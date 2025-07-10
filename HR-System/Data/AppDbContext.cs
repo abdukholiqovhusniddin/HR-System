@@ -2,8 +2,12 @@
 using Microsoft.EntityFrameworkCore;
 
 namespace HR_System.Data;
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+public class AppDbContext : DbContext
 {
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+        Database.EnsureCreated();
+    }
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Contract> Contracts { get; set; }
     public DbSet<Salary> Salaries { get; set; }
@@ -17,5 +21,4 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
 
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
-
 }

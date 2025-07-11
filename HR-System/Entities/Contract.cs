@@ -1,9 +1,6 @@
 ﻿namespace HR_System.Entities;
-public class Contract: BaseEntity
+public class Contract: EmployeeBaseEntity
 {
-    public int EmployeeId { get; set; }
-    public Employee? Employee { get; set; }
-
     public string? ContractType { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime? EndDate { get; set; }

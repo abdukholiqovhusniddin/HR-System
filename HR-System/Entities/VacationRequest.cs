@@ -1,9 +1,6 @@
 ﻿namespace HR_System.Entities;
-public class VacationRequest: BaseEntity
+public class VacationRequest: EmployeeBaseEntity
 {
-    public int EmployeeId { get; set; }
-    public Employee? Employee { get; set; }
-    
     public string? VacationType { get; set; }
 
     public DateTime StartDate { get; set; }

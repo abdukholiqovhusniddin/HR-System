@@ -1,9 +1,6 @@
 ﻿namespace HR_System.Entities;
-public class Salary: BaseEntity
+public class Salary: EmployeeBaseEntity
 {
-    public int EmployeeId { get; set; }
-    public Employee? Employee { get; set; }
-
     public decimal BaseSalary { get; set; }
 
     public decimal? Bonus { get; set; }

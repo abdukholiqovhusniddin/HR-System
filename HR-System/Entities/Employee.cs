@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
-using System.Diagnostics.Contracts;
-
-namespace HR_System.Entities;
+﻿namespace HR_System.Entities;
 public class Employee : BaseEntity
 {
     public string? FullName { get; set; }
@@ -26,9 +23,5 @@ public class Employee : BaseEntity
     public ICollection<Contract>? Contracts { get; set; }
     public ICollection<Salary>? Salaries { get; set; }
     public ICollection<VacationRequest>? Vacations { get; set; }
-    public ICollection<EquipmentAssignment>? Equipments { get; set; }
-
-    [NotMapped]
-    public int Age => DateTime.Today.Year - DateOfBirth.Year - 
-        (DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - DateOfBirth.Year)) ? 1 : 0);
+    public ICollection<EquipmentAssignment>? Equipments { get; set; }    
 }

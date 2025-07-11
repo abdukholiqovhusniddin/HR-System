@@ -1,9 +1,6 @@
 ﻿namespace HR_System.Entities;
-public class EquipmentAssignment: BaseEntity
+public class EquipmentAssignment: EmployeeBaseEntity
 {
-    public int EmployeeId { get; set; }
-    public Employee? Employee { get; set; }
-
     public string? Type { get; set; }
 
     public string? Model { get; set; }

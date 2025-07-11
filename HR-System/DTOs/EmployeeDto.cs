@@ -16,6 +16,7 @@ public class EmployeeDto
         public int? ManagerId { get; set; }
         public bool IsEmailPublic { get; set; }
         public bool IsTelegramPublic { get; set; }
+
     }
 
     public class EmployeeUpdateDto : EmployeeCreateDto
@@ -29,8 +30,10 @@ public class EmployeeDto
         public string? PhotoUrl { get; set; }
         public string? Position { get; set; }
         public string? Department { get; set; }
-        public int Age { get; set; }
         public string? Email { get; set; }
         public string? Telegram { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public int Age => DateTime.Today.Year - DateOfBirth.Year -
+        (DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - DateOfBirth.Year)) ? 1 : 0);
     }
 }

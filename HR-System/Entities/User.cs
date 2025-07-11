@@ -8,13 +8,10 @@ public enum UserRole
     Manager,
     Admin
 }
-public class User: BaseEntity
+public class User: EmployeeBaseEntity
 {
     public string? Username { get; set; }
     public string? PasswordHash { get; set; }
-
-    public int EmployeeId { get; set; }
-    public Employee? Employee { get; set; }
 
     public UserRole Role { get; set; }
 }

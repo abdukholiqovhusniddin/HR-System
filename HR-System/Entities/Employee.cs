@@ -20,6 +20,7 @@ public class Employee : BaseEntity
     public int? ManagerId { get; set; }
     public Employee? Manager { get; set; }
 
+    public ICollection<Employee>? Subordinates { get; set; } = [];
     public ICollection<Contract>? Contracts { get; set; }
     public ICollection<Salary>? Salaries { get; set; }
     public ICollection<VacationRequest>? Vacations { get; set; }

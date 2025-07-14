@@ -16,7 +16,7 @@ public class EmployeeDto
         public int? ManagerId { get; set; }
         public bool IsEmailPublic { get; set; }
         public bool IsTelegramPublic { get; set; }
-
+        public ICollection<int>? SubordinateIds { get; set; } = [];
     }
 
     public class EmployeeUpdateDto : EmployeeCreateDto

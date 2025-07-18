@@ -23,11 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Interfaces\" />
     <Folder Include="JwtAuth\" />
-    <Folder Include="Repository\" />
-    <Folder Include="Service\" />
   </ItemGroup>
 
 </Project>

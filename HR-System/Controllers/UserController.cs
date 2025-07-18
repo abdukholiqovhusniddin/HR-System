@@ -33,7 +33,7 @@ public class UserController(IUserService service) : ControllerBase
 
     [HttpPost]
     [Route("login")]
-    public async Task<IActionResult> Login(LoginResponseDto userLoginDto)
+    public async Task<IActionResult> Login(UserLoginDto userLoginDto)
     {
         var token = await _service.LoginAsync(userLoginDto);
         if (string.IsNullOrEmpty(token))

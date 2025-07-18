@@ -4,4 +4,5 @@ namespace HR_System.Interfaces;
 public interface IUserService
 {
     Task<UserDto> CreateUserAsync(UserRegisterDto userRegisterDto);
+    Task<string?> LoginAsync(UserLoginDto userLoginDto);
 }

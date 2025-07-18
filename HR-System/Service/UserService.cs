@@ -25,8 +25,12 @@ public class UserService(IUserRepository userRepository) : IUserService
         return new UserDto(userRegisterDto.Username, userRegisterDto.Email, userRegisterDto.Role);
     }
 
-    public Task<string?> LoginAsync(UserAuthDto.LoginResponseDto userLoginDto)
+    public async Task<string?> LoginAsync(UserLoginDto userLoginDto)
     {
-        throw new NotImplementedException();
+        User user = await _userRepository.GetByUsernameAsync(userLoginDto.Username);
+        if (!BCrypt.Net.BCrypt.Verify(userLoginDto.Password, user.PasswordHash))
+            throw new ApiException("Invalid password.");
+        //return jwtService.GenerateToken(user);
+        return "qwert";
     }
 }

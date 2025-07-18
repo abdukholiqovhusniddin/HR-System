@@ -20,4 +20,8 @@ public class UserRepository(AppDbContext context) : IUserRepository
             throw new ApiException("Username cannot be null or empty.");
         return await _context.Users.AnyAsync(n => n.Username == username);
     }
+
+    public async Task<User> GetByUsernameAsync(string? username) =>
+        await _context.Users.FirstOrDefaultAsync(n => n.Username == username)
+            ?? throw new ApiException("User not found.");
 }

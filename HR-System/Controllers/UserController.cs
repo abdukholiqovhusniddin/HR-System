@@ -11,7 +11,7 @@ public class UserController(IUserService service) : ControllerBase
 {
     private readonly IUserService _service = service;
 
-    [HttpGet]
+    [HttpPost]
     [Route("register")]
     public async Task<IActionResult> CreateUser(UserRegisterDto userRegisterDto)
     {

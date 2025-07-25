@@ -1,5 +1,7 @@
 using HR_System.Data;
 using HR_System.Interfaces;
+using HR_System.JwtAuth;
+using HR_System.Middlewares;
 using HR_System.Repository;
 using HR_System.Service;
 using Mapster;
@@ -21,7 +23,11 @@ builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<JwtService>();
+builder.Services.Configure<AuthSettings>(builder.Configuration.GetSection("AuthSettings"));
+builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddAuthorization();
+builder.Services.AddHttpContextAccessor();
 
 
 builder.Services.AddSwaggerGen(c =>
@@ -60,8 +66,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCustomExceptionHandler();
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

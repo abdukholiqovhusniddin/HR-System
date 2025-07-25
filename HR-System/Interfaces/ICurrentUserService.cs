@@ -1,5 +1,5 @@
 ﻿namespace HR_System.Interfaces;
-public class ICurrentUserService
+public interface ICurrentUserService
 {
     int UserId { get; }
 }

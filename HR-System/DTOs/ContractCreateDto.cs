@@ -1,7 +1,7 @@
 ﻿namespace HR_System.DTOs;
 public class ContractCreateDto
 {
-    public int EmployeeId { get; set; }
+    public Guid EmployeeId { get; set; }
     public string? ContractType { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime? EndDate { get; set; }

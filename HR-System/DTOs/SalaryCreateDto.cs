@@ -1,7 +1,7 @@
 ﻿namespace HR_System.DTOs;
 public class SalaryCreateDto
 {
-    public int EmployeeId { get; set; }
+    public Guid EmployeeId { get; set; }
     public decimal BaseSalary { get; set; }
     public decimal? Bonus { get; set; }
     public decimal? Deduction { get; set; }

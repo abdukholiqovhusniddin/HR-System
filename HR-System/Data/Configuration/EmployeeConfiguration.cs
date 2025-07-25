@@ -17,7 +17,7 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
         builder.Property(e => e.PassportInfo).HasMaxLength(200);
 
         builder.HasOne(e => e.Manager)
-               .WithMany()
+               .WithMany(e => e.Subordinates)
                .HasForeignKey(e => e.ManagerId)
                .OnDelete(DeleteBehavior.Restrict);
     }

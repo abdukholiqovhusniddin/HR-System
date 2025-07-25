@@ -13,7 +13,7 @@ public class EmployeeDto
         public string? Department { get; set; }
         public DateTime HireDate { get; set; }
         public string? PassportInfo { get; set; }
-        public int? ManagerId { get; set; }
+        public Guid ManagerId { get; set; }
         public bool IsEmailPublic { get; set; }
         public bool IsTelegramPublic { get; set; }
         public ICollection<int>? SubordinateIds { get; set; } = [];
@@ -21,7 +21,7 @@ public class EmployeeDto
 
     public class EmployeeUpdateDto : EmployeeCreateDto
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
     }
 
     public class EmployeeDirectoryDto

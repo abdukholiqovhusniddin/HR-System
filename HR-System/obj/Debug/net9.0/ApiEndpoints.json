@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "userLoginDto",
-        "Type": "HR_System.DTOs.UserAuthDto\u002BLoginResponseDto",
+        "Type": "HR_System.DTOs.UserAuthDto\u002BUserLoginDto",
         "IsRequired": true
       }
     ],
@@ -19,13 +19,13 @@
     "ContainingType": "HR_System.Controllers.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/User/register",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "userRegisterDto",
-        "Type": "HR_System.DTOs.UserAuthDto",
+        "Type": "HR_System.DTOs.UserAuthDto\u002BUserRegisterDto",
         "IsRequired": true
       }
     ],

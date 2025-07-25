@@ -17,10 +17,13 @@ public class Employee : BaseEntity
 
     public string? PassportInfo { get; set; }
 
-    public int? ManagerId { get; set; }
+    public Guid ManagerId { get; set; }
     public Employee? Manager { get; set; }
 
-    public ICollection<Employee>? Subordinates { get; set; } = [];
+    public Guid UserId { get; set; }
+    public User? User { get; set; }
+
+    public ICollection<Employee>? Subordinates { get; set; }
     public ICollection<Contract>? Contracts { get; set; }
     public ICollection<Salary>? Salaries { get; set; }
     public ICollection<VacationRequest>? Vacations { get; set; }

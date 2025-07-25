@@ -14,7 +14,15 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
     {
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))
         {
-            throw new ApiException("User already exists.");
+            throw new ApiException("User or already exists.");
+        }
+        if (await _userRepository.ExistsAsync(userRegisterDto.Email))
+        {
+            throw new ApiException("Email or already exists.");
+        }
+        if (!Enum.IsDefined(userRegisterDto.Role))
+        {
+            throw new ApiException("Invalid role value.");
         }
 
         await _userRepository.CreateAsync(new User

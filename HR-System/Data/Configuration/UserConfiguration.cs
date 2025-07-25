@@ -27,6 +27,10 @@ public class UserConfiguration: IEntityTypeConfiguration<User>
                .HasForeignKey<Employee>(e => e.UserId)
                .OnDelete(DeleteBehavior.Restrict);
 
+        builder.Property(u => u.Role)
+            .IsRequired()
+            .HasConversion<string>();
+
         builder.HasData(
             new User
             {

@@ -1,5 +1,6 @@
 ﻿using HR_System.DTOs;
 using HR_System.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static HR_System.DTOs.UserAuthDto;
 
@@ -11,6 +12,7 @@ public class UserController(IUserService service) : ControllerBase
 {
     private readonly IUserService _service = service;
 
+    [Authorize(Roles = "Admin,HR")]
     [HttpPost]
     [Route("register")]
     public async Task<IActionResult> CreateUser(UserRegisterDto userRegisterDto)

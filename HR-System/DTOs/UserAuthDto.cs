@@ -36,4 +36,22 @@ public class UserAuthDto
         [MinLength(6, ErrorMessage = "Password must be at least 6 characters long")]
         public string? Password { get; set; }
     }
+
+    public class UserProfileDto
+    {
+        public string? Username { get; set; }
+        public string? FullName { get; set; }
+        public string? PhotoUrl { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public string? Email { get; set; }
+        public bool IsEmailPublic { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Telegram { get; set; }
+        public bool IsTelegramPublic { get; set; }
+        public string? Position { get; set; }
+        public string? Department { get; set; }
+        public DateTime HireDate { get; set; }
+        public string? PassportInfo { get; set; }
+        public Guid ManagerId { get; set; }
+    }
 }

@@ -35,12 +35,21 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
         return new UserDto(userRegisterDto.Username, userRegisterDto.Email, userRegisterDto.Role);
     }
 
+    public async Task<object?> GetByUsernameAsync(string username, string role)
+    {
+        var user = await _userRepository.GetByUsernameAsync(username);
+        if (user == null)
+            return null;
+        return await _userRepository.GetUserInfoByRoleAsync(user, role);
+    }
+
     public async Task<string?> LoginAsync(UserLoginDto userLoginDto)
     {
-        User user = await _userRepository.GetByUsernameAsync(userLoginDto.Username);
+        var user = await _userRepository.GetByUsernameAsync(userLoginDto.Username);
+        if (user == null)
+            return null;
         if (!BCrypt.Net.BCrypt.Verify(userLoginDto.Password, user.PasswordHash))
-            throw new ApiException("Invalid password.");
-
+            return null;
         return jwtService.GenerateToken(user);
     }
 }

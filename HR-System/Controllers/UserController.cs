@@ -1,4 +1,5 @@
-﻿using HR_System.DTOs;
+﻿using System.Security.Claims;
+using HR_System.DTOs;
 using HR_System.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +13,7 @@ public class UserController(IUserService service) : ControllerBase
 {
     private readonly IUserService _service = service;
 
-    [Authorize(Roles = "Admin,HR")]
+    [Authorize(Roles = "Admin")]
     [HttpPost]
     [Route("register")]
     public async Task<IActionResult> CreateUser(UserRegisterDto userRegisterDto)
@@ -42,13 +43,39 @@ public class UserController(IUserService service) : ControllerBase
         {
             return Unauthorized((new ApiResponse<object>
             {
-                Error = "Invalid email or password.",
+                Error = "Invalid username or password.",
                 StatusCode = 401
             }));
         }
         return Ok((new ApiResponse<object>
         {
             Data = token,
+            StatusCode = 200
+        }));
+    }
+
+    [Authorize]
+    [HttpGet("me")]
+    public async Task<IActionResult> GetMe()
+    {
+        var username = User.FindFirst(ClaimTypes.Name)?.Value;
+        var role = User.FindFirst(ClaimTypes.Role)?.Value;
+        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(role))
+            return Unauthorized();
+
+        var user = await _service.GetByUsernameAsync(username, role);
+
+        if (user == null)
+        {
+            return NotFound((new ApiResponse<object>
+            {
+                Error = "User not found",
+                StatusCode = 404
+            }));
+        }
+        return Ok((new ApiResponse<object>
+        {
+            Data = user,
             StatusCode = 200
         }));
     }

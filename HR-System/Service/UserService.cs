@@ -46,8 +46,19 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
         UserProfileDto userProfile = new()
         {
             Username = userByRole?.Username,
-            Email = userByRole?.Email,
             FullName = userByRole?.EmployeeProfile?.FullName,
+            PhotoUrl = userByRole?.EmployeeProfile?.PhotoUrl,
+            DateOfBirth = userByRole?.EmployeeProfile?.DateOfBirth,
+            Email = userByRole?.Email,
+            IsEmailPublic = userByRole?.EmployeeProfile?.IsEmailPublic ?? false,
+            PhoneNumber = userByRole?.EmployeeProfile?.PhoneNumber,
+            Telegram = userByRole?.EmployeeProfile?.Telegram,
+            IsTelegramPublic = userByRole?.EmployeeProfile?.IsTelegramPublic ?? false,
+            Position = userByRole?.EmployeeProfile?.Position,
+            Department = userByRole?.EmployeeProfile?.Department,
+            HireDate = userByRole?.EmployeeProfile?.HireDate ?? DateTime.MinValue,
+            PassportInfo = userByRole?.EmployeeProfile?.PassportInfo,
+            ManagerId = userByRole?.EmployeeProfile?.ManagerId ?? Guid.Empty
         };
 
         return userProfile;

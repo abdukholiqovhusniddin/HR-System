@@ -1,6 +1,4 @@
-﻿using System.Security.Claims;
-using HR_System.DTOs;
-using HR_System.Interfaces;
+﻿using HR_System.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static HR_System.DTOs.UserAuthDto;
@@ -9,7 +7,7 @@ namespace HR_System.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class UserController(IUserService service) : ControllerBase
+public class UserController(IUserService service) : ApiControllerBase
 {
     private readonly IUserService _service = service;
 
@@ -58,12 +56,13 @@ public class UserController(IUserService service) : ControllerBase
     [HttpGet("me")]
     public async Task<IActionResult> GetMe()
     {
-        var username = User.FindFirst(ClaimTypes.Name)?.Value;
-        var role = User.FindFirst(ClaimTypes.Role)?.Value;
-        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(role))
-            return Unauthorized();
-
-        var user = await _service.GetByUsernameAsync(username, role);
+        if (!IsAuthenticated)
+            return Unauthorized((new ApiResponse<object>
+            {
+                Error = "User is not authenticated.",
+                StatusCode = 401
+            }));
+        UserProfileDto? user = await _service.GetByUsernameAsync(UserName, UserRole, UserId);
 
         if (user == null)
         {

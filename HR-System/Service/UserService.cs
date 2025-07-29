@@ -35,12 +35,22 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
         return new UserDto(userRegisterDto.Username, userRegisterDto.Email, userRegisterDto.Role);
     }
 
-    public async Task<object?> GetByUsernameAsync(string username, string role)
+    public async Task<UserProfileDto?> GetByUsernameAsync(string username, string role, Guid userid)
     {
         var user = await _userRepository.GetByUsernameAsync(username);
         if (user == null)
             return null;
-        return await _userRepository.GetUserInfoByRoleAsync(user, role);
+
+        var userByRole = await _userRepository.GetUserInfoByRoleAsync(userid, role);
+
+        UserProfileDto userProfile = new()
+        {
+            Username = userByRole?.Username,
+            Email = userByRole?.Email,
+            FullName = userByRole?.EmployeeProfile?.FullName,
+        };
+
+        return userProfile;
     }
 
     public async Task<string?> LoginAsync(UserLoginDto userLoginDto)

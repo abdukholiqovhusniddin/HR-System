@@ -67,7 +67,7 @@
         }
       }
     },
-    "/api/User/me": {
+    "/api/User/auth/me": {
       "get": {
         "tags": [
           "User"

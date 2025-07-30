@@ -1,5 +1,4 @@
 ﻿using HR_System.Entities;
-using static HR_System.DTOs.UserAuthDto;
 
 namespace HR_System.Interfaces;
 public interface IUserRepository

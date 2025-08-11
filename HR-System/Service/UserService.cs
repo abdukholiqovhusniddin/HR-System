@@ -58,7 +58,9 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
             Department = userByRole?.EmployeeProfile?.Department,
             HireDate = userByRole?.EmployeeProfile?.HireDate ?? DateTime.MinValue,
             PassportInfo = userByRole?.EmployeeProfile?.PassportInfo,
-            ManagerId = userByRole?.EmployeeProfile?.ManagerId ?? Guid.Empty
+            ManagerId = userByRole?.EmployeeProfile?.ManagerId ?? Guid.Empty,
+            Age = DateTime.Today.Year - userByRole?.EmployeeProfile?.DateOfBirth.Year -
+                  (userByRole?.EmployeeProfile?.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - userByRole.EmployeeProfile.DateOfBirth.Year)) ? 1 : 0)
         };
 
         return userProfile;

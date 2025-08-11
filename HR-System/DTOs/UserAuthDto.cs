@@ -53,5 +53,6 @@ public class UserAuthDto
         public DateTime HireDate { get; set; }
         public string? PassportInfo { get; set; }
         public Guid ManagerId { get; set; }
+        public int? Age { get; internal set; }
     }
 }

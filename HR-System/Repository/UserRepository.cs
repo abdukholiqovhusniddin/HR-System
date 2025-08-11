@@ -1,4 +1,5 @@
-﻿using HR_System.Data;
+﻿using HR_System.Commons;
+using HR_System.Data;
 using HR_System.Entities;
 using HR_System.Exceptions;
 using HR_System.Interfaces;
@@ -94,17 +95,7 @@ public class UserRepository(AppDbContext context) : IUserRepository
                 EmployeeId = c.EmployeeId
             }).ToList();
 
-        List<Salary>? FilterSalaries(ICollection<Salary>? src) =>
-            src?.Select(s => new Salary
-            {
-                Id = s.Id,
-                BaseSalary = s.BaseSalary,
-                Bonus = s.Bonus,
-                Deduction = s.Deduction,
-                StartPeriod = s.StartPeriod,
-                EndPeriod = s.EndPeriod,
-                EmployeeId = s.EmployeeId
-            }).ToList();
+        
 
         List<VacationRequest>? FilterVacations(ICollection<VacationRequest>? src) =>
             src?.Select(v => new VacationRequest
@@ -133,7 +124,6 @@ public class UserRepository(AppDbContext context) : IUserRepository
         var filteredEmployee = new Employee
         {
             Id = employee.Id,
-            CreatedAt = employee.CreatedAt,
             FullName = employee.FullName,
             PhotoUrl = employee.PhotoUrl,
             Position = employee.Position,
@@ -141,15 +131,13 @@ public class UserRepository(AppDbContext context) : IUserRepository
             DateOfBirth = employee.DateOfBirth,
             HireDate = employee.HireDate,
             UserId = employee.UserId,
-            ManagerId = employee.ManagerId,
-            User = null
+            ManagerId = employee.ManagerId
         };
 
         switch (role)
         {
             case "Employee":
                 filteredEmployee.Email = employee.IsEmailPublic ? employee.Email : null;
-                filteredEmployee.PhoneNumber = employee.IsEmailPublic ? employee.PhoneNumber : null;
                 filteredEmployee.Telegram = employee.IsTelegramPublic ? employee.Telegram : null;
                 filteredEmployee.IsEmailPublic = employee.IsEmailPublic;
                 filteredEmployee.IsTelegramPublic = employee.IsTelegramPublic;
@@ -164,14 +152,14 @@ public class UserRepository(AppDbContext context) : IUserRepository
                 filteredEmployee.PassportInfo = employee.PassportInfo;
                 filteredEmployee.Manager = FilterManager(employee.Manager);
                 filteredEmployee.Contracts = FilterContracts(employee.Contracts);
-                filteredEmployee.Salaries = FilterSalaries(employee.Salaries);
+                filteredEmployee.Salaries = FilterDataUserExtension.FilterSalaries(employee.Salaries);
                 filteredEmployee.Vacations = FilterVacations(employee.Vacations);
                 filteredEmployee.Equipments = FilterEquipments(employee.Equipments);
                 filteredEmployee.Subordinates = employee.Subordinates?.Select(s => FilterSubordinate(s, false, false)).ToList();
                 break;
 
             case "Accountant":
-                filteredEmployee.Salaries = FilterSalaries(employee.Salaries);
+                filteredEmployee.Salaries = FilterDataUserExtension.FilterSalaries(employee.Salaries);
                 break;
 
             case "Manager":
@@ -190,7 +178,7 @@ public class UserRepository(AppDbContext context) : IUserRepository
                 filteredEmployee.PassportInfo = employee.PassportInfo;
                 filteredEmployee.Manager = FilterManager(employee.Manager);
                 filteredEmployee.Contracts = FilterContracts(employee.Contracts);
-                filteredEmployee.Salaries = FilterSalaries(employee.Salaries);
+                filteredEmployee.Salaries =FilterDataUserExtension.FilterSalaries(employee.Salaries);
                 filteredEmployee.Vacations = FilterVacations(employee.Vacations);
                 filteredEmployee.Equipments = FilterEquipments(employee.Equipments);
                 filteredEmployee.Subordinates = employee.Subordinates?.Select(s => FilterSubordinate(s, false, false)).ToList();
@@ -210,5 +198,4 @@ public class UserRepository(AppDbContext context) : IUserRepository
             EmployeeProfile = filteredEmployee
         };
     }
-    
 }

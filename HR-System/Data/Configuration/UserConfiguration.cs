@@ -39,6 +39,23 @@ public class UserConfiguration: IEntityTypeConfiguration<User>
                 Email = "test@gmail.com",
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"),
                 Role = UserRole.Admin,
-            });
+                //EmployeeProfile = new Employee
+                //{
+                //    FullName = "Admin User",
+                //    Email = "abdukholiqovh@gmail.com",
+                //    PhoneNumber = "+998901234567",
+                //    Position = "Administrator",
+                //    Department = "Administration",
+                //    DateOfBirth = new DateTime(1990, 1, 1),
+                //    IsEmailPublic = true,
+                //    IsTelegramPublic = true,
+                //    Telegram = "admin_telegram",
+                //    PhotoUrl = "https://example.com/admin_photo.jpg",
+                //    PassportInfo = "AB1234567",
+                //    CreatedAt = DateTime.UtcNow
+                //}
+
+            }
+        );
     }
 }

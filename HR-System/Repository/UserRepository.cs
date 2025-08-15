@@ -49,6 +49,7 @@ public class UserRepository(AppDbContext context) : IUserRepository
             return null;
 
         var employee = user.EmployeeProfile;
+
         if (employee == null)
             return new User
             {
@@ -59,67 +60,6 @@ public class UserRepository(AppDbContext context) : IUserRepository
                 CreatedAt = user.CreatedAt,
                 EmployeeProfile = null
             };
-
-        Employee? FilterManager(Employee? m) =>
-            m == null ? null : new Employee { Id = m.Id, FullName = m.FullName, Position = m.Position };
-
-        Employee FilterSubordinate(Employee s, bool withContacts, bool withVacations) => new()
-        {
-            Id = s.Id,
-            FullName = s.FullName,
-            PhotoUrl = s.PhotoUrl,
-            Position = s.Position,
-            Department = s.Department,
-            DateOfBirth = s.DateOfBirth,
-            Email = withContacts && s.IsEmailPublic ? s.Email : null,
-            PhoneNumber = withContacts && s.IsEmailPublic ? s.PhoneNumber : null,
-            Telegram = withContacts && s.IsTelegramPublic ? s.Telegram : null,
-            IsEmailPublic = s.IsEmailPublic,
-            IsTelegramPublic = s.IsTelegramPublic,
-            Vacations = withVacations
-                ? s.Vacations?.OrderByDescending(v => v.EndDate).Take(1).ToList()
-                : null
-        };
-
-        List<Contract>? FilterContracts(ICollection<Contract>? src) =>
-            src?.Select(c => new Contract
-            {
-                Id = c.Id,
-                ContractType = c.ContractType,
-                StartDate = c.StartDate,
-                EndDate = c.EndDate,
-                Terms = c.Terms,
-                DocumentUrl = c.DocumentUrl,
-                DocumentName = c.DocumentName,
-                DocumentType = c.DocumentType,
-                EmployeeId = c.EmployeeId
-            }).ToList();
-
-        
-
-        List<VacationRequest>? FilterVacations(ICollection<VacationRequest>? src) =>
-            src?.Select(v => new VacationRequest
-            {
-                Id = v.Id,
-                CreatedAt = v.CreatedAt,
-                VacationType = v.VacationType,
-                StartDate = v.StartDate,
-                EndDate = v.EndDate,
-                Status = v.Status,
-                EmployeeId = v.EmployeeId
-            }).ToList();
-
-        List<EquipmentAssignment>? FilterEquipments(ICollection<EquipmentAssignment>? src) =>
-            src?.Select(e => new EquipmentAssignment
-            {
-                Id = e.Id,
-                Type = e.Type,
-                Model = e.Model,
-                InventoryNumber = e.InventoryNumber,
-                AssignmentDate = e.AssignmentDate,
-                Status = e.Status,
-                EmployeeId = e.EmployeeId
-            }).ToList();
 
         var filteredEmployee = new Employee
         {
@@ -137,12 +77,12 @@ public class UserRepository(AppDbContext context) : IUserRepository
         switch (role)
         {
             case "Employee":
-                filteredEmployee.Email = employee.IsEmailPublic ? employee.Email : null;
-                filteredEmployee.Telegram = employee.IsTelegramPublic ? employee.Telegram : null;
+                filteredEmployee.Email = employee.Email;
+                filteredEmployee.Telegram = employee.Telegram;
                 filteredEmployee.IsEmailPublic = employee.IsEmailPublic;
                 filteredEmployee.IsTelegramPublic = employee.IsTelegramPublic;
-                filteredEmployee.Vacations = FilterVacations(employee.Vacations);
-                filteredEmployee.Subordinates = employee.Subordinates?.Select(s => FilterSubordinate(s, true, true)).ToList();
+                filteredEmployee.Vacations = FilterDataUserExtension.FilterVacations(employee.Vacations);
+                filteredEmployee.Subordinates = employee.Subordinates?.Select(s => FilterDataUserExtension.FilterSubordinate(s, true, true)).ToList();
                 break;
 
             case "HR":
@@ -150,12 +90,14 @@ public class UserRepository(AppDbContext context) : IUserRepository
                 filteredEmployee.PhoneNumber = employee.PhoneNumber;
                 filteredEmployee.Telegram = employee.Telegram;
                 filteredEmployee.PassportInfo = employee.PassportInfo;
-                filteredEmployee.Manager = FilterManager(employee.Manager);
-                filteredEmployee.Contracts = FilterContracts(employee.Contracts);
+                filteredEmployee.IsTelegramPublic = employee.IsTelegramPublic;
+                filteredEmployee.IsEmailPublic = employee.IsEmailPublic;
+                filteredEmployee.Manager = FilterDataUserExtension.FilterManager(employee.Manager);
+                filteredEmployee.Contracts = FilterDataUserExtension.FilterContracts(employee.Contracts);
                 filteredEmployee.Salaries = FilterDataUserExtension.FilterSalaries(employee.Salaries);
-                filteredEmployee.Vacations = FilterVacations(employee.Vacations);
-                filteredEmployee.Equipments = FilterEquipments(employee.Equipments);
-                filteredEmployee.Subordinates = employee.Subordinates?.Select(s => FilterSubordinate(s, false, false)).ToList();
+                filteredEmployee.Vacations = FilterDataUserExtension.FilterVacations(employee.Vacations);
+                filteredEmployee.Equipments = FilterDataUserExtension.FilterEquipments(employee.Equipments);
+                filteredEmployee.Subordinates = employee.Subordinates?.Select(s => FilterDataUserExtension.FilterSubordinate(s, false, false)).ToList();
                 break;
 
             case "Accountant":
@@ -165,8 +107,8 @@ public class UserRepository(AppDbContext context) : IUserRepository
             case "Manager":
                 filteredEmployee.Subordinates = employee.Subordinates?.Select(s =>
                 {
-                    var sub = FilterSubordinate(s, true, false);
-                    sub.Vacations = FilterVacations(s.Vacations);
+                    var sub = FilterDataUserExtension.FilterSubordinate(s, true, false);
+                    sub.Vacations = FilterDataUserExtension.FilterVacations(s.Vacations);
                     return sub;
                 }).ToList();
                 break;
@@ -176,12 +118,14 @@ public class UserRepository(AppDbContext context) : IUserRepository
                 filteredEmployee.PhoneNumber = employee.PhoneNumber;
                 filteredEmployee.Telegram = employee.Telegram;
                 filteredEmployee.PassportInfo = employee.PassportInfo;
-                filteredEmployee.Manager = FilterManager(employee.Manager);
-                filteredEmployee.Contracts = FilterContracts(employee.Contracts);
+                filteredEmployee.IsTelegramPublic = employee.IsTelegramPublic;
+                filteredEmployee.IsEmailPublic = employee.IsEmailPublic;
+                filteredEmployee.Manager = FilterDataUserExtension.FilterManager(employee.Manager);
+                filteredEmployee.Contracts = FilterDataUserExtension.FilterContracts(employee.Contracts);
                 filteredEmployee.Salaries =FilterDataUserExtension.FilterSalaries(employee.Salaries);
-                filteredEmployee.Vacations = FilterVacations(employee.Vacations);
-                filteredEmployee.Equipments = FilterEquipments(employee.Equipments);
-                filteredEmployee.Subordinates = employee.Subordinates?.Select(s => FilterSubordinate(s, false, false)).ToList();
+                filteredEmployee.Vacations = FilterDataUserExtension.FilterVacations(employee.Vacations);
+                filteredEmployee.Equipments = FilterDataUserExtension.FilterEquipments(employee.Equipments);
+                filteredEmployee.Subordinates = employee.Subordinates?.Select(s => FilterDataUserExtension.FilterSubordinate(s, false, false)).ToList();
                 break;
 
             default:

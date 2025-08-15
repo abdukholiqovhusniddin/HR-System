@@ -8,6 +8,7 @@ public class AppDbContext : DbContext
     {
         Database.EnsureCreated();
     }
+
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Contract> Contracts { get; set; }
     public DbSet<Salary> Salaries { get; set; }

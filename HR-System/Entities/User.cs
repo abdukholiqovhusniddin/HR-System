@@ -15,5 +15,6 @@ public class User: BaseEntity
     public string? PasswordHash { get; set; }
 
     public UserRole Role { get; set; }
+
     public Employee? EmployeeProfile { get; set; }
 }

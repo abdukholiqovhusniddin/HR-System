@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace HR_System.Controllers;
+
 [Route("api/[controller]")]
 [ApiController]
 public class ApiControllerBase : ControllerBase

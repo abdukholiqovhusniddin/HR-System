@@ -37,7 +37,11 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
 
     public async Task<UserProfileDto?> GetByUsernameAsync(string username, string role, Guid userid)
     {
+        if (string.IsNullOrWhiteSpace(username))
+            throw new ApiException("Username cannot be null.");
+
         var user = await _userRepository.GetByUsernameAsync(username);
+
         if (user == null)
             return null;
 
@@ -49,11 +53,11 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
             FullName = userByRole?.EmployeeProfile?.FullName,
             PhotoUrl = userByRole?.EmployeeProfile?.PhotoUrl,
             DateOfBirth = userByRole?.EmployeeProfile?.DateOfBirth,
-            Email = userByRole?.Email,
-            IsEmailPublic = userByRole?.EmployeeProfile?.IsEmailPublic ?? false,
+            Email = userByRole?.EmployeeProfile?.Email,
+            IsEmailPublic = (bool)(userByRole?.EmployeeProfile?.IsEmailPublic),
             PhoneNumber = userByRole?.EmployeeProfile?.PhoneNumber,
             Telegram = userByRole?.EmployeeProfile?.Telegram,
-            IsTelegramPublic = userByRole?.EmployeeProfile?.IsTelegramPublic ?? false,
+            IsTelegramPublic = (bool)(userByRole?.EmployeeProfile?.IsTelegramPublic),
             Position = userByRole?.EmployeeProfile?.Position,
             Department = userByRole?.EmployeeProfile?.Department,
             HireDate = userByRole?.EmployeeProfile?.HireDate ?? DateTime.MinValue,

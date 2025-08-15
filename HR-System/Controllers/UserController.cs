@@ -9,7 +9,7 @@ namespace HR_System.Controllers;
 [ApiController]
 public class UserController(IUserService service) : ApiControllerBase
 {
-    private readonly IUserService _service = service;
+    private readonly IUserService _service = service; // DI- Dependency Injection   
 
     [Authorize(Roles = "Admin")]
     [HttpPost]

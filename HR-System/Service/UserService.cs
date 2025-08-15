@@ -3,6 +3,7 @@ using HR_System.Entities;
 using HR_System.Exceptions;
 using HR_System.Interfaces;
 using HR_System.JwtAuth;
+using Mapster;
 using static HR_System.DTOs.UserAuthDto;
 
 namespace HR_System.Service;
@@ -46,28 +47,9 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
             return null;
 
         var userByRole = await _userRepository.GetUserInfoByRoleAsync(userid, role);
+        var employeeProfile = userByRole.Adapt<UserProfileDto>();
 
-        UserProfileDto userProfile = new()
-        {
-            Username = userByRole?.Username,
-            FullName = userByRole?.EmployeeProfile?.FullName,
-            PhotoUrl = userByRole?.EmployeeProfile?.PhotoUrl,
-            DateOfBirth = userByRole?.EmployeeProfile?.DateOfBirth,
-            Email = userByRole?.EmployeeProfile?.Email,
-            IsEmailPublic = (bool)(userByRole?.EmployeeProfile?.IsEmailPublic),
-            PhoneNumber = userByRole?.EmployeeProfile?.PhoneNumber,
-            Telegram = userByRole?.EmployeeProfile?.Telegram,
-            IsTelegramPublic = (bool)(userByRole?.EmployeeProfile?.IsTelegramPublic),
-            Position = userByRole?.EmployeeProfile?.Position,
-            Department = userByRole?.EmployeeProfile?.Department,
-            HireDate = userByRole?.EmployeeProfile?.HireDate ?? DateTime.MinValue,
-            PassportInfo = userByRole?.EmployeeProfile?.PassportInfo,
-            ManagerId = userByRole?.EmployeeProfile?.ManagerId ?? Guid.Empty,
-            Age = DateTime.Today.Year - userByRole?.EmployeeProfile?.DateOfBirth.Year -
-                  (userByRole?.EmployeeProfile?.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - userByRole.EmployeeProfile.DateOfBirth.Year)) ? 1 : 0)
-        };
-
-        return userProfile;
+        return employeeProfile;
     }
 
     public async Task<string?> LoginAsync(UserLoginDto userLoginDto)

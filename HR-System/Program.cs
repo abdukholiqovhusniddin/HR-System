@@ -1,3 +1,4 @@
+using System.Reflection;
 using HR_System.Data;
 using HR_System.Interfaces;
 using HR_System.JwtAuth;
@@ -57,6 +58,11 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 });
+
+builder.Services.AddMapster();
+
+TypeAdapterConfig.GlobalSettings.Scan(
+    Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 

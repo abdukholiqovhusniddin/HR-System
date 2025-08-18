@@ -52,7 +52,6 @@ public class UserAuthDto
         public string? Department { get; set; }
         public DateTime HireDate { get; set; }
         public string? PassportInfo { get; set; }
-        public Guid ManagerId { get; set; }
         public int? Age { get; internal set; }
     }
 }

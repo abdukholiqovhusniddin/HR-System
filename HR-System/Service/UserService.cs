@@ -46,10 +46,11 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
         if (user == null)
             return null;
 
-        var userByRole = await _userRepository.GetUserInfoByRoleAsync(userid, role);
-        var employeeProfile = userByRole.Adapt<UserProfileDto>();
 
-        return employeeProfile;
+        //var userByRole = await _userRepository.GetUserInfoByRoleAsync(userid, role);
+        //var employeeProfile = userByRole.Adapt<UserProfileDto>();
+
+        return user;
     }
 
     public async Task<string?> LoginAsync(UserLoginDto userLoginDto)

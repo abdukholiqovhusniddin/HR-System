@@ -1,4 +1,5 @@
 using System.Reflection;
+using FluentValidation;
 using HR_System.Data;
 using HR_System.Interfaces;
 using HR_System.JwtAuth;
@@ -13,6 +14,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddMapster();
 builder.Services.AddControllers();
+
+//builder.Services.AddValidatorsFromAssemblies
+//    ((IEnumerable<Assembly>)Assembly.GetExecutingAssembly());
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("HRDb")));

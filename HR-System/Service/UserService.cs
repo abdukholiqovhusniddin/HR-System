@@ -36,23 +36,6 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
         return new UserDto(userRegisterDto.Username, userRegisterDto.Email, userRegisterDto.Role);
     }
 
-    public async Task<UserProfileDto?> GetByUsernameAsync(string username, string role, Guid userid)
-    {
-        if (string.IsNullOrWhiteSpace(username))
-            throw new ApiException("Username cannot be null.");
-
-        var user = await _userRepository.GetByUsernameAsync(username);
-
-        if (user == null)
-            return null;
-
-
-        //var userByRole = await _userRepository.GetUserInfoByRoleAsync(userid, role);
-        //var employeeProfile = userByRole.Adapt<UserProfileDto>();
-
-        return user;
-    }
-
     public async Task<string?> LoginAsync(UserLoginDto userLoginDto)
     {
         var user = await _userRepository.GetByUsernameAsync(userLoginDto.Username);
@@ -61,5 +44,20 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
         if (!BCrypt.Net.BCrypt.Verify(userLoginDto.Password, user.PasswordHash))
             return null;
         return jwtService.GenerateToken(user);
+    }
+
+    public async Task<UserProfileDto?> GetByUsernameAsync(string username, string role, Guid userid)
+    {
+        if (string.IsNullOrWhiteSpace(username))
+            throw new ApiException("Username cannot be null.");
+
+        var user = await _userRepository.GetByUsernameAsync(username, includeEmployeeProfile: true);
+
+        if (user == null)
+            return null;
+
+        var employeeProfile = user.Adapt<UserProfileDto>();
+
+        return employeeProfile;
     }
 }

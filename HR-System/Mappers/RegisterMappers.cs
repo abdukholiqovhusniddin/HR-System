@@ -20,7 +20,6 @@ public class RegisterMappers : IRegister
             .Map(dest => dest.Department, src => src.EmployeeProfile.Department)
             .Map(dest => dest.HireDate, src => src.EmployeeProfile != null ? src.EmployeeProfile.HireDate : DateTime.MinValue)
             .Map(dest => dest.PassportInfo, src => src.EmployeeProfile.PassportInfo)
-            .Map(dest => dest.ManagerId, src => src.EmployeeProfile != null ? src.EmployeeProfile.ManagerId : Guid.Empty)
             .Map(dest => dest.Age, src =>
                 DateTime.Today.Year - src.EmployeeProfile.DateOfBirth.Year -
                 (src.EmployeeProfile.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - src.EmployeeProfile.DateOfBirth.Year)) ? 1 : 0));

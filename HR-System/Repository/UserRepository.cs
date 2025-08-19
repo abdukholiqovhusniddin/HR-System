@@ -1,9 +1,11 @@
 ﻿using HR_System.Commons;
 using HR_System.Data;
+using HR_System.DTOs;
 using HR_System.Entities;
 using HR_System.Exceptions;
 using HR_System.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using static HR_System.DTOs.UserAuthDto;
 
 namespace HR_System.Repository;
 public class UserRepository(AppDbContext context) : IUserRepository
@@ -24,9 +26,20 @@ public class UserRepository(AppDbContext context) : IUserRepository
         return await _context.Users.AnyAsync(n => n.Username == usernameOrEmail || n.Email == usernameOrEmail);
     }
 
-    public async Task<User?> GetByUsernameAsync(string? username) =>
-        await _context.Users.AsNoTracking().FirstOrDefaultAsync(n => n.Username == username);
+    public async Task<User?> GetByUsernameAsync(string? username, bool includeEmployeeProfile = false)
+    {
+        IQueryable<User> query = _context.Users.AsNoTracking();
 
+        if (includeEmployeeProfile)
+            query = query.Include(u => u.EmployeeProfile);
+
+        return await query.FirstOrDefaultAsync(u => u.Username == username);
+    }
+
+    //public async Task<User?> GetByIdAsync(Guid userid) =>
+    //    await _context.Users
+    //        .Include(e => e.EmployeeProfile)
+    //        .FirstOrDefaultAsync(u => u.Id == userid);
 
     //public async Task<User?> GetUserInfoByRoleAsync(Guid userId, string role)
     //{

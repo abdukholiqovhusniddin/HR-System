@@ -88,3 +88,5 @@ D:\Git-Hub_pr\HR-System\HR-System\obj\Debug\net9.0\rpswa.dswa.cache.json
 D:\Git-Hub_pr\HR-System\HR-System\obj\Debug\net9.0\rjimswa.dswa.cache.json
 D:\Git-Hub_pr\HR-System\HR-System\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
 D:\Git-Hub_pr\HR-System\HR-System\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\FluentValidation.dll
+D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\FluentValidation.DependencyInjectionExtensions.dll

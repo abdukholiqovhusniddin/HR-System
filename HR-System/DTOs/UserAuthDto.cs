@@ -19,7 +19,21 @@ public class UserAuthDto
         public string? Password { get; set; }
 
         [Required(ErrorMessage = "Role is required")]
-        public UserRole Role { get; set; } = UserRole.Employee  ;
+        public UserRole Role { get; set; } = UserRole.Employee;
+
+        public string? FullName { get; set; }
+        public string? PhotoUrl { get; set; }
+        public DateTime? DateOfBirth { get; set; }
+        public string? PhoneNumber { get; set; }
+        public string? Telegram { get; set; }
+        public bool IsEmailPublic { get; set; } = false;
+        public bool IsTelegramPublic { get; set; } = false;
+        public string? Position { get; set; }
+        public string? Department { get; set; }
+        public DateTime HireDate { get; set; } = DateTime.UtcNow;
+        public string? PassportInfo { get; set; }
+
+
     }
     public class UserDto(string? username, string? email, UserRole role)
     {
@@ -41,6 +55,7 @@ public class UserAuthDto
     {
         public string? Username { get; set; }
         public string? FullName { get; set; }
+        public UserRole Role { get; set; }
         public string? PhotoUrl { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string? Email { get; set; }

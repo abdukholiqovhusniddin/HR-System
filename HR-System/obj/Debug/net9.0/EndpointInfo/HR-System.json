@@ -176,6 +176,9 @@
             "type": "string",
             "nullable": true
           },
+          "role": {
+            "$ref": "#/components/schemas/UserRole"
+          },
           "photoUrl": {
             "type": "string",
             "nullable": true
@@ -253,6 +256,49 @@
           },
           "role": {
             "$ref": "#/components/schemas/UserRole"
+          },
+          "fullName": {
+            "type": "string",
+            "nullable": true
+          },
+          "photoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateOfBirth": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "phoneNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "telegram": {
+            "type": "string",
+            "nullable": true
+          },
+          "isEmailPublic": {
+            "type": "boolean"
+          },
+          "isTelegramPublic": {
+            "type": "boolean"
+          },
+          "position": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "hireDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "passportInfo": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false

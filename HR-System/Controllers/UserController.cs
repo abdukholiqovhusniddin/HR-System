@@ -23,7 +23,7 @@ public class UserController(IUserService service) : ApiControllerBase
         {
             return BadRequest((new ApiResponse<object>
             {
-                Error = "User with this email already exists.",
+                Error = "User creation failed. User or email already exists.",
                 StatusCode = 400
             }));
         }
@@ -36,7 +36,7 @@ public class UserController(IUserService service) : ApiControllerBase
 
     [HttpPost]
     [Route("login")]
-    public async Task<IActionResult> Login(UserLoginDto userLoginDto)
+    public async Task<IActionResult> Login([FromBody] UserLoginDto userLoginDto)
     {
         var token = await _service.LoginAsync(userLoginDto);
         if (string.IsNullOrEmpty(token))

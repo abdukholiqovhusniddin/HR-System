@@ -46,7 +46,7 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
         return jwtService.GenerateToken(user);
     }
 
-    public async Task<UserProfileDto?> GetByUsernameAsync(string username, string role, Guid userid)
+    public async Task<UserProfileDto?> GetByUsernameAsync(string username)
     {
         if (string.IsNullOrWhiteSpace(username))
             throw new ApiException("Username cannot be null.");
@@ -59,5 +59,21 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
         var employeeProfile = user.Adapt<UserProfileDto>();
 
         return employeeProfile;
+    }
+
+    public async Task<UserProfileDto?> AssignRoleAsync(string? username, UserRole role)
+    {
+        if (!Enum.IsDefined(typeof(UserRole), role))
+            throw new Exception("Invalid role.");
+
+        var user = await _userRepository.GetByUsernameAsync(username, includeEmployeeProfile: true);
+
+        if (user == null)
+            return null;
+
+        user.Role = role;
+        await _userRepository.UpdateAsync(user);
+
+        return user.Adapt<UserProfileDto>();
     }
 }

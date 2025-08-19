@@ -1,4 +1,6 @@
-﻿using HR_System.Interfaces;
+﻿using HR_System.DTOs;
+using HR_System.Interfaces;
+using HR_System.Service;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using static HR_System.DTOs.UserAuthDto;
@@ -62,7 +64,7 @@ public class UserController(IUserService service) : ApiControllerBase
                 Error = "User is not authenticated.",
                 StatusCode = 401
             }));
-        UserProfileDto? user = await _service.GetByUsernameAsync(UserName, UserRole, UserId);
+        UserProfileDto? user = await _service.GetByUsernameAsync(UserName);
 
         if (user == null)
         {
@@ -77,5 +79,17 @@ public class UserController(IUserService service) : ApiControllerBase
             Data = user,
             StatusCode = 200
         }));
+    }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPut("assign-role")]
+    public async Task<ActionResult<UserProfileDto>> AssignRole([FromBody] AssignRoleDto dto)
+    {
+        UserProfileDto? updatedUser = await _service.AssignRoleAsync(dto.Username, dto.Role);
+
+        if (updatedUser == null)
+            return NotFound("User not found");
+
+        return Ok(updatedUser);
     }
 }

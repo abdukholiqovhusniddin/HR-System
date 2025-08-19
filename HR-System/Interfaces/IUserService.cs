@@ -1,9 +1,11 @@
-﻿using static HR_System.DTOs.UserAuthDto;
+﻿using HR_System.Entities;
+using static HR_System.DTOs.UserAuthDto;
 
 namespace HR_System.Interfaces;
 public interface IUserService
 {
+    Task<UserProfileDto> AssignRoleAsync(string? username, UserRole role);
     Task<UserDto> CreateUserAsync(UserRegisterDto userRegisterDto);
-    Task<UserProfileDto?> GetByUsernameAsync(string username, string role, Guid userid);
+    Task<UserProfileDto?> GetByUsernameAsync(string username);
     Task<string?> LoginAsync(UserLoginDto userLoginDto);
 }

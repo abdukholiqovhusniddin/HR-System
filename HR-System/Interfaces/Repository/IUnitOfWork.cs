@@ -1,4 +1,4 @@
-﻿namespace HR_System.Interfaces
+﻿namespace HR_System.Interfaces.Repository
 {
     public interface IUnitOfWork
     {

@@ -1,5 +1,5 @@
 ﻿using HR_System.Data;
-using HR_System.Interfaces;
+using HR_System.Interfaces.Repository;
 
 namespace HR_System.Repository
 {

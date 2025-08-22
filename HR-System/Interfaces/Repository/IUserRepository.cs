@@ -2,7 +2,7 @@
 using HR_System.Entities;
 using static HR_System.DTOs.UserAuthDto;
 
-namespace HR_System.Interfaces;
+namespace HR_System.Interfaces.Repository;
 public interface IUserRepository
 {
     Task<Guid> CreateAsync(User user);

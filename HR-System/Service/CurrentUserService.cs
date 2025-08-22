@@ -1,5 +1,5 @@
 ﻿using System.Security.Claims;
-using HR_System.Interfaces;
+using HR_System.Interfaces.Service;
 
 namespace HR_System.Service;
 public class CurrentUserService(IHttpContextAccessor httpContextAccessor) : ICurrentUserService

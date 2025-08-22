@@ -7,9 +7,13 @@ using Mapster;
 using static HR_System.DTOs.UserAuthDto;
 
 namespace HR_System.Service;
-public class UserService(IUserRepository userRepository, JwtService jwtService) : IUserService
+public class UserService(IUserRepository userRepository, JwtService jwtService, 
+    IUnitOfWork unitOfWork,
+    IEmployerRepository employerRepository) : IUserService
 {
     private readonly IUserRepository _userRepository = userRepository;
+    private readonly IUnitOfWork _unitOfWork = unitOfWork;
+    private readonly IEmployerRepository _employerRepository = employerRepository;
 
     public async Task<UserDto> CreateUserAsync(UserRegisterDto userRegisterDto)
     {
@@ -26,13 +30,17 @@ public class UserService(IUserRepository userRepository, JwtService jwtService) 
             throw new ApiException("Invalid role value.");
         }
 
-        await _userRepository.CreateAsync(new User
+        var userId = await _userRepository.CreateAsync(new User
         {
             Username = userRegisterDto.Username,
             Email = userRegisterDto.Email,
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(userRegisterDto.Password),
             Role = userRegisterDto.Role
         });
+
+        var employer = await _employerRepository.CreateAsync(userId);
+
+        await _unitOfWork.SaveChangesAsync(cancellationToken: CancellationToken.None);
         return new UserDto(userRegisterDto.Username, userRegisterDto.Email, userRegisterDto.Role);
     }
 

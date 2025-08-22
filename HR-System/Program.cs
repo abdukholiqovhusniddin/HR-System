@@ -2,6 +2,7 @@ using System.Reflection;
 using FluentValidation;
 using HR_System.Data;
 using HR_System.Interfaces;
+using HR_System.Interfaces.Repository;
 using HR_System.JwtAuth;
 using HR_System.Middlewares;
 using HR_System.Repository;

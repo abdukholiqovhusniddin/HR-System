@@ -1,6 +1,7 @@
-﻿
+﻿using static HR_System.DTOs.UserAuthDto;
+
 namespace HR_System.Interfaces.Repository;
 public interface IEmployerRepository
 {
-    Task CreateAsync(Guid userId);
+    Task<UserDto?> CreateAsync(Guid userId, UserRegisterDto userRegisterDto);
 }

@@ -1,6 +1,7 @@
 ﻿using HR_System.DTOs;
 using HR_System.Entities;
 using HR_System.Exceptions;
+using HR_System.Helpers;
 using HR_System.Interfaces.Repository;
 using HR_System.Interfaces.Service;
 using HR_System.JwtAuth;
@@ -16,7 +17,12 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IEmployerRepository _employerRepository = employerRepository;
 
-    public async Task<UserDto> CreateUserAsync(UserRegisterDto userRegisterDto)
+    public string GeneratePasswordForUser()
+    {
+        return PasswordHelper.PasswordGeneration();
+    }
+
+    public async Task<UserDto?> CreateUserAsync(UserRegisterDto userRegisterDto)
     {
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))
         {
@@ -31,18 +37,25 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
             throw new ApiException("Invalid role value.");
         }
 
+        string password = GeneratePasswordForUser();
+
         var userId = await _userRepository.CreateAsync(new User
         {
             Username = userRegisterDto.Username,
             Email = userRegisterDto.Email,
-            PasswordHash = BCrypt.Net.BCrypt.HashPassword(userRegisterDto.Password),
+            PasswordHash = BCrypt.Net.BCrypt.HashPassword(password),
             Role = userRegisterDto.Role
         });
 
-        var employer = await _employerRepository.CreateAsync(userId);
+        UserDto? employer = await _employerRepository.CreateAsync(userId, userRegisterDto) ?? throw new ApiException("Employer creation failed.");
+
+        employer.Username = userRegisterDto.Username;
+        employer.Email = userRegisterDto.Email;
+        employer.Password = password;
+        employer.Role = userRegisterDto.Role;
 
         await _unitOfWork.SaveChangesAsync(cancellationToken: CancellationToken.None);
-        return new UserDto(userRegisterDto.Username, userRegisterDto.Email, userRegisterDto.Role);
+        return employer;
     }
 
     public async Task<string?> LoginAsync(UserLoginDto userLoginDto)

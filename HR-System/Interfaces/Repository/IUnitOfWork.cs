@@ -1,7 +1,5 @@
-﻿namespace HR_System.Interfaces.Repository
+﻿namespace HR_System.Interfaces.Repository;
+public interface IUnitOfWork
 {
-    public interface IUnitOfWork
-    {
-        Task<int> SaveChangesAsync(CancellationToken cancellationToken);
-    }
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

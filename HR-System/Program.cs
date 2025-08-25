@@ -1,5 +1,4 @@
 using System.Reflection;
-using FluentValidation;
 using HR_System.Data;
 using HR_System.Interfaces.Repository;
 using HR_System.Interfaces.Service;
@@ -16,11 +15,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMapster();
 builder.Services.AddControllers();
 
-//builder.Services.AddValidatorsFromAssemblies
-//    ((IEnumerable<Assembly>)Assembly.GetExecutingAssembly());
-
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("HRDb")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("HRDb")));
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 

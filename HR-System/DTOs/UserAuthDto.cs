@@ -14,32 +14,65 @@ public class UserAuthDto
         [EmailAddress(ErrorMessage = "Invalid email address format")]
         public string? Email { get; set; }
 
-        [MinLength(6, ErrorMessage = "Password must be at least 6 characters long")]
-        [Required(ErrorMessage = "Password is required")]
-        public string? Password { get; set; }
+        //[MinLength(6, ErrorMessage = "Password must be at least 6 characters long")]
+        //[Required(ErrorMessage = "Password is required")]
+        //public string? Password { get; set; }
 
         [Required(ErrorMessage = "Role is required")]
         public UserRole Role { get; set; } = UserRole.Employee;
 
+        [Required(ErrorMessage = "Full name is required")]
+        [StringLength(100, ErrorMessage = "Full name cannot exceed 100 characters")]
+        public string? FullName { get; set; }
+
+        [Url(ErrorMessage = "Invalid URL format")]
+        [StringLength(int.MaxValue, ErrorMessage = "Photo URL cannot exceed maximum length")]
+        public string? PhotoUrl { get; set; }
+
+        [Required(ErrorMessage = "Date of birth is required")]
+        public DateTime? DateOfBirth { get; set; }
+
+
+        [Required(ErrorMessage = "PhoneNumber is required")]
+        public string? PhoneNumber { get; set; }
+
+
+        [Required(ErrorMessage = "Telegram is required")]
+        public string? Telegram { get; set; }
+        public bool IsEmailPublic { get; set; } = false;
+        public bool IsTelegramPublic { get; set; } = false;
+
+        [Required(ErrorMessage = "Position is required")]
+        public string? Position { get; set; }
+
+        [Required(ErrorMessage = "Department is required")]
+        public string? Department { get; set; }
+
+        [Required(ErrorMessage = "Hire date is required")]
+        public DateTime HireDate { get; set; } = DateTime.UtcNow;
+
+        [Required(ErrorMessage = "Passport info is required")]
+        public string? PassportInfo { get; set; }
+
+
+    }
+    public class UserDto
+    {
+        public string? Username { get; set; }
+        public string? Email { get; set; }
+        public string? Password { get; set; }
+        public UserRole Role { get; set; }
         public string? FullName { get; set; }
         public string? PhotoUrl { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Telegram { get; set; }
-        public bool IsEmailPublic { get; set; } = false;
-        public bool IsTelegramPublic { get; set; } = false;
+        public bool IsTelegramPublic { get; set; }
+        public bool IsEmailPublic { get; set; }
         public string? Position { get; set; }
         public string? Department { get; set; }
-        public DateTime HireDate { get; set; } = DateTime.UtcNow;
+        public DateTime HireDate { get; set; }
         public string? PassportInfo { get; set; }
-
-
-    }
-    public class UserDto(string? username, string? email, UserRole role)
-    {
-        public string? Username { get; set; } = username;
-        public string? Email { get; set; } = email;
-        public UserRole Role { get; set; } = role;
     }
 
     public class UserLoginDto

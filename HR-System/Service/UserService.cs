@@ -22,20 +22,14 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
         return PasswordHelper.PasswordGeneration();
     }
 
-    public async Task<UserDto?> CreateUserAsync(UserRegisterDto userRegisterDto)
+    public async Task<UserDto> CreateUserAsync(UserRegisterDto userRegisterDto)
     {
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))
-        {
             throw new ApiException("User or already exists.");
-        }
         if (await _userRepository.ExistsAsync(userRegisterDto.Email))
-        {
             throw new ApiException("Email or already exists.");
-        } 
         if (!Enum.IsDefined(userRegisterDto.Role))
-        {
             throw new ApiException("Invalid role value.");
-        }
 
         string password = GeneratePasswordForUser();
 
@@ -47,7 +41,8 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
             Role = userRegisterDto.Role
         });
 
-        UserDto? employer = await _employerRepository.CreateAsync(userId, userRegisterDto) ?? throw new ApiException("Employer creation failed.");
+        UserDto? employer = await _employerRepository.CreateAsync(userId, userRegisterDto)
+            ?? throw new ApiException("Employer creation failed.");
 
         employer.Username = userRegisterDto.Username;
         employer.Email = userRegisterDto.Email;

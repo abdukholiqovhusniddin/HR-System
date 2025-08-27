@@ -13,11 +13,10 @@ public class UserRepository(AppDbContext context) : IUserRepository
     private readonly AppDbContext _context = context;
     public async Task<Guid> CreateAsync(User user)
     {
-        if (user == null)
+        if (user is null)
             throw new ApiException("User cannot be null.");
         await _context.Users.AddAsync(user);
         return user.Id;
-        //await _context.SaveChangesAsync();
     }
 
     public async Task<bool> ExistsAsync(string? usernameOrEmail)

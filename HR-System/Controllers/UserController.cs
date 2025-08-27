@@ -56,7 +56,7 @@ public class UserController(IUserService service) : ApiControllerBase
 
     [Authorize]
     [HttpGet("me")]
-    public async Task<IActionResult> GetMe()
+    public async Task<IActionResult> GetMe(CancellationToken cancellationToken = default)
     {
         if (!IsAuthenticated)
             return Unauthorized((new ApiResponse<object>

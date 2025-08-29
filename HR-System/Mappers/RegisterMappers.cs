@@ -23,5 +23,9 @@ public class RegisterMappers : IRegister
             .Map(dest => dest.Age, src =>
                 DateTime.Today.Year - src.EmployeeProfile.DateOfBirth.Year -
                 (src.EmployeeProfile.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - src.EmployeeProfile.DateOfBirth.Year)) ? 1 : 0));
+        config.NewConfig<Employee, UserDto>()
+            .Map(dest => dest.Username, src => src.User.Username)
+            .Map(dest => dest.Email, src => src.User.Email)
+            .Map(dest => dest.Role, src => src.User.Role);
     }
 }

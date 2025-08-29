@@ -185,8 +185,7 @@
           },
           "dateOfBirth": {
             "type": "string",
-            "format": "date-time",
-            "nullable": true
+            "format": "date-time"
           },
           "email": {
             "type": "string",
@@ -233,9 +232,17 @@
       },
       "UserRegisterDto": {
         "required": [
+          "dateOfBirth",
+          "department",
           "email",
-          "password",
+          "fullName",
+          "hireDate",
+          "managerUsername",
+          "passportInfo",
+          "phoneNumber",
+          "position",
           "role",
+          "telegram",
           "username"
         ],
         "type": "object",
@@ -250,33 +257,32 @@
             "type": "string",
             "format": "email"
           },
-          "password": {
-            "minLength": 6,
-            "type": "string"
-          },
           "role": {
             "$ref": "#/components/schemas/UserRole"
           },
           "fullName": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 100,
+            "minLength": 0,
+            "type": "string"
           },
           "photoUrl": {
+            "maxLength": 2147483647,
+            "minLength": 0,
             "type": "string",
+            "format": "uri",
             "nullable": true
           },
           "dateOfBirth": {
             "type": "string",
-            "format": "date-time",
-            "nullable": true
+            "format": "date-time"
           },
           "phoneNumber": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "telegram": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "isEmailPublic": {
             "type": "boolean"
@@ -285,20 +291,24 @@
             "type": "boolean"
           },
           "position": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "department": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
           },
           "hireDate": {
             "type": "string",
             "format": "date-time"
           },
           "passportInfo": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "type": "string"
+          },
+          "managerUsername": {
+            "minLength": 1,
+            "type": "string"
           }
         },
         "additionalProperties": false

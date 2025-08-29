@@ -26,7 +26,7 @@ builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 
-builder.Services.AddSwaggerGen();
+//builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<JwtService>();
 builder.Services.Configure<AuthSettings>(builder.Configuration.GetSection("AuthSettings"));
 builder.Services.AddJwtAuthentication(builder.Configuration);
@@ -53,8 +53,8 @@ builder.Services.AddSwaggerGen(c =>
             {
                 Reference = new OpenApiReference
                 {
-                    Type = ReferenceType.SecurityScheme,
-                    Id = "Bearer"
+                    Id = "Bearer",
+                    Type = ReferenceType.SecurityScheme
                 }
             },
             Array.Empty<string>()

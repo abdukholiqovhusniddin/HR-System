@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>HR_System</RootNamespace>
+    <UserSecretsId>37a596f8-7a4e-4422-bf41-b0d920b3d5cc</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

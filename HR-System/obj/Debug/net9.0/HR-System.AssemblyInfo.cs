@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("37a596f8-7a4e-4422-bf41-b0d920b3d5cc")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("HR-System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcf6a208e1871d98b11df93f29ea3697f11b094e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+78ba60e0348164e4eb6a4c2d41063fa8382d4304")]
 [assembly: System.Reflection.AssemblyProductAttribute("HR-System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HR-System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

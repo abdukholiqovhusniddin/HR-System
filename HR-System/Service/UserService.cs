@@ -44,10 +44,7 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
         UserDto? employer = await _employerRepository.CreateAsync(userId, userRegisterDto)
             ?? throw new ApiException("Employer creation failed.");
 
-        employer.Username = userRegisterDto.Username;
-        employer.Email = userRegisterDto.Email;
         employer.Password = password;
-        employer.Role = userRegisterDto.Role;
 
         await _unitOfWork.SaveChangesAsync(cancellationToken: CancellationToken.None);
         return employer;
@@ -70,12 +67,11 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
 
         var user = await _userRepository.GetByUsernameAsync(username, includeEmployeeProfile: true);
 
-        if (user == null)
-            return null;
+        if (user is null)
+            throw new ApiException("User not found.");
 
-        var employeeProfile = user.Adapt<UserProfileDto>();
 
-        return employeeProfile;
+        return user.Adapt<UserProfileDto>();
     }
 
     public async Task<UserProfileDto?> AssignRoleAsync(string? username, UserRole role)

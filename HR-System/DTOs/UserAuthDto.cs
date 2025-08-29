@@ -30,7 +30,7 @@ public class UserAuthDto
         public string? PhotoUrl { get; set; }
 
         [Required(ErrorMessage = "Date of birth is required")]
-        public DateTime? DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
 
         [Required(ErrorMessage = "PhoneNumber is required")]
@@ -54,7 +54,8 @@ public class UserAuthDto
         [Required(ErrorMessage = "Passport info is required")]
         public string? PassportInfo { get; set; }
 
-
+        [Required(ErrorMessage = "ManagerUsername is required")]
+        public string? ManagerUsername { get; set; }
     }
     public class UserDto
     {
@@ -64,7 +65,7 @@ public class UserAuthDto
         public UserRole Role { get; set; }
         public string? FullName { get; set; }
         public string? PhotoUrl { get; set; }
-        public DateTime? DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Telegram { get; set; }
         public bool IsTelegramPublic { get; set; }
@@ -73,6 +74,7 @@ public class UserAuthDto
         public string? Department { get; set; }
         public DateTime HireDate { get; set; }
         public string? PassportInfo { get; set; }
+        public string? ManagerName { get; set; }
     }
 
     public class UserLoginDto
@@ -90,7 +92,7 @@ public class UserAuthDto
         public string? FullName { get; set; }
         public UserRole Role { get; set; }
         public string? PhotoUrl { get; set; }
-        public DateTime? DateOfBirth { get; set; }
+        public DateTime DateOfBirth { get; set; }
         public string? Email { get; set; }
         public bool IsEmailPublic { get; set; }
         public string? PhoneNumber { get; set; }

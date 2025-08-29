@@ -18,7 +18,7 @@ public class JwtService(IOptions<AuthSettings> options)
             new(ClaimTypes.Role, account.Role.ToString())
         };
         var jwtToken = new JwtSecurityToken(
-            expires: DateTime.UtcNow.Add(options.Value.Expres),
+            expires: DateTime.UtcNow.Add(options.Value.Expires),
             claims: claims,
             signingCredentials: new SigningCredentials(
                 new SymmetricSecurityKey(Encoding.UTF8.GetBytes(options.Value.SecretKey)),

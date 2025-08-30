@@ -237,7 +237,7 @@
           "email",
           "fullName",
           "hireDate",
-          "managerUsername",
+          "managerId",
           "passportInfo",
           "phoneNumber",
           "position",
@@ -306,9 +306,9 @@
             "minLength": 1,
             "type": "string"
           },
-          "managerUsername": {
-            "minLength": 1,
-            "type": "string"
+          "managerId": {
+            "type": "string",
+            "format": "uuid"
           }
         },
         "additionalProperties": false

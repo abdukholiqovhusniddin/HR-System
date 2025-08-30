@@ -17,7 +17,7 @@ public class Employee : BaseEntity
 
     public string? PassportInfo { get; set; }
 
-    public Guid ManagerId { get; set; }
+    public Guid? ManagerId { get; set; }
     public Employee? Manager { get; set; }
 
     public Guid UserId { get; set; }

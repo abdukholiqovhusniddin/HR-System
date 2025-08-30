@@ -55,7 +55,7 @@ public class UserAuthDto
         public string? PassportInfo { get; set; }
 
         [Required(ErrorMessage = "ManagerUsername is required")]
-        public string? ManagerUsername { get; set; }
+        public Guid? ManagerId { get; set; }
     }
     public class UserDto
     {
@@ -74,7 +74,7 @@ public class UserAuthDto
         public string? Department { get; set; }
         public DateTime HireDate { get; set; }
         public string? PassportInfo { get; set; }
-        public string? ManagerName { get; set; }
+        public Guid? ManagerId { get; set; }
     }
 
     public class UserLoginDto

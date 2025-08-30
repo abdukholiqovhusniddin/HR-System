@@ -34,7 +34,7 @@ public class UserConfiguration: IEntityTypeConfiguration<User>
         builder.HasData(
             new User
             {
-                Id = new Guid("7b9b6dcb-79ea-4f1f-9c6e-02f1cf23f18e"),
+                Id = new Guid("1cd5ed74-9327-4446-9c76-adfc28d3f5bd"),
                 Username = "admin",
                 Email = "test@gmail.com",
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"),

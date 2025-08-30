@@ -24,7 +24,7 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
         builder.HasData(
             new Employee
             {
-                Id = new Guid("7b9b6dcb-79ea-4f1f-9c6e-02f1cf23f19a"),
+                Id = new Guid("d0ef2057-73ee-4092-80ea-b891a9947eae"),
                 FullName = "Admin User",
                 Email = "abdukholiqovh@gmail.com",
                 PhoneNumber = "+998901234567",
@@ -37,8 +37,7 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
                 PhotoUrl = "https://example.com/admin_photo.jpg",
                 PassportInfo = "AB1234567",
                 CreatedAt = DateTime.UtcNow,
-                ManagerId = new Guid("7b9b6dcb-79ea-4f1f-9c6e-02f1cf23f19a"),
-                UserId = new Guid("7b9b6dcb-79ea-4f1f-9c6e-02f1cf23f18e")
+                UserId = new Guid("1cd5ed74-9327-4446-9c76-adfc28d3f5bd")
             }
         );
     }

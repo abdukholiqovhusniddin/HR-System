@@ -13,25 +13,8 @@ public class EmployerRepository(AppDbContext context) : IEmployerRepository
     {
         var employer = await _context.Employees.FirstOrDefaultAsync(x => x.UserId == userId);
 
-        if (employer is not null)
+        if (employer is null)
             return null;
-
-        Guid managerId;
-
-        if (userRegisterDto.Role == UserRole.Admin)
-        {
-            managerId = userId;
-        }
-        else
-        {
-            var manager = await _context.Employees
-                .FirstOrDefaultAsync(x => x.User != null
-                    && x.User.Username == userRegisterDto.ManagerUsername
-                    && (x.User.Role == UserRole.Manager || x.User.Role == UserRole.Admin))
-                ?? throw new Exception("Manager not found.");
-
-            managerId = manager.Id;
-        }
 
         var newEmployer = new Employee
         {
@@ -47,9 +30,16 @@ public class EmployerRepository(AppDbContext context) : IEmployerRepository
             Department = userRegisterDto.Department,
             HireDate = userRegisterDto.HireDate,
             PassportInfo = userRegisterDto.PassportInfo,
-            UserId = userId,
-            ManagerId = managerId
+            UserId = userId
         };
+
+        if (userRegisterDto.Role != UserRole.Admin)
+        {
+            var manager = await _context.Employees
+                .FirstOrDefaultAsync(x => x.Id == userRegisterDto.ManagerId)
+                ?? throw new Exception("Manager not found.");
+            newEmployer.ManagerId = manager.Id;
+        }
 
         await _context.Employees.AddAsync(newEmployer);
 

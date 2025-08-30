@@ -1,4 +1,5 @@
-﻿using HR_System.Entities;
+﻿using HR_System.Data.Configuration;
+using HR_System.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace HR_System.Data;
@@ -18,8 +19,13 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.ApplyConfiguration(new ContractConfiguration());
+        modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+        modelBuilder.ApplyConfiguration(new EquipmentAssignmentConfiguration());
+        modelBuilder.ApplyConfiguration(new SalaryConfiguration());
+        modelBuilder.ApplyConfiguration(new UserConfiguration());
+        modelBuilder.ApplyConfiguration(new VacationRequestConfiguration());
         base.OnModelCreating(modelBuilder);
-
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        //modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
 }

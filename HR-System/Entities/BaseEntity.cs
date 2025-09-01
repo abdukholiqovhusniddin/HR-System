@@ -1,4 +1,6 @@
-﻿namespace HR_System.Entities;
+﻿using System.Data;
+
+namespace HR_System.Entities;
 public abstract class BaseEntity
 {
     public Guid Id { get; set; }

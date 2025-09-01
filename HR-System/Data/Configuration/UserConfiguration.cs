@@ -31,6 +31,9 @@ public class UserConfiguration: IEntityTypeConfiguration<User>
             .IsRequired()
             .HasConversion<string>();
 
+        builder.Property(u => u.CreatedAt)
+            .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
         builder.HasData(
             new User
             {

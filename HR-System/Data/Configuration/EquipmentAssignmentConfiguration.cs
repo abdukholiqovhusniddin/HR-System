@@ -11,5 +11,8 @@ public class EquipmentAssignmentConfiguration: IEntityTypeConfiguration<Equipmen
         builder.Property(e => e.Model).HasMaxLength(150);
         builder.Property(e => e.InventoryNumber).HasMaxLength(100);
         builder.Property(e => e.Status).HasMaxLength(50);
+
+        builder.Property(u => u.CreatedAt)
+            .HasDefaultValueSql("CURRENT_TIMESTAMP");
     }
 }

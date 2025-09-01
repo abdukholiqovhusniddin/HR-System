@@ -20,11 +20,11 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.ApplyConfiguration(new ContractConfiguration());
-        modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
         modelBuilder.ApplyConfiguration(new EquipmentAssignmentConfiguration());
         modelBuilder.ApplyConfiguration(new SalaryConfiguration());
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new VacationRequestConfiguration());
+        modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
         base.OnModelCreating(modelBuilder);
         //modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }

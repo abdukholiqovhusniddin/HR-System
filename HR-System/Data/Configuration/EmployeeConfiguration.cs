@@ -16,6 +16,9 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
         builder.Property(e => e.PhotoUrl).HasMaxLength(500);
         builder.Property(e => e.PassportInfo).HasMaxLength(200);
 
+        builder.Property(u => u.CreatedAt)
+            .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
         builder.HasOne(e => e.Manager)
                .WithMany(e => e.Subordinates)
                .HasForeignKey(e => e.ManagerId)

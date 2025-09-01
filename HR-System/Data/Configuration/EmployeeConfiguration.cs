@@ -20,6 +20,8 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
                .WithMany(e => e.Subordinates)
                .HasForeignKey(e => e.ManagerId)
                .OnDelete(DeleteBehavior.Restrict);
+        builder.Property(u=>u.CreatedAt)
+            .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
         builder.HasData(
             new Employee

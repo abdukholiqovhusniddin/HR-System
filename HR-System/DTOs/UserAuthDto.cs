@@ -54,7 +54,6 @@ public class UserAuthDto
         [Required(ErrorMessage = "Passport info is required")]
         public string? PassportInfo { get; set; }
 
-        [Required(ErrorMessage = "ManagerUsername is required")]
         public Guid? ManagerId { get; set; }
     }
     public class UserDto

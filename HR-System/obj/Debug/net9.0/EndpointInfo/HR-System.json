@@ -237,7 +237,6 @@
           "email",
           "fullName",
           "hireDate",
-          "managerId",
           "passportInfo",
           "phoneNumber",
           "position",
@@ -308,7 +307,8 @@
           },
           "managerId": {
             "type": "string",
-            "format": "uuid"
+            "format": "uuid",
+            "nullable": true
           }
         },
         "additionalProperties": false

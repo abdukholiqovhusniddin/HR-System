@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "/Users/shahlojaborova/IO Academy/projects/HR-System/HR-System/HR-System.csproj": {}
+    "D:\\Git-Hub_pr\\HR-System\\HR-System\\HR-System.csproj": {}
   },
   "projects": {
-    "/Users/shahlojaborova/IO Academy/projects/HR-System/HR-System/HR-System.csproj": {
+    "D:\\Git-Hub_pr\\HR-System\\HR-System\\HR-System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/shahlojaborova/IO Academy/projects/HR-System/HR-System/HR-System.csproj",
+        "projectUniqueName": "D:\\Git-Hub_pr\\HR-System\\HR-System\\HR-System.csproj",
         "projectName": "HR-System",
-        "projectPath": "/Users/shahlojaborova/IO Academy/projects/HR-System/HR-System/HR-System.csproj",
-        "packagesPath": "/Users/shahlojaborova/.nuget/packages/",
-        "outputPath": "/Users/shahlojaborova/IO Academy/projects/HR-System/HR-System/obj/",
+        "projectPath": "D:\\Git-Hub_pr\\HR-System\\HR-System\\HR-System.csproj",
+        "packagesPath": "C:\\Users\\Another love\\.nuget\\packages\\",
+        "outputPath": "D:\\Git-Hub_pr\\HR-System\\HR-System\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/shahlojaborova/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Another love\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -116,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

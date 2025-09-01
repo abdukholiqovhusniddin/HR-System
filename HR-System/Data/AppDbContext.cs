@@ -20,13 +20,24 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new ContractConfiguration());
-        modelBuilder.ApplyConfiguration(new EquipmentAssignmentConfiguration());
-        modelBuilder.ApplyConfiguration(new SalaryConfiguration());
-        modelBuilder.ApplyConfiguration(new UserConfiguration());
-        modelBuilder.ApplyConfiguration(new VacationRequestConfiguration());
-        modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
+        var dateTimeConverter = new ValueConverter<DateTime, DateTime>(
+        v => v.Kind == DateTimeKind.Utc ? v : DateTime.SpecifyKind(v, DateTimeKind.Utc),
+        v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
+
+        foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+        {
+            foreach (var property in entityType.GetProperties().Where(p => p.ClrType == typeof(DateTime)))
+            {
+                property.SetValueConverter(dateTimeConverter);
+            }
+        }
+        //modelBuilder.ApplyConfiguration(new ContractConfiguration());
+        //modelBuilder.ApplyConfiguration(new EquipmentAssignmentConfiguration());
+        //modelBuilder.ApplyConfiguration(new SalaryConfiguration());
+        //modelBuilder.ApplyConfiguration(new UserConfiguration());
+        //modelBuilder.ApplyConfiguration(new VacationRequestConfiguration());
+        //modelBuilder.ApplyConfiguration(new EmployeeConfiguration());
         base.OnModelCreating(modelBuilder);
-        //modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(AppDbContext).Assembly);
     }
 }

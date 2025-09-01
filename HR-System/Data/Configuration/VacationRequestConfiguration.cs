@@ -9,7 +9,7 @@ public class VacationRequestConfiguration : IEntityTypeConfiguration<VacationReq
     {
         builder.Property(v => v.VacationType).HasMaxLength(100);
         builder.Property(v => v.Status).HasMaxLength(50);
-        builder.Property(u=>u.CreatedAt)
-            .HasDefaultValueSql("CURRENT_TIMESTAMP");
+        //builder.Property(u=>u.CreatedAt)
+        //    .HasDefaultValueSql("CURRENT_TIMESTAMP");
     }
 }

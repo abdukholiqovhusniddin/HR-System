@@ -11,11 +11,6 @@ public class EmployerRepository(AppDbContext context) : IEmployerRepository
     private readonly AppDbContext _context = context;
     public async Task<UserDto?> CreateAsync(Guid userId, UserRegisterDto userRegisterDto)
     {
-        var employer = await _context.Employees.FirstOrDefaultAsync(x => x.UserId == userId);
-
-        if (employer is null)
-            return null;
-
         var newEmployer = new Employee
         {
             FullName = userRegisterDto.FullName,
@@ -33,7 +28,7 @@ public class EmployerRepository(AppDbContext context) : IEmployerRepository
             UserId = userId
         };
 
-        if (userRegisterDto.Role != UserRole.Admin)
+        if (userRegisterDto.Role != UserRole.Admin && userRegisterDto.ManagerId.ToString() != "3fa85f64-5717-4562-b3fc-2c963f66afa6")
         {
             var manager = await _context.Employees
                 .FirstOrDefaultAsync(x => x.Id == userRegisterDto.ManagerId)

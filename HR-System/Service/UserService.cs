@@ -45,6 +45,9 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
             ?? throw new ApiException("Employer creation failed.");
 
         employer.Password = password;
+        employer.Username = userRegisterDto.Username;
+        employer.Email = userRegisterDto.Email;
+        employer.Role = userRegisterDto.Role;
 
         await _unitOfWork.SaveChangesAsync(cancellationToken: CancellationToken.None);
         return employer;

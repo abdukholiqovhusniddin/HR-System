@@ -87,9 +87,17 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
         if (user == null)
             return null;
 
-        if(user.Role == UserRole.Manager)
+        
+
+        if (user.Role == UserRole.Manager)
         {
-            throw new ApiException("Manger not update role");
+            var managerId = await _userRepository.ExistsMenegerId(dto.NewManagerId);
+            if (managerId)
+            {
+                ////   ManagerId => NewManagerId all keys
+            }
+            else 
+                throw new ApiException("Manager not found");
         }
 
         user.Role = dto.Role;

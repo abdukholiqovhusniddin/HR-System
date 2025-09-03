@@ -143,6 +143,11 @@
           },
           "role": {
             "$ref": "#/components/schemas/UserRole"
+          },
+          "managerId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
           }
         },
         "additionalProperties": false

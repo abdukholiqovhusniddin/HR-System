@@ -26,9 +26,12 @@ public class UserRepository(AppDbContext context) : IUserRepository
         return await _context.Users.AnyAsync(n => n.Username == usernameOrEmail || n.Email == usernameOrEmail);
     }
 
+    public async Task<bool> ExistsMenegerId(Guid? managerId) =>
+        await _context.Employees.AnyAsync(m => m.Id == managerId && m.ManagerId == null);
+
     public async Task<User?> GetByUsernameAsync(string? username, bool includeEmployeeProfile = false)
     {
-        IQueryable<User> query = _context.Users.AsNoTracking();
+        IQueryable<User> query = _context.Users;
 
         if (includeEmployeeProfile)
             query = query.Include(u => u.EmployeeProfile);

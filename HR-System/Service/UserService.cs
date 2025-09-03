@@ -77,17 +77,34 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
         return user.Adapt<UserProfileDto>();
     }
 
-    public async Task<UserProfileDto?> AssignRoleAsync(string? username, UserRole role)
+    public async Task<UserProfileDto?> AssignRoleAsync(AssignRoleDto dto)
     {
-        if (!Enum.IsDefined(typeof(UserRole), role))
+        if (!Enum.IsDefined(typeof(UserRole), dto.Role))
             throw new Exception("Invalid role.");
 
-        var user = await _userRepository.GetByUsernameAsync(username, includeEmployeeProfile: true);
+        var user = await _userRepository.GetByUsernameAsync(dto.Username, includeEmployeeProfile: true);
 
         if (user == null)
             return null;
 
-        user.Role = role;
+        if(user.Role == UserRole.Manager)
+        {
+            throw new ApiException("Manger not update role");
+        }
+
+        user.Role = dto.Role;
+
+        if (dto.Role != UserRole.Manager && dto.Role != UserRole.Admin)
+        {
+            bool managerId = await _userRepository.ExistsMenegerId(dto.ManagerId);
+            if (managerId)
+                user.EmployeeProfile.ManagerId = dto.ManagerId;
+            else
+                throw new ApiException("Manager not found");
+        }
+        else
+            user.EmployeeProfile.ManagerId = null;
+
         await _userRepository.UpdateAsync(user);
 
         return user.Adapt<UserProfileDto>();

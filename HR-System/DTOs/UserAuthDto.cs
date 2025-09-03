@@ -14,10 +14,6 @@ public class UserAuthDto
         [EmailAddress(ErrorMessage = "Invalid email address format")]
         public string? Email { get; set; }
 
-        //[MinLength(6, ErrorMessage = "Password must be at least 6 characters long")]
-        //[Required(ErrorMessage = "Password is required")]
-        //public string? Password { get; set; }
-
         [Required(ErrorMessage = "Role is required")]
         public UserRole Role { get; set; } = UserRole.Employee;
 
@@ -102,5 +98,17 @@ public class UserAuthDto
         public DateTime HireDate { get; set; }
         public string? PassportInfo { get; set; }
         public int? Age { get; internal set; }
+    }
+
+    public class AssignRoleDto
+    {
+        [Required]
+        public string? Username { get; set; }
+
+        [Required]
+        [EnumDataType(typeof(UserRole), ErrorMessage = "Invalid role.")]
+        public UserRole Role { get; set; }
+
+        public Guid? ManagerId { get; set; }
     }
 }

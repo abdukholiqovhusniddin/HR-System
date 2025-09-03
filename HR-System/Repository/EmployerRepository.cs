@@ -1,5 +1,6 @@
 ﻿using HR_System.Data;
 using HR_System.Entities;
+using HR_System.Exceptions;
 using HR_System.Interfaces.Repository;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
@@ -28,12 +29,11 @@ public class EmployerRepository(AppDbContext context) : IEmployerRepository
             UserId = userId
         };
 
-        if (userRegisterDto.Role != UserRole.Admin && userRegisterDto.ManagerId.ToString() != "3fa85f64-5717-4562-b3fc-2c963f66afa6")
-        {
+        if(userRegisterDto.Role != UserRole.Admin)
+            {
             var manager = await _context.Employees
-                .FirstOrDefaultAsync(x => x.Id == userRegisterDto.ManagerId)
-                ?? throw new Exception("Manager not found.");
-            newEmployer.ManagerId = manager.Id;
+                    .FirstOrDefaultAsync(x => x.Id == userRegisterDto.ManagerId && x.ManagerId == null && x.User.Role != UserRole.Admin)
+                    ?? throw new ApiException("Manager not found");
         }
 
         await _context.Employees.AddAsync(newEmployer);

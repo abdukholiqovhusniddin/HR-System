@@ -85,7 +85,7 @@ public class UserController(IUserService service) : ApiControllerBase
     [HttpPut("assign-role")]
     public async Task<ActionResult<UserProfileDto>> AssignRole([FromBody] AssignRoleDto dto)
     {
-        UserProfileDto? updatedUser = await _service.AssignRoleAsync(dto.Username, dto.Role);
+        UserProfileDto? updatedUser = await _service.AssignRoleAsync(dto);
 
         if (updatedUser == null)
             return NotFound("User not found");

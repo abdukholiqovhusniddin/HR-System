@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "dto",
-        "Type": "HR_System.DTOs.AssignRoleDto",
+        "Type": "HR_System.DTOs.UserAuthDto\u002BAssignRoleDto",
         "IsRequired": true
       }
     ],

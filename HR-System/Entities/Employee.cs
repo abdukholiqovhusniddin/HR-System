@@ -21,7 +21,7 @@ public class Employee : BaseEntity
     public Employee? Manager { get; set; }
 
     public Guid UserId { get; set; }
-    public User? User { get; set; }
+    public User User { get; set; } = default!;
 
     public ICollection<Employee>? Subordinates { get; set; }
     public ICollection<Contract>? Contracts { get; set; }

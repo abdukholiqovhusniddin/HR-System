@@ -29,15 +29,16 @@ public class EmployerRepository(AppDbContext context) : IEmployerRepository
             UserId = userId
         };
 
-        if(userRegisterDto.Role != UserRole.Admin)
-            {
+        if(userRegisterDto.Role != UserRole.Admin && userRegisterDto.ManagerId.ToString() != "3fa85f64-5717-4562-b3fc-2c963f66afa6")
+        {
             var manager = await _context.Employees
-                    .FirstOrDefaultAsync(x => x.Id == userRegisterDto.ManagerId && x.ManagerId == null && x.User.Role != UserRole.Admin)
+                    .FirstOrDefaultAsync(x => x.Id == userRegisterDto.ManagerId && x.User.Role == UserRole.Manager)
                     ?? throw new ApiException("Manager not found");
+            newEmployer.ManagerId = manager.ManagerId;
         }
 
         await _context.Employees.AddAsync(newEmployer);
-
+        
         return newEmployer.Adapt<UserDto>();
     }
 }

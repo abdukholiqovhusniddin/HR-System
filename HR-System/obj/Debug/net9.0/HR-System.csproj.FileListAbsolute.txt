@@ -436,3 +436,6 @@ D:\Git-Hub_pr\HR-System\HR-System\obj\Debug\net9.0\refint\HR-System.dll
 D:\Git-Hub_pr\HR-System\HR-System\obj\Debug\net9.0\HR-System.pdb
 D:\Git-Hub_pr\HR-System\HR-System\obj\Debug\net9.0\HR-System.genruntimeconfig.cache
 D:\Git-Hub_pr\HR-System\HR-System\obj\Debug\net9.0\ref\HR-System.dll
+D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
+D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\MailKit.dll
+D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\MimeKit.dll

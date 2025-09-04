@@ -1,11 +1,8 @@
-﻿using HR_System.Commons;
-using HR_System.Data;
-using HR_System.DTOs;
+﻿using HR_System.Data;
 using HR_System.Entities;
 using HR_System.Exceptions;
 using HR_System.Interfaces.Repository;
 using Microsoft.EntityFrameworkCore;
-using static HR_System.DTOs.UserAuthDto;
 
 namespace HR_System.Repository;
 public class UserRepository(AppDbContext context) : IUserRepository
@@ -25,9 +22,6 @@ public class UserRepository(AppDbContext context) : IUserRepository
             throw new ApiException("Username or email cannot be null or empty.");
         return await _context.Users.AnyAsync(n => n.Username == usernameOrEmail || n.Email == usernameOrEmail);
     }
-
-    public async Task<bool> ExistsMenegerId(Guid? managerId) =>
-        await _context.Employees.AnyAsync(m => m.Id == managerId && m.ManagerId == null);
 
     public async Task<User?> GetByUsernameAsync(string? username, bool includeEmployeeProfile = false)
     {

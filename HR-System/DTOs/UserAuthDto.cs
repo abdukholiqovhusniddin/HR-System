@@ -108,9 +108,5 @@ public class UserAuthDto
         [Required]
         [EnumDataType(typeof(UserRole), ErrorMessage = "Invalid role.")]
         public UserRole Role { get; set; }
-
-        public Guid? ManagerId { get; set; }
-
-        public Guid? NewManagerId { get; set; }
     }
 }

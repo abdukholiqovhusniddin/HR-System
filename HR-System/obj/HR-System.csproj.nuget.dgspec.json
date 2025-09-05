@@ -109,6 +109,14 @@
             "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "Telegram.Bot": {
+              "target": "Package",
+              "version": "[22.7.2, )"
+            },
+            "Telegram.Bots.Extensions.Polling": {
+              "target": "Package",
+              "version": "[5.9.0, )"
             }
           },
           "imports": [

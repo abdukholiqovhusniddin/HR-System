@@ -2,8 +2,8 @@
 public class Employee : BaseEntity
 {
     public string? FullName { get; set; }
-    public string? PhotoUrl { get; set; }
     public DateTime DateOfBirth { get; set; }
+    public string? PhotoUrl { get; set; }
     
     public string? Email { get; set; }
     public bool IsEmailPublic { get; set; }
@@ -23,9 +23,11 @@ public class Employee : BaseEntity
     public Guid UserId { get; set; }
     public User User { get; set; } = default!;
 
+    public DataFile Image { get; set; } = default!;
+
     public ICollection<Employee>? Subordinates { get; set; }
     public ICollection<Contract>? Contracts { get; set; }
     public ICollection<Salary>? Salaries { get; set; }
     public ICollection<VacationRequest>? Vacations { get; set; }
-    public ICollection<EquipmentAssignment>? Equipments { get; set; }    
+    public ICollection<EquipmentAssignment>? Equipments { get; set; }
 }

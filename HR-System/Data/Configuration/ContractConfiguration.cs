@@ -12,7 +12,5 @@ public class ContractConfiguration : IEntityTypeConfiguration<Contract>
         builder.Property(c => c.DocumentUrl).HasMaxLength(250);
         builder.Property(c => c.DocumentName).HasMaxLength(150);
         builder.Property(c => c.DocumentType).HasMaxLength(50);
-        //builder.Property(u=>u.CreatedAt)
-        //    .HasDefaultValueSql("CURRENT_TIMESTAMP");
     }
 }

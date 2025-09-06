@@ -446,3 +446,4 @@ D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\Polly.Extensions.Http.dll
 D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\Telegram.Bot.dll
 D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\Telegram.Bots.dll
 D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\Telegram.Bots.Extensions.Polling.dll
+D:\Git-Hub_pr\HR-System\HR-System\bin\Debug\net9.0\HR-System.staticwebassets.runtime.json

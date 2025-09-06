@@ -10,7 +10,5 @@ public class SalaryConfiguration: IEntityTypeConfiguration<Salary>
         builder.Property(s => s.BaseSalary).HasPrecision(18, 2);
         builder.Property(s => s.Bonus).HasPrecision(18, 2);
         builder.Property(s => s.Deduction).HasPrecision(18, 2);
-        //builder.Property(u=>u.CreatedAt)
-        //    .HasDefaultValueSql("CURRENT_TIMESTAMP");
     }
 }

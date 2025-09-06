@@ -16,7 +16,7 @@ public class UserController(IUserService service) : ApiControllerBase
     [Authorize(Roles = "Admin")]
     [HttpPost]
     [Route("register")]
-    public async Task<IActionResult> CreateUser(UserRegisterDto userRegisterDto)
+    public async Task<IActionResult> CreateUser([FromForm]UserRegisterDto userRegisterDto)
     {
         UserDto createdUser = await _service.CreateUserAsync(userRegisterDto);
         if (createdUser == null)

@@ -1,4 +1,6 @@
-﻿using HR_System.DTOs;
+﻿using System.Text;
+using System.Xml;
+using HR_System.DTOs;
 using HR_System.Entities;
 using HR_System.Exceptions;
 using HR_System.Helpers;
@@ -6,7 +8,9 @@ using HR_System.Interfaces.Repository;
 using HR_System.Interfaces.Service;
 using HR_System.JwtAuth;
 using Mapster;
+using Newtonsoft.Json;
 using static HR_System.DTOs.UserAuthDto;
+using Formatting = Newtonsoft.Json.Formatting;
 
 namespace HR_System.Service;
 public class UserService(IUserRepository userRepository, JwtService jwtService, 
@@ -17,11 +21,9 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IEmployerRepository _employerRepository = employerRepository;
 
-    public string GeneratePasswordForUser()
-    {
-        return PasswordHelper.PasswordGeneration();
-    }
-
+    public string GeneratePasswordForUser() =>
+        PasswordHelper.PasswordGeneration();
+    
     public async Task<UserDto> CreateUserAsync(UserRegisterDto userRegisterDto)
     {
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))

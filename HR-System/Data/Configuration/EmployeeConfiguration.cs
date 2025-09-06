@@ -36,7 +36,6 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
                 IsEmailPublic = true,
                 IsTelegramPublic = true,
                 Telegram = "admin_telegram",
-                PhotoUrl = "https://example.com/admin_photo.jpg",
                 PassportInfo = "AB1234567",
                 CreatedAt = DateTime.UtcNow,
                 UserId = new Guid("1cd5ed74-9327-4446-9c76-adfc28d3f5bd")

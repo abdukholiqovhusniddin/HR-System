@@ -21,9 +21,8 @@ public class UserAuthDto
         [StringLength(100, ErrorMessage = "Full name cannot exceed 100 characters")]
         public string? FullName { get; set; }
 
-        [Url(ErrorMessage = "Invalid URL format")]
-        [StringLength(int.MaxValue, ErrorMessage = "Photo URL cannot exceed maximum length")]
-        public string? PhotoUrl { get; set; }
+        
+        public FormFile? PhotoUrl { get; set; }
 
         [Required(ErrorMessage = "Date of birth is required")]
         public DateTime DateOfBirth { get; set; }
@@ -59,7 +58,7 @@ public class UserAuthDto
         public string? Password { get; set; }
         public UserRole Role { get; set; }
         public string? FullName { get; set; }
-        public string? PhotoUrl { get; set; }
+        public IFormFile? PhotoUrl { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Telegram { get; set; }
@@ -86,7 +85,7 @@ public class UserAuthDto
         public string? Username { get; set; }
         public string? FullName { get; set; }
         public UserRole Role { get; set; }
-        public string? PhotoUrl { get; set; }
+        public IFormFile? PhotoUrl { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string? Email { get; set; }
         public bool IsEmailPublic { get; set; }

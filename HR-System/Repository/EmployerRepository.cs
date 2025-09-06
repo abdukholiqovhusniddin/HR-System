@@ -15,7 +15,7 @@ public class EmployerRepository(AppDbContext context) : IEmployerRepository
         var newEmployer = new Employee
         {
             FullName = userRegisterDto.FullName,
-            PhotoUrl = userRegisterDto.PhotoUrl,
+           // PhotoUrl = userRegisterDto.PhotoUrl,
             DateOfBirth = userRegisterDto.DateOfBirth,
             Email = userRegisterDto.Email,
             IsEmailPublic = userRegisterDto.IsEmailPublic,

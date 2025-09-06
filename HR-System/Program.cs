@@ -35,7 +35,15 @@ builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddSwaggerGen(c =>
 {
+    
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "HR API", Version = "v1" });
+    // убираем дефолтные примеры у Guid
+    c.MapType<Guid>(() => new OpenApiSchema
+    {
+        Type = "string",
+        Format = "uuid",
+        Example = null // 🔑 вот это убирает 3fa85f64...
+    });
     c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         In = ParameterLocation.Header,

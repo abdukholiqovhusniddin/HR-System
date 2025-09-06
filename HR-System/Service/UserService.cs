@@ -15,6 +15,7 @@ using Formatting = Newtonsoft.Json.Formatting;
 namespace HR_System.Service;
 public class UserService(IUserRepository userRepository, JwtService jwtService, 
     IUnitOfWork unitOfWork,
+    IFileService fileService,
     IEmployerRepository employerRepository) : IUserService
 {
     private readonly IUserRepository _userRepository = userRepository;
@@ -27,33 +28,67 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
     public async Task<UserDto> CreateUserAsync(UserRegisterDto userRegisterDto)
     {
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))
-            throw new ApiException("User or already exists.");
+            throw new ApiException("User already exists.");
         if (await _userRepository.ExistsAsync(userRegisterDto.Email))
-            throw new ApiException("Email or already exists.");
+            throw new ApiException("Email already exists.");
         if (!Enum.IsDefined(userRegisterDto.Role))
             throw new ApiException("Invalid role value.");
 
         string password = GeneratePasswordForUser();
 
-        var userId = await _userRepository.CreateAsync(new User
+        var user = new User
         {
             Username = userRegisterDto.Username,
             Email = userRegisterDto.Email,
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(password),
             Role = userRegisterDto.Role
-        });
+        };
 
-        UserDto? employer = await _employerRepository.CreateAsync(userId, userRegisterDto)
-            ?? throw new ApiException("Employer creation failed.");
+        var userId = await _userRepository.CreateAsync(user);
 
-        employer.Password = password;
-        employer.Username = userRegisterDto.Username;
-        employer.Email = userRegisterDto.Email;
-        employer.Role = userRegisterDto.Role;
+        // создаём сущность Employer
+        var newEmployer = new Employee
+        {
+            FullName = userRegisterDto.FullName,
+            DateOfBirth = userRegisterDto.DateOfBirth,
+            Email = userRegisterDto.Email,
+            IsEmailPublic = userRegisterDto.IsEmailPublic,
+            PhoneNumber = userRegisterDto.PhoneNumber,
+            Telegram = userRegisterDto.Telegram,
+            IsTelegramPublic = userRegisterDto.IsTelegramPublic,
+            Position = userRegisterDto.Position,
+            Department = userRegisterDto.Department,
+            HireDate = userRegisterDto.HireDate,
+            PassportInfo = userRegisterDto.PassportInfo,
+            UserId = userId
+        };
 
-        await _unitOfWork.SaveChangesAsync(cancellationToken: CancellationToken.None);
-        return employer;
+        // фото загружаем через сервис (Application уровень)
+        if (userRegisterDto.Photo is not null)
+        {
+            var imagePath = await fileService.SaveAsync(userRegisterDto.Photo);
+
+            newEmployer.Image = new DataFile(newEmployer.Id,
+                imagePath.Name,
+                imagePath.Url,
+                imagePath.Size,
+                imagePath.Extension);
+
+            newEmployer.PhotoUrl = imagePath.Url;
+        }
+
+        var userDto  = await _employerRepository.CreateAsync(newEmployer);
+        await _unitOfWork.SaveChangesAsync(CancellationToken.None);
+
+        if (userDto is null)
+            throw new ApiException("Failed to create user profile.");
+        userDto.Password = password; 
+        userDto.Username = userRegisterDto.Username; 
+        userDto.Email = userRegisterDto.Email; 
+        userDto.Role = userRegisterDto.Role;
+        return userDto;
     }
+
 
     public async Task<string?> LoginAsync(UserLoginDto userLoginDto)
     {

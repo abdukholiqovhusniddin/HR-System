@@ -12,19 +12,125 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/UserRegisterDto"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserRegisterDto"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/UserRegisterDto"
+                "required": [
+                  "DateOfBirth",
+                  "Department",
+                  "Email",
+                  "FullName",
+                  "HireDate",
+                  "PassportInfo",
+                  "PhoneNumber",
+                  "Position",
+                  "Role",
+                  "Telegram",
+                  "Username"
+                ],
+                "type": "object",
+                "properties": {
+                  "Username": {
+                    "maxLength": 50,
+                    "minLength": 3,
+                    "type": "string"
+                  },
+                  "Email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "Role": {
+                    "$ref": "#/components/schemas/UserRole"
+                  },
+                  "FullName": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "DateOfBirth": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "PhoneNumber": {
+                    "type": "string"
+                  },
+                  "Telegram": {
+                    "type": "string"
+                  },
+                  "IsEmailPublic": {
+                    "type": "boolean"
+                  },
+                  "IsTelegramPublic": {
+                    "type": "boolean"
+                  },
+                  "Position": {
+                    "type": "string"
+                  },
+                  "Department": {
+                    "type": "string"
+                  },
+                  "HireDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "PassportInfo": {
+                    "type": "string"
+                  },
+                  "ManagerId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "encoding": {
+                "Username": {
+                  "style": "form"
+                },
+                "Email": {
+                  "style": "form"
+                },
+                "Role": {
+                  "style": "form"
+                },
+                "FullName": {
+                  "style": "form"
+                },
+                "Photo": {
+                  "style": "form"
+                },
+                "DateOfBirth": {
+                  "style": "form"
+                },
+                "PhoneNumber": {
+                  "style": "form"
+                },
+                "Telegram": {
+                  "style": "form"
+                },
+                "IsEmailPublic": {
+                  "style": "form"
+                },
+                "IsTelegramPublic": {
+                  "style": "form"
+                },
+                "Position": {
+                  "style": "form"
+                },
+                "Department": {
+                  "style": "form"
+                },
+                "HireDate": {
+                  "style": "form"
+                },
+                "PassportInfo": {
+                  "style": "form"
+                },
+                "ManagerId": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -181,6 +287,7 @@
           },
           "photoUrl": {
             "type": "string",
+            "format": "binary",
             "nullable": true
           },
           "dateOfBirth": {
@@ -226,89 +333,6 @@
             "format": "int32",
             "nullable": true,
             "readOnly": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "UserRegisterDto": {
-        "required": [
-          "dateOfBirth",
-          "department",
-          "email",
-          "fullName",
-          "hireDate",
-          "passportInfo",
-          "phoneNumber",
-          "position",
-          "role",
-          "telegram",
-          "username"
-        ],
-        "type": "object",
-        "properties": {
-          "username": {
-            "maxLength": 50,
-            "minLength": 3,
-            "type": "string"
-          },
-          "email": {
-            "minLength": 1,
-            "type": "string",
-            "format": "email"
-          },
-          "role": {
-            "$ref": "#/components/schemas/UserRole"
-          },
-          "fullName": {
-            "maxLength": 100,
-            "minLength": 0,
-            "type": "string"
-          },
-          "photoUrl": {
-            "maxLength": 2147483647,
-            "minLength": 0,
-            "type": "string",
-            "format": "uri",
-            "nullable": true
-          },
-          "dateOfBirth": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "phoneNumber": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "telegram": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "isEmailPublic": {
-            "type": "boolean"
-          },
-          "isTelegramPublic": {
-            "type": "boolean"
-          },
-          "position": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "department": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "hireDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "passportInfo": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "managerId": {
-            "type": "string",
-            "format": "uuid",
-            "nullable": true
           }
         },
         "additionalProperties": false

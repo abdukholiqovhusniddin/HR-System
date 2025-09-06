@@ -19,7 +19,6 @@ public static class FilterDataUserExtension
     {
         Id = s.Id,
         FullName = s.FullName,
-        PhotoUrl = s.PhotoUrl,
         Position = s.Position,
         Department = s.Department,
         DateOfBirth = s.DateOfBirth,

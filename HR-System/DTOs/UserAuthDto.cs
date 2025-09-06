@@ -22,7 +22,7 @@ public class UserAuthDto
         public string? FullName { get; set; }
 
         
-        public FormFile? PhotoUrl { get; set; }
+        public IFormFile? Photo { get; set; }
 
         [Required(ErrorMessage = "Date of birth is required")]
         public DateTime DateOfBirth { get; set; }
@@ -58,7 +58,8 @@ public class UserAuthDto
         public string? Password { get; set; }
         public UserRole Role { get; set; }
         public string? FullName { get; set; }
-        public IFormFile? PhotoUrl { get; set; }
+        public string? PhotoUrl { get; set; }
+        public IFormFile? Photo { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string? PhoneNumber { get; set; }
         public string? Telegram { get; set; }

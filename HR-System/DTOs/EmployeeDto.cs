@@ -4,7 +4,7 @@ public class EmployeeDto
     public class EmployeeCreateDto
     {
         public string? FullName { get; set; }
-        public string? PhotoUrl { get; set; }
+        public IFormFile? Photo { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
@@ -27,7 +27,7 @@ public class EmployeeDto
     public class EmployeeDirectoryDto
     {
         public string? FullName { get; set; }
-        public string? PhotoUrl { get; set; }
+        public IFormFile? Photo { get; set; }
         public string? Position { get; set; }
         public string? Department { get; set; }
         public string? Email { get; set; }

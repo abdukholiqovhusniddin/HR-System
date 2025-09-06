@@ -10,7 +10,6 @@ public class RegisterMappers : IRegister
     {
         config.NewConfig<User, UserProfileDto>()
             .Map(dest => dest.FullName, src => src.EmployeeProfile.FullName)
-            .Map(dest => dest.PhotoUrl, src => src.EmployeeProfile.PhotoUrl)
             .Map(dest => dest.DateOfBirth, src => src.EmployeeProfile.DateOfBirth)
             .Map(dest => dest.IsEmailPublic, src => src.EmployeeProfile.IsEmailPublic)
             .Map(dest => dest.PhoneNumber, src => src.EmployeeProfile.PhoneNumber)

@@ -13,7 +13,6 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
         builder.Property(e => e.PhoneNumber).HasMaxLength(30);
         builder.Property(e => e.Position).HasMaxLength(100);
         builder.Property(e => e.Department).HasMaxLength(100);
-        builder.Property(e => e.PhotoUrl).HasMaxLength(500);
         builder.Property(e => e.PassportInfo).HasMaxLength(200);
 
         builder.HasOne(e => e.Manager)

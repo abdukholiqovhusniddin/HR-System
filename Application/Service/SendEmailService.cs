@@ -4,6 +4,7 @@ using Application.Interfaces;
 using Microsoft.Extensions.Options;
 using Microsoft.Office.Interop.Word;
 
+
 namespace Application.Service;
 public class EmailService(IOptions<EmailOptions> emailOptions) : IEmailService
 {

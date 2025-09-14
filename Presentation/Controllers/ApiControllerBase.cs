@@ -1,7 +1,7 @@
 ﻿using System.Security.Claims;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HR_System.Controllers;
+namespace Presentation.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

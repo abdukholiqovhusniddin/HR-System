@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "E1W2so/+P2s=",
+  "dgSpecHash": "55/ZiGW+Q2A=",
   "success": true,
   "projectFilePath": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Presentation.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Another love\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\mailkit\\4.13.0\\mailkit.4.13.0.nupkg.sha512",

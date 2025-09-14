@@ -9,10 +9,10 @@ namespace Infrastructure.Repositories;
 public class EmployerRepository(AppDbContext context, IFileService fileService) : IEmployerRepository
 {
     private readonly AppDbContext _context = context;
-    public async Task<UserResponseDto?> CreateAsync(Employee newEmployer)
+    public async Task<Employee> CreateAsync(Employee newEmployer)
     {
         await _context.Employees.AddAsync(newEmployer);
 
-        return newEmployer.Adapt<UserResponseDto>();
+        return newEmployer;
     }
 }

@@ -1,10 +1,15 @@
 using System.Reflection;
+using Application.Commons;
 using Application.Interfaces;
+using Application.JwtAuth;
 using Application.Service;
 using Domain.Interfaces;
 using Infrastructure.Persistence.DataContext;
 using Infrastructure.Repositories;
+using Mapster;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Presentation.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 

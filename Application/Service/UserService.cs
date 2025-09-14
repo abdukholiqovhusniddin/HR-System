@@ -8,7 +8,6 @@ using Domain.Entities;
 using Domain.Enums;
 using Domain.Interfaces;
 using Mapster;
-using Org.BouncyCastle.Crypto.Generators;
 
 namespace Application.Service;
 public class UserService(IUserRepository userRepository, JwtService jwtService,
@@ -76,9 +75,8 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
             newEmployer.PhotoUrl = imagePath.Url;
         }
 
-
-        var userDto = await _employerRepository.CreateAsync(newEmployer)
-            ?? throw new ApiException("Failed to create user profile.");
+        var employee = await _employerRepository.CreateAsync(newEmployer);
+        var userDto = employee.Adapt<UserResponseDto>();
 
         userDto.Password = password;
         userDto.Username = userRegisterDto.Username;

@@ -1,10 +1,8 @@
-﻿using HR_System.Commons;
-using HR_System.DTOs;
-using HR_System.Interfaces.Service;
-using Microsoft.AspNetCore.Authorization;
+﻿using Application.Commons;
+using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace HR_System.Controllers;
+namespace Presentation.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

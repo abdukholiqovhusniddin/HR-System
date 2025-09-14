@@ -6,18 +6,18 @@ using Microsoft.Office.Interop.Word;
 
 
 namespace Application.Service;
-public class EmailService(IOptions<EmailOptions> emailOptions) : IEmailService
+public class EmailService(IOptions<Commons.EmailOptions> emailOptions) : IEmailService
 {
-    private readonly EmailOptions _emailOptions = emailOptions.Value;
+    private readonly Commons.EmailOptions _emailOptions = emailOptions.Value;
 
-    public async Task SendPasswordEmailGmailAsync(string email, string username, string password)
+    public async System.Threading.Tasks.Task SendPasswordEmailGmailAsync(string email, string username, string password)
     {
         using var client = new SmtpClient(_emailOptions.SmtpServer, _emailOptions.Port);
         client.EnableSsl = true;
         client.UseDefaultCredentials = false;
         client.Credentials = new NetworkCredential(_emailOptions.FromEmail, _emailOptions.Password);
 
-        var mail = new MailMessage
+        var mail = new System.Net.Mail.MailMessage
         {
             From = new MailAddress(_emailOptions.FromEmail)
         };

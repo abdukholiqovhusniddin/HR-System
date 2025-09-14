@@ -1,0 +1,1047 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\service\\sendemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\service\\sendemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\commons\\emailoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\commons\\emailoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\presentation\\presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|solutionrelative:presentation\\presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|solutionrelative:presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\mappers\\registermappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\mappers\\registermappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\jwtauth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\jwtauth\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\jwtauth\\authsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\jwtauth\\authsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\jwtauth\\authextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\jwtauth\\authextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\interfaces\\iemployerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\iemployerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\repositories\\employerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\employerrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\repositories\\employeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\employeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\interfaces\\iemployeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\interfaces\\iemployeesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\entities\\datafile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\datafile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\contract.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\service\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\service\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\service\\currentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\service\\employeesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\service\\employeesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\interfaces\\ifileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\interfaces\\iemployeesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iemployeesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\interfaces\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\interfaces\\icurrentuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\exceptions\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\exceptions\\apiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\exceptions\\apiexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\dtos\\responses\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\dtos\\responses\\userresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\dtos\\responses\\userprofileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\dtos\\responses\\userprofileresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\dtos\\responses\\employeecreateresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\dtos\\responses\\employeecreateresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\dtos\\responses\\directoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\dtos\\responses\\directoryresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\dtos\\requests\\userregisterrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\dtos\\requests\\userregisterrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\dtos\\requests\\userloginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\dtos\\requests\\userloginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\dtos\\requests\\assignrolerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\dtos\\requests\\assignrolerequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\dtos\\filedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\dtos\\filedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\commons\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\commons\\passwordhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\application\\commons\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E6D10639-7C8F-4355-9D49-EC7025363B22}|Application\\Application.csproj|solutionrelative:application\\commons\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\persistence\\datacontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\datacontext\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\persistence\\configurations\\salaryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\salaryconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\persistence\\configurations\\vacationrequestconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\vacationrequestconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\persistence\\configurations\\equipmentassignmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\equipmentassignmentconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\persistence\\configurations\\employeeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\employeeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\persistence\\configurations\\contractconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\persistence\\configurations\\contractconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\presentation\\controllers\\apicontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\apicontrollerbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\presentation\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\presentation\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\presentation\\middlewares\\exceptionhandlingmiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|solutionrelative:presentation\\middlewares\\exceptionhandlingmiddlewareextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\presentation\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1104A11C-1295-4146-8A86-B100E266B97E}|Presentation\\Presentation.csproj|solutionrelative:presentation\\middlewares\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39905F1D-E824-400B-AC6C-FCF81DD7977A}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\entities\\vacationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\vacationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\entities\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\salary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\entities\\equipmentassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\equipmentassignment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|c:\\users\\another love\\onedrive\\desktop\\hr-systemclean\\hr-systemsolution\\domain\\entities\\employeebaseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C74A0556-96F6-4C90-A436-5AD6FBDBC55C}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\employeebaseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{131369f2-062d-44a2-8671-91ff31efb4f4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Domain.csproj",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\Domain.csproj",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
+              "RelativeToolTip": "Domain\\Domain.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T12:20:16.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Infrastructure.csproj",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Infrastructure.csproj",
+              "RelativeToolTip": "Infrastructure\\Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T12:17:27.495Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\UserService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\UserService.cs",
+              "RelativeToolTip": "Application\\Service\\UserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:28:25.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SendEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\SendEmailService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\SendEmailService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\SendEmailService.cs",
+              "RelativeToolTip": "Application\\Service\\SendEmailService.cs",
+              "ViewState": "AgIAAAcAAACAZ0gMrxUMwAgAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:25:13.85Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailOptions.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Commons\\EmailOptions.cs",
+              "RelativeDocumentMoniker": "Application\\Commons\\EmailOptions.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Commons\\EmailOptions.cs",
+              "RelativeToolTip": "Application\\Commons\\EmailOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:46:34.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IEmailService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\IEmailService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IEmailService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\IEmailService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IEmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:36:21.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Application.csproj",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Application.csproj",
+              "RelativeDocumentMoniker": "Application\\Application.csproj",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Application.csproj",
+              "RelativeToolTip": "Application\\Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T12:10:16.206Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Presentation.csproj",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Presentation.csproj",
+              "RelativeDocumentMoniker": "Presentation\\Presentation.csproj",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Presentation.csproj",
+              "RelativeToolTip": "Presentation\\Presentation.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-12T12:16:17.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "Presentation\\appsettings.json",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\appsettings.json",
+              "RelativeToolTip": "Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-14T17:25:00.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "RegisterMappers.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Mappers\\RegisterMappers.cs",
+              "RelativeDocumentMoniker": "Application\\Mappers\\RegisterMappers.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Mappers\\RegisterMappers.cs",
+              "RelativeToolTip": "Application\\Mappers\\RegisterMappers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:16:35.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\JwtAuth\\JwtService.cs",
+              "RelativeDocumentMoniker": "Application\\JwtAuth\\JwtService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\JwtAuth\\JwtService.cs",
+              "RelativeToolTip": "Application\\JwtAuth\\JwtService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:40:01.429Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\JwtAuth\\AuthSettings.cs",
+              "RelativeDocumentMoniker": "Application\\JwtAuth\\AuthSettings.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\JwtAuth\\AuthSettings.cs",
+              "RelativeToolTip": "Application\\JwtAuth\\AuthSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:39:52.882Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\JwtAuth\\AuthExtensions.cs",
+              "RelativeDocumentMoniker": "Application\\JwtAuth\\AuthExtensions.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\JwtAuth\\AuthExtensions.cs",
+              "RelativeToolTip": "Application\\JwtAuth\\AuthExtensions.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:39:30.981Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Interfaces\\IUserRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:30:40.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:20:28.529Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IEmployerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Interfaces\\IEmployerRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IEmployerRepository.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Interfaces\\IEmployerRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IEmployerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:30:27.173Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EmployeesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Repositories\\EmployeesRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\EmployeesRepository.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Repositories\\EmployeesRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\EmployeesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:51:36.463Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "EmployerRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Repositories\\EmployerRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\EmployerRepository.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Repositories\\EmployerRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\EmployerRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:51:58.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IEmployeesRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Interfaces\\IEmployeesRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IEmployeesRepository.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Interfaces\\IEmployeesRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IEmployeesRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:29:58.513Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:27:46.063Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Employee.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\Employee.cs",
+              "RelativeToolTip": "Domain\\Entities\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:06:15.048Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DataFile.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\DataFile.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\DataFile.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\DataFile.cs",
+              "RelativeToolTip": "Domain\\Entities\\DataFile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:06:00.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Contract.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\Contract.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Contract.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\Contract.cs",
+              "RelativeToolTip": "Domain\\Entities\\Contract.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:05:43.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:05:27.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\FileService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\FileService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\FileService.cs",
+              "RelativeToolTip": "Application\\Service\\FileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:22:17.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CurrentUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\CurrentUserService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\CurrentUserService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\CurrentUserService.cs",
+              "RelativeToolTip": "Application\\Service\\CurrentUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T16:58:42.994Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "EmployeesService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\EmployeesService.cs",
+              "RelativeDocumentMoniker": "Application\\Service\\EmployeesService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Service\\EmployeesService.cs",
+              "RelativeToolTip": "Application\\Service\\EmployeesService.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:20:39.046Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "IFileService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\IFileService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IFileService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\IFileService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IFileService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:37:04.744Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IEmployeesService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\IEmployeesService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IEmployeesService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\IEmployeesService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IEmployeesService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:36:44.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IUserService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:37:13.974Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ICurrentUserService.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\ICurrentUserService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\ICurrentUserService.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Interfaces\\ICurrentUserService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\ICurrentUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:36:35.497Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Exceptions\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "Application\\Exceptions\\NotFoundException.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Exceptions\\NotFoundException.cs",
+              "RelativeToolTip": "Application\\Exceptions\\NotFoundException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:10:44.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ApiException.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Exceptions\\ApiException.cs",
+              "RelativeDocumentMoniker": "Application\\Exceptions\\ApiException.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Exceptions\\ApiException.cs",
+              "RelativeToolTip": "Application\\Exceptions\\ApiException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:10:34.978Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UserResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Responses\\UserResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Responses\\UserResponseDto.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Responses\\UserResponseDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Responses\\UserResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T16:44:19.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UserProfileResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Responses\\UserProfileResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Responses\\UserProfileResponseDto.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Responses\\UserProfileResponseDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Responses\\UserProfileResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T16:48:09.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "EmployeeCreateResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Responses\\EmployeeCreateResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Responses\\EmployeeCreateResponseDto.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Responses\\EmployeeCreateResponseDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Responses\\EmployeeCreateResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T12:48:43.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "DirectoryResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Responses\\DirectoryResponseDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Responses\\DirectoryResponseDto.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Responses\\DirectoryResponseDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Responses\\DirectoryResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T16:54:34.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "UserRegisterRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Requests\\UserRegisterRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Requests\\UserRegisterRequestDto.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Requests\\UserRegisterRequestDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Requests\\UserRegisterRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T16:42:24.885Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "UserLoginRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Requests\\UserLoginRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Requests\\UserLoginRequestDto.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Requests\\UserLoginRequestDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Requests\\UserLoginRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T16:46:19.895Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "AssignRoleRequestDto.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Requests\\AssignRoleRequestDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\Requests\\AssignRoleRequestDto.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\Requests\\AssignRoleRequestDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\Requests\\AssignRoleRequestDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T16:50:03.582Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "FileDto.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\FileDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\FileDto.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\DTOs\\FileDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\FileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T12:45:50.238Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "PasswordHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Commons\\PasswordHelper.cs",
+              "RelativeDocumentMoniker": "Application\\Commons\\PasswordHelper.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Commons\\PasswordHelper.cs",
+              "RelativeToolTip": "Application\\Commons\\PasswordHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:09:36.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Commons\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Commons\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Application\\Commons\\ApiResponse.cs",
+              "RelativeToolTip": "Application\\Commons\\ApiResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T18:03:48.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\DataContext\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\DataContext\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\DataContext\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\DataContext\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:50:15.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "SalaryConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\SalaryConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\SalaryConfiguration.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\SalaryConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\SalaryConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:51:02.241Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "VacationRequestConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\VacationRequestConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\VacationRequestConfiguration.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\VacationRequestConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\VacationRequestConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:51:19.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwCkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:51:11.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "EquipmentAssignmentConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\EquipmentAssignmentConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\EquipmentAssignmentConfiguration.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\EquipmentAssignmentConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\EquipmentAssignmentConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:50:53.341Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "EmployeeConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\EmployeeConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\EmployeeConfiguration.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\EmployeeConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\EmployeeConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:50:44.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "ContractConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\ContractConfiguration.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Persistence\\Configurations\\ContractConfiguration.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Persistence\\Configurations\\ContractConfiguration.cs",
+              "RelativeToolTip": "Infrastructure\\Persistence\\Configurations\\ContractConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:50:35.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:05:14.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "ApiControllerBase.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Controllers\\ApiControllerBase.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\ApiControllerBase.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Controllers\\ApiControllerBase.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\ApiControllerBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:12:14.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFUAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:12:42.273Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T20:12:24.175Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "Presentation\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "Presentation\\Middlewares\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T17:56:51.307Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ExceptionHandlingMiddlewareExtensions.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Middlewares\\ExceptionHandlingMiddlewareExtensions.cs",
+              "RelativeDocumentMoniker": "Presentation\\Middlewares\\ExceptionHandlingMiddlewareExtensions.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Middlewares\\ExceptionHandlingMiddlewareExtensions.cs",
+              "RelativeToolTip": "Presentation\\Middlewares\\ExceptionHandlingMiddlewareExtensions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T17:57:06.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Repositories\\UnitOfWork.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\UnitOfWork.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:52:56.025Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:53:05.826Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\UserRole.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Enums\\UserRole.cs",
+              "RelativeToolTip": "Domain\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-12T12:28:34.053Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "VacationRequest.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\VacationRequest.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\VacationRequest.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\VacationRequest.cs",
+              "RelativeToolTip": "Domain\\Entities\\VacationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:08:09.072Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Salary.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\Salary.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Salary.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\Salary.cs",
+              "RelativeToolTip": "Domain\\Entities\\Salary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:07:48.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "EquipmentAssignment.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\EquipmentAssignment.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\EquipmentAssignment.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\EquipmentAssignment.cs",
+              "RelativeToolTip": "Domain\\Entities\\EquipmentAssignment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:07:39.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "EmployeeBaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\EmployeeBaseEntity.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\EmployeeBaseEntity.cs",
+              "ToolTip": "C:\\Users\\Another love\\OneDrive\\Desktop\\HR-SystemClean\\HR-SystemSolution\\Domain\\Entities\\EmployeeBaseEntity.cs",
+              "RelativeToolTip": "Domain\\Entities\\EmployeeBaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T19:07:12.551Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

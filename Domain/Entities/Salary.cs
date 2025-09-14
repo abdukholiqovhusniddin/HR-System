@@ -1,4 +1,4 @@
-﻿namespace HR_System.Entities;
+﻿namespace Domain.Entities;
 public class Salary: EmployeeBaseEntity
 {
     public decimal BaseSalary { get; set; }

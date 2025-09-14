@@ -1,10 +1,10 @@
-﻿using HR_System.Data;
-using HR_System.DTOs;
-using HR_System.Entities;
-using HR_System.Interfaces.Repository;
+﻿using Domain.Entities;
+using Domain.Enums;
+using Domain.Interfaces;
+using Infrastructure.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
 
-namespace HR_System.Repository;
+namespace Infrastructure.Repositories;
 public class EmployeesRepository(AppDbContext context) : IEmployeesRepository
 {
     private readonly AppDbContext _context = context;

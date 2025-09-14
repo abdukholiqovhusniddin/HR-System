@@ -1,4 +1,4 @@
-﻿namespace HR_System.Helpers;
+﻿namespace Application.Commons;
 
 public class EmailOptions
 {

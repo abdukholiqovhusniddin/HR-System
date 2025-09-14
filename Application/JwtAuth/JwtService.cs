@@ -1,11 +1,11 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using HR_System.Entities;
+using Domain.Entities;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 
-namespace HR_System.JwtAuth;
+namespace Application.JwtAuth;
 public class JwtService(IOptions<AuthSettings> options)
 {
     public string GenerateToken(User account)

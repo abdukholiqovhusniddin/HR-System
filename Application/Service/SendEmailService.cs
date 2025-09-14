@@ -1,10 +1,10 @@
 ﻿using System.Net;
 using System.Net.Mail;
-using HR_System.Helpers;
-using HR_System.Interfaces.Service;
+using Application.Interfaces;
 using Microsoft.Extensions.Options;
+using Microsoft.Office.Interop.Word;
 
-namespace HR_System.Service;
+namespace Application.Service;
 public class EmailService(IOptions<EmailOptions> emailOptions) : IEmailService
 {
     private readonly EmailOptions _emailOptions = emailOptions.Value;

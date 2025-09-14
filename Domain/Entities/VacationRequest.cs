@@ -1,4 +1,4 @@
-﻿namespace HR_System.Entities;
+﻿namespace Domain.Entities;
 public class VacationRequest: EmployeeBaseEntity
 {
     public string? VacationType { get; set; }

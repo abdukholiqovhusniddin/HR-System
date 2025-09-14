@@ -1,6 +1,8 @@
-﻿namespace Application.Interfaces;
+﻿using Application.DTOs.Responses;
+
+namespace Application.Interfaces;
 public interface IEmployeesService
 {
-    Task<EmployeeCreateDto> GetById(Guid id);
-    Task<List<DirectoryDto>> GetDirectory();
+    Task<EmployeeCreateResponseDto> GetById(Guid id);
+    Task<List<DirectoryResponseDto>> GetDirectory();
 }

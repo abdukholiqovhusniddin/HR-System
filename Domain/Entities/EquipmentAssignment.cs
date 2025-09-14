@@ -1,4 +1,4 @@
-﻿namespace HR_System.Entities;
+﻿namespace Domain.Entities;
 public class EquipmentAssignment: EmployeeBaseEntity
 {
     public string? Type { get; set; }

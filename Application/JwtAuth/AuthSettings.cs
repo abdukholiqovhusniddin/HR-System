@@ -1,4 +1,4 @@
-﻿namespace HR_System.JwtAuth;
+﻿namespace Application.JwtAuth;
 public class AuthSettings
 {
     public TimeSpan Expires { get; set; }

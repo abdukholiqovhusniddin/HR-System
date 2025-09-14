@@ -1,9 +1,9 @@
 using System.Reflection;
 using Application.Interfaces;
+using Application.Service;
 using Domain.Interfaces;
-using HR_System.Data;
-using HR_System.Repository;
-using HR_System.Service;
+using Infrastructure.Persistence.DataContext;
+using Infrastructure.Repositories;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);

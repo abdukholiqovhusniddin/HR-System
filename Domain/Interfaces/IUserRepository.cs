@@ -1,4 +1,4 @@
-﻿using HR_System.Entities;
+﻿using Domain.Entities;
 
 namespace Domain.Interfaces;
 public interface IUserRepository

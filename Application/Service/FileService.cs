@@ -1,14 +1,16 @@
-﻿using HR_System.DTOs;
-using HR_System.Interfaces.Service;
+﻿using Application.DTOs;
+using Application.Interfaces;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 
-namespace HR_System.Service;
+namespace Application.Service;
 public class FileService(IWebHostEnvironment env) : IFileService
 {
     private readonly IWebHostEnvironment _env = env;
 
     public async Task RemoveAsync(string fileName)
     {
-        if(string.IsNullOrWhiteSpace(fileName))
+        if (string.IsNullOrWhiteSpace(fileName))
             throw new ArgumentException("File name cannot be null or empty.", nameof(fileName));
 
         string filePath = Path.Combine(_env.WebRootPath, fileName.TrimStart('/'));

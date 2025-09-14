@@ -2,7 +2,7 @@
 using Domain.Enums;
 
 namespace Application.DTOs.Requests;
-public class AssignRoleRequestsDto
+public class AssignRoleRequestDto
 {
     public required string Username { get; set; }
 

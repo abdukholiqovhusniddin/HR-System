@@ -1,32 +1,30 @@
-﻿using HR_System.DTOs;
-using HR_System.Entities;
-using HR_System.Exceptions;
-using HR_System.Interfaces.Repository;
-using HR_System.Interfaces.Service;
+﻿using Application.DTOs.Responses;
+using Application.Exceptions;
+using Application.Interfaces;
+using Domain.Interfaces;
 using Mapster;
-using static HR_System.DTOs.EmployeeDto;
 
-namespace HR_System.Service;
+namespace Application.Service;
 public class EmployeesService(IEmployeesRepository directory) : IEmployeesService
 {
     private readonly IEmployeesRepository _directoryRepository = directory;
 
-    public async Task<EmployeeCreateDto> GetById(Guid id)
+    public async Task<EmployeeCreateResponseDto> GetById(Guid id)
     {
         if (id == Guid.Empty)
             throw new ApiException("Id is empty");
 
         var employee = await _directoryRepository.GetById(id);
 
-        return employee is null ? throw new NotFoundException("Employee not found") 
-            : employee.Adapt<EmployeeCreateDto>();
+        return employee is null ? throw new NotFoundException("Employee not found")
+            : employee.Adapt<EmployeeCreateResponseDto>();
     }
 
-    public async Task<List<DirectoryDto>> GetDirectory()
+    public async Task<List<DirectoryResponseDto>> GetDirectory()
     {
         var directoryDto = await _directoryRepository.GetAllDirectory();
 
-        return [.. directoryDto.Select(a => new DirectoryDto(a.FullName,
+        return [.. directoryDto.Select(a => new DirectoryResponseDto(a.FullName,
             a.Position, a.Department))];
     }
 }

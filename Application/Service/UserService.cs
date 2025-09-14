@@ -1,14 +1,17 @@
-﻿using HR_System.Entities;
-using HR_System.Exceptions;
-using HR_System.Helpers;
-using HR_System.Interfaces.Repository;
-using HR_System.Interfaces.Service;
-using HR_System.JwtAuth;
+﻿using Application.Commons;
+using Application.DTOs.Requests;
+using Application.DTOs.Responses;
+using Application.Exceptions;
+using Application.Interfaces;
+using Application.JwtAuth;
+using Domain.Entities;
+using Domain.Enums;
+using Domain.Interfaces;
 using Mapster;
-using static HR_System.DTOs.UserAuthDto;
+using Org.BouncyCastle.Crypto.Generators;
 
-namespace HR_System.Service;
-public class UserService(IUserRepository userRepository, JwtService jwtService, 
+namespace Application.Service;
+public class UserService(IUserRepository userRepository, JwtService jwtService,
     IUnitOfWork unitOfWork,
     IFileService fileService,
     IEmailService emailService,
@@ -20,8 +23,8 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
 
     public string GeneratePasswordForUser() =>
         PasswordHelper.PasswordGeneration();
-    
-    public async Task<UserDto> CreateUserAsync(UserRegisterDto userRegisterDto)
+
+    public async Task<UserResponseDto> CreateUserAsync(UserRegisterRequestDto userRegisterDto)
     {
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))
             throw new ApiException("User already exists.");
@@ -88,7 +91,7 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
         return userDto;
     }
 
-    public async Task<string?> LoginAsync(UserLoginDto userLoginDto)
+    public async Task<string?> LoginAsync(UserLoginRequestDto userLoginDto)
     {
         var user = await _userRepository.GetByUsernameAsync(userLoginDto.Username);
         if (user == null)
@@ -98,7 +101,7 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
         return jwtService.GenerateToken(user);
     }
 
-    public async Task<UserProfileDto?> GetByUsernameAsync(string username)
+    public async Task<UserProfileResponseDto?> GetByUsernameAsync(string username)
     {
         if (string.IsNullOrWhiteSpace(username))
             throw new ApiException("Username cannot be null.");
@@ -106,10 +109,10 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
         var user = await _userRepository.GetByUsernameAsync(username, includeEmployeeProfile: true);
 
         return user is null ? throw new ApiException("User not found.")
-            : user.Adapt<UserProfileDto>();
+            : user.Adapt<UserProfileResponseDto>();
     }
 
-    public async Task<UserProfileDto?> AssignRoleAsync(AssignRoleDto dto)
+    public async Task<UserProfileResponseDto?> AssignRoleAsync(AssignRoleRequestDto dto)
     {
         if (!Enum.IsDefined(typeof(UserRole), dto.Role))
             throw new Exception("Invalid role.");
@@ -123,6 +126,6 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
 
         await _userRepository.UpdateAsync(user);
 
-        return user.Adapt<UserProfileDto>();
+        return user.Adapt<UserProfileResponseDto>();
     }
 }

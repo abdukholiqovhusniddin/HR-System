@@ -1,2 +1,2 @@
-﻿namespace HR_System.Exceptions;
+﻿namespace Application.Exceptions;
 public class NotFoundException(string message) : Exception(message + "not found");

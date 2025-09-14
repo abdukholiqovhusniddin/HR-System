@@ -1,15 +1,14 @@
-﻿using HR_System.Entities;
+﻿using Application.DTOs.Responses;
+using Domain.Entities;
 using Mapster;
-using static HR_System.DTOs.EmployeeDto;
-using static HR_System.DTOs.UserAuthDto;
 
-namespace HR_System.Mappers;
+namespace Application.Mappers;
 
 public class RegisterMappers : IRegister
 {
     public void Register(TypeAdapterConfig config)
     {
-        config.NewConfig<User, UserProfileDto>()
+        config.NewConfig<User, UserProfileResponseDto>()
             .Map(dest => dest.FullName, src => src.EmployeeProfile.FullName)
             .Map(dest => dest.DateOfBirth, src => src.EmployeeProfile.DateOfBirth)
             .Map(dest => dest.IsEmailPublic, src => src.EmployeeProfile.IsEmailPublic)
@@ -23,7 +22,7 @@ public class RegisterMappers : IRegister
             .Map(dest => dest.Age, src =>
                 DateTime.Today.Year - src.EmployeeProfile.DateOfBirth.Year -
                 (src.EmployeeProfile.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - src.EmployeeProfile.DateOfBirth.Year)) ? 1 : 0));
-        config.NewConfig<Employee, UserDto>();
-        config.NewConfig<Employee, EmployeeCreateDto>();
+        config.NewConfig<Employee, UserResponseDto>();
+        config.NewConfig<Employee, EmployeeCreateResponseDto>();
     }
 }

@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using HR_System.Exceptions;
+using Application.Exceptions;
 
 namespace Presentation.Middlewares;
 public class ExceptionHandlingMiddleware(RequestDelegate next, ILogger<ExceptionHandlingMiddleware> logger)

@@ -1,8 +1,11 @@
-﻿namespace Application.Interfaces;
+﻿using Application.DTOs.Requests;
+using Application.DTOs.Responses;
+
+namespace Application.Interfaces;
 public interface IUserService
 {
-    Task<UserProfileDto?> AssignRoleAsync(AssignRoleDto dto);
-    Task<UserDto> CreateUserAsync(UserRegisterDto userRegisterDto);
-    Task<UserProfileDto?> GetByUsernameAsync(string username);
-    Task<string?> LoginAsync(UserLoginDto userLoginDto);
+    Task<UserProfileResponseDto?> AssignRoleAsync(AssignRoleRequestDto dto);
+    Task<UserResponseDto> CreateUserAsync(UserRegisterRequestDto userRegisterDto);
+    Task<UserProfileResponseDto?> GetByUsernameAsync(string username);
+    Task<string?> LoginAsync(UserLoginRequestDto userLoginDto);
 }

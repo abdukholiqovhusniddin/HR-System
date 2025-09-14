@@ -1,8 +1,8 @@
-﻿using HR_System.Entities;
+﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace HR_System.Data.Configuration;
+namespace Infrastructure.Persistence.Configurations;
 public class SalaryConfiguration: IEntityTypeConfiguration<Salary>
 {
     public void Configure(EntityTypeBuilder<Salary> builder)

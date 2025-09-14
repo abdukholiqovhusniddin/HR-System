@@ -1,4 +1,4 @@
-﻿namespace HR_System.Entities;
+﻿namespace Domain.Entities;
 public abstract class EmployeeBaseEntity: BaseEntity
 {
     public Guid EmployeeId { get; set; }

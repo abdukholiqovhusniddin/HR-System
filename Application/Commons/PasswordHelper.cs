@@ -1,4 +1,4 @@
-﻿namespace HR_System.Helpers;
+﻿namespace Application.Commons;
 public static class PasswordHelper
 {
     public static string PasswordGeneration()

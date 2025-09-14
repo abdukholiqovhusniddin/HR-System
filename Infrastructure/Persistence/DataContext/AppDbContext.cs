@@ -1,9 +1,8 @@
-﻿using HR_System.Data.Configuration;
-using HR_System.Entities;
+﻿using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
-namespace HR_System.Data;
+namespace Infrastructure.Persistence.DataContext;
 public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)

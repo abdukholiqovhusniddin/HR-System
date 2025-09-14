@@ -1,4 +1,4 @@
-﻿namespace HR_System.Entities;
+﻿namespace Domain.Entities;
 public class DataFile(Guid EmployeeId, string Name,
     string Url, long Size, string Extension)
 {

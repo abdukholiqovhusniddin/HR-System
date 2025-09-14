@@ -1,4 +1,4 @@
-﻿namespace HR_System.Entities;
+﻿namespace Domain.Entities;
 public class Contract: EmployeeBaseEntity
 {
     public string? ContractType { get; set; }

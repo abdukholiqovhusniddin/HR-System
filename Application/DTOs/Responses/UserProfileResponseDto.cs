@@ -19,4 +19,20 @@ public class UserProfileResponseDto
     public DateTime HireDate { get; set; }
     public string? PassportInfo { get; set; }
     public int? Age { get; internal set; }
+    
+    public static UserProfileResponseDto FromEmployee(Employee e) => new()
+    {
+        FullName = e.FullName,
+        DateOfBirth = e.DateOfBirth,
+        IsEmailPublic = e.IsEmailPublic,
+        PhoneNumber = e.PhoneNumber,
+        Telegram = e.Telegram,
+        IsTelegramPublic = e.IsTelegramPublic,
+        Position = e.Position,
+        Department = e.Department,
+        HireDate = e.HireDate,
+        PassportInfo = e.PassportInfo,
+        Age = DateTime.Today.Year - e.DateOfBirth.Year -
+              (e.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - e.DateOfBirth.Year)) ? 1 : 0)
+    };
 }

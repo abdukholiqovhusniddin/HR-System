@@ -27,7 +27,7 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
                .WithOne(e => e.User)
                .HasForeignKey<Employee>(e => e.UserId)
                .OnDelete(DeleteBehavior.Restrict);
-
+             
         builder.Property(u => u.Role)
             .IsRequired()
             .HasConversion<string>();

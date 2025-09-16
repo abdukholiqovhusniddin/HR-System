@@ -18,3 +18,23 @@ C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Infrastr
 C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
 C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.genruntimeconfig.cache
 C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Infrastructure.deps.json
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Infrastructure.runtimeconfig.json
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Infrastructure.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Infrastructure.pdb
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Application.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Domain.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Application.pdb
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Domain.pdb
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.csproj.AssemblyReference.cache
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.AssemblyInfoInputs.cache
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.AssemblyInfo.cs
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.csproj.CoreCompileInputs.cache
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.sourcelink.json
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastr.15EFFBFE.Up2Date
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\refint\Infrastructure.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.pdb
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\Infrastructure.genruntimeconfig.cache
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\obj\Debug\net9.0\ref\Infrastructure.dll

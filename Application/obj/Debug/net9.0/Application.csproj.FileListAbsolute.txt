@@ -16,3 +16,21 @@ C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Applicat
 C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.pdb
 C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.genruntimeconfig.cache
 C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\ref\Application.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Application.deps.json
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Application.runtimeconfig.json
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Application.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Application.pdb
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Domain.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Domain.pdb
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.csproj.AssemblyReference.cache
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.AssemblyInfoInputs.cache
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.AssemblyInfo.cs
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.csproj.CoreCompileInputs.cache
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.sourcelink.json
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Applicat.44B5EDA2.Up2Date
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\refint\Application.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.pdb
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.genruntimeconfig.cache
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\ref\Application.dll

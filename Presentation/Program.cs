@@ -1,6 +1,5 @@
 using System.Reflection;
 using Application.Commons;
-using Application.Interfaces;
 using Application.JwtAuth;
 using Application.Service;
 using Domain.Interfaces;

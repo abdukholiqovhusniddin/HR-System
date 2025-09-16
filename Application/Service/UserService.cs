@@ -112,7 +112,7 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
 
     public async Task<UserProfileResponseDto?> AssignRoleAsync(AssignRoleRequestDto dto)
     {
-        if (!Enum.IsDefined(typeof(UserRole), dto.Role))
+        if (!Enum.IsDefined(dto.Role))
             throw new Exception("Invalid role.");
 
         var user = await _userRepository.GetByUsernameAsync(dto.Username, includeEmployeeProfile: true);

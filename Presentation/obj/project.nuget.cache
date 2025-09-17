@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OvNAko97XDk=",
+  "dgSpecHash": "Dk3bediCobU=",
   "success": true,
   "projectFilePath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Presentation.csproj",
   "expectedPackageFiles": [
@@ -11,8 +11,8 @@
     "C:\\Users\\Another love\\.nuget\\packages\\mapster\\7.4.0\\mapster.7.4.0.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\mapster.core\\1.2.1\\mapster.core.1.2.1.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\mapster.dependencyinjection\\1.0.1\\mapster.dependencyinjection.1.0.1.nupkg.sha512",
-    "C:\\Users\\Another love\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
-    "C:\\Users\\Another love\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Another love\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\Another love\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.9\\microsoft.aspnetcore.authentication.jwtbearer.9.0.9.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.3.0\\microsoft.aspnetcore.http.abstractions.2.3.0.nupkg.sha512",
@@ -76,27 +76,5 @@
     "C:\\Users\\Another love\\.nuget\\packages\\system.text.json\\9.0.9\\system.text.json.9.0.9.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problem reading the cache file D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Presentation\\obj\\project.nuget.cache : '<' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.",
-      "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Presentation.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Presentation.csproj",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 13.0.0 was resolved.",
-      "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Presentation.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Presentation\\Presentation.csproj",
-      "libraryId": "MediatR",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

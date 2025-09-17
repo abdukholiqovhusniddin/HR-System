@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\bin\Debug\net9.0\Domain.deps.json
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\bin\Debug\net9.0\Domain.runtimeconfig.json
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\bin\Debug\net9.0\Domain.dll
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\bin\Debug\net9.0\Domain.pdb
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.csproj.AssemblyReference.cache
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.sourcelink.json
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.dll
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\refint\Domain.dll
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.pdb
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.genruntimeconfig.cache
-C:\Users\Another love\OneDrive\Desktop\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\ref\Domain.dll
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Domain\bin\Debug\net9.0\Domain.deps.json
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Domain\bin\Debug\net9.0\Domain.runtimeconfig.json
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Domain\bin\Debug\net9.0\Domain.dll
@@ -29,35 +13,3 @@ D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\refint\Do
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.pdb
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\Domain.genruntimeconfig.cache
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Domain\obj\Debug\net9.0\ref\Domain.dll
-=======
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/bin/Debug/net9.0/Domain.deps.json
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/bin/Debug/net9.0/Domain.runtimeconfig.json
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/bin/Debug/net9.0/Domain.dll
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/bin/Debug/net9.0/Domain.pdb
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/Domain.csproj.AssemblyReference.cache
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/Domain.sourcelink.json
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/Domain.dll
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/refint/Domain.dll
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/Domain.pdb
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/Domain.genruntimeconfig.cache
-C:/Users/Another love/OneDrive/Desktop/HR-SystemClean/HR-SystemSolution/Domain/obj/Debug/net9.0/ref/Domain.dll
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/bin/Debug/net9.0/Domain.deps.json
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/bin/Debug/net9.0/Domain.runtimeconfig.json
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/bin/Debug/net9.0/Domain.dll
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/bin/Debug/net9.0/Domain.pdb
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/Domain.csproj.AssemblyReference.cache
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/Domain.GeneratedMSBuildEditorConfig.editorconfig
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/Domain.AssemblyInfoInputs.cache
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/Domain.AssemblyInfo.cs
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/Domain.csproj.CoreCompileInputs.cache
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/Domain.sourcelink.json
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/Domain.dll
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/refint/Domain.dll
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/Domain.pdb
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/Domain.genruntimeconfig.cache
-/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/Debug/net9.0/ref/Domain.dll
->>>>>>> 9d000141f03ee15c0593964aba1041bbb9074fcb

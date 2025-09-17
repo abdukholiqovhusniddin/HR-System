@@ -7,7 +7,7 @@ public class UserProfileResponseDto
     public string? Username { get; set; }
     public string? FullName { get; set; }
     public UserRole Role { get; set; }
-    public IFormFile? PhotoUrl { get; set; }
+    public string? PhotoUrl { get; set; }
     public DateTime DateOfBirth { get; set; }
     public string? Email { get; set; }
     public bool IsEmailPublic { get; set; }
@@ -32,6 +32,8 @@ public class UserProfileResponseDto
         Department = e.Department,
         HireDate = e.HireDate,
         PassportInfo = e.PassportInfo,
+        PhotoUrl = e.PhotoUrl,
+        Role = e.User.Role,
         Age = DateTime.Today.Year - e.DateOfBirth.Year -
               (e.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - e.DateOfBirth.Year)) ? 1 : 0)
     };

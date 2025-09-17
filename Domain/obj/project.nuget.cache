@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "09JvtkmhtbY=",
+  "dgSpecHash": "qT3G3REI1pc=",
   "success": true,
   "projectFilePath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
@@ -8,8 +8,8 @@
     "C:\\Users\\Another love\\.nuget\\packages\\bouncycastle.cryptography\\2.5.1\\bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\mailkit\\4.13.0\\mailkit.4.13.0.nupkg.sha512",
-    "C:\\Users\\Another love\\.nuget\\packages\\mediatr\\13.0.0\\mediatr.13.0.0.nupkg.sha512",
-    "C:\\Users\\Another love\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\Another love\\.nuget\\packages\\mediatr\\11.0.0\\mediatr.11.0.0.nupkg.sha512",
+    "C:\\Users\\Another love\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\9.0.9\\microsoft.aspnetcore.authentication.jwtbearer.9.0.9.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.9\\microsoft.aspnetcore.openapi.9.0.9.nupkg.sha512",
@@ -69,27 +69,5 @@
     "C:\\Users\\Another love\\.nuget\\packages\\system.text.json\\9.0.9\\system.text.json.9.0.9.nupkg.sha512",
     "C:\\Users\\Another love\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problem reading the cache file D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\obj\\project.nuget.cache : '<' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.",
-      "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
-      "targetGraphs": []
-    },
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 13.0.0 was resolved.",
-      "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
-      "warningLevel": 1,
-      "filePath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
-      "libraryId": "MediatR",
-      "targetGraphs": [
-        "net9.0"
-      ]
-    }
-  ]
+  "logs": []
 }

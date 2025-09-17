@@ -1,5 +1,4 @@
 ﻿using Application.Commons;
-using Application.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers;

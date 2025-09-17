@@ -71,6 +71,15 @@
   ],
   "logs": [
     {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problem reading the cache file D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\obj\\project.nuget.cache : '<' is an invalid start of a value. Path: $ | LineNumber: 0 | BytePositionInLine: 0.",
+      "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
+      "targetGraphs": []
+    },
+    {
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: MediatR.Extensions.Microsoft.DependencyInjection 11.1.0 requires MediatR (>= 11.0.0 && < 12.0.0) but version MediatR 13.0.0 was resolved.",

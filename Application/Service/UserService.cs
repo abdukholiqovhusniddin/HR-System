@@ -106,13 +106,7 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
 
         var user = await _userRepository.GetByUsernameAsync(username, includeEmployeeProfile: true);
 
-       /* return user is null ? throw new ApiException("User not found.")
-            : user.Adapt<UserProfileResponseDto>();*/
-       return user is null ? throw new ApiException("User not found.")
-           : user.EmployeeProfile != null
-               ? UserProfileResponseDto.FromEmployee(user.EmployeeProfile)
-               : new UserProfileResponseDto();
-
+       return user?.EmployeeProfile?.Adapt<UserProfileResponseDto>();
     }
 
     public async Task<UserProfileResponseDto?> AssignRoleAsync(AssignRoleRequestDto dto)

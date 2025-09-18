@@ -12,12 +12,8 @@
 
   <ItemGroup>
     <Folder Include="DTOs\References\" />
-    <Folder Include="Features\Employees\Commands\" />
     <Folder Include="Features\Employees\Handlers\" />
-    <Folder Include="Features\Employees\Queries\" />
-    <Folder Include="Features\Users\Commands\" />
     <Folder Include="Features\Users\Handlers\" />
-    <Folder Include="Features\Users\Queries\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,10 +38,6 @@
     <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.9" />
     <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
     <PackageReference Include="MimeKit" Version="4.13.0" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.4" />
   </ItemGroup>
 
 </Project>

@@ -1,6 +1,7 @@
 using System.Reflection;
 using Application.Commons;
 using Application.JwtAuth;
+using Application.Mappers;
 using Application.Service;
 using Domain.Interfaces;
 using Infrastructure.Persistence.DataContext;
@@ -11,6 +12,12 @@ using Microsoft.OpenApi.Models;
 using Presentation.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var config = TypeAdapterConfig.GlobalSettings;
+config.Scan(Assembly.GetExecutingAssembly());
+
+builder.Services.AddMapster();
+new RegisterMappers().Register(config);
 
 builder.Services.AddMapster();
 builder.Services.AddControllers();
@@ -74,10 +81,7 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
-builder.Services.AddMapster();
 
-TypeAdapterConfig.GlobalSettings.Scan(
-    Assembly.GetExecutingAssembly());
 
 var app = builder.Build();
 

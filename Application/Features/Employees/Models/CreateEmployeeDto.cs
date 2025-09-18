@@ -1,4 +1,4 @@
 ﻿namespace Application.Features.Employees.Models;
-public class CreateUserDto
+public class CreateEmployeeDto
 {
 }

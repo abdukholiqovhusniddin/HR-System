@@ -31,7 +31,7 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
                 PhoneNumber = "+998901234567",
                 Position = "Administrator",
                 Department = "Administration",
-                DateOfBirth = new DateTime(1990, 1, 1),
+                DateOfBirth = new DateTime(2005, 02, 11),
                 IsEmailPublic = true,
                 IsTelegramPublic = true,
                 Telegram = "admin_telegram",

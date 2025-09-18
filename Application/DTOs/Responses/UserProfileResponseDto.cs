@@ -1,5 +1,4 @@
 ﻿using Domain.Enums;
-using Microsoft.AspNetCore.Http;
 
 namespace Application.DTOs.Responses;
 public class UserProfileResponseDto

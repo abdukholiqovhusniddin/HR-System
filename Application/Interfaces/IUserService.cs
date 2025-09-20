@@ -1,4 +1,4 @@
-﻿using Application.DTOs.Requests;
+﻿using Application.DTOs.Employees.Requests;
 using Application.DTOs.Responses;
 
 namespace Application.Interfaces;

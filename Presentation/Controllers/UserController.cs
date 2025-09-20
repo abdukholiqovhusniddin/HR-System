@@ -1,7 +1,6 @@
 ﻿using Application.Commons;
-using Application.DTOs.Requests;
+using Application.DTOs.Employees.Requests;
 using Application.DTOs.Responses;
-using Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

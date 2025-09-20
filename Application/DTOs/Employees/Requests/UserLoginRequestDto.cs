@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Application.DTOs.Requests;
+namespace Application.DTOs.Employees.Requests;
 public class UserLoginRequestDto
 {
     public required string Username { get; set; }

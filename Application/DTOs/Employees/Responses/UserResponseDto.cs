@@ -1,7 +1,7 @@
 ﻿using Domain.Enums;
 using Microsoft.AspNetCore.Http;
 
-namespace Application.DTOs.Responses;
+namespace Application.DTOs.Employees.Responses;
 public class UserResponseDto
 {
     public string? Username { get; set; }

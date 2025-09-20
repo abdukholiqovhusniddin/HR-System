@@ -13,12 +13,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             .IsRequired()
             .HasMaxLength(100);
 
-        builder.HasIndex(u => u.Email)
-            .IsUnique();
-        builder.Property(u => u.Email)
-            .IsRequired()
-            .HasMaxLength(256);
-
         builder.Property(u => u.PasswordHash)
             .IsRequired().
             HasMaxLength(256);
@@ -40,7 +34,6 @@ public class UserConfiguration : IEntityTypeConfiguration<User>
             {
                 Id = new Guid("1cd5ed74-9327-4446-9c76-adfc28d3f5bd"),
                 Username = "admin12345",
-                Email = "abdukholiqovh@gmail.com",
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword("admin123"),
                 Role = UserRole.Admin,
             }

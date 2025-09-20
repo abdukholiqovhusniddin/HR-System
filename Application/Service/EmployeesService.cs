@@ -4,13 +4,16 @@ using Application.Interfaces;
 using Domain.Interfaces;
 using Mapster;
 using Application.Features.Employees.Models;
+using Application.Commons;
+using MediatR;
 
 namespace Application.Service;
-public class EmployeesService(IEmployeesRepository directory) : IEmployeesService
+
+public class EmployeesService(IEmployeesRepository directory) : 
 {
     private readonly IEmployeesRepository _directoryRepository = directory;
 
-    public async Task<GetEmployeeDto> GetById(Guid id)
+    public async Task<GetEmployeeDto> GetById(Guid id, CancellationToken cancellationToken)
     {
         if (id == Guid.Empty)
             throw new ApiException("Id is empty");
@@ -21,11 +24,23 @@ public class EmployeesService(IEmployeesRepository directory) : IEmployeesServic
             : employee.Adapt<GetEmployeeDto>();
     }
 
-    public async Task<List<DirectoryResponseDto>> GetDirectory()
+    public async Task<List<GetDirectoryDto>> GetDirectory(CancellationToken cancellationToken)
     {
         var directoryDto = await _directoryRepository.GetAllDirectory();
 
-        return [.. directoryDto.Select(a => new DirectoryResponseDto(a.FullName,
+        return [.. directoryDto.Select(a => new GetDirectoryDto(a.FullName!,
             a.Position, a.Department))];
     }
 }
+
+//public sealed record GetEmployees : IRequest<ApiResponse<List<GetDirectoryDto>>>;
+
+//public sealed class GetEmployeesHandler(IEmployeesRepository employeesRepository) : IRequestHandler<GetEmployees, ApiResponse<List<GetDirectoryDto>>>
+//{
+//    private readonly IEmployeesRepository _employeesRepository = employeesRepository;
+
+//    public async Task<ApiResponse<List<GetDirectoryDto>>> GetDirectory(GetEmployees request, CancellationToken cancellationToken)
+//    {
+//        var directory = await _employeesRepository.GetAllDirectory();
+//    }
+//}

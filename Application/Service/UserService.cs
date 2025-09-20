@@ -1,5 +1,5 @@
 ﻿using Application.Commons;
-using Application.DTOs.Requests;
+using Application.DTOs.Employees.Requests;
 using Application.DTOs.Responses;
 using Application.Exceptions;
 using Application.Interfaces;
@@ -37,7 +37,6 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
         var user = new User
         {
             Username = userRegisterDto.Username,
-            Email = userRegisterDto.Email,
             PasswordHash = BCrypt.Net.BCrypt.HashPassword(password),
             Role = userRegisterDto.Role
         };

@@ -1,4 +1,5 @@
-﻿using Application.Features.Employees.Models;
+﻿using Application.DTOs.Employees.Responses;
+using Application.Features.Employees.Models;
 using Mapster;
 
 namespace Application.Mappers;

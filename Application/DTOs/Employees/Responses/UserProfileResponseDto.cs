@@ -1,6 +1,6 @@
 ﻿using Domain.Enums;
 
-namespace Application.DTOs.Responses;
+namespace Application.DTOs.Employees.Responses;
 public class UserProfileResponseDto
 {
     public string? Username { get; set; }

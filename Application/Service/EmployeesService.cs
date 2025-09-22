@@ -6,14 +6,23 @@ using Mapster;
 using Application.Features.Employees.Models;
 using Application.Commons;
 using MediatR;
+using Application.DTOs.Employees.Responses;
 
 namespace Application.Service;
 
-public class EmployeesService(IEmployeesRepository directory) : 
+public class EmployeesService(IEmployeesRepository directory)
 {
     private readonly IEmployeesRepository _directoryRepository = directory;
 
-    public async Task<GetEmployeeDto> GetById(Guid id, CancellationToken cancellationToken)
+    public async Task<List<ResponseDirectoryDto>> GetDirectory(CancellationToken cancellationToken)
+    {
+        var directoryDto = await _directoryRepository.GetAllDirectory();
+
+        return [.. directoryDto.Select(a => new ResponseDirectoryDto(a.FullName!,
+            a.Position, a.Department))];
+    }
+
+    public async Task<ResponseEmployeeDto> GetById(Guid id, CancellationToken cancellationToken)
     {
         if (id == Guid.Empty)
             throw new ApiException("Id is empty");
@@ -21,15 +30,7 @@ public class EmployeesService(IEmployeesRepository directory) :
         var employee = await _directoryRepository.GetById(id);
 
         return employee is null ? throw new NotFoundException("Employee not found")
-            : employee.Adapt<GetEmployeeDto>();
-    }
-
-    public async Task<List<GetDirectoryDto>> GetDirectory(CancellationToken cancellationToken)
-    {
-        var directoryDto = await _directoryRepository.GetAllDirectory();
-
-        return [.. directoryDto.Select(a => new GetDirectoryDto(a.FullName!,
-            a.Position, a.Department))];
+            : employee.Adapt<ResponseEmployeeDto>();
     }
 }
 

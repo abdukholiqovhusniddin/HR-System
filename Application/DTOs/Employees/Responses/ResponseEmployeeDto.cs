@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 
 namespace Application.Features.Employees.Models;
-public class GetEmployeeDto
+public class ResponseEmployeeDto
 {
     public string? FullName { get; set; }
     public IFormFile? Photo { get; set; }

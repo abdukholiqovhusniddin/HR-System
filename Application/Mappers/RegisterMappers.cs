@@ -43,6 +43,6 @@ public class RegisterMappers : IRegister
                 (src.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - src.DateOfBirth.Year)) ? 1 : 0));
 
         config.NewConfig<Employee, UserResponseDto>();
-        config.NewConfig<Employee, GetEmployeeDto>();
+        config.NewConfig<Employee, ResponseEmployeeDto>();
     }
 }

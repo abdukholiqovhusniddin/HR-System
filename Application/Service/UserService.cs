@@ -1,6 +1,6 @@
 ﻿using Application.Commons;
 using Application.DTOs.Employees.Requests;
-using Application.DTOs.Responses;
+using Application.DTOs.Employees.Responses;
 using Application.Exceptions;
 using Application.Interfaces;
 using Application.JwtAuth;

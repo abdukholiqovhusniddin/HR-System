@@ -1,6 +1,7 @@
 ﻿using Application.Commons;
 using Application.Features.Employees.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers;
@@ -20,11 +21,12 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
         return StatusCode(directoryDto.StatusCode, directoryDto);
     }
 
+    [Authorize(Roles = "Admin, HR")]
     [HttpGet]
     [Route("{id:guid}")]
     public async Task<IActionResult> GetById([FromRoute] Guid id, CancellationToken cancellationToken)
     {
-        var employeeDto = await _mediator.Send(new GetById(id), cancellationToken);
+        var employeeDto = await _mediator.Send(new GetEmployeeById(id), cancellationToken);
 
         return Ok(new ApiResponse<object>
         {

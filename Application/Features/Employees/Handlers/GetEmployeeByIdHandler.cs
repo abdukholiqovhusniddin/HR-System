@@ -1,11 +1,12 @@
 ﻿using Application.Commons;
 using Application.DTOs.Employees.Responses;
 using Application.Exceptions;
+using Application.Features.Employees.Queries;
 using Domain.Interfaces;
 using Mapster;
 using MediatR;
 
-namespace Application.Features.Employees.Queries;
+namespace Application.Features.Employees.Handlers;
 
 internal sealed class GetEmployeeByIdHandler(IEmployeesRepository directory) : IRequestHandler<GetEmployeeById, ApiResponse<ResponseEmployeeDto>>
 {

@@ -1,7 +1,9 @@
-﻿using Application.Commons;
+﻿using System.Threading;
+using Application.Commons;
 using Application.DTOs.Employees.Requests;
 using Application.DTOs.Employees.Responses;
 using Application.DTOs.Users.Requests;
+using Application.Features.Users.Commands;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -17,22 +19,23 @@ public class UserController(IMediator mediator) : ApiControllerBase
     [Authorize(Roles = "Admin")]
     [HttpPost]
     [Route("register")]
-    public async Task<IActionResult> CreateUser([FromForm] UserRegisterRequestDto userRegisterDto)
+    public async Task<IActionResult> CreateUser([FromForm] UserRegisterRequestDto userRegisterDto, CancellationToken cancellationToken)
     {
-        var createdUser = await _mediator.Send(userRegisterDto);
-        if (createdUser == null)
-        {
-            return BadRequest(new ApiResponse<object>
-            {
-                Error = "User creation failed. User or email already exists.",
-                StatusCode = 400
-            });
-        }
-        return Ok(new ApiResponse<object>
-        {
-            Data = createdUser,
-            StatusCode = 201
-        });
+        var responseUserRegister = await _mediator.Send(new CreateUserCommand(userRegisterDto), cancellationToken);
+        //if (createdUser == null)
+        //{
+        //    return BadRequest(new ApiResponse<object>
+        //    {
+        //        Error = "User creation failed. User or email already exists.",
+        //        StatusCode = 400
+        //    });
+        //}
+        //return Ok(new ApiResponse<object>
+        //{
+        //    Data = createdUser,
+        //    StatusCode = 201
+        //});
+        return StatusCode(responseUserRegister.StatusCode, responseUserRegister);
     }
 
     [HttpPost]

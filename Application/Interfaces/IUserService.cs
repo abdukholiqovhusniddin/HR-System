@@ -1,5 +1,6 @@
 ﻿using Application.DTOs.Employees.Requests;
 using Application.DTOs.Employees.Responses;
+using Application.DTOs.Users.Requests;
 
 namespace Application.Interfaces;
 public interface IUserService

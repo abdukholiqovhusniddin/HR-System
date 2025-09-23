@@ -1,6 +1,8 @@
 ﻿using Application.Commons;
 using Application.DTOs.Employees.Requests;
 using Application.DTOs.Employees.Responses;
+using Application.DTOs.Users.Requests;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,16 +10,16 @@ namespace Presentation.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class UserController(IUserService service) : ApiControllerBase
+public class UserController(IMediator mediator) : ApiControllerBase
 {
-    private readonly IUserService _service = service; // DI- Dependency Injection   
+    private readonly IMediator _mediator = mediator; // DI- Dependency Injection   
 
     [Authorize(Roles = "Admin")]
     [HttpPost]
     [Route("register")]
     public async Task<IActionResult> CreateUser([FromForm] UserRegisterRequestDto userRegisterDto)
     {
-        UserResponseDto createdUser = await _service.CreateUserAsync(userRegisterDto);
+        var createdUser = await _mediator.Send(userRegisterDto);
         if (createdUser == null)
         {
             return BadRequest(new ApiResponse<object>

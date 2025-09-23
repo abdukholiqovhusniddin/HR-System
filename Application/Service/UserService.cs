@@ -1,6 +1,7 @@
 ﻿using Application.Commons;
 using Application.DTOs.Employees.Requests;
 using Application.DTOs.Employees.Responses;
+using Application.DTOs.Users.Requests;
 using Application.Exceptions;
 using Application.Interfaces;
 using Application.JwtAuth;
@@ -20,7 +21,7 @@ public class UserService(IUserRepository userRepository, JwtService jwtService,
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IEmployerRepository _employerRepository = employerRepository;
 
-    public string GeneratePasswordForUser() =>
+    public static string GeneratePasswordForUser() =>
         PasswordHelper.PasswordGeneration();
 
     public async Task<UserResponseDto> CreateUserAsync(UserRegisterRequestDto userRegisterDto)

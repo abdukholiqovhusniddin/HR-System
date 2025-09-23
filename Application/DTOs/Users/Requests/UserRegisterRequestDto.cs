@@ -2,7 +2,7 @@
 using Domain.Enums;
 using Microsoft.AspNetCore.Http;
 
-namespace Application.DTOs.Employees.Requests;
+namespace Application.DTOs.Users.Requests;
 public class UserRegisterRequestDto
 {
     [StringLength(50, MinimumLength = 3, ErrorMessage = "Username must be between 3 and 50 characters")]

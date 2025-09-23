@@ -13,7 +13,6 @@
   <ItemGroup>
     <Folder Include="DTOs\Users\Responses\" />
     <Folder Include="DTOs\Users\Requests\" />
-    <Folder Include="Features\Employees\Handlers\" />
     <Folder Include="Features\Users\Handlers\" />
   </ItemGroup>
 

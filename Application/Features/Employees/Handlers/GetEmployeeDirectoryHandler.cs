@@ -1,9 +1,10 @@
 ﻿using Application.Commons;
 using Application.DTOs.Employees.Responses;
+using Application.Features.Employees.Queries;
 using Domain.Interfaces;
 using MediatR;
 
-namespace Application.Features.Employees.Queries;
+namespace Application.Features.Employees.Handlers;
 
 internal sealed class GetEmployeeDirectoryHandler(IEmployeesRepository directoryRepository) : IRequestHandler<GetEmployeeDirectory, ApiResponse<List<ResponseDirectoryDto>>>
 {

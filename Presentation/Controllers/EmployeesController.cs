@@ -24,15 +24,11 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
     [Authorize(Roles = "Admin, HR")]
     [HttpGet]
     [Route("{id:guid}")]
-    public async Task<IActionResult> GetById([FromRoute] Guid id, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetById([FromRoute] Guid Id, CancellationToken cancellationToken)
     {
-        var employeeDto = await _mediator.Send(new GetEmployeeById(id), cancellationToken);
+        var employeeDto = await _mediator.Send(new GetEmployeeById(Id), cancellationToken);
 
-        return Ok(new ApiResponse<object>
-        {
-            Data = employeeDto,
-            StatusCode = 200
-        });
+        return StatusCode(employeeDto.StatusCode, employeeDto);
     }
 
 }

@@ -22,19 +22,7 @@ public class UserController(IMediator mediator) : ApiControllerBase
     public async Task<IActionResult> CreateUser([FromForm] UserRegisterRequestDto userRegisterDto, CancellationToken cancellationToken)
     {
         var responseUserRegister = await _mediator.Send(new CreateUserCommand(userRegisterDto), cancellationToken);
-        //if (createdUser == null)
-        //{
-        //    return BadRequest(new ApiResponse<object>
-        //    {
-        //        Error = "User creation failed. User or email already exists.",
-        //        StatusCode = 400
-        //    });
-        //}
-        //return Ok(new ApiResponse<object>
-        //{
-        //    Data = createdUser,
-        //    StatusCode = 201
-        //});
+
         return StatusCode(responseUserRegister.StatusCode, responseUserRegister);
     }
 

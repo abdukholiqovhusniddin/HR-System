@@ -1,16 +1,17 @@
 ﻿using Application.Commons;
 using Application.DTOs.Employees.Responses;
 using Application.Exceptions;
+using Application.Features.Users.Commands;
 using Application.Interfaces;
 using Domain.Interfaces;
 using Mapster;
 using MediatR;
 
-namespace Application.Features.Users.Commands;
+namespace Application.Features.Users.Handlers;
 
 internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
     IUnitOfWork unitOfWork, IFileService fileService,
-    IEmailService emailService, IEmployerRepository employerRepository) : IRequestHandler<CreateUserCommand, ApiResponse<UserResponseDto>>
+    IEmailService emailService, IEmployerRepository employerRepository) : IRequestHandler<RegisterUserCommand, ApiResponse<UserResponseDto>>
 {
     private readonly IUserRepository _userRepository = userRepository;
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
@@ -19,7 +20,7 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
     public static string GeneratePasswordForUser() =>
         PasswordHelper.PasswordGeneration();
 
-    public async Task<ApiResponse<UserResponseDto>> Handle(CreateUserCommand request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<UserResponseDto>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
         var userRegisterDto = request.userRegisterDto;
 

@@ -423,6 +423,10 @@
               "target": "Package",
               "version": "[11.0.0, )"
             },
+            "MediatR.Extensions": {
+              "target": "Package",
+              "version": "[0.6.0, )"
+            },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[11.1.0, )"

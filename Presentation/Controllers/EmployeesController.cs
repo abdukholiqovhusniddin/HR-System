@@ -10,13 +10,12 @@ namespace Presentation.Controllers;
 [ApiController]
 public class EmployeesController(IMediator mediator) : ApiControllerBase
 {
-    private readonly IMediator _mediator = mediator; // DI- Dependency Injection
 
     [HttpGet]
     [Route("directory")]
     public async Task<IActionResult> GetDirectory()
     {
-        var directoryDto = await _mediator.Send(new GetEmployeeDirectory());
+        var directoryDto = await mediator.Send(new GetEmployeeDirectory());
 
         return StatusCode(directoryDto.StatusCode, directoryDto);
     }
@@ -26,7 +25,7 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
     [Route("{id:guid}")]
     public async Task<IActionResult> GetById([FromRoute] Guid Id)
     {
-        var employeeDto = await _mediator.Send(new GetEmployeeById(Id));
+        var employeeDto = await mediator.Send(new GetEmployeeById(Id));
 
         return StatusCode(employeeDto.StatusCode, employeeDto);
     }

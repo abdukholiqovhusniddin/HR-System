@@ -8,7 +8,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "Id",
         "Type": "System.Guid",
         "IsRequired": true
       }
@@ -34,14 +34,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "dto",
-        "Type": "Application.DTOs.Requests.AssignRoleRequestDto",
+        "Name": "AssignRoleDto",
+        "Type": "Application.DTOs.Users.Requests.AssignRoleRequestDto",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "Application.DTOs.Responses.UserProfileResponseDto",
+        "Type": "Application.DTOs.Users.Responses.UserProfileResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -61,7 +61,7 @@
     "Parameters": [
       {
         "Name": "userLoginDto",
-        "Type": "Application.DTOs.Requests.UserLoginRequestDto",
+        "Type": "Application.DTOs.Users.Requests.UserLoginRequestDto",
         "IsRequired": true
       }
     ],
@@ -69,7 +69,7 @@
   },
   {
     "ContainingType": "Presentation.Controllers.UserController",
-    "Method": "GetMe",
+    "Method": "GetMeQuery",
     "RelativePath": "api/User/me",
     "HttpMethod": "GET",
     "IsController": true,

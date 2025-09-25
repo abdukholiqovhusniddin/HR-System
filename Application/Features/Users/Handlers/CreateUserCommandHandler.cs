@@ -1,5 +1,5 @@
 ﻿using Application.Commons;
-using Application.DTOs.Employees.Responses;
+using Application.DTOs.Users.Responses;
 using Application.Exceptions;
 using Application.Features.Users.Commands;
 using Application.Interfaces;

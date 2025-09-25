@@ -8,6 +8,7 @@ using Infrastructure.Helpers;
 using Infrastructure.Persistence.DataContext;
 using Infrastructure.Repositories;
 using Mapster;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Presentation.Middlewares;
@@ -19,6 +20,8 @@ config.Scan(Assembly.GetExecutingAssembly());
 
 builder.Services.AddMapster();
 new RegisterMappers().Register(config);
+builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+
 
 builder.Services.AddMapster();
 builder.Services.AddControllers();
@@ -26,7 +29,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("HRDb")));
 
-builder.Services.Configure<EmailOptions>(builder
+builder.Services.Configure<Application.Commons.EmailOptions>(builder
     .Configuration.GetSection("SendEmail"));
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
@@ -34,9 +37,7 @@ builder.Services.AddScoped<IEmployerRepository, EmployerRepository>();
 builder.Services.AddScoped<IEmployeesRepository, EmployeesRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
-builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IFileService, FileService>();
-builder.Services.AddScoped<IEmployeesService, EmployeesService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();

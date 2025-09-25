@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Domain.Enums;
 
-namespace Application.DTOs.Employees.Requests;
+namespace Application.DTOs.Users.Requests;
 public class AssignRoleRequestDto
 {
     public required string Username { get; set; }

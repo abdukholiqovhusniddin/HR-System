@@ -1,8 +1,7 @@
 ﻿using System.Threading;
 using Application.Commons;
-using Application.DTOs.Employees.Requests;
-using Application.DTOs.Employees.Responses;
 using Application.DTOs.Users.Requests;
+using Application.DTOs.Users.Responses;
 using Application.Features.Users.Commands;
 using Application.Features.Users.Queries;
 using MediatR;
@@ -48,32 +47,15 @@ public class UserController(IMediator mediator) : ApiControllerBase
             });
 
         var user = await _mediator.Send(new GetMeQuery(UserName));
-
-        //if (user == null)
-        //{
-        //    return NotFound(new ApiResponse<object>
-        //    {
-        //        Error = "User not found",
-        //        StatusCode = 404
-        //    });
-        //}
-        //return Ok(new ApiResponse<object>
-        //{
-        //    Data = user,
-        //    StatusCode = 200
-        //});
         return StatusCode(user.StatusCode, user);
     }
 
     [Authorize(Roles = "Admin")]
     [HttpPut("assign-role")]
-    public async Task<ActionResult<UserProfileResponseDto>> AssignRole([FromBody] AssignRoleRequestDto dto)
+    public async Task<ActionResult<UserProfileResponseDto>> AssignRole([FromBody] AssignRoleRequestDto AssignRoleDto)
     {
-        UserProfileResponseDto? updatedUser = await _service.AssignRoleAsync(dto);
+        var updatedUser = await _mediator.Send(new AssignRoleCommand(AssignRoleDto));
 
-        if (updatedUser == null)
-            return NotFound("User not found");
-
-        return Ok(updatedUser);
+        return StatusCode(updatedUser.StatusCode, updatedUser);
     }
 }

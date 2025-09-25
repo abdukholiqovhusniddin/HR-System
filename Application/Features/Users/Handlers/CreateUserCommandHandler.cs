@@ -22,7 +22,7 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
 
     public async Task<ApiResponse<UserResponseDto>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
-        var userRegisterDto = request.userRegisterDto;
+        var userRegisterDto = request.UserRegisterDto;
 
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))
             throw new ApiException("User already exists.");

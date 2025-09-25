@@ -4,4 +4,4 @@ using Application.DTOs.Users.Requests;
 using MediatR;
 
 namespace Application.Features.Users.Commands;
-public sealed record CreateUserCommand(UserRegisterRequestDto userRegisterDto) : IRequest<ApiResponse<UserResponseDto>>;
+public sealed record RegisterUserCommand(UserRegisterRequestDto UserRegisterDto) : IRequest<ApiResponse<UserResponseDto>>;

@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.Employees.Responses;
+using Application.DTOs.Users.Responses;
 using Mapster;
 
 namespace Application.Mappers;

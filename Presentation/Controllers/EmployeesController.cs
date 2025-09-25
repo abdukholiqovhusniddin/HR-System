@@ -14,9 +14,9 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
 
     [HttpGet]
     [Route("directory")]
-    public async Task<IActionResult> GetDirectory(CancellationToken cancellationToken)
+    public async Task<IActionResult> GetDirectory()
     {
-        var directoryDto = await _mediator.Send(new GetEmployeeDirectory(), cancellationToken);
+        var directoryDto = await _mediator.Send(new GetEmployeeDirectory());
 
         return StatusCode(directoryDto.StatusCode, directoryDto);
     }
@@ -24,9 +24,9 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
     [Authorize(Roles = "Admin, HR")]
     [HttpGet]
     [Route("{id:guid}")]
-    public async Task<IActionResult> GetById([FromRoute] Guid Id, CancellationToken cancellationToken)
+    public async Task<IActionResult> GetById([FromRoute] Guid Id)
     {
-        var employeeDto = await _mediator.Send(new GetEmployeeById(Id), cancellationToken);
+        var employeeDto = await _mediator.Send(new GetEmployeeById(Id));
 
         return StatusCode(employeeDto.StatusCode, employeeDto);
     }

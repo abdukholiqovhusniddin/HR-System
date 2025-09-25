@@ -1,5 +1,5 @@
 ﻿using Application.Commons;
-using Application.DTOs.Employees.Requests;
+using Application.DTOs.Users.Requests;
 using MediatR;
 
 namespace Application.Features.Users.Commands;

@@ -29,7 +29,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("HRDb")));
 
-builder.Services.Configure<Application.Commons.EmailOptions>(builder
+builder.Services.Configure<EmailOptions>(builder
     .Configuration.GetSection("SendEmail"));
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();

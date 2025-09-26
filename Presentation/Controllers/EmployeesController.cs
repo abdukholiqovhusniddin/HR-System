@@ -30,4 +30,8 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
         return StatusCode(employeeDto.StatusCode, employeeDto);
     }
 
+    //[Authorize(Roles = "HR")]
+    //[HttpPut]
+    //[Route]
+
 }

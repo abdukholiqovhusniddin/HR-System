@@ -1,3 +1,43 @@
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/bin/Debug/net9.0/Infrastructure.deps.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/bin/Debug/net9.0/Infrastructure.runtimeconfig.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/bin/Debug/net9.0/Infrastructure.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/bin/Debug/net9.0/Infrastructure.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/bin/Debug/net9.0/Application.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/bin/Debug/net9.0/Domain.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/bin/Debug/net9.0/Application.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/bin/Debug/net9.0/Domain.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastructure.csproj.AssemblyReference.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastructure.AssemblyInfoInputs.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastructure.AssemblyInfo.cs
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastructure.csproj.CoreCompileInputs.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastructure.sourcelink.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastr.15EFFBFE.Up2Date
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastructure.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/refint/Infrastructure.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastructure.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/Infrastructure.genruntimeconfig.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Infrastructure/obj/Debug/net9.0/ref/Infrastructure.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/bin/Debug/net9.0/Infrastructure.deps.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/bin/Debug/net9.0/Infrastructure.runtimeconfig.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/bin/Debug/net9.0/Infrastructure.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/bin/Debug/net9.0/Infrastructure.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/bin/Debug/net9.0/Application.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/bin/Debug/net9.0/Domain.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/bin/Debug/net9.0/Application.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/bin/Debug/net9.0/Domain.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastructure.csproj.AssemblyReference.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastructure.AssemblyInfoInputs.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastructure.AssemblyInfo.cs
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastructure.csproj.CoreCompileInputs.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastructure.sourcelink.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastr.15EFFBFE.Up2Date
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastructure.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/refint/Infrastructure.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastructure.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/Infrastructure.genruntimeconfig.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/Debug/net9.0/ref/Infrastructure.dll
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Infrastructure.deps.json
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Infrastructure.runtimeconfig.json
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Infrastructure\bin\Debug\net9.0\Infrastructure.dll

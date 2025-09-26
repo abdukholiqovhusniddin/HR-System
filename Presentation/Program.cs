@@ -1,4 +1,5 @@
 using System.Reflection;
+using Application;
 using Application.Commons;
 using Application.JwtAuth;
 using Application.Mappers;
@@ -20,7 +21,7 @@ config.Scan(Assembly.GetExecutingAssembly());
 
 builder.Services.AddMapster();
 new RegisterMappers().Register(config);
-builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddApplication();
 
 
 builder.Services.AddMapster();

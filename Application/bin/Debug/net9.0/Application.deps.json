@@ -13,14 +13,17 @@
           "MailKit": "4.13.0",
           "Mapster": "7.4.0",
           "Mapster.DependencyInjection": "1.0.1",
-          "MediatR": "11.0.0",
+          "MediatR": "13.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "Mediator": "1.0.2123",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.9",
           "Microsoft.EntityFrameworkCore": "9.0.9",
           "Microsoft.EntityFrameworkCore.Design": "9.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
+          "Microsoft.Extensions.DependencyInjection": "9.0.9",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9",
           "Microsoft.Extensions.Options": "9.0.9",
           "Microsoft.Office.Interop.Word": "15.0.4797.1004",
           "MimeKit": "4.13.0"
@@ -96,28 +99,42 @@
           }
         }
       },
-      "MediatR/11.0.0": {
+      "Mediator/1.0.2123": {
         "dependencies": {
-          "MediatR.Contracts": "1.0.1"
+          "ServiceStack.Text": "3.2.2"
         },
         "runtime": {
-          "lib/netstandard2.1/MediatR.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.0.0"
+          "lib/Mediator.dll": {
+            "assemblyVersion": "1.0.2123.0",
+            "fileVersion": "1.0.2123.0"
           }
         }
       },
-      "MediatR.Contracts/1.0.1": {
+      "MediatR/13.0.0": {
+        "dependencies": {
+          "MediatR.Contracts": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9",
+          "Microsoft.Extensions.Logging": "9.0.9",
+          "Microsoft.IdentityModel.JsonWebTokens": "8.0.1"
+        },
+        "runtime": {
+          "lib/net9.0/MediatR.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.0.0"
+          }
+        }
+      },
+      "MediatR.Contracts/2.0.1": {
         "runtime": {
           "lib/netstandard2.0/MediatR.Contracts.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.1.0"
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
           }
         }
       },
       "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
         "dependencies": {
-          "MediatR": "11.0.0",
+          "MediatR": "13.0.0",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9"
         },
         "runtime": {
@@ -697,7 +714,7 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Office.Interop.Word.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "15.0.4797.1003"
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -729,6 +746,14 @@
           "lib/net6.0/Mono.TextTemplating.dll": {
             "assemblyVersion": "3.0.0.0",
             "fileVersion": "3.0.0.1"
+          }
+        }
+      },
+      "ServiceStack.Text/3.2.2": {
+        "runtime": {
+          "lib/ServiceStack.Text.dll": {
+            "assemblyVersion": "3.2.2.5660",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -823,13 +848,20 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Security.Cryptography.Pkcs/8.0.1": {},
       "System.Text.Encodings.Web/8.0.0": {},
-      "System.Text.Json/9.0.9": {},
+      "System.Text.Json/9.0.9": {
+        "runtime": {
+          "lib/net9.0/System.Text.Json.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.925.41916"
+          }
+        }
+      },
       "System.Threading.Channels/7.0.0": {},
       "Domain/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "MailKit": "4.13.0",
-          "MediatR": "11.0.0",
+          "MediatR": "13.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
           "Microsoft.AspNetCore.OpenApi": "9.0.9",
@@ -899,19 +931,26 @@
       "path": "mapster.dependencyinjection/1.0.1",
       "hashPath": "mapster.dependencyinjection.1.0.1.nupkg.sha512"
     },
-    "MediatR/11.0.0": {
+    "Mediator/1.0.2123": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8klzVGZQiA2oxZRzQFBZbdPD/IQUm9RYtfiyTDKhxDQ99Gi93+GXt1ZJjH2D7Lh7ZFHCv5XdkwbmfHEQBCatPg==",
-      "path": "mediatr/11.0.0",
-      "hashPath": "mediatr.11.0.0.nupkg.sha512"
+      "sha512": "sha512-Rl1ogCbyFIAuFc3t9L+VnLIa12VK+Le38SHKs+94VGsBpIqZmqBHfBpudt52VmqzNP17k8mlzHGNfZuteSyrQA==",
+      "path": "mediator/1.0.2123",
+      "hashPath": "mediator.1.0.2123.nupkg.sha512"
     },
-    "MediatR.Contracts/1.0.1": {
+    "MediatR/13.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
-      "path": "mediatr.contracts/1.0.1",
-      "hashPath": "mediatr.contracts.1.0.1.nupkg.sha512"
+      "sha512": "sha512-gR5vSoIINsXs86we38qdIfG62f6ngxT2sSaePsakJGHJIgLUDA7b41lujGXGWxX0hWyk8suajr2VKcAYSVMtdw==",
+      "path": "mediatr/13.0.0",
+      "hashPath": "mediatr.13.0.0.nupkg.sha512"
+    },
+    "MediatR.Contracts/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
+      "path": "mediatr.contracts/2.0.1",
+      "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
     },
     "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
       "type": "package",
@@ -1192,6 +1231,13 @@
       "sha512": "sha512-YqueG52R/Xej4VVbKuRIodjiAhV0HR/XVbLbNrJhCZnzjnSjgMJ/dCdV0akQQxavX6hp/LC6rqLGLcXeQYU7XA==",
       "path": "mono.texttemplating/3.0.0",
       "hashPath": "mono.texttemplating.3.0.0.nupkg.sha512"
+    },
+    "ServiceStack.Text/3.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PINVnZiz4u6MVuz/7Y9ru2inAA8AiRLvC72rnnvRLo19iFHDMDNzn7oMozvZ+OGVjqSL9LEUx6z1Rti9xJav8w==",
+      "path": "servicestack.text/3.2.2",
+      "hashPath": "servicestack.text.3.2.2.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",

@@ -1,18 +1,36 @@
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Application.deps.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Application.runtimeconfig.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Application.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Application.pdb
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Domain.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\bin\Debug\net9.0\Domain.pdb
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.csproj.AssemblyReference.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.AssemblyInfoInputs.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.AssemblyInfo.cs
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.csproj.CoreCompileInputs.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.sourcelink.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Applicat.44B5EDA2.Up2Date
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\refint\Application.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.pdb
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\Application.genruntimeconfig.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\obj\Debug\net9.0\ref\Application.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/bin/Debug/net9.0/Application.deps.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/bin/Debug/net9.0/Application.runtimeconfig.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/bin/Debug/net9.0/Application.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/bin/Debug/net9.0/Application.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/bin/Debug/net9.0/Domain.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/bin/Debug/net9.0/Domain.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Application.csproj.AssemblyReference.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Application.AssemblyInfoInputs.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Application.AssemblyInfo.cs
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Application.csproj.CoreCompileInputs.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Application.sourcelink.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Applicat.44B5EDA2.Up2Date
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Application.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/refint/Application.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Application.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/Application.genruntimeconfig.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Application/obj/Debug/net9.0/ref/Application.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/bin/Debug/net9.0/Application.deps.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/bin/Debug/net9.0/Application.runtimeconfig.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/bin/Debug/net9.0/Application.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/bin/Debug/net9.0/Application.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/bin/Debug/net9.0/Domain.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/bin/Debug/net9.0/Domain.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Application.csproj.AssemblyReference.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Application.AssemblyInfoInputs.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Application.AssemblyInfo.cs
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Application.csproj.CoreCompileInputs.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Application.sourcelink.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Applicat.44B5EDA2.Up2Date
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Application.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/refint/Application.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Application.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/Application.genruntimeconfig.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/Debug/net9.0/ref/Application.dll

@@ -1,161 +1,323 @@
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\appsettings.Development.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\appsettings.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Presentation.staticwebassets.runtime.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Presentation.staticwebassets.endpoints.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Presentation.exe
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Presentation.deps.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Presentation.runtimeconfig.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Presentation.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Presentation.pdb
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\BCrypt.Net-Next.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\BouncyCastle.Cryptography.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Humanizer.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\MailKit.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Mapster.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Mapster.Core.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Mapster.DependencyInjection.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\MediatR.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\MediatR.Contracts.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.AspNetCore.OpenApi.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Build.Locator.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Design.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.EntityFrameworkCore.Relational.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Caching.Abstractions.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Caching.Memory.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Office.Interop.Word.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.OpenApi.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\MimeKit.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Mono.TextTemplating.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Npgsql.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\System.CodeDom.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\System.Composition.AttributedModel.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\System.Composition.Convention.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\System.Composition.Hosting.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\System.Composition.Runtime.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\System.Composition.TypedParts.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Application.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Domain.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Infrastructure.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Infrastructure.pdb
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Application.pdb
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Domain.pdb
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.csproj.AssemblyReference.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\rpswa.dswa.cache.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.GeneratedMSBuildEditorConfig.editorconfig
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.AssemblyInfoInputs.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.AssemblyInfo.cs
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.csproj.CoreCompileInputs.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.MvcApplicationPartsAssemblyInfo.cs
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.MvcApplicationPartsAssemblyInfo.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.sourcelink.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\rjimswa.dswa.cache.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\scopedcss\bundle\Presentation.styles.css
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\staticwebassets.build.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\staticwebassets.build.json.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\staticwebassets.development.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presenta.BC777DBE.Up2Date
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\refint\Presentation.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.pdb
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.genruntimeconfig.cache
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\ref\Presentation.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\MediatR.Extensions.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/appsettings.Development.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/appsettings.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Presentation.staticwebassets.runtime.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Presentation.staticwebassets.endpoints.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Presentation.exe
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Presentation.deps.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Presentation.runtimeconfig.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Presentation.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Presentation.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/BCrypt.Net-Next.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/BouncyCastle.Cryptography.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Humanizer.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/MailKit.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Mapster.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Mapster.Core.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Mapster.DependencyInjection.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/MediatR.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/MediatR.Contracts.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Build.Locator.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.Office.Interop.Word.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Microsoft.OpenApi.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/MimeKit.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Mono.TextTemplating.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Npgsql.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/System.CodeDom.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/System.Composition.AttributedModel.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/System.Composition.Convention.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/System.Composition.Hosting.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/System.Composition.Runtime.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/System.Composition.TypedParts.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Application.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Domain.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Infrastructure.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Infrastructure.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Application.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/Domain.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.csproj.AssemblyReference.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/rpswa.dswa.cache.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.GeneratedMSBuildEditorConfig.editorconfig
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.AssemblyInfoInputs.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.AssemblyInfo.cs
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.csproj.CoreCompileInputs.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.MvcApplicationPartsAssemblyInfo.cs
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.MvcApplicationPartsAssemblyInfo.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.sourcelink.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/rjimswa.dswa.cache.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/scopedcss/bundle/Presentation.styles.css
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/staticwebassets.build.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/staticwebassets.build.json.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/staticwebassets.development.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/staticwebassets.upToDateCheck.txt
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presenta.BC777DBE.Up2Date
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/refint/Presentation.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.pdb
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/Presentation.genruntimeconfig.cache
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/obj/Debug/net9.0/ref/Presentation.dll
+D:/Git-Hub_pr/HR-SystemClean/HR-SystemSolution/Presentation/bin/Debug/net9.0/MediatR.Extensions.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/appsettings.Development.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/appsettings.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Presentation.staticwebassets.runtime.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Presentation.staticwebassets.endpoints.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Presentation
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Presentation.deps.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Presentation.runtimeconfig.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Presentation.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Presentation.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/BCrypt.Net-Next.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/BouncyCastle.Cryptography.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Humanizer.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/MailKit.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Mapster.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Mapster.Core.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Mapster.DependencyInjection.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/MediatR.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/MediatR.Contracts.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/MediatR.Extensions.Microsoft.DependencyInjection.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.AspNetCore.OpenApi.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Build.Locator.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.DependencyModel.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Options.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Extensions.Primitives.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Logging.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.IdentityModel.Tokens.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.Office.Interop.Word.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Microsoft.OpenApi.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/MimeKit.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Mono.TextTemplating.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Npgsql.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/System.CodeDom.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/System.Composition.AttributedModel.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/System.Composition.Convention.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/System.Composition.Hosting.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/System.Composition.Runtime.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/System.Composition.TypedParts.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/System.Text.Json.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/cs/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/de/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/es/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/fr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/it/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ja/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ko/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pl/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ru/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/tr/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Application.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Domain.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Infrastructure.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Infrastructure.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Application.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Domain.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.csproj.AssemblyReference.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/rpswa.dswa.cache.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.AssemblyInfoInputs.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.AssemblyInfo.cs
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.csproj.CoreCompileInputs.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.MvcApplicationPartsAssemblyInfo.cs
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.MvcApplicationPartsAssemblyInfo.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.sourcelink.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/rjimswa.dswa.cache.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/scopedcss/bundle/Presentation.styles.css
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/staticwebassets.build.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/staticwebassets.build.json.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/staticwebassets.development.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/staticwebassets.build.endpoints.json
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presenta.BC777DBE.Up2Date
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/refint/Presentation.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.pdb
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/Presentation.genruntimeconfig.cache
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/obj/Debug/net9.0/ref/Presentation.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/Mediator.dll
+/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Presentation/bin/Debug/net9.0/ServiceStack.Text.dll

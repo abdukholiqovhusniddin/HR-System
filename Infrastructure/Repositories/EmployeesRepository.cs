@@ -8,6 +8,7 @@ namespace Infrastructure.Repositories;
 public class EmployeesRepository(AppDbContext context) : IEmployeesRepository
 {
     private readonly AppDbContext _context = context;
+
     public async Task<IEnumerable<Employee>> GetAllDirectory() =>
         await _context.Employees.Where(a => a.User.Role != UserRole.Admin).ToListAsync();
 

@@ -21,9 +21,8 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
     }
 
     [Authorize(Roles = "Admin, HR")]
-    [HttpGet]
-    [Route("{id:guid}")]
-    public async Task<IActionResult> GetById([FromRoute] Guid Id)
+    [HttpGet("Id")]
+    public async Task<IActionResult> GetById(Guid Id)
     {
         var employeeDto = await mediator.Send(new GetEmployeeById(Id));
 

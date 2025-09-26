@@ -15,7 +15,7 @@ public class Employee : BaseEntity
     public string? Department { get; set; }
     public DateTime HireDate { get; set; }
 
-    public string? PassportInfo { get; set; }
+    public required string PassportInfo { get; set; }
 
     public Guid? ManagerId { get; set; }
     public Employee? Manager { get; set; }

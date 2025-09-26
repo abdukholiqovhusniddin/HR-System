@@ -4,7 +4,7 @@ namespace Application.DTOs.Employees.Responses;
 public class ResponseEmployeeDto
 {
     public string? FullName { get; set; }
-    public IFormFile? Photo { get; set; }
+    public string? PhotoUrl { get; set; }
     public DateTime DateOfBirth { get; set; }
     public string? Email { get; set; }
     public string? PhoneNumber { get; set; }

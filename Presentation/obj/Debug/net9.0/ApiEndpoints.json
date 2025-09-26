@@ -1,8 +1,18 @@
 [
   {
     "ContainingType": "Presentation.Controllers.EmployeesController",
+    "Method": "GetDirectory",
+    "RelativePath": "api/Employees/directory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.EmployeesController",
     "Method": "GetById",
-    "RelativePath": "api/Employees/{id}",
+    "RelativePath": "api/Employees/Id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,19 +20,9 @@
       {
         "Name": "Id",
         "Type": "System.Guid",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Presentation.Controllers.EmployeesController",
-    "Method": "GetDirectory",
-    "RelativePath": "api/Employees/directory",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
     "ReturnTypes": []
   },
   {

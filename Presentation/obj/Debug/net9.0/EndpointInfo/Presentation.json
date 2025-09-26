@@ -17,7 +17,7 @@
         }
       }
     },
-    "/api/Employees/{id}": {
+    "/api/Employees/Id": {
       "get": {
         "tags": [
           "Employees"
@@ -25,8 +25,7 @@
         "parameters": [
           {
             "name": "Id",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string",
               "format": "uuid"

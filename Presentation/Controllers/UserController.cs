@@ -1,7 +1,10 @@
-﻿using Application.Commons;
-using Application.DTOs.Requests;
-using Application.DTOs.Responses;
-using Application.Interfaces;
+﻿using System.Threading;
+using Application.Commons;
+using Application.DTOs.Users.Requests;
+using Application.DTOs.Users.Responses;
+using Application.Features.Users.Commands;
+using Application.Features.Users.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,87 +12,50 @@ namespace Presentation.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class UserController(IUserService service) : ApiControllerBase
+public class UserController(IMediator mediator) : ApiControllerBase
 {
-    private readonly IUserService _service = service; // DI- Dependency Injection   
+    private readonly IMediator _mediator = mediator; // DI- Dependency Injection   
 
     [Authorize(Roles = "Admin")]
     [HttpPost]
     [Route("register")]
     public async Task<IActionResult> CreateUser([FromForm] UserRegisterRequestDto userRegisterDto)
     {
-        UserResponseDto createdUser = await _service.CreateUserAsync(userRegisterDto);
-        if (createdUser == null)
-        {
-            return BadRequest(new ApiResponse<object>
-            {
-                Error = "User creation failed. User or email already exists.",
-                StatusCode = 400
-            });
-        }
-        return Ok(new ApiResponse<object>
-        {
-            Data = createdUser,
-            StatusCode = 201
-        });
+        var responseUserRegister = await _mediator.Send(new RegisterUserCommand(userRegisterDto));
+
+        return StatusCode(responseUserRegister.StatusCode, responseUserRegister);
     }
 
     [HttpPost]
     [Route("login")]
     public async Task<IActionResult> Login([FromBody] UserLoginRequestDto userLoginDto)
     {
-        var token = await _service.LoginAsync(userLoginDto);
-        if (string.IsNullOrEmpty(token))
-        {
-            return Unauthorized(new ApiResponse<object>
-            {
-                Error = "Invalid username or password.",
-                StatusCode = 401
-            });
-        }
-        return Ok(new ApiResponse<object>
-        {
-            Data = token,
-            StatusCode = 200
-        });
+        var token = await _mediator.Send(new LoginUserCommand(userLoginDto));
+
+        return StatusCode(token.StatusCode, token);
     }
 
     [Authorize]
     [HttpGet("me")]
-    public async Task<IActionResult> GetMe(CancellationToken cancellationToken = default)
+    public async Task<IActionResult> GetMeQuery()
     {
         if (!IsAuthenticated)
-            return Unauthorized(new ApiResponse<object>
+            return Unauthorized(new ApiResponse<string>
             {
                 Error = "User is not authenticated.",
                 StatusCode = 401
             });
-        UserProfileResponseDto? user = await _service.GetByUsernameAsync(UserName);
 
-        if (user == null)
-        {
-            return NotFound(new ApiResponse<object>
-            {
-                Error = "User not found",
-                StatusCode = 404
-            });
-        }
-        return Ok(new ApiResponse<object>
-        {
-            Data = user,
-            StatusCode = 200
-        });
+        var user = await _mediator.Send(new GetMeQuery(UserName));
+        return StatusCode(user.StatusCode, user);
     }
 
     [Authorize(Roles = "Admin")]
     [HttpPut("assign-role")]
-    public async Task<ActionResult<UserProfileResponseDto>> AssignRole([FromBody] AssignRoleRequestDto dto)
+    public async Task<ActionResult<UserProfileResponseDto>> AssignRole([FromBody] AssignRoleRequestDto AssignRoleDto)
     {
-        UserProfileResponseDto? updatedUser = await _service.AssignRoleAsync(dto);
+        var updatedUser = await _mediator.Send(new AssignRoleCommand(AssignRoleDto));
 
-        if (updatedUser == null)
-            return NotFound("User not found");
-
-        return Ok(updatedUser);
+        return StatusCode(updatedUser.StatusCode, updatedUser);
     }
 }

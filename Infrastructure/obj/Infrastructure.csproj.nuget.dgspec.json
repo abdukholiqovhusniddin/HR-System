@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/Infrastructure.csproj": {}
+    "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/Application.csproj": {
+    "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/Application.csproj",
+        "projectUniqueName": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/Application.csproj",
-        "packagesPath": "/Users/shahlojaborova/.nuget/packages/",
-        "outputPath": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/obj/",
+        "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Another love\\.nuget\\packages\\",
+        "outputPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/shahlojaborova/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Another love\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/Domain.csproj": {
-                "projectPath": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/Domain.csproj"
+              "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj"
               }
             }
           }
@@ -63,6 +69,14 @@
             "Mapster.DependencyInjection": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -103,22 +117,6 @@
             "MimeKit": {
               "target": "Package",
               "version": "[4.13.0, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Swashbuckle.AspNetCore.Swagger": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerGen": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerUI": {
-              "target": "Package",
-              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -137,26 +135,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/Domain.csproj": {
+    "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/Domain.csproj",
+        "projectUniqueName": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/Domain.csproj",
-        "packagesPath": "/Users/shahlojaborova/.nuget/packages/",
-        "outputPath": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Domain/obj/",
+        "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Another love\\.nuget\\packages\\",
+        "outputPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/shahlojaborova/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Another love\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -189,6 +193,14 @@
               "target": "Package",
               "version": "[4.13.0, )"
             },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.9, )"
@@ -212,26 +224,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.9, )"
-            },
-            "MimeKit": {
-              "target": "Package",
-              "version": "[4.13.0, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Swashbuckle.AspNetCore.Swagger": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerGen": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerUI": {
-              "target": "Package",
-              "version": "[9.0.4, )"
             }
           },
           "imports": [
@@ -250,34 +242,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/Infrastructure.csproj": {
+    "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/Infrastructure.csproj",
-        "packagesPath": "/Users/shahlojaborova/.nuget/packages/",
-        "outputPath": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Infrastructure/obj/",
+        "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Another love\\.nuget\\packages\\",
+        "outputPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/shahlojaborova/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Another love\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/Application.csproj": {
-                "projectPath": "/Users/shahlojaborova/IO Academy/projects/HR2/HR-System/Application/Application.csproj"
+              "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Application\\Application.csproj": {
+                "projectPath": "D:\\Git-Hub_pr\\HR-SystemClean\\HR-SystemSolution\\Application\\Application.csproj"
               }
             }
           }
@@ -306,6 +304,14 @@
               "target": "Package",
               "version": "[4.13.0, )"
             },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[9.0.9, )"
@@ -330,23 +336,7 @@
               "target": "Package",
               "version": "[9.0.9, )"
             },
-            "MimeKit": {
-              "target": "Package",
-              "version": "[4.13.0, )"
-            },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Swashbuckle.AspNetCore.Swagger": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerGen": {
-              "target": "Package",
-              "version": "[9.0.4, )"
-            },
-            "Swashbuckle.AspNetCore.SwaggerUI": {
               "target": "Package",
               "version": "[9.0.4, )"
             }
@@ -367,7 +357,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

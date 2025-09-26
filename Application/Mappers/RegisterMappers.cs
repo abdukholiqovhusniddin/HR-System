@@ -1,5 +1,5 @@
-﻿using Application.DTOs.Responses;
-using Domain.Entities;
+﻿using Application.DTOs.Employees.Responses;
+using Application.DTOs.Users.Responses;
 using Mapster;
 
 namespace Application.Mappers;
@@ -9,6 +9,7 @@ public class RegisterMappers : IRegister
     public void Register(TypeAdapterConfig config)
     {
         config.NewConfig<User, UserProfileResponseDto>()
+            .Map(dest => dest.Username, src => src.Username)
             .Map(dest => dest.FullName, src => src.EmployeeProfile.FullName)
             .Map(dest => dest.DateOfBirth, src => src.EmployeeProfile.DateOfBirth)
             .Map(dest => dest.IsEmailPublic, src => src.EmployeeProfile.IsEmailPublic)
@@ -22,8 +23,9 @@ public class RegisterMappers : IRegister
             .Map(dest => dest.Age, src =>
                 DateTime.Today.Year - src.EmployeeProfile.DateOfBirth.Year -
                 (src.EmployeeProfile.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - src.EmployeeProfile.DateOfBirth.Year)) ? 1 : 0));
-        
+
         config.NewConfig<Employee, UserProfileResponseDto>()
+            .Map(dest => dest.Username, src => src.User.Username)
             .Map(dest => dest.FullName, src => src.FullName)
             .Map(dest => dest.DateOfBirth, src => src.DateOfBirth)
             .Map(dest => dest.IsEmailPublic, src => src.IsEmailPublic)
@@ -41,6 +43,6 @@ public class RegisterMappers : IRegister
                 (src.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - src.DateOfBirth.Year)) ? 1 : 0));
 
         config.NewConfig<Employee, UserResponseDto>();
-        config.NewConfig<Employee, EmployeeCreateResponseDto>();
+        config.NewConfig<Employee, ResponseEmployeeDto>();
     }
 }

@@ -11,17 +11,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\References\" />
-    <Folder Include="Features\Employees\Commands\" />
-    <Folder Include="Features\Employees\Handlers\" />
-    <Folder Include="Features\Employees\Queries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
     <PackageReference Include="MailKit" Version="4.13.0" />
     <PackageReference Include="Mapster" Version="7.4.0" />
     <PackageReference Include="Mapster.DependencyInjection" Version="1.0.1" />
+    <PackageReference Include="MediatR" Version="11.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.9" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
@@ -37,10 +32,10 @@
     <PackageReference Include="Microsoft.Extensions.Options" Version="9.0.9" />
     <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1004" />
     <PackageReference Include="MimeKit" Version="4.13.0" />
-    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="9.0.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="9.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\Employees\Requests\" />
   </ItemGroup>
 
 </Project>

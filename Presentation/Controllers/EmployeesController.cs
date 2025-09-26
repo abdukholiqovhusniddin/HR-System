@@ -1,37 +1,33 @@
 ﻿using Application.Commons;
-using Application.Interfaces;
+using Application.Features.Employees.Queries;
+using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class EmployeesController(IEmployeesService service) : ApiControllerBase
+public class EmployeesController(IMediator mediator) : ApiControllerBase
 {
-    private readonly IEmployeesService _service = service; // DI- Dependency Injection
 
     [HttpGet]
     [Route("directory")]
     public async Task<IActionResult> GetDirectory()
     {
-        var directoryDto = await _service.GetDirectory();
-        return Ok(new ApiResponse<object>
-        {
-            Data = directoryDto,
-            StatusCode = 200
-        });
+        var directoryDto = await mediator.Send(new GetEmployeeDirectory());
+
+        return StatusCode(directoryDto.StatusCode, directoryDto);
     }
 
+    [Authorize(Roles = "Admin, HR")]
     [HttpGet]
     [Route("{id:guid}")]
-    public async Task<IActionResult> GetById([FromRoute] Guid id)
+    public async Task<IActionResult> GetById([FromRoute] Guid Id)
     {
-        var employeeDto = await _service.GetById(id);
-        return Ok(new ApiResponse<object>
-        {
-            Data = employeeDto,
-            StatusCode = 200
-        });
+        var employeeDto = await mediator.Send(new GetEmployeeById(Id));
+
+        return StatusCode(employeeDto.StatusCode, employeeDto);
     }
 
 }

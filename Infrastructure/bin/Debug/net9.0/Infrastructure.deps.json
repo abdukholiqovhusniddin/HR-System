@@ -11,16 +11,14 @@
           "Application": "1.0.0",
           "BCrypt.Net-Next": "4.0.3",
           "MailKit": "4.13.0",
+          "MediatR": "11.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
           "Microsoft.AspNetCore.OpenApi": "9.0.9",
           "Microsoft.EntityFrameworkCore": "9.0.9",
           "Microsoft.EntityFrameworkCore.Design": "9.0.9",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.9",
-          "MimeKit": "4.13.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
-          "Swashbuckle.AspNetCore.Swagger": "9.0.4",
-          "Swashbuckle.AspNetCore.SwaggerGen": "9.0.4",
-          "Swashbuckle.AspNetCore.SwaggerUI": "9.0.4"
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4"
         },
         "runtime": {
           "Infrastructure.dll": {}
@@ -93,6 +91,37 @@
           }
         }
       },
+      "MediatR/11.0.0": {
+        "dependencies": {
+          "MediatR.Contracts": "1.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.0.0.0"
+          }
+        }
+      },
+      "MediatR.Contracts/1.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/MediatR.Contracts.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        }
+      },
+      "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
+        "dependencies": {
+          "MediatR": "11.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "9.0.9"
+        },
+        "runtime": {
+          "lib/netstandard2.1/MediatR.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "11.0.0.0",
+            "fileVersion": "11.1.0.0"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.9": {
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "8.0.1"
@@ -117,7 +146,7 @@
       },
       "Microsoft.AspNetCore.OpenApi/9.0.9": {
         "dependencies": {
-          "Microsoft.OpenApi": "1.6.25"
+          "Microsoft.OpenApi": "1.6.17"
         },
         "runtime": {
           "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
@@ -663,15 +692,15 @@
         "runtime": {
           "lib/netstandard2.0/Microsoft.Office.Interop.Word.dll": {
             "assemblyVersion": "15.0.0.0",
-            "fileVersion": "0.0.0.0"
+            "fileVersion": "15.0.4797.1003"
           }
         }
       },
-      "Microsoft.OpenApi/1.6.25": {
+      "Microsoft.OpenApi/1.6.17": {
         "runtime": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
-            "assemblyVersion": "1.6.25.0",
-            "fileVersion": "1.6.25.0"
+            "assemblyVersion": "1.6.17.0",
+            "fileVersion": "1.6.17.0"
           }
         }
       },
@@ -719,36 +748,6 @@
           "lib/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {
             "assemblyVersion": "9.0.4.0",
             "fileVersion": "9.0.4.0"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.Swagger/9.0.4": {
-        "dependencies": {
-          "Microsoft.OpenApi": "1.6.25"
-        },
-        "runtime": {
-          "lib/net9.0/Swashbuckle.AspNetCore.Swagger.dll": {
-            "assemblyVersion": "9.0.4.0",
-            "fileVersion": "9.0.4.1727"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerGen/9.0.4": {
-        "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "9.0.4"
-        },
-        "runtime": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {
-            "assemblyVersion": "9.0.4.0",
-            "fileVersion": "9.0.4.1727"
-          }
-        }
-      },
-      "Swashbuckle.AspNetCore.SwaggerUI/9.0.4": {
-        "runtime": {
-          "lib/net9.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {
-            "assemblyVersion": "9.0.4.0",
-            "fileVersion": "9.0.4.1727"
           }
         }
       },
@@ -843,14 +842,7 @@
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Security.Cryptography.Pkcs/8.0.1": {},
       "System.Text.Encodings.Web/8.0.0": {},
-      "System.Text.Json/9.0.9": {
-        "runtime": {
-          "lib/net9.0/System.Text.Json.dll": {
-            "assemblyVersion": "9.0.0.0",
-            "fileVersion": "9.0.925.41916"
-          }
-        }
-      },
+      "System.Text.Json/9.0.9": {},
       "System.Threading.Channels/7.0.0": {},
       "Application/1.0.0": {
         "dependencies": {
@@ -859,17 +851,15 @@
           "MailKit": "4.13.0",
           "Mapster": "7.4.0",
           "Mapster.DependencyInjection": "1.0.1",
+          "MediatR": "11.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
           "Microsoft.AspNetCore.Http.Abstractions": "2.3.0",
           "Microsoft.AspNetCore.OpenApi": "9.0.9",
           "Microsoft.EntityFrameworkCore": "9.0.9",
           "Microsoft.Extensions.Options": "9.0.9",
           "Microsoft.Office.Interop.Word": "15.0.4797.1004",
-          "MimeKit": "4.13.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
-          "Swashbuckle.AspNetCore.Swagger": "9.0.4",
-          "Swashbuckle.AspNetCore.SwaggerGen": "9.0.4",
-          "Swashbuckle.AspNetCore.SwaggerUI": "9.0.4"
+          "MimeKit": "4.13.0"
         },
         "runtime": {
           "Application.dll": {
@@ -882,14 +872,11 @@
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
           "MailKit": "4.13.0",
+          "MediatR": "11.0.0",
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "9.0.9",
           "Microsoft.AspNetCore.OpenApi": "9.0.9",
-          "Microsoft.EntityFrameworkCore": "9.0.9",
-          "MimeKit": "4.13.0",
-          "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.4",
-          "Swashbuckle.AspNetCore.Swagger": "9.0.4",
-          "Swashbuckle.AspNetCore.SwaggerGen": "9.0.4",
-          "Swashbuckle.AspNetCore.SwaggerUI": "9.0.4"
+          "Microsoft.EntityFrameworkCore": "9.0.9"
         },
         "runtime": {
           "Domain.dll": {
@@ -954,6 +941,27 @@
       "sha512": "sha512-LfjnRIwx6WAo3ssq8PFeaHFaUz00BfSG9BhWgXsiDa3H5lDhG0lpMGDF6w2ZnooS4eHYmAv4f77VxmzpvgorNg==",
       "path": "mapster.dependencyinjection/1.0.1",
       "hashPath": "mapster.dependencyinjection.1.0.1.nupkg.sha512"
+    },
+    "MediatR/11.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8klzVGZQiA2oxZRzQFBZbdPD/IQUm9RYtfiyTDKhxDQ99Gi93+GXt1ZJjH2D7Lh7ZFHCv5XdkwbmfHEQBCatPg==",
+      "path": "mediatr/11.0.0",
+      "hashPath": "mediatr.11.0.0.nupkg.sha512"
+    },
+    "MediatR.Contracts/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
+      "path": "mediatr.contracts/1.0.1",
+      "hashPath": "mediatr.contracts.1.0.1.nupkg.sha512"
+    },
+    "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RW3etRuy6Xp63cgqfC0r/ITOtUT0f9ymJl1+1XZdzsYUsfv7WBPC2kXGOP8IYpY/6c4Q6805vbIW/88DopUs3w==",
+      "path": "mediatr.extensions.microsoft.dependencyinjection/11.1.0",
+      "hashPath": "mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authentication.JwtBearer/9.0.9": {
       "type": "package",
@@ -1207,12 +1215,12 @@
       "path": "microsoft.office.interop.word/15.0.4797.1004",
       "hashPath": "microsoft.office.interop.word.15.0.4797.1004.nupkg.sha512"
     },
-    "Microsoft.OpenApi/1.6.25": {
+    "Microsoft.OpenApi/1.6.17": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-ZahSqNGtNV7N0JBYS/IYXPkLVexL/AZFxo6pqxv6A7Uli7Q7zfitNjkaqIcsV73Ukzxi4IlJdyDgcQiMXiH8cw==",
-      "path": "microsoft.openapi/1.6.25",
-      "hashPath": "microsoft.openapi.1.6.25.nupkg.sha512"
+      "sha512": "sha512-Le+kehlmrlQfuDFUt1zZ2dVwrhFQtKREdKBo+rexOwaCoYP0/qpgT9tLxCsZjsgR5Itk1UKPcbgO+FyaNid/bA==",
+      "path": "microsoft.openapi/1.6.17",
+      "hashPath": "microsoft.openapi.1.6.17.nupkg.sha512"
     },
     "MimeKit/4.13.0": {
       "type": "package",
@@ -1241,27 +1249,6 @@
       "sha512": "sha512-mw5vcY2IEc7L+IeGrxpp/J5OSnCcjkjAgJYCm/eD52wpZze8zsSifdqV7zXslSMmfJG2iIUGZyo3KuDtEFKwMQ==",
       "path": "npgsql.entityframeworkcore.postgresql/9.0.4",
       "hashPath": "npgsql.entityframeworkcore.postgresql.9.0.4.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.Swagger/9.0.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-syU8U4Eg3DfhU+BBeDUh66erwDsYOhp82InXbrOsqWP3qoOfQbBtePcTetkLNanovYHYX40alZBE6gQQFtBZkQ==",
-      "path": "swashbuckle.aspnetcore.swagger/9.0.4",
-      "hashPath": "swashbuckle.aspnetcore.swagger.9.0.4.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerGen/9.0.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-GnCikaq7kagEckGGsrVnKl2icRQebyr14/7s3T/rQQO7edOIXkxtjTOJZqbazOxaTXBDCDdSInMiYbMQhFnE5Q==",
-      "path": "swashbuckle.aspnetcore.swaggergen/9.0.4",
-      "hashPath": "swashbuckle.aspnetcore.swaggergen.9.0.4.nupkg.sha512"
-    },
-    "Swashbuckle.AspNetCore.SwaggerUI/9.0.4": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2ugT2OvZsKHqk/2rMDmuqDuFmtix0NvzlXxAfnfHROVMTovbx7Z0UsOQHZa462DBTgdBFnR2Ss6wm4fypfymdA==",
-      "path": "swashbuckle.aspnetcore.swaggerui/9.0.4",
-      "hashPath": "swashbuckle.aspnetcore.swaggerui.9.0.4.nupkg.sha512"
     },
     "System.CodeDom/6.0.0": {
       "type": "package",

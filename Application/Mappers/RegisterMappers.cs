@@ -1,4 +1,5 @@
-﻿using Application.DTOs.Employees.Responses;
+﻿using Application.DTOs.Employees.Requests;
+using Application.DTOs.Employees.Responses;
 using Application.DTOs.Users.Responses;
 using Mapster;
 
@@ -44,5 +45,7 @@ public class RegisterMappers : IRegister
 
         config.NewConfig<Employee, UserResponseDto>();
         config.NewConfig<Employee, ResponseEmployeeDto>();
+
+        config.NewConfig<UpdateEmployeeDtoRequest, Employee>();
     }
 }

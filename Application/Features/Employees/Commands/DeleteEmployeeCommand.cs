@@ -2,4 +2,4 @@
 using MediatR;
 
 namespace Application.Features.Employees.Commands;
-public sealed record DeleteEmployeeCommand(Guid Id) : IRequest<ApiResponse<Employee>>;
+public record DeleteEmployeeCommand(Guid Id) : IRequest<ApiResponse<Employee>>;

@@ -25,6 +25,8 @@ public class Employee : BaseEntity
 
     public DataFile Image { get; set; } = default!;
 
+    public bool IsActive { get; set; } = true;
+
     public ICollection<Employee>? Subordinates { get; set; }
     public ICollection<Contract>? Contracts { get; set; }
     public ICollection<Salary>? Salaries { get; set; }

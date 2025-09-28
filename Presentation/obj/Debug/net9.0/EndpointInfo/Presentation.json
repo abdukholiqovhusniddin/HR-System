@@ -17,8 +17,30 @@
         }
       }
     },
-    "/api/Employees/Id": {
+    "/api/Employees/Get by Id": {
       "get": {
+        "tags": [
+          "Employees"
+        ],
+        "parameters": [
+          {
+            "name": "Id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employees/Delete by Id": {
+      "delete": {
         "tags": [
           "Employees"
         ],

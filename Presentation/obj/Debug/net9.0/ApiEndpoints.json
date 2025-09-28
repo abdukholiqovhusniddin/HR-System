@@ -1,6 +1,22 @@
 [
   {
     "ContainingType": "Presentation.Controllers.EmployeesController",
+    "Method": "DeleteById",
+    "RelativePath": "api/Employees/Delete by Id",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.EmployeesController",
     "Method": "GetDirectory",
     "RelativePath": "api/Employees/directory",
     "HttpMethod": "GET",
@@ -12,7 +28,7 @@
   {
     "ContainingType": "Presentation.Controllers.EmployeesController",
     "Method": "GetById",
-    "RelativePath": "api/Employees/Id",
+    "RelativePath": "api/Employees/Get by Id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

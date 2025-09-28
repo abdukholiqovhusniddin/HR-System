@@ -1,4 +1,7 @@
 ﻿using Application.Commons;
+using Application.DTOs.Employees.Requests;
+using Application.DTOs.Users.Requests;
+using Application.Features.Employees.Commands;
 using Application.Features.Employees.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -31,7 +34,15 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
     [HttpDelete("Delete by Id")]
     public async Task<IActionResult> DeleteById(Guid Id)
     {
-        var response = await mediator.Send(new Application.Features.Employees.Commands.DeleteEmployeeCommand(Id));
+        var response = await mediator.Send(new DeleteEmployeeCommand(Id));
+        return StatusCode(response.StatusCode, response);
+    }
+
+    [Authorize(Roles = "HR")]
+    [HttpPost]
+    public async Task<IActionResult> UpdateEmployee([FromForm] UpdateEmployeeDtoRequest command)
+    {
+        var response = await mediator.Send(new UpdateEmployeeCommand(command));
         return StatusCode(response.StatusCode, response);
     }
 }

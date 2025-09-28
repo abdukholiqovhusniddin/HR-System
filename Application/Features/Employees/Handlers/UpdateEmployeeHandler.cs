@@ -1,12 +1,11 @@
 ﻿using Application.Commons;
-using Application.DTOs.Employees.Requests;
 using Application.Features.Employees.Commands;
 using Domain.Interfaces;
 using Mapster;
 using MediatR;
 
 namespace Application.Features.Employees.Handlers;
-public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUnitOfWork unitOfWork) 
+public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUnitOfWork unitOfWork)
     : IRequestHandler<UpdateEmployeeCommand, ApiResponse<Employee>>
 {
     private readonly IEmployeesRepository _employeesRepository = employeesRepository;

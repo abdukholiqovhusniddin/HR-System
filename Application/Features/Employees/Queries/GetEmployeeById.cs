@@ -4,4 +4,4 @@ using MediatR;
 
 namespace Application.Features.Employees.Queries;
 
-public sealed record GetEmployeeById(Guid EmployeeId) : IRequest<ApiResponse<ResponseEmployeeDto>>;
+public record GetEmployeeById(Guid EmployeeId) : IRequest<ApiResponse<ResponseEmployeeDto>>;

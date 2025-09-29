@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Application.Features.Contracts.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,7 +15,7 @@ public class ContractsController(IMediator mediator) : ApiControllerBase
     [HttpGet("employeeId")]
     public async Task<IActionResult> GetById(Guid employeeId)
     {
-        var employeeContract = await _mediator.Send(new GetContractById(employeeId));
+        var employeeContract = await _mediator.Send(new GetContractQuery(employeeId));
 
         return StatusCode(employeeContract.StatusCode, employeeContract);
     }

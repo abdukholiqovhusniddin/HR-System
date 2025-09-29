@@ -5,6 +5,28 @@
     "version": "v1"
   },
   "paths": {
+    "/api/Contracts/employeeId": {
+      "get": {
+        "tags": [
+          "Contracts"
+        ],
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Employees/directory": {
       "get": {
         "tags": [
@@ -54,6 +76,149 @@
             }
           }
         ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Employees": {
+      "post": {
+        "tags": [
+          "Employees"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "DateOfBirth",
+                  "Email",
+                  "FullName",
+                  "HireDate",
+                  "Id",
+                  "PassportInfo",
+                  "PhoneNumber",
+                  "Role",
+                  "Telegram",
+                  "Username"
+                ],
+                "type": "object",
+                "properties": {
+                  "Id": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "Username": {
+                    "maxLength": 50,
+                    "minLength": 3,
+                    "type": "string"
+                  },
+                  "Email": {
+                    "type": "string",
+                    "format": "email"
+                  },
+                  "Role": {
+                    "$ref": "#/components/schemas/UserRole"
+                  },
+                  "FullName": {
+                    "maxLength": 100,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "Photo": {
+                    "type": "string",
+                    "format": "binary"
+                  },
+                  "DateOfBirth": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "PhoneNumber": {
+                    "type": "string"
+                  },
+                  "Telegram": {
+                    "type": "string"
+                  },
+                  "IsEmailPublic": {
+                    "type": "boolean"
+                  },
+                  "IsTelegramPublic": {
+                    "type": "boolean"
+                  },
+                  "Position": {
+                    "type": "string"
+                  },
+                  "Department": {
+                    "type": "string"
+                  },
+                  "HireDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "PassportInfo": {
+                    "type": "string"
+                  },
+                  "ManagerId": {
+                    "type": "string",
+                    "format": "uuid"
+                  }
+                }
+              },
+              "encoding": {
+                "Id": {
+                  "style": "form"
+                },
+                "Username": {
+                  "style": "form"
+                },
+                "Email": {
+                  "style": "form"
+                },
+                "Role": {
+                  "style": "form"
+                },
+                "FullName": {
+                  "style": "form"
+                },
+                "Photo": {
+                  "style": "form"
+                },
+                "DateOfBirth": {
+                  "style": "form"
+                },
+                "PhoneNumber": {
+                  "style": "form"
+                },
+                "Telegram": {
+                  "style": "form"
+                },
+                "IsEmailPublic": {
+                  "style": "form"
+                },
+                "IsTelegramPublic": {
+                  "style": "form"
+                },
+                "Position": {
+                  "style": "form"
+                },
+                "Department": {
+                  "style": "form"
+                },
+                "HireDate": {
+                  "style": "form"
+                },
+                "PassportInfo": {
+                  "style": "form"
+                },
+                "ManagerId": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"

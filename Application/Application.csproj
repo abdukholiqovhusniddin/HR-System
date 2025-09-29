@@ -38,7 +38,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Contracts\Commands\" />
+    <Folder Include="DTOs\Contract\Responses\" />
   </ItemGroup>
 
 </Project>

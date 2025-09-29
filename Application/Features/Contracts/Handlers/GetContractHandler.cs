@@ -1,4 +1,5 @@
 ﻿using Application.Commons;
+using Application.Exceptions;
 using Application.Features.Contracts.Queries;
 using Domain.Interfaces;
 using MediatR;
@@ -10,17 +11,12 @@ public class GetContractHandler(IContractsRepository contractsRepository): IRequ
     public async Task<ApiResponse<Contract>> Handle(GetContractQuery request, CancellationToken cancellationToken)
     {
         var contract = await _contractsRepository.GetByEmployeeId(request.EmployeeId);
-        if (contract is null)
-            return new ApiResponse<Contract>
-            {
-                StatusCode = 404,
-                Error = "Contract not found"
-            };
 
-        return new ApiResponse<Contract>
+        return contract is null
+            ? throw new NotFoundException("Contract not found")
+            : new ApiResponse<Contract>
         {
-            Data = contract,
-            StatusCode = 200
+            Data = contract
         };
     }
 }

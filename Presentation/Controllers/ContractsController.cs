@@ -1,4 +1,6 @@
-﻿using Application.Features.Contracts.Queries;
+﻿using Application.DTOs.Contract.Requests;
+using Application.Features.Contracts.Commands;
+using Application.Features.Contracts.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,4 +22,11 @@ public class ContractsController(IMediator mediator) : ApiControllerBase
         return StatusCode(employeeContract.StatusCode, employeeContract);
     }
 
+    [HttpPost("Add contract")]
+    public async Task<IActionResult> AddContract(AddContractDtoRequest employeeContract)
+    {
+        var result = await _mediator.Send(new AddContractCommand(employeeContract));
+
+        return StatusCode(result.StatusCode, result);
+    }
 }

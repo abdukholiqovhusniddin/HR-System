@@ -1,9 +1,12 @@
-﻿namespace Domain.Entities;
+﻿using Domain.Commons;
+
+namespace Domain.Entities;
 public class Employee : BaseEntity
 {
     public required string FullName { get; set; }
     public DateTime DateOfBirth { get; set; }
     public string? PhotoUrl { get; set; }
+    public EmployeeFile Image { get; set; } = default!;
 
     public required string Email { get; set; }
     public bool IsEmailPublic { get; set; }
@@ -22,8 +25,6 @@ public class Employee : BaseEntity
 
     public Guid UserId { get; set; }
     public User User { get; set; } = default!;
-
-    public DataFile Image { get; set; } = default!;
 
     public bool IsActive { get; set; } = true;
 

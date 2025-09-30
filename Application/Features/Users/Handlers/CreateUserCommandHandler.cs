@@ -66,11 +66,23 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
         {
             var imagePath = await fileService.SaveAsync(userRegisterDto.Photo);
 
-            newEmployer.Image = new DataFile(newEmployer.Id,
-                imagePath.Name,
-                imagePath.Url,
-                imagePath.Size,
-                imagePath.Extension);
+            newEmployer.Image = new EmployeeFile()
+            {
+                EmployeeId = newEmployer.Id,
+                Name = imagePath.Name,
+                Url = imagePath.Url,
+                Size = imagePath.Size,
+                Extension = imagePath.Extension,
+            };
+
+            //newEmployer.Image = new EmployeeFile()
+            //{
+            //    newEmployer.Id,
+            //    imagePath.Name,
+            //    imagePath.Url,
+            //    imagePath.Size,
+            //    imagePath.Extension
+            //};
 
             newEmployer.PhotoUrl = imagePath.Url;
         }

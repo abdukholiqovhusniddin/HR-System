@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities;
+﻿namespace Domain.Commons;
 public abstract class BaseEntity
 {
     public Guid Id { get; set; }

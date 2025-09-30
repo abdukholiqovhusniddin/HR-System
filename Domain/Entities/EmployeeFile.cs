@@ -1,8 +1,7 @@
 ﻿using Domain.Commons;
 
 namespace Domain.Entities;
-public abstract class EmployeeBaseEntity: BaseEntity
+public class EmployeeFile: DataFile
 {
     public required Guid EmployeeId { get; set; }
-    public Employee? Employee { get; set; }
 }

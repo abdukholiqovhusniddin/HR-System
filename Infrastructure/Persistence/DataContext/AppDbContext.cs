@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+﻿using Domain.Commons;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -11,12 +11,13 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Employee> Employees { get; set; }
+    public DbSet<EmployeeFile> EmployeesFile { get; set; }
     public DbSet<Contract> Contracts { get; set; }
+    public DbSet<ContractFile> ContractFiles { get; set; }
     public DbSet<Salary> Salaries { get; set; }
     public DbSet<VacationRequest> VacationRequests { get; set; }
     public DbSet<EquipmentAssignment> EquipmentAssignments { get; set; }
     public DbSet<User> Users { get; set; }
-    public DbSet<DataFile> DataFiles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

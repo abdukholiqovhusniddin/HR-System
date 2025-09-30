@@ -22,6 +22,11 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
         builder.Property(u=>u.CreatedAt)
             .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
+        builder.HasMany(e => e.Contracts)
+               .WithOne(c => c.Employee)
+               .HasForeignKey(c => c.EmployeeId)
+               .OnDelete(DeleteBehavior.Cascade);
+
         builder.HasData(
             new Employee
             {

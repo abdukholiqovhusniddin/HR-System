@@ -1,42 +1,53 @@
 ﻿using Application.Commons;
 using Application.Exceptions;
 using Application.Features.Contracts.Commands;
+using Application.Interfaces;
 using Domain.Interfaces;
 using Mapster;
 using MediatR;
 
 namespace Application.Features.Contracts.Handlers;
 
-public class AddContractHandler(IContractsRepository contractsRepository) : IRequestHandler<AddContractCommand, ApiResponse<Contract>>
+public class AddContractHandler(IContractsRepository contractsRepository,
+    IFileService fileService) : IRequestHandler<AddContractCommand, ApiResponse<Contract>>
 {
     private readonly IContractsRepository _contractsRepository = contractsRepository;
     public async Task<ApiResponse<Contract>> Handle(AddContractCommand request, CancellationToken cancellationToken)
     {
         var contract = request.AddContractDtoRequest;
-        if (await _contractsRepository.ExistsAsync(contract.EmployeeId))
-            throw new ApiException("Contract already exists for this Employee");
 
         var newContract = new Contract
         {
-
+            Id = Guid.NewGuid(),
+            EmployeeId = contract.EmployeeId,
+            ContractType = contract.ContractType,
+            StartDate = contract.StartDate,
+            EndDate = contract.EndDate,
+            Terms = contract.Terms
         };
-        //var newContract = new Contract
-        //{
-        //    EmployeeId = request.AddContractDtoRequest.EmployeeId,
-        //    ContractType = request.AddContractDtoRequest.ContractType,
-        //    StartDate = request.AddContractDtoRequest.StartDate,
-        //    EndDate = request.AddContractDtoRequest.EndDate,
-        //    Terms = request.AddContractDtoRequest.Terms,
-        //    DocumentUrl = request.AddContractDtoRequest.DocumentUrl,
-        //    DocumentName = request.AddContractDtoRequest.DocumentName,
-        //    DocumentType = request.AddContractDtoRequest.DocumentType,
-        //    CreatedAt = DateTime.UtcNow
-        //};
-        //var addedContract = await _contractsRepository.AddAsync(newContract);
-        //return new ApiResponse<Contract>
-        //{
-        //    Data = addedContract,
-        //    StatusCode = 201
-        //};
+
+        if (contract.DocumentPdf is not null)
+        {
+            var documentPath = await fileService.SaveAsync(contract.DocumentPdf);
+
+            newContract.DocumentPdf = new ContractFile()
+            {
+                ContractId = contract.EmployeeId,
+                Name = documentPath.Name,
+                Url = documentPath.Url,
+                Size = documentPath.Size,
+                Extension = documentPath.Extension,
+
+            };
+
+            newContract.DocumentUrl = documentPath.Url;
+        }
+
+
+        return new ApiResponse<Contract>
+        {
+            Data = newContract,
+            StatusCode = 201
+        };
     }
 }

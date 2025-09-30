@@ -1,4 +1,5 @@
 ﻿
+using Domain.Commons;
 using Domain.Enums;
 
 namespace Domain.Entities;
@@ -11,7 +12,7 @@ public class Contract: EmployeeBaseEntity
 
     public string? DocumentUrl { get; set; }
 
+    public ContractFile DocumentPdf { get; set; } = default!;
+
     public bool IsDeleted { get; set; } = false;
-    //public string? DocumentName { get; set; }
-    //public string? DocumentType { get; set; }
 }

@@ -1,6 +1,7 @@
 ﻿using Application.DTOs.Contract.Requests;
 using Application.Features.Contracts.Commands;
 using Application.Features.Contracts.Queries;
+using Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

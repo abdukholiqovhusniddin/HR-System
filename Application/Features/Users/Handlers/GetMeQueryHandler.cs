@@ -19,22 +19,13 @@ internal sealed class GetMeQueryHandler(IUserRepository userRepository) : IReque
         if (string.IsNullOrWhiteSpace(userProfile))
             throw new ApiException("Username cannot be null.");
 
-        var user = await _userRepository.GetByUsernameAsync(userProfile, includeEmployeeProfile: true);
-
-        if (user is null)
-        {
-            return new ApiResponse<UserProfileResponseDto>
-            {
-                StatusCode = 404,
-                Error = "User not found"
-            };
-        }
+        var user = await _userRepository.GetByUsernameAsync(userProfile, includeEmployeeProfile: true)
+            ?? throw new NotFoundException("User not found");
 
         var userDto = user.EmployeeProfile?.Adapt<UserProfileResponseDto>();
         return new ApiResponse<UserProfileResponseDto>
         {
-            Data = userDto,
-            StatusCode = 200
+            Data = userDto
         };
 
     }

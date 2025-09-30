@@ -20,4 +20,8 @@ public class EmployeesRepository(AppDbContext context) : IEmployeesRepository
     public async Task<Employee?> GetById(Guid id) =>
         await _context.Employees.FirstOrDefaultAsync(e => e.Id == id && e.IsActive);
 
+    public void Update(Employee employee)
+    {
+        _context.Employees.Update(employee);
+    }
 }

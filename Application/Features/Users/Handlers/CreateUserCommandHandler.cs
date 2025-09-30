@@ -91,13 +91,8 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
         await emailService.SendPasswordEmailGmailAsync(userRegisterDto.Email, userRegisterDto.Username, password);
 
         if (userDto is null)
-        {
-            return new ApiResponse<UserResponseDto>
-            {
-                Error = "User creation failed.",
-                StatusCode = 400
-            };
-        }
+            throw new ApiException("User creation failed.");
+        
         return new ApiResponse<UserResponseDto>
         {
             Data = userDto,

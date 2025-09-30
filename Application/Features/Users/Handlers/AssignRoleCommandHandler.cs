@@ -1,5 +1,6 @@
 ﻿using Application.Commons;
 using Application.DTOs.Users.Responses;
+using Application.Exceptions;
 using Application.Features.Users.Commands;
 using Domain.Interfaces;
 using Mapster;
@@ -16,16 +17,8 @@ internal sealed class AssignRoleCommandHandler(IUserRepository userRepository) :
         if (!Enum.IsDefined(dto.Role))
             throw new Exception("Invalid role.");
 
-        var user = await _userRepository.GetByUsernameAsync(dto.Username, includeEmployeeProfile: true);
-
-        if (user == null)
-        {
-            return new ApiResponse<UserProfileResponseDto>
-            {
-                StatusCode = 404,
-                Error = "User not found"
-            };
-        }
+        var user = await _userRepository.GetByUsernameAsync(dto.Username, includeEmployeeProfile: true)
+            ?? throw new NotFoundException("User not found");
 
         user.Role = dto.Role;
 
@@ -36,7 +29,6 @@ internal sealed class AssignRoleCommandHandler(IUserRepository userRepository) :
         return new ApiResponse<UserProfileResponseDto>
         {
             Data = userDto,
-            StatusCode = 200
         };
     }
 }

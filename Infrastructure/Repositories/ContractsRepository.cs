@@ -10,8 +10,6 @@ public class ContractsRepository(AppDbContext context): IContractsRepository
 
     public async Task CreateAsync(Contract newContract)
     {
-        if (newContract is null)
-            throw new ApiException("Contract is not null");
         await _context.Contracts.AddAsync(newContract);
     }
 

@@ -1,5 +1,6 @@
 ﻿using Application.Commons;
 using Application.DTOs.Employees.Responses;
+using Application.Exceptions;
 using Application.Features.Employees.Queries;
 using Domain.Interfaces;
 using MediatR;
@@ -14,20 +15,12 @@ public class GetEmployeeDirectoryHandler(IEmployeesRepository directoryRepositor
     {
         var directoryDto = await _directoryRepository.GetAllDirectory();
 
-        if (directoryDto is null)
-        {
-            return new ApiResponse<List<ResponseDirectoryDto>>
-            {
-                StatusCode = 404,
-                Error = "Directory not found"
-            };
-        }
-
-        return new ApiResponse<List<ResponseDirectoryDto>>
+        return directoryDto is null
+            ? throw new NotFoundException("Directory not found")
+            : new ApiResponse<List<ResponseDirectoryDto>>
         {
             Data = [.. directoryDto.Select(a => new ResponseDirectoryDto(a.FullName!,
-                a.Position, a.Department))],
-            StatusCode = 200
+                a.Position, a.Department))]
         };
     }
 }

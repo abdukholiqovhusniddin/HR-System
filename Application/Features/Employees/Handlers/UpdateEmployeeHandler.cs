@@ -25,6 +25,7 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
 
         employee = updateDto.Adapt(employee);
 
+        await _employeesRepository.Update(employee);
         await _unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         return new ApiResponse<Employee>

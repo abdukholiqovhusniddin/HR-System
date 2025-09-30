@@ -1,4 +1,5 @@
 ﻿using Application.Commons;
+using Application.Exceptions;
 using Application.Features.Users.Commands;
 using Application.JwtAuth;
 using Domain.Interfaces;
@@ -16,17 +17,12 @@ internal sealed class LoginUserCommandHandler(IUserRepository userRepository,
 
         if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash))
         {
-            return new ApiResponse<string>
-            {
-                Error = "Invalid username or password.",
-                StatusCode = 401
-            };
+            throw new ApiException("Invalid username or password.");
         }
         var token = jwtService.GenerateToken(user);
         return new ApiResponse<string>
         {
-            Data = token,
-            StatusCode = 200
+            Data = token
         };
     }
 }

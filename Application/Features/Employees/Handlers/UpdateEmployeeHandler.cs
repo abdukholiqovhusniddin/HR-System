@@ -1,4 +1,5 @@
 ﻿using Application.Commons;
+using Application.Exceptions;
 using Application.Features.Employees.Commands;
 using Domain.Interfaces;
 using Mapster;
@@ -13,15 +14,8 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
     public async Task<ApiResponse<Employee>> Handle(UpdateEmployeeCommand request, CancellationToken cancellationToken)
     {
         var updateDto = request.UpdateEmployee;
-        var employee = await _employeesRepository.GetById(updateDto.Id);
-        if (employee is null)
-        {
-            return new ApiResponse<Employee>
-            {
-                StatusCode = 404,
-                Error = "Employee not found"
-            };
-        }
+        var employee = await _employeesRepository.GetById(updateDto.Id)
+            ?? throw new NotFoundException("Employee not found");
 
         employee = updateDto.Adapt(employee);
 
@@ -31,7 +25,6 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
         return new ApiResponse<Employee>
         {
             Data = employee,
-            StatusCode = 200
         };
     }
 }

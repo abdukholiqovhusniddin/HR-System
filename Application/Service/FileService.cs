@@ -20,13 +20,13 @@ public class FileService(IWebHostEnvironment env) : IFileService
         }
     }
 
-    public async Task<FileDto> SaveAsync(IFormFile file)
+    public async Task<FileDto> SaveAsync(IFormFile file, string folderName)
     {
         if (file == null || file.Length == 0)
         {
             throw new ArgumentException("Invalid file");
         }
-        string uploadsFolder = Path.Combine(_env.WebRootPath, "uploads");
+        string uploadsFolder = Path.Combine(_env.WebRootPath, $"{folderName}");
         if (!Directory.Exists(uploadsFolder))
         {
             Directory.CreateDirectory(uploadsFolder);
@@ -34,6 +34,7 @@ public class FileService(IWebHostEnvironment env) : IFileService
         string fileExtension = Path.GetExtension(file.FileName);
         string uniqueFileName = Guid.NewGuid().ToString() + fileExtension;
         string filePath = Path.Combine(uploadsFolder, uniqueFileName);
+
         using (var stream = new FileStream(filePath, FileMode.Create))
         {
             await file.CopyToAsync(stream);
@@ -42,7 +43,7 @@ public class FileService(IWebHostEnvironment env) : IFileService
         return new FileDto
         {
             Name = file.FileName,
-            Url = $"/uploads/{uniqueFileName}",
+            Url = $"/{folderName}/{uniqueFileName}",
             Extension = fileExtension,
             Size = file.Length
         };

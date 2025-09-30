@@ -3,5 +3,5 @@ public interface IEmployeesRepository
 {
     Task<IEnumerable<Employee>> GetAllDirectory();
     Task<Employee?> GetById(Guid id);
-    void Update(Employee employee);
+    Task Update(Employee employee);
 }

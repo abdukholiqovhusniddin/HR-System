@@ -24,10 +24,16 @@ public class ContractsController(IMediator mediator) : ApiControllerBase
     }
 
     [HttpPost("Add contract")]
-    public async Task<IActionResult> AddContract(AddContractDtoRequest employeeContract)
+    public async Task<IActionResult> AddContract([FromForm]AddContractDtoRequest employeeContract)
     {
         var result = await _mediator.Send(new AddContractCommand(employeeContract));
 
         return StatusCode(result.StatusCode, result);
+    }
+
+    [HttpPut("UpdateContract")]
+    public async Task<IActionResult> UpdateContract()
+    {
+
     }
 }

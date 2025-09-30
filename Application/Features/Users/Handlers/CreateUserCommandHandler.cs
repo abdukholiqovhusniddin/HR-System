@@ -64,7 +64,7 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
         // фото загружаем через сервис (Application уровень)
         if (userRegisterDto.Photo is not null)
         {
-            var imagePath = await fileService.SaveAsync(userRegisterDto.Photo);
+            var imagePath = await fileService.SaveAsync(userRegisterDto.Photo, "PhotoEmployees");
 
             newEmployer.Image = new EmployeeFile()
             {
@@ -74,15 +74,6 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
                 Size = imagePath.Size,
                 Extension = imagePath.Extension,
             };
-
-            //newEmployer.Image = new EmployeeFile()
-            //{
-            //    newEmployer.Id,
-            //    imagePath.Name,
-            //    imagePath.Url,
-            //    imagePath.Size,
-            //    imagePath.Extension
-            //};
 
             newEmployer.PhotoUrl = imagePath.Url;
         }

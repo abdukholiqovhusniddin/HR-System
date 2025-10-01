@@ -2,6 +2,7 @@
 using Application.Exceptions;
 using Application.Features.Contracts.Commands;
 using Domain.Interfaces;
+using Mapster;
 using MediatR;
 
 namespace Application.Features.Contracts.Handlers;
@@ -12,8 +13,11 @@ public class UpdateContractHandler(IContractsRepository contractsRepository)
 
     public async Task<ApiResponse<Contract>> Handle(UpdateContractCommon request, CancellationToken cancellationToken)
     {
-        var updateContract = await _contractsRepository.ExistAsync(request.UpdateContractDtoRequest)
-            ?? throw new NotFoundException("Contract or Employee not found");
+        var contract = request.UpdateContractDtoRequest;
+        var updateContract = await _contractsRepository.GetContractById(contract.ContractId)
+            ?? throw new NotFoundException("Contract not found");
+
+        updateContract = contract.Adapt(updateContract);
 
         await _contractsRepository.UpdateAsync(updateContract);
 

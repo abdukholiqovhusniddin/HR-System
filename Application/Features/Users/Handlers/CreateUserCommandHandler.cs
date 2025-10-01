@@ -30,9 +30,6 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
         if (await _userRepository.ExistsAsync(userRegisterDto.Email))
             throw new ApiException("Email already exists.");
 
-        if (!Enum.IsDefined(userRegisterDto.Role))
-            throw new ApiException("Invalid role value.");
-
         string password = GeneratePasswordForUser();
 
         var user = new User
@@ -86,12 +83,12 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
         userDto.Email = userRegisterDto.Email;
         userDto.Role = userRegisterDto.Role;
 
+        if (userDto is null)
+            throw new ApiException("User creation failed.");
+
         await _unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         await emailService.SendPasswordEmailGmailAsync(userRegisterDto.Email, userRegisterDto.Username, password);
-
-        if (userDto is null)
-            throw new ApiException("User creation failed.");
         
         return new ApiResponse<UserResponseDto>
         {

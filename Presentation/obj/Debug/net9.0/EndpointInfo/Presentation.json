@@ -27,6 +27,147 @@
         }
       }
     },
+    "/api/Contracts/Add contract": {
+      "post": {
+        "tags": [
+          "Contracts"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "ContractType",
+                  "EmployeeId"
+                ],
+                "type": "object",
+                "properties": {
+                  "EmployeeId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "ContractType": {
+                    "$ref": "#/components/schemas/ContractType"
+                  },
+                  "StartDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "EndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Terms": {
+                    "maxLength": 1000,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "DocumentPdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "EmployeeId": {
+                  "style": "form"
+                },
+                "ContractType": {
+                  "style": "form"
+                },
+                "StartDate": {
+                  "style": "form"
+                },
+                "EndDate": {
+                  "style": "form"
+                },
+                "Terms": {
+                  "style": "form"
+                },
+                "DocumentPdf": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Contracts/UpdateContract": {
+      "put": {
+        "tags": [
+          "Contracts"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "required": [
+                  "ContractType"
+                ],
+                "type": "object",
+                "properties": {
+                  "ContractId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "ContractType": {
+                    "$ref": "#/components/schemas/ContractType"
+                  },
+                  "StartDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "EndDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "Terms": {
+                    "maxLength": 1000,
+                    "minLength": 0,
+                    "type": "string"
+                  },
+                  "DocumentPdf": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              },
+              "encoding": {
+                "ContractId": {
+                  "style": "form"
+                },
+                "ContractType": {
+                  "style": "form"
+                },
+                "StartDate": {
+                  "style": "form"
+                },
+                "EndDate": {
+                  "style": "form"
+                },
+                "Terms": {
+                  "style": "form"
+                },
+                "DocumentPdf": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Employees/directory": {
       "get": {
         "tags": [
@@ -100,7 +241,6 @@
                   "Id",
                   "PassportInfo",
                   "PhoneNumber",
-                  "Role",
                   "Telegram",
                   "Username"
                 ],
@@ -242,7 +382,6 @@
                   "HireDate",
                   "PassportInfo",
                   "PhoneNumber",
-                  "Role",
                   "Telegram",
                   "Username"
                 ],
@@ -471,6 +610,14 @@
           }
         },
         "additionalProperties": false
+      },
+      "ContractType": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "UserLoginRequestDto": {
         "required": [

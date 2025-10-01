@@ -1,4 +1,5 @@
-﻿using Application.Exceptions;
+﻿using Application.DTOs.Contract.Requests;
+using Application.Exceptions;
 using Domain.Interfaces;
 using Infrastructure.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
@@ -16,4 +17,14 @@ public class ContractsRepository(AppDbContext context): IContractsRepository
     public async Task<Contract> GetByEmployeeId(Guid employeeId) =>
         await _context.Contracts.FirstOrDefaultAsync(c => c.EmployeeId == employeeId 
             && c.Employee.IsActive);
+
+    public async Task<Contract> GetContractById(Guid contractId) =>
+        await _context.Contracts.FirstOrDefaultAsync(c => c.Id == contractId &&
+            c.Employee.IsActive && !c.IsDeleted);
+
+    public async Task UpdateAsync(Contract updateContract)
+    {
+         _context.Contracts.Update(updateContract);
+        await _context.SaveChangesAsync();
+    }
 }

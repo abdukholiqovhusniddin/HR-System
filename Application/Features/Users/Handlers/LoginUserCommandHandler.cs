@@ -20,9 +20,6 @@ internal sealed class LoginUserCommandHandler(IUserRepository userRepository,
             throw new ApiException("Invalid username or password.");
         }
         var token = jwtService.GenerateToken(user);
-        return new ApiResponse<string>
-        {
-            Data = token
-        };
+        return new ApiResponse<string>(token);
     }
 }

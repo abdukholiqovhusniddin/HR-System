@@ -11,7 +11,7 @@ public abstract class CreateAndUpdateEmployeeDto
     [EmailAddress(ErrorMessage = "Invalid email address format")]
     public required string Email { get; set; }
 
-    [Required(ErrorMessage = "Role is required")]
+    [EnumDataType(typeof(UserRole), ErrorMessage = "Invalid role.")]
     public UserRole Role { get; set; } = UserRole.Employee;
 
     [StringLength(100, ErrorMessage = "Full name cannot exceed 100 characters")]

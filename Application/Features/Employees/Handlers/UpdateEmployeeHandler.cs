@@ -22,9 +22,6 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
         await _employeesRepository.Update(employee);
         await _unitOfWork.SaveChangesAsync(CancellationToken.None);
 
-        return new ApiResponse<Employee>
-        {
-            Data = employee,
-        };
+        return new ApiResponse<Employee>(employee);
     }
 }

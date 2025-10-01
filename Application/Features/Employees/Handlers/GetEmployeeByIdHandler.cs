@@ -17,12 +17,9 @@ internal sealed class GetEmployeeByIdHandler(IEmployeesRepository directory) : I
             throw new ApiException("Id is empty");
 
         var employee = await _directoryRepository.GetById(request.EmployeeId);
-        
+
         return employee is null
             ? throw new NotFoundException("Employee not found")
-            : new ApiResponse<ResponseEmployeeDto>
-        {
-            Data = employee.Adapt<ResponseEmployeeDto>()
-        };
+            : new ApiResponse<ResponseEmployeeDto>(employee.Adapt<ResponseEmployeeDto>());
     }
 }

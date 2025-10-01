@@ -32,8 +32,10 @@ public class ContractsController(IMediator mediator) : ApiControllerBase
     }
 
     [HttpPut("UpdateContract")]
-    public async Task<IActionResult> UpdateContract()
+    public async Task<IActionResult> UpdateContract([FromForm]UpdateContractDtoRequest updateContract)
     {
-
+        var respons = await _mediator.Send(new UpdateContractCommon(updateContract));
+        
+        return StatusCode(respons.StatusCode, respons);
     }
 }

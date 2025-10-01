@@ -5,7 +5,8 @@ using Domain.Interfaces;
 using MediatR;
 
 namespace Application.Features.Employees.Handlers;
-public class DeleteEmployeeHandler(IEmployeesRepository employeesRepository):IRequestHandler<DeleteEmployeeCommand, ApiResponse<Employee>>
+public class DeleteEmployeeHandler(IEmployeesRepository employeesRepository,
+    IUnitOfWork unitOfWork) :IRequestHandler<DeleteEmployeeCommand, ApiResponse<Employee>>
 {
     private readonly IEmployeesRepository _employeesRepository = employeesRepository;
     public async Task<ApiResponse<Employee>> Handle(DeleteEmployeeCommand request, CancellationToken cancellationToken)
@@ -15,9 +16,8 @@ public class DeleteEmployeeHandler(IEmployeesRepository employeesRepository):IRe
 
         employee.IsActive = false;
 
-        return new ApiResponse<Employee>
-        {
-            Data = employee
-        };
+        await unitOfWork.SaveChangesAsync(CancellationToken.None);
+
+        return new ApiResponse<Employee>(employee);
     }
 }

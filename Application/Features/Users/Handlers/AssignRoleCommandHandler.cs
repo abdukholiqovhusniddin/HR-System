@@ -13,10 +13,6 @@ internal sealed class AssignRoleCommandHandler(IUserRepository userRepository) :
     public async Task<ApiResponse<UserProfileResponseDto>> Handle(AssignRoleCommand request, CancellationToken cancellationToken)
     {
         var dto = request.AssignRoleDto;
-
-        if (!Enum.IsDefined(dto.Role))
-            throw new Exception("Invalid role.");
-
         var user = await _userRepository.GetByUsernameAsync(dto.Username, includeEmployeeProfile: true)
             ?? throw new NotFoundException("User not found");
 
@@ -26,9 +22,6 @@ internal sealed class AssignRoleCommandHandler(IUserRepository userRepository) :
 
         var userDto = user.EmployeeProfile?.Adapt<UserProfileResponseDto>();
 
-        return new ApiResponse<UserProfileResponseDto>
-        {
-            Data = userDto,
-        };
+        return new ApiResponse<UserProfileResponseDto>(userDto!);
     }
 }

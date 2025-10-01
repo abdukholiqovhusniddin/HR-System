@@ -23,10 +23,8 @@ internal sealed class GetMeQueryHandler(IUserRepository userRepository) : IReque
             ?? throw new NotFoundException("User not found");
 
         var userDto = user.EmployeeProfile?.Adapt<UserProfileResponseDto>();
-        return new ApiResponse<UserProfileResponseDto>
-        {
-            Data = userDto
-        };
+
+        return new ApiResponse<UserProfileResponseDto>(userDto!);
 
     }
 }

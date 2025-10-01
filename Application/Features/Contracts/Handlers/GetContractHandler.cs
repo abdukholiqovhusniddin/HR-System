@@ -10,13 +10,13 @@ public class GetContractHandler(IContractsRepository contractsRepository): IRequ
     private readonly IContractsRepository _contractsRepository = contractsRepository;
     public async Task<ApiResponse<Contract>> Handle(GetContractQuery request, CancellationToken cancellationToken)
     {
+        if (request.EmployeeId == Guid.Empty)
+            throw new ApiException("Id is empty");
+
         var contract = await _contractsRepository.GetByEmployeeId(request.EmployeeId);
 
         return contract is null
             ? throw new NotFoundException("Contract not found")
-            : new ApiResponse<Contract>
-        {
-            Data = contract
-        };
+            : new ApiResponse<Contract>(contract);
     }
 }

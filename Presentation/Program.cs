@@ -37,6 +37,7 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IEmployerRepository, EmployerRepository>();
 builder.Services.AddScoped<IEmployeesRepository, EmployeesRepository>();
 builder.Services.AddScoped<IContractsRepository, ContractsRepository>();
+builder.Services.AddScoped<ISalariesRepository, SalariesRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddScoped<IFileService, FileService>();

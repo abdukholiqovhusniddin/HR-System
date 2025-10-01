@@ -6,7 +6,8 @@ using Domain.Interfaces;
 using MediatR;
 
 namespace Application.Features.Contracts.Handlers;
-public class DeleteContractHandler(IContractsRepository contractsRepository, IUnitOfWork unitOfWork) : IRequestHandler<DeleteContractCommand, ApiResponse<Contract>>
+public class DeleteContractHandler(IContractsRepository contractsRepository, IUnitOfWork unitOfWork)
+    : IRequestHandler<DeleteContractCommand, ApiResponse<Contract>>
 {
     private readonly IContractsRepository _contractsRepository = contractsRepository;
     public async Task<ApiResponse<Contract>> Handle(DeleteContractCommand request, CancellationToken cancellationToken)

@@ -42,6 +42,22 @@
   },
   {
     "ContainingType": "Presentation.Controllers.ContractsController",
+    "Method": "DeleteContract",
+    "RelativePath": "api/Contracts/Delete contract",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contractId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.ContractsController",
     "Method": "GetById",
     "RelativePath": "api/Contracts/employeeId",
     "HttpMethod": "GET",
@@ -224,6 +240,22 @@
     "Parameters": [
       {
         "Name": "Id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.SalariesController",
+    "Method": "GetSalaryByEmployeeId",
+    "RelativePath": "api/Salaries/Get salary by employeeId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeId",
         "Type": "System.Guid",
         "IsRequired": false
       }

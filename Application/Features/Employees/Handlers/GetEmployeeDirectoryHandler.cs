@@ -7,7 +7,8 @@ using MediatR;
 
 namespace Application.Features.Employees.Handlers;
 
-public class GetEmployeeDirectoryHandler(IEmployeesRepository directoryRepository) : IRequestHandler<GetEmployeeDirectory, ApiResponse<List<ResponseDirectoryDto>>>
+public class GetEmployeeDirectoryHandler(IEmployeesRepository directoryRepository) 
+    : IRequestHandler<GetEmployeeDirectory, ApiResponse<List<ResponseDirectoryDto>>>
 {
     private readonly IEmployeesRepository _directoryRepository = directoryRepository;
 

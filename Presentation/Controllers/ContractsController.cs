@@ -38,4 +38,11 @@ public class ContractsController(IMediator mediator) : ApiControllerBase
         
         return StatusCode(respons.StatusCode, respons);
     }
+
+    [HttpDelete("Delete contract")]
+    public async Task<IActionResult> DeleteContract(Guid contractId)
+    {
+        var response = await _mediator.Send(new DeleteContractCommand(contractId));
+        return StatusCode(response.StatusCode, response);
+    }
 }

@@ -1,5 +1,5 @@
 ﻿namespace Domain.Entities;
-public class VacationRequest: EmployeeBaseEntity
+public class Vacations: EmployeeBaseEntity
 {
     public string? VacationType { get; set; }
 

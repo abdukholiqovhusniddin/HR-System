@@ -2,6 +2,7 @@
 using Application.DTOs.Employees.Requests;
 using Application.DTOs.Employees.Responses;
 using Application.DTOs.Salaries.Requests;
+using Application.DTOs.Salaries.Responses;
 using Application.DTOs.Users.Responses;
 using Mapster;
 
@@ -53,5 +54,10 @@ public class RegisterMappers : IRegister
         config.NewConfig<UpdateContractDtoRequest, Contract>();
 
         config.NewConfig<AddSalaryDtoRequest, Salary>();
+
+        config.NewConfig<Salary, SalaryEmployeeAndHistoryDtoResponse>()
+            .Map(dest => dest.FullName, src => src.Employee.FullName)
+            .Map(dest => dest.Position, src => src.Employee.Position)
+            .Map(dest => dest.Department, src => src.Employee.Department);
     }
 }

@@ -21,7 +21,8 @@ public class AddContractHandler(IContractsRepository contractsRepository,
             ContractType = contract.ContractType,
             StartDate = contract.StartDate,
             EndDate = contract.EndDate,
-            Terms = contract.Terms
+            Terms = contract.Terms,
+            DocumentPdf = null!
         };
 
         if (contract.DocumentPdf is not null)

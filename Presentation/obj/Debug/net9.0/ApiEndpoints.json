@@ -1,8 +1,8 @@
 [
   {
     "ContainingType": "Presentation.Controllers.ContractsController",
-    "Method": "AddContract",
-    "RelativePath": "api/Contracts/Add contract",
+    "Method": "Create",
+    "RelativePath": "api/Contracts",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -43,7 +43,7 @@
   {
     "ContainingType": "Presentation.Controllers.ContractsController",
     "Method": "DeleteContract",
-    "RelativePath": "api/Contracts/Delete contract",
+    "RelativePath": "api/Contracts/${contractId}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -51,15 +51,15 @@
       {
         "Name": "contractId",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
   },
   {
     "ContainingType": "Presentation.Controllers.ContractsController",
-    "Method": "GetById",
-    "RelativePath": "api/Contracts/employeeId",
+    "Method": "GetByEmployeeId",
+    "RelativePath": "api/Contracts/${employeeId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -67,7 +67,7 @@
       {
         "Name": "employeeId",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -75,7 +75,7 @@
   {
     "ContainingType": "Presentation.Controllers.ContractsController",
     "Method": "UpdateContract",
-    "RelativePath": "api/Contracts/UpdateContract",
+    "RelativePath": "api/Contracts/updateContract",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -248,8 +248,8 @@
   },
   {
     "ContainingType": "Presentation.Controllers.SalariesController",
-    "Method": "CreateSalaries",
-    "RelativePath": "api/Salaries/Create salary for employee",
+    "Method": "Create",
+    "RelativePath": "api/Salaries",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -264,24 +264,8 @@
   },
   {
     "ContainingType": "Presentation.Controllers.SalariesController",
-    "Method": "GetSalaryEmployee",
-    "RelativePath": "api/Salaries/Get history salary employee by Id",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "salaryEmployeeId",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Presentation.Controllers.SalariesController",
-    "Method": "GetSalaryByEmployeeId",
-    "RelativePath": "api/Salaries/Get salary by employeeId",
+    "Method": "GetByEmployeeId",
+    "RelativePath": "api/Salaries/{employeeId}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -289,9 +273,35 @@
       {
         "Name": "employeeId",
         "Type": "System.Guid",
-        "IsRequired": false
+        "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.SalariesController",
+    "Method": "GetHistory",
+    "RelativePath": "api/Salaries/{employeeId}/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.SalariesController",
+    "Method": "GetReport",
+    "RelativePath": "api/Salaries/report",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

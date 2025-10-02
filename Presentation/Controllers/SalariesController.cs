@@ -36,7 +36,7 @@ public class SalariesController(IMediator mediator) : ApiControllerBase
     [HttpGet("{employeeId}/history")]
     public async Task<IActionResult> GetHistory(Guid employeeId)
     {
-        var salaryEmployee = await _mediator.Send(new GetSalaryEmployeeQuery(employeeId));
+        var salaryEmployee = await _mediator.Send(new GetSalaryHistoryQuery(employeeId));
         return StatusCode(salaryEmployee.StatusCode, salaryEmployee);
     }
 

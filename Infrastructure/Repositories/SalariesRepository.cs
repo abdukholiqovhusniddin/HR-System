@@ -11,7 +11,13 @@ public class SalariesRepository(AppDbContext context) : ISalariesRepository
     public async Task CreateAsync(Salary newSalary) =>
         await _context.Salaries.AddAsync(newSalary);
 
-    public async Task<List<Salary>> GetByEmployeeId(Guid employeeId) =>
-        await _context.Salaries.Where(s => s.EmployeeId == employeeId
-        && s.Employee.IsActive).ToListAsync();
+    public async Task<Salary?> GetByEmployeeId(Guid employeeId) =>
+        await _context.Salaries.Include(s => s.Employee)
+            .Where(s => s.EmployeeId == employeeId && s.Employee.IsActive)
+            .OrderByDescending(s => s.StartPeriod).FirstOrDefaultAsync();
+
+    public async Task<List<Salary>> GetHistoryByEmployeeId(Guid salaryEmployee) =>
+        await _context.Salaries.Include(s => s.Employee)
+            .Where(s => s.EmployeeId == salaryEmployee && s.Employee.IsActive)
+            .OrderBy(s => s.StartPeriod).ToListAsync();
 }

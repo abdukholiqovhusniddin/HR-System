@@ -5,7 +5,7 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Contracts/employeeId": {
+    "/api/Contracts/${employeeId}": {
       "get": {
         "tags": [
           "Contracts"
@@ -13,7 +13,8 @@
         "parameters": [
           {
             "name": "employeeId",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -27,7 +28,7 @@
         }
       }
     },
-    "/api/Contracts/Add contract": {
+    "/api/Contracts": {
       "post": {
         "tags": [
           "Contracts"
@@ -38,6 +39,7 @@
               "schema": {
                 "required": [
                   "ContractType",
+                  "DocumentPdf",
                   "EmployeeId"
                 ],
                 "type": "object",
@@ -98,7 +100,7 @@
         }
       }
     },
-    "/api/Contracts/UpdateContract": {
+    "/api/Contracts/updateContract": {
       "put": {
         "tags": [
           "Contracts"
@@ -108,7 +110,8 @@
             "multipart/form-data": {
               "schema": {
                 "required": [
-                  "ContractType"
+                  "ContractType",
+                  "DocumentPdf"
                 ],
                 "type": "object",
                 "properties": {
@@ -168,7 +171,7 @@
         }
       }
     },
-    "/api/Contracts/Delete contract": {
+    "/api/Contracts/${contractId}": {
       "delete": {
         "tags": [
           "Contracts"
@@ -176,7 +179,8 @@
         "parameters": [
           {
             "name": "contractId",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -388,7 +392,7 @@
         }
       }
     },
-    "/api/Salaries/Get salary by employeeId": {
+    "/api/Salaries/{employeeId}": {
       "get": {
         "tags": [
           "Salaries"
@@ -396,7 +400,8 @@
         "parameters": [
           {
             "name": "employeeId",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string",
               "format": "uuid"
@@ -410,7 +415,7 @@
         }
       }
     },
-    "/api/Salaries/Create salary for employee": {
+    "/api/Salaries": {
       "post": {
         "tags": [
           "Salaries"
@@ -441,20 +446,33 @@
         }
       }
     },
-    "/api/Salaries/Get history salary employee by Id": {
+    "/api/Salaries/{employeeId}/history": {
       "get": {
         "tags": [
           "Salaries"
         ],
         "parameters": [
           {
-            "name": "salaryEmployeeId",
-            "in": "query",
+            "name": "employeeId",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string",
               "format": "uuid"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Salaries/report": {
+      "get": {
+        "tags": [
+          "Salaries"
         ],
         "responses": {
           "200": {

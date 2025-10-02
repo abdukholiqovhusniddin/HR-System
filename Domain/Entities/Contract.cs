@@ -12,7 +12,7 @@ public class Contract: EmployeeBaseEntity
 
     public string? DocumentUrl { get; set; }
 
-    public ContractFile DocumentPdf { get; set; } = default!;
+    public required ContractFile DocumentPdf { get; set; } = default!;
 
-    public bool IsDeleted { get; set; } = false;
+    public bool IsAktive { get; set; } = true;
 }

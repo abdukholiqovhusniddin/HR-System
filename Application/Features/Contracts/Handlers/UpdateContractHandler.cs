@@ -34,8 +34,7 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
             };
             updateContract.DocumentUrl = documentPath.Url;
         }
-        
-
+  
         await _contractsRepository.UpdateAsync(updateContract);
 
         return new ApiResponse<Contract>(updateContract);

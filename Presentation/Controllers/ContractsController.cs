@@ -1,10 +1,9 @@
-﻿using Application.DTOs.Contract.Requests;
-using Application.Features.Contracts.Commands;
+﻿using Application.Features.Contracts.Commands;
 using Application.Features.Contracts.Queries;
-using Domain.Entities;
-using MediatR;
 using Microsoft.AspNetCore.Authorization;
+using Application.DTOs.Contract.Requests;
 using Microsoft.AspNetCore.Mvc;
+using MediatR;
 
 namespace Presentation.Controllers;
 
@@ -15,8 +14,10 @@ public class ContractsController(IMediator mediator) : ApiControllerBase
 {
     private readonly IMediator _mediator = mediator;
 
-    [HttpGet("employeeId")]
-    public async Task<IActionResult> GetById(Guid employeeId)
+
+    // Get contracts for an employee
+    [HttpGet("${employeeId}")]
+    public async Task<IActionResult> GetByEmployeeId(Guid employeeId)
     {
         var employeeContract = await _mediator.Send(new GetContractQuery(employeeId));
 

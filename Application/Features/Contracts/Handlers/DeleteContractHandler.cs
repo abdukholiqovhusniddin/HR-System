@@ -17,7 +17,7 @@ public class DeleteContractHandler(IContractsRepository contractsRepository, IUn
         var contract = await _contractsRepository.GetContractById(contractId)
             ?? throw new NotFoundException("Contract not found");
 
-        contract.IsAktive = true;
+        contract.IsAktive = false;
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         return new ApiResponse<Contract>(contract);

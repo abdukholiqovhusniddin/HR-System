@@ -14,9 +14,9 @@ public class ContractsRepository(AppDbContext context): IContractsRepository
         await _context.Contracts.AddAsync(newContract);
     }
 
-    public async Task<Contract> GetByEmployeeId(Guid employeeId) =>
-        await _context.Contracts.FirstOrDefaultAsync(c => c.EmployeeId == employeeId 
-            && c.Employee.IsActive);
+    public async Task<List<Contract>> GetByEmployeeId(Guid employeeId) =>
+        await _context.Contracts.Where(c => c.EmployeeId == employeeId 
+            && c.Employee.IsActive).ToListAsync();
 
     public async Task<Contract> GetContractById(Guid contractId) =>
         await _context.Contracts.FirstOrDefaultAsync(c => c.Id == contractId &&

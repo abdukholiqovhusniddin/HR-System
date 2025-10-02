@@ -8,11 +8,10 @@ public class SalariesRepository(AppDbContext context) : ISalariesRepository
 {
     private readonly AppDbContext _context = context;
 
-    public async Task CreateAsync(Salary newSalary)
-    {
+    public async Task CreateAsync(Salary newSalary) =>
         await _context.Salaries.AddAsync(newSalary);
-    }
 
-    public async Task<Salary?> GetByEmployeeId(Guid employeeId) =>
-        await _context.Salaries.FirstOrDefaultAsync(s => s.EmployeeId == employeeId && s.Employee.IsActive);
+    public async Task<List<Salary>> GetByEmployeeId(Guid employeeId) =>
+        await _context.Salaries.Where(s => s.EmployeeId == employeeId
+        && s.Employee.IsActive).ToListAsync();
 }

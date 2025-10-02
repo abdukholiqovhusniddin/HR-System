@@ -20,7 +20,7 @@ public class ContractsController(IMediator mediator) : ApiControllerBase
     {
         var employeeContract = await _mediator.Send(new GetContractQuery(employeeId));
 
-        return StatusCode(employeeContract.StatusCode, employeeContract);
+        return  StatusCode(employeeContract.StatusCode, employeeContract);
     }
 
     [HttpPost("Add contract")]

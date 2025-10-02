@@ -2,4 +2,4 @@
 using MediatR;
 
 namespace Application.Features.Salaries.Queries;
-public record GetSalaryByIdQuery(Guid EmployeeId) : IRequest<ApiResponse<Salary>>;
+public record GetSalaryByIdQuery(Guid EmployeeId) : IRequest<ApiResponse<List<Salary>>>;

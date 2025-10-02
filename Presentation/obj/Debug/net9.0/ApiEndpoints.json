@@ -248,6 +248,38 @@
   },
   {
     "ContainingType": "Presentation.Controllers.SalariesController",
+    "Method": "CreateSalaries",
+    "RelativePath": "api/Salaries/Create salary for employee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Salaries.Requests.AddSalaryDtoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.SalariesController",
+    "Method": "GetSalaryEmployee",
+    "RelativePath": "api/Salaries/Get history salary employee by Id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "salaryEmployeeId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.SalariesController",
     "Method": "GetSalaryByEmployeeId",
     "RelativePath": "api/Salaries/Get salary by employeeId",
     "HttpMethod": "GET",

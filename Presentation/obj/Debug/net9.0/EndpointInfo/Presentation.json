@@ -410,6 +410,59 @@
         }
       }
     },
+    "/api/Salaries/Create salary for employee": {
+      "post": {
+        "tags": [
+          "Salaries"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSalaryDtoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSalaryDtoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddSalaryDtoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Salaries/Get history salary employee by Id": {
+      "get": {
+        "tags": [
+          "Salaries"
+        ],
+        "parameters": [
+          {
+            "name": "salaryEmployeeId",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/User/register": {
       "post": {
         "tags": [
@@ -638,6 +691,44 @@
   },
   "components": {
     "schemas": {
+      "AddSalaryDtoRequest": {
+        "required": [
+          "baseSalary",
+          "employeeId",
+          "endPeriod",
+          "startPeriod"
+        ],
+        "type": "object",
+        "properties": {
+          "employeeId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "baseSalary": {
+            "type": "number",
+            "format": "double"
+          },
+          "bonus": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "deduction": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "startPeriod": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endPeriod": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "AssignRoleRequestDto": {
         "required": [
           "role",

@@ -3,4 +3,4 @@ using Application.DTOs.Salaries.Responses;
 using MediatR;
 
 namespace Application.Features.Salaries.Queries;
-public record GetSalaryReportQuery(): IRequest<ApiResponse<List<SalaryReportDtoResponse>>>;
+public record GetSalaryReportQuery(): IRequest<ApiResponse<List<SalaryDtoResponse>>>;

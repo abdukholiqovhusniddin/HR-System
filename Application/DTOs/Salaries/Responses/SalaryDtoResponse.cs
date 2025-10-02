@@ -1,5 +1,5 @@
 ﻿namespace Application.DTOs.Salaries.Responses;
-public class SalaryEmployeeAndHistoryDtoResponse
+public class SalaryDtoResponse
 {
     public required string FullName { get; set; }
     public required string Position { get; set; }
@@ -9,4 +9,5 @@ public class SalaryEmployeeAndHistoryDtoResponse
     public decimal? Deduction { get; set; }
     public required DateTime StartPeriod { get; set; }
     public required DateTime EndPeriod { get; set; }
+    public decimal? FinalAmount  => BaseSalary + (Bonus ?? 0) - (Deduction ?? 0);
 }

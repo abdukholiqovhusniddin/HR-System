@@ -8,10 +8,10 @@ using MediatR;
 
 namespace Application.Features.Salaries.Handlers;
 public class GetSalaryByIdHandler(ISalariesRepository salariesRepository)
-    : IRequestHandler<GetSalaryByIdQuery, ApiResponse<SalaryEmployeeAndHistoryDtoResponse>>
+    : IRequestHandler<GetSalaryByIdQuery, ApiResponse<SalaryDtoResponse>>
 {
     private readonly ISalariesRepository _salariesRepository = salariesRepository;
-    public async Task<ApiResponse<SalaryEmployeeAndHistoryDtoResponse>> Handle(GetSalaryByIdQuery request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<SalaryDtoResponse>> Handle(GetSalaryByIdQuery request, CancellationToken cancellationToken)
     {
         Guid employeeId = request.EmployeeId;
         if (employeeId == Guid.Empty)
@@ -19,10 +19,10 @@ public class GetSalaryByIdHandler(ISalariesRepository salariesRepository)
 
         var salary =  await _salariesRepository.GetByEmployeeId(employeeId);
 
-        var response = salary.Adapt<SalaryEmployeeAndHistoryDtoResponse>();
+        var response = salary.Adapt<SalaryDtoResponse>();
 
         return salary is null
             ? throw new NotFoundException("Salary not found")
-            : new ApiResponse<SalaryEmployeeAndHistoryDtoResponse>(response);
+            : new ApiResponse<SalaryDtoResponse>(response);
     }
 }

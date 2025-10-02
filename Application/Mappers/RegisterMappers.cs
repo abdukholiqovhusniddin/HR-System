@@ -55,7 +55,7 @@ public class RegisterMappers : IRegister
 
         config.NewConfig<AddSalaryDtoRequest, Salary>();
 
-        config.NewConfig<Salary, SalaryEmployeeAndHistoryDtoResponse>()
+        config.NewConfig<Salary, SalaryDtoResponse>()
             .Map(dest => dest.FullName, src => src.Employee.FullName)
             .Map(dest => dest.Position, src => src.Employee.Position)
             .Map(dest => dest.Department, src => src.Employee.Department);

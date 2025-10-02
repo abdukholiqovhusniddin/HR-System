@@ -20,4 +20,14 @@ public class SalariesRepository(AppDbContext context) : ISalariesRepository
         await _context.Salaries.Include(s => s.Employee)
             .Where(s => s.EmployeeId == salaryEmployee && s.Employee.IsActive)
             .OrderBy(s => s.StartPeriod).ToListAsync();
+
+    public async Task<List<Salary?>> GetSalaryReport() =>
+        await _context.Salaries.Include(s => s.Employee)
+            .Where(s => s.Employee.IsActive)
+            .GroupBy(s => s.EmployeeId)
+            .Select(g => g.OrderByDescending(s => s.StartPeriod)
+                      .FirstOrDefault())                
+            .Where(s => s != null)         
+            .ToListAsync();
+
 }

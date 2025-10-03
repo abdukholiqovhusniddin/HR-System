@@ -7,6 +7,10 @@ public class VacationRepository(AppDbContext context) : IVacationRepository
 {
     private readonly AppDbContext _context = context;
 
+    public async Task<Vacation?> ApproveVacation(Guid vacationId) =>
+        await _context.Vacations.FirstOrDefaultAsync(v => v.Id == vacationId && v.Employee.IsActive
+        && v.Status == Domain.Enums.VacationStatus.Pending);
+
     public async Task CreateVacationAsync(Guid userId, Vacation vacation) =>
         await _context.Vacations.AddAsync(vacation);
 
@@ -23,4 +27,7 @@ public class VacationRepository(AppDbContext context) : IVacationRepository
     public async Task<Vacation?> GetVacationsByUserId(Guid userId) =>
         await _context.Vacations.Include(v => v.Employee)
             .FirstOrDefaultAsync(v => v.Employee.UserId == userId && v.Employee.IsActive);
+
+    public async Task UpdateAsync(Vacation vacation) =>
+        await _context.Vacations.AddAsync(vacation);
 }

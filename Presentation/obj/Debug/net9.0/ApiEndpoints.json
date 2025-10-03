@@ -470,6 +470,22 @@
   },
   {
     "ContainingType": "Presentation.Controllers.VacationsController",
+    "Method": "ApproveVacation",
+    "RelativePath": "api/Vacations/{id}/approve",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.VacationsController",
     "Method": "GetMyVacations",
     "RelativePath": "api/Vacations/me",
     "HttpMethod": "GET",

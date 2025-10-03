@@ -77,5 +77,10 @@ public class RegisterMappers : IRegister
             .Map(dest => dest.Department, src => src.Employee.Department);
 
         config.NewConfig<AddEquipmentDtoRequest, Equipments>();
+
+        config.NewConfig<Equipments, EquipmentDtoResponse>()
+            .Map(dest => dest.FullName, src => src.Employee.FullName)
+            .Map(dest => dest.Position, src => src.Employee.Position)
+            .Map(dest => dest.Department, src => src.Employee.Department);
     }
 }

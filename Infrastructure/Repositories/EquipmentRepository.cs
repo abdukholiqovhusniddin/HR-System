@@ -10,7 +10,13 @@ public class EquipmentRepository(AppDbContext appDbContext) : IEquipmentReposito
     public async Task AddEquipmentAsync(Equipments newEquipment) =>
         await _context.Equipments.AddAsync(newEquipment);
 
+    public async Task<Equipments?> GetByIdAsync(Guid equipmentId) =>
+        await _context.Equipments.FirstOrDefaultAsync(e => e.Id == equipmentId);
+
     public async Task<List<Equipments>> GetEquipmentByEmployeeId(Guid employeeId) =>
         await _context.Equipments.Where(e => e.EmployeeId == employeeId
         && e.Employee.IsActive).ToListAsync();
+
+    //public async Task UpdateStatusAsync(Equipments equipment) =>
+    //     _context.Equipments.Update(equipment);
 }

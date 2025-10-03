@@ -1,5 +1,7 @@
 ﻿using Application.DTOs.Equipments.Requests;
+using Application.Features.Equipment.Commands;
 using Application.Features.Equipment.Queries;
+using Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -27,6 +29,14 @@ public class EquipmentsController(IMediator mediator) : ApiControllerBase
     public async Task<IActionResult> AddEquipment(AddEquipmentDtoRequest addEquipmentDtoRequest)
     {
         var result = await _mediator.Send(new AddEquipmentCommand(addEquipmentDtoRequest));
+        return StatusCode(result.StatusCode, result);
+    }
+
+    /// Update equipment status (e.g. Returned)
+    [HttpPut("{id}/status")]
+    public async Task<IActionResult> UpdateStatus(Guid id, EquipmentStatus status)
+    {
+        var result = await _mediator.Send(new UpdateEquipmentStatusCommand(id, status));
         return StatusCode(result.StatusCode, result);
     }
 }

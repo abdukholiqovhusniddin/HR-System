@@ -415,6 +415,67 @@
         }
       }
     },
+    "/api/Equipments": {
+      "post": {
+        "tags": [
+          "Equipments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddEquipmentDtoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddEquipmentDtoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddEquipmentDtoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Equipments/{id}/status": {
+      "put": {
+        "tags": [
+          "Equipments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          },
+          {
+            "name": "status",
+            "in": "query",
+            "schema": {
+              "$ref": "#/components/schemas/EquipmentStatus"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Salaries/{employeeId}": {
       "get": {
         "tags": [
@@ -831,6 +892,38 @@
   },
   "components": {
     "schemas": {
+      "AddEquipmentDtoRequest": {
+        "required": [
+          "employeeId",
+          "inventoryNumber",
+          "model",
+          "type"
+        ],
+        "type": "object",
+        "properties": {
+          "employeeId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "model": {
+            "type": "string",
+            "nullable": true
+          },
+          "inventoryNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "assignmentDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "AddSalaryDtoRequest": {
         "required": [
           "baseSalary",
@@ -915,6 +1008,16 @@
           }
         },
         "additionalProperties": false
+      },
+      "EquipmentStatus": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "UserLoginRequestDto": {
         "required": [

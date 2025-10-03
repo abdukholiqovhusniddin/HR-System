@@ -7,21 +7,17 @@ using Mapster;
 using MediatR;
 
 namespace Application.Features.Vacations.Handlers;
-public class ApproveVacationHandler(IVacationRepository vacationRepository, IUnitOfWork unitOfWork)
-    : IRequestHandler<ApproveVacationCommand, ApiResponse<VacationDtoResponse>>
+public class RejectVacationHandler(IVacationRepository vacationRepository, IUnitOfWork unitOfWork)
+    : IRequestHandler<RejectVacationCommand, ApiResponse<VacationDtoResponse>>
 {
     private readonly IVacationRepository _vacationRepository = vacationRepository;
-    public async Task<ApiResponse<VacationDtoResponse>> Handle(ApproveVacationCommand request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<VacationDtoResponse>> Handle(RejectVacationCommand request, CancellationToken cancellationToken)
     {
-        Guid vacationId = request.VacationId;
-        if (vacationId == Guid.Empty)
-            throw new ApiException("Invalid vacation ID");
-
+        var vacationId = request.VacationId;
         var vacation = await _vacationRepository.ApproveAndRejectVacation(vacationId)
-            ?? throw new ApiException("Vacation not found or could not be approved");
+            ?? throw new ApiException("Vacation not found or cannot be rejected");
 
-        vacation.Status = Domain.Enums.VacationStatus.Approved;
-
+        vacation.Status = Domain.Enums.VacationStatus.Rejected;
         await _vacationRepository.UpdateAsync(vacation);
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 

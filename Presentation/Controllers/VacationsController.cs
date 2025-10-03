@@ -48,4 +48,13 @@ public class VacationsController(IMediator mediator) : ApiControllerBase
         var command = await _mediator.Send(new ApproveVacationCommand(id));
         return StatusCode(command.StatusCode, command);
     }
+
+    /// Update vacation (approve/reject)
+    [HttpPut("{id}/reject")]
+    [Authorize(Roles = "HR,Manager")]
+    public async Task<IActionResult> RejectVacation(Guid id)
+    {
+        var command = await _mediator.Send(new RejectVacationCommand(id));
+        return StatusCode(command.StatusCode, command);
+    }
 }

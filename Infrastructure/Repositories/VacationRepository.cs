@@ -7,7 +7,7 @@ public class VacationRepository(AppDbContext context) : IVacationRepository
 {
     private readonly AppDbContext _context = context;
 
-    public async Task<Vacation?> ApproveVacation(Guid vacationId) =>
+    public async Task<Vacation?> ApproveAndRejectVacation(Guid vacationId) =>
         await _context.Vacations.FirstOrDefaultAsync(v => v.Id == vacationId && v.Employee.IsActive
         && v.Status == Domain.Enums.VacationStatus.Pending);
 

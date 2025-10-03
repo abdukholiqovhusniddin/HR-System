@@ -32,5 +32,5 @@ public class Employee : BaseEntity
     public ICollection<Contract>? Contracts { get; set; }
     public ICollection<Salary>? Salaries { get; set; }
     public ICollection<Vacation>? Vacations { get; set; }
-    public ICollection<EquipmentAssignment>? Equipments { get; set; }
+    public ICollection<Equipments>? Equipments { get; set; }
 }

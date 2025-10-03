@@ -247,6 +247,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Presentation.Controllers.EquipmentsController",
+    "Method": "GetByEmployeeId",
+    "RelativePath": "api/Equipments/${employeeId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employeeId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Presentation.Controllers.SalariesController",
     "Method": "Create",
     "RelativePath": "api/Salaries",

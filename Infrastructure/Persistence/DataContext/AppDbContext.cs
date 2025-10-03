@@ -16,7 +16,7 @@ public class AppDbContext : DbContext
     public DbSet<ContractFile> ContractFiles { get; set; }
     public DbSet<Salary> Salaries { get; set; }
     public DbSet<Vacation> Vacations { get; set; }
-    public DbSet<EquipmentAssignment> EquipmentAssignments { get; set; }
+    public DbSet<Equipments> Equipments { get; set; }
     public DbSet<User> Users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

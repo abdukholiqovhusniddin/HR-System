@@ -392,6 +392,29 @@
         }
       }
     },
+    "/api/Equipments/${employeeId}": {
+      "get": {
+        "tags": [
+          "Equipments"
+        ],
+        "parameters": [
+          {
+            "name": "employeeId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Salaries/{employeeId}": {
       "get": {
         "tags": [

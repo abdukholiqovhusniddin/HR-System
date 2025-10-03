@@ -37,4 +37,9 @@
     <PackageReference Include="MimeKit" Version="4.13.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\Equipments\Requests\" />
+    <Folder Include="Features\Equipment\Commands\" />
+  </ItemGroup>
+
 </Project>

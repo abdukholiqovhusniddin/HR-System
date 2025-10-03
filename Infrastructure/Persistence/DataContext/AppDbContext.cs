@@ -15,7 +15,7 @@ public class AppDbContext : DbContext
     public DbSet<Contract> Contracts { get; set; }
     public DbSet<ContractFile> ContractFiles { get; set; }
     public DbSet<Salary> Salaries { get; set; }
-    public DbSet<Vacations> VacationRequests { get; set; }
+    public DbSet<Vacations> Vacation { get; set; }
     public DbSet<EquipmentAssignment> EquipmentAssignments { get; set; }
     public DbSet<User> Users { get; set; }
 

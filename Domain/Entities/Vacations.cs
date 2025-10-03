@@ -1,10 +1,12 @@
-﻿namespace Domain.Entities;
+﻿using Domain.Enums;
+
+namespace Domain.Entities;
 public class Vacations: EmployeeBaseEntity
 {
-    public string? VacationType { get; set; }
+    public required VacationType VacationType { get; set; }
 
-    public DateTime StartDate { get; set; }
-    public DateTime EndDate { get; set; }
+    public required DateTime StartDate { get; set; }
+    public required DateTime EndDate { get; set; }
 
-    public string? Status { get; set; }
+    public required VacationStatus Status { get; set; }
 }

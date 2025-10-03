@@ -1,6 +1,7 @@
 ﻿using Application.DTOs.Contract.Requests;
 using Application.DTOs.Employees.Requests;
 using Application.DTOs.Employees.Responses;
+using Application.DTOs.Equipments.Requests;
 using Application.DTOs.Equipments.Responses;
 using Application.DTOs.Salaries.Requests;
 using Application.DTOs.Salaries.Responses;
@@ -74,5 +75,7 @@ public class RegisterMappers : IRegister
             .Map(dest => dest.FullName, src => src.Employee.FullName)
             .Map(dest => dest.Position, src => src.Employee.Position)
             .Map(dest => dest.Department, src => src.Employee.Department);
+
+        config.NewConfig<AddEquipmentDtoRequest, Equipments>();
     }
 }

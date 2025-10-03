@@ -1,4 +1,5 @@
-﻿using Application.Features.Equipment.Queries;
+﻿using Application.DTOs.Equipments.Requests;
+using Application.Features.Equipment.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -18,6 +19,14 @@ public class EquipmentsController(IMediator mediator) : ApiControllerBase
     public async Task<IActionResult> GetByEmployeeId(Guid employeeId)
     {
         var result = await _mediator.Send(new GetEquipmentByEmployeeIdQuery(employeeId));
+        return StatusCode(result.StatusCode, result);
+    }
+
+    /// Add new equipment for employee
+    [HttpPost]
+    public async Task<IActionResult> AddEquipment(AddEquipmentDtoRequest addEquipmentDtoRequest)
+    {
+        var result = await _mediator.Send(new AddEquipmentCommand(addEquipmentDtoRequest));
         return StatusCode(result.StatusCode, result);
     }
 }

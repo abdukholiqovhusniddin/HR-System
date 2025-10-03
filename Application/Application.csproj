@@ -38,7 +38,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\Equipments\Requests\" />
     <Folder Include="Features\Equipment\Commands\" />
   </ItemGroup>
 

@@ -16,6 +16,10 @@ public class VacationRepository(AppDbContext context) : IVacationRepository
             .Select(e => e.Id)
             .FirstOrDefaultAsync();
 
+    public async Task<List<Vacation>> GetPendingVacationsAsync() =>
+        await _context.Vacations.Where(s => s.Status == Domain.Enums.VacationStatus.Pending
+            && s.Employee.IsActive).ToListAsync();
+
     public async Task<Vacation?> GetVacationsByUserId(Guid userId) =>
         await _context.Vacations.Include(v => v.Employee)
             .FirstOrDefaultAsync(v => v.Employee.UserId == userId && v.Employee.IsActive);

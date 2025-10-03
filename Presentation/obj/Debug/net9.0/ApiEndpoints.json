@@ -441,5 +441,41 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.VacationsController",
+    "Method": "CreateVacation",
+    "RelativePath": "api/Vacations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createVacationDtoRequest",
+        "Type": "Application.DTOs.Vacations.Requests.CreateVacationDtoRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.VacationsController",
+    "Method": "GetPendingVacations",
+    "RelativePath": "api/Vacations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Presentation.Controllers.VacationsController",
+    "Method": "GetMyVacations",
+    "RelativePath": "api/Vacations/me",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

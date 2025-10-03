@@ -705,6 +705,59 @@
           }
         }
       }
+    },
+    "/api/Vacations/me": {
+      "get": {
+        "tags": [
+          "Vacations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Vacations": {
+      "post": {
+        "tags": [
+          "Vacations"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateVacationDtoRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateVacationDtoRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateVacationDtoRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Vacations"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
@@ -771,6 +824,28 @@
         ],
         "type": "integer",
         "format": "int32"
+      },
+      "CreateVacationDtoRequest": {
+        "required": [
+          "endDate",
+          "startDate",
+          "vacationType"
+        ],
+        "type": "object",
+        "properties": {
+          "vacationType": {
+            "$ref": "#/components/schemas/VacationType"
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
       },
       "UserLoginRequestDto": {
         "required": [
@@ -863,6 +938,16 @@
           2,
           3,
           4
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
+      "VacationType": {
+        "enum": [
+          0,
+          1,
+          2,
+          3
         ],
         "type": "integer",
         "format": "int32"

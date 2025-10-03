@@ -23,12 +23,21 @@ public class VacationsController(IMediator mediator) : ApiControllerBase
     }
 
     /// POST /api/vacations
-    [HttpPost("")]
+    [HttpPost]
     [Authorize(Roles = "Employee")]
     public async Task<IActionResult> CreateVacation(CreateVacationDtoRequest createVacationDtoRequest)
     {
         var command = await _mediator.Send(new CreateVacationCommand(UserId, createVacationDtoRequest));
         return StatusCode(command.StatusCode, command);
+    }
+
+    /// GET /api/vacations/pending
+    [HttpGet]
+    [Authorize(Roles = "HR,Manager")]
+    public async Task<IActionResult> GetPendingVacations()
+    {
+        var vacations = await _mediator.Send(new GetPendingVacationsQuery());
+        return StatusCode(vacations.StatusCode, vacations);
     }
 
 }

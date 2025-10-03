@@ -4,6 +4,7 @@ using Application.DTOs.Employees.Responses;
 using Application.DTOs.Salaries.Requests;
 using Application.DTOs.Salaries.Responses;
 using Application.DTOs.Users.Responses;
+using Application.DTOs.Vacations.Requests;
 using Application.DTOs.Vacations.Responses;
 using Mapster;
 
@@ -61,9 +62,11 @@ public class RegisterMappers : IRegister
             .Map(dest => dest.Position, src => src.Employee.Position)
             .Map(dest => dest.Department, src => src.Employee.Department);
 
-        config.NewConfig<Vacations, VacationDtoResponse>()
+        config.NewConfig<Vacation, VacationDtoResponse>()
             .Map(dest => dest.FullName, src => src.Employee.FullName)
             .Map(dest => dest.Position, src => src.Employee.Position)
             .Map(dest => dest.Department, src => src.Employee.Department);
+
+        config.NewConfig<CreateVacationDtoRequest, Vacation>();
     }
 }

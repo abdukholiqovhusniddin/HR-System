@@ -37,9 +37,4 @@
     <PackageReference Include="MimeKit" Version="4.13.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DTOs\Vacations\Requests\" />
-    <Folder Include="Features\Vacations\Commands\" />
-  </ItemGroup>
-
 </Project>

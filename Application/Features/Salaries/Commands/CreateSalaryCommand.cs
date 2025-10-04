@@ -3,4 +3,4 @@ using Application.DTOs.Salaries.Requests;
 using MediatR;
 
 namespace Application.Features.Salaries.Commands;
-public record CreateSalaryCommand(AddSalaryDtoRequest salary): IRequest<ApiResponse<Salary>>;
+public record CreateSalaryCommand(AddSalaryDtoRequest salary): IRequest<ApiResponse<Salary>>; // dto

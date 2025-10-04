@@ -7,5 +7,4 @@ public interface IVacationRepository
     Task<Guid> GetEmployeeIdByUserIdAsync(Guid userId);
     Task<List<Vacation>> GetPendingVacationsAsync();
     Task<Vacation?> GetVacationsByUserId(Guid userId);
-    Task UpdateAsync(Vacation vacation);
 }

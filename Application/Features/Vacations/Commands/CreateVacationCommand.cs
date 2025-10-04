@@ -4,4 +4,4 @@ using MediatR;
 
 namespace Application.Features.Vacations.Commands;
 public record CreateVacationCommand(Guid UserId, CreateVacationDtoRequest CreateVacationDtoRequest) 
-    : IRequest<ApiResponse<Vacation>>;
+    : IRequest<ApiResponse<Vacation>>; // dto

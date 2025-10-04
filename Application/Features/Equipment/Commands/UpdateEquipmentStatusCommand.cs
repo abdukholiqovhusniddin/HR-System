@@ -5,4 +5,4 @@ using MediatR;
 
 namespace Application.Features.Equipment.Commands;
 public record UpdateEquipmentStatusCommand(Guid EquipmentId, EquipmentStatus NewStatus) 
-    : IRequest<ApiResponse<EquipmentDtoResponse>>;
+    : IRequest<ApiResponse<EquipmentDtoResponse>>;  // id equipment

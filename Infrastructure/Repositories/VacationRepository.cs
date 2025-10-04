@@ -27,7 +27,4 @@ public class VacationRepository(AppDbContext context) : IVacationRepository
     public async Task<Vacation?> GetVacationsByUserId(Guid userId) =>
         await _context.Vacations.Include(v => v.Employee)
             .FirstOrDefaultAsync(v => v.Employee.UserId == userId && v.Employee.IsActive);
-
-    public async Task UpdateAsync(Vacation vacation) =>
-        await _context.Vacations.AddAsync(vacation);
 }

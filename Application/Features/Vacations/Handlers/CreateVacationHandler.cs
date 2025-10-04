@@ -5,7 +5,7 @@ using Mapster;
 using MediatR;
 
 namespace Application.Features.Vacations.Handlers;
-public class CreateVacationHandler(IVacationRepository vacationRepository, IUnitOfWork unitOfWork) 
+public class CreateVacationHandler(IVacationRepository vacationRepository) 
     : IRequestHandler<CreateVacationCommand, ApiResponse<Vacation>>
 {
     private readonly IVacationRepository _vacationRepository = vacationRepository;
@@ -19,7 +19,6 @@ public class CreateVacationHandler(IVacationRepository vacationRepository, IUnit
         vacation.EmployeeId = userId;
 
         await _vacationRepository.CreateVacationAsync(userId, vacation);
-        await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         return new ApiResponse<Vacation>(vacation);
 

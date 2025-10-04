@@ -9,7 +9,6 @@ using Infrastructure.Helpers;
 using Infrastructure.Persistence.DataContext;
 using Infrastructure.Repositories;
 using Mapster;
-using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Presentation.Middlewares;

@@ -14,6 +14,7 @@ public class EquipmentRepository(AppDbContext appDbContext) : IEquipmentReposito
         await _context.Equipments.FirstOrDefaultAsync(e => e.Id == equipmentId);
 
     public async Task<List<Equipments>> GetEquipmentByEmployeeId(Guid employeeId) =>
-        await _context.Equipments.Where(e => e.EmployeeId == employeeId
+        await _context.Equipments.Include(e => e.Employee)
+        .Where(e => e.EmployeeId == employeeId
         && e.Employee.IsActive).ToListAsync();
 }

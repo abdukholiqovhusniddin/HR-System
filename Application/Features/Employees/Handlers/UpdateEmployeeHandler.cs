@@ -11,7 +11,6 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
     : IRequestHandler<UpdateEmployeeCommand, ApiResponse<Unit>>
 {
     private readonly IEmployeesRepository _employeesRepository = employeesRepository;
-    private readonly IUnitOfWork _unitOfWork = unitOfWork;
     public async Task<ApiResponse<Unit>> Handle(UpdateEmployeeCommand request, CancellationToken cancellationToken)
     {
 
@@ -25,14 +24,13 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
             await fileService.RemoveAsync(employee.PhotoUrl);
 
             var photoPath = await fileService.SaveAsync(updateDto.Photo, "Employees");
-            employee.Image = new EmployeeFile()
-            {
-                EmployeeId = updateDto.Id,
-                Name = photoPath.Name,
-                Url = photoPath.Url,
-                Size = photoPath.Size,
-                Extension = photoPath.Extension,
-            };
+
+            var getPhoto = await _employeesRepository.GetImgByEmployeeId(updateDto.Id);
+
+            getPhoto.Name = photoPath.Name;
+            getPhoto.Url = photoPath.Url;
+            getPhoto.Size = photoPath.Size;
+            getPhoto.Extension = photoPath.Extension;
 
             employee.PhotoUrl = photoPath.Url;
 
@@ -41,7 +39,7 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
         {
             _ = updateDto.Adapt(employee);
         }
-        await _unitOfWork.SaveChangesAsync(CancellationToken.None);
+        await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         return new ApiResponse<Unit>();
     }

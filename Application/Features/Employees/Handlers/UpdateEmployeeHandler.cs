@@ -15,23 +15,42 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
     {
 
         var updateDto = request.UpdateEmployee;
+
+        if(updateDto.ManagerId.ToString() == "3fa85f64-5717-4562-b3fc-2c963f66afa6")
+            updateDto.ManagerId = null;
+
         var employee = await _employeesRepository.GetById(updateDto.Id)
             ?? throw new NotFoundException("Employee not found");
-        if (employee.PhotoUrl is not null && updateDto.Photo is not null)
+
+        if (updateDto.Photo is not null)
         {
             employee = updateDto.Adapt(employee);
 
-            await fileService.RemoveAsync(employee.PhotoUrl);
-
             var photoPath = await fileService.SaveAsync(updateDto.Photo, "Employees");
 
-            var getPhoto = await _employeesRepository.GetImgByEmployeeId(updateDto.Id);
+            if (employee.PhotoUrl is not null)
+            {
+                await fileService.RemoveAsync(employee.PhotoUrl);
 
-            getPhoto.Name = photoPath.Name;
-            getPhoto.Url = photoPath.Url;
-            getPhoto.Size = photoPath.Size;
-            getPhoto.Extension = photoPath.Extension;
+                var getPhoto = await _employeesRepository.GetImgByEmployeeId(updateDto.Id);
 
+                getPhoto.Name = photoPath.Name;
+                getPhoto.Url = photoPath.Url;
+                getPhoto.Size = photoPath.Size;
+                getPhoto.Extension = photoPath.Extension;
+                
+            }
+            else
+            {
+                var getPhoto = new EmployeeFile
+                {
+                    EmployeeId = updateDto.Id,
+                    Name = photoPath.Name,
+                    Url = photoPath.Url,
+                    Size = photoPath.Size,
+                    Extension = photoPath.Extension
+                };
+            }
             employee.PhotoUrl = photoPath.Url;
 
         }

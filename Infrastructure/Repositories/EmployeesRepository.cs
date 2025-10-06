@@ -11,7 +11,7 @@ public class EmployeesRepository(AppDbContext context) : IEmployeesRepository
 
     public async Task Delete(Employee employee)
     {
-        await _context.Employees.Where(e => e.Id == employee.Id).ExecuteDeleteAsync();
+        await _context.Employees.Where(e => e.Id == employee.Id && e.IsActive).ExecuteDeleteAsync();
     }
 
     public async Task<IEnumerable<Employee>> GetAllDirectory() =>

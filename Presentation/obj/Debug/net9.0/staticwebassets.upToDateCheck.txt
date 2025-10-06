@@ -2,10 +2,13 @@ wwwroot\Employees\0ea09de8-2029-4d30-8495-6fecc037b5c4.png
 wwwroot\Employees\163eac6f-54ac-4dbb-a4b6-5b3b80d7dbce.JPG
 wwwroot\Employees\2edd438e-f300-4095-a5a5-11bbbccd901b.JPG
 wwwroot\Employees\4a924d47-d960-41af-bfb1-568a48734286.JPG
+wwwroot\Employees\68521d2d-9046-4e91-9468-671e379e57ee.png
 wwwroot\Employees\8e01b77b-eab6-4255-a64f-214e798209d6.JPG
 wwwroot\Employees\911272e3-0c5b-4365-9cc4-25068df66a6d.JPG
 wwwroot\Employees\a3ca9a06-2d99-47e3-9bd5-2952f68abb8f.JPG
+wwwroot\Employees\c15882c0-53cc-4ccd-a494-4956f79b61c9.png
 wwwroot\Employees\ea0318b2-46e0-464d-8a26-db3b7c839db8.JPG
+wwwroot\PhotoEmployees\7a954816-5ec5-4c31-8395-fbd7aae96493.png
 wwwroot\PhotoEmployees\9ba61f23-4bfc-406f-a539-f69f838d4c6d.png
 wwwroot\PhotoEmployees\adc2adb4-613b-40ae-95ae-01388eac91fd.png
 wwwroot\uploads\32ce6fc0-2f4b-496e-84d0-897dbd96e586.JPG

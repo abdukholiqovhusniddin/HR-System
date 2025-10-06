@@ -13,12 +13,9 @@ public class FileService(IWebHostEnvironment env) : IFileService
         if (string.IsNullOrWhiteSpace(fileUrl))
             throw new ArgumentException("File path cannot be null or empty.", nameof(fileUrl));
 
-        // Fayl URL ichidan folder nomini va fayl nomini ajratamiz
-        // Masalan: "/images/avatar.jpg" => "images/avatar.jpg"
         string relativePath = fileUrl.TrimStart('/', '\\');
         string fullPath = Path.Combine(_env.WebRootPath, relativePath);
 
-        // Fayl haqiqatan ham wwwroot ichidami — xavfsizlik uchun tekshiramiz
         if (!fullPath.StartsWith(_env.WebRootPath, StringComparison.OrdinalIgnoreCase))
             throw new InvalidOperationException("Invalid file path.");
 
@@ -28,19 +25,8 @@ public class FileService(IWebHostEnvironment env) : IFileService
         }
         else
         {
-            // Optional: loglash yoki shunchaki warning qaytarish mumkin
-            Console.WriteLine($"⚠ Fayl topilmadi: {fullPath}");
+            Console.WriteLine($"File not found: {fullPath}");
         }
-
-        //if (string.IsNullOrWhiteSpace(fileName))
-        //    throw new ArgumentException("File name cannot be null or empty.", nameof(fileName));
-
-        //string filePath = Path.Combine(_env.WebRootPath, fileName.TrimStart('/'));
-
-        //if (File.Exists(filePath))
-        //{
-        //    await Task.Run(() => File.Delete(filePath));
-        //}
     }
 
     public async Task<FileDto> SaveAsync(IFormFile file, string folderName)

@@ -7,23 +7,26 @@ using Mapster;
 using MediatR;
 
 namespace Application.Features.Contracts.Handlers;
-public class UpdateContractHandler(IContractsRepository contractsRepository, IFileService fileService)
-    : IRequestHandler<UpdateContractCommon, ApiResponse<Contract>>
+public class UpdateContractHandler(IContractsRepository contractsRepository, IFileService fileService, IUnitOfWork unitOfWork)
+    : IRequestHandler<UpdateContractCommon, ApiResponse<Guid>>
 {
     private readonly IContractsRepository _contractsRepository = contractsRepository;
 
-    public async Task<ApiResponse<Contract>> Handle(UpdateContractCommon request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<Guid>> Handle(UpdateContractCommon request, CancellationToken cancellationToken)
     {
         var contract = request.UpdateContractDtoRequest;
         var updateContract = await _contractsRepository.GetContractById(contract.ContractId)
             ?? throw new NotFoundException("Contract not found");
 
-        updateContract = contract.Adapt(updateContract);
-
-        if(contract.DocumentPdf is not null)
+        if (contract.DocumentPdf is not null && updateContract.DocumentUrl is not null)
         {
-            var documentPath = await fileService.SaveAsync(contract.DocumentPdf, "Contracts");
+            await fileService.RemoveAsync(updateContract.DocumentUrl);
+
+            updateContract = contract.Adapt(updateContract);
+
             
+            var documentPath = await fileService.SaveAsync(contract.DocumentPdf, "Contracts");
+
             updateContract.DocumentPdf = new ContractFile()
             {
                 ContractId = updateContract.Id,
@@ -34,9 +37,13 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
             };
             updateContract.DocumentUrl = documentPath.Url;
         }
-  
-        await _contractsRepository.UpdateAsync(updateContract);
+        else
+        {
+            updateContract = contract.Adapt(updateContract);
+        }
 
-        return new ApiResponse<Contract>(updateContract);
+        await unitOfWork.SaveChangesAsync(CancellationToken.None);
+
+        return new ApiResponse<Guid>(updateContract.EmployeeId);
     }
 }

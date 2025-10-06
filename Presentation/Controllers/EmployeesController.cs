@@ -39,7 +39,7 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
     }
 
     [Authorize(Roles = "HR")]
-    [HttpPost]
+    [HttpPut]
     public async Task<IActionResult> UpdateEmployee([FromForm] UpdateEmployeeDtoRequest command)
     {
         var response = await mediator.Send(new UpdateEmployeeCommand(command));

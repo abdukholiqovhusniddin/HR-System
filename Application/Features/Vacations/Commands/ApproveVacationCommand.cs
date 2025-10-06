@@ -4,4 +4,4 @@ using MediatR;
 
 namespace Application.Features.Vacations.Commands;
 public record ApproveVacationCommand(Guid VacationId) 
-    : IRequest<ApiResponse<VacationDtoResponse>>;
+    : IRequest<ApiResponse<VacationDtoResponse>>; 

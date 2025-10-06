@@ -117,7 +117,7 @@
     "ContainingType": "Presentation.Controllers.EmployeesController",
     "Method": "UpdateEmployee",
     "RelativePath": "api/Employees",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [

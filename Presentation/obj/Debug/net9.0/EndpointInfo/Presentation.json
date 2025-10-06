@@ -251,7 +251,7 @@
       }
     },
     "/api/Employees": {
-      "post": {
+      "put": {
         "tags": [
           "Employees"
         ],
@@ -267,6 +267,7 @@
                   "Id",
                   "PassportInfo",
                   "PhoneNumber",
+                  "Photo",
                   "Telegram",
                   "Username"
                 ],
@@ -581,6 +582,7 @@
                   "HireDate",
                   "PassportInfo",
                   "PhoneNumber",
+                  "Photo",
                   "Telegram",
                   "Username"
                 ],

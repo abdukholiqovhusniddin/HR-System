@@ -1,16 +1,18 @@
 ﻿using Application.Commons;
+using Application.DTOs.Contract.Responses;
 using Application.Features.Contracts.Commands;
 using Application.Interfaces;
 using Domain.Interfaces;
+using Mapster;
 using MediatR;
 
 namespace Application.Features.Contracts.Handlers;
 
 public class AddContractHandler(IContractsRepository contractsRepository,
-    IFileService fileService, IUnitOfWork unitOfWork) : IRequestHandler<AddContractCommand, ApiResponse<Contract>>
+    IFileService fileService, IUnitOfWork unitOfWork) : IRequestHandler<AddContractCommand, ApiResponse<ContractDtoResponse>>
 {
     private readonly IContractsRepository _contractsRepository = contractsRepository;
-    public async Task<ApiResponse<Contract>> Handle(AddContractCommand request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<ContractDtoResponse>> Handle(AddContractCommand request, CancellationToken cancellationToken)
     {
         var contract = request.AddContractDtoRequest;
 
@@ -46,9 +48,11 @@ public class AddContractHandler(IContractsRepository contractsRepository,
 
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
-        return new ApiResponse<Contract>
+        var response = newContract.Adapt<ContractDtoResponse>();
+
+        return new ApiResponse<ContractDtoResponse>
         {
-            Data = newContract,
+            Data = response,
             StatusCode = 201
         };
     }

@@ -16,7 +16,4 @@ public class EquipmentRepository(AppDbContext appDbContext) : IEquipmentReposito
     public async Task<List<Equipments>> GetEquipmentByEmployeeId(Guid employeeId) =>
         await _context.Equipments.Where(e => e.EmployeeId == employeeId
         && e.Employee.IsActive).ToListAsync();
-
-    //public async Task UpdateStatusAsync(Equipments equipment) =>
-    //     _context.Equipments.Update(equipment);
 }

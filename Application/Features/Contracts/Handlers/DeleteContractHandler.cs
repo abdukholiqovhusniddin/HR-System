@@ -7,10 +7,10 @@ using MediatR;
 
 namespace Application.Features.Contracts.Handlers;
 public class DeleteContractHandler(IContractsRepository contractsRepository, IUnitOfWork unitOfWork)
-    : IRequestHandler<DeleteContractCommand, ApiResponse<Contract>>
+    : IRequestHandler<DeleteContractCommand, ApiResponse<Unit>>
 {
     private readonly IContractsRepository _contractsRepository = contractsRepository;
-    public async Task<ApiResponse<Contract>> Handle(DeleteContractCommand request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<Unit>> Handle(DeleteContractCommand request, CancellationToken cancellationToken)
     {
         Guid contractId = request.ContractId;
 
@@ -20,6 +20,6 @@ public class DeleteContractHandler(IContractsRepository contractsRepository, IUn
         contract.IsAktive = false;
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
-        return new ApiResponse<Contract>(contract);
+        return new ApiResponse<Unit>();
     }
 }

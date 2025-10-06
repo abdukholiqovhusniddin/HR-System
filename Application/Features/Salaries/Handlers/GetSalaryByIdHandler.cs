@@ -17,12 +17,11 @@ public class GetSalaryByIdHandler(ISalariesRepository salariesRepository)
         if (employeeId == Guid.Empty)
             throw new ApiException("Id is empty");
 
-        var salary =  await _salariesRepository.GetByEmployeeId(employeeId);
+        var salary =  await _salariesRepository.GetByEmployeeId(employeeId)
+            ?? throw new NotFoundException("Salary not found");
 
         var response = salary.Adapt<SalaryDtoResponse>();
 
-        return salary is null
-            ? throw new NotFoundException("Salary not found")
-            : new ApiResponse<SalaryDtoResponse>(response);
+        return new ApiResponse<SalaryDtoResponse>(response);
     }
 }

@@ -19,10 +19,4 @@ public class ContractsRepository(AppDbContext context): IContractsRepository
     public async Task<Contract> GetContractById(Guid contractId) =>
         await _context.Contracts.FirstOrDefaultAsync(c => c.Id == contractId &&
             c.Employee.IsActive && c.IsAktive);
-
-    public async Task UpdateAsync(Contract updateContract)
-    {
-         _context.Contracts.Update(updateContract);
-        await _context.SaveChangesAsync();
-    }
 }

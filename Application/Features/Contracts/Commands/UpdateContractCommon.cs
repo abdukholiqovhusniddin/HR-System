@@ -4,4 +4,4 @@ using MediatR;
 
 namespace Application.Features.Contracts.Commands;
 public record UpdateContractCommon(UpdateContractDtoRequest UpdateContractDtoRequest): 
-    IRequest<ApiResponse<Contract>>;
+    IRequest<ApiResponse<Guid>>; /// IDContract

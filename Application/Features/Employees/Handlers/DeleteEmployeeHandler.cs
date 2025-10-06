@@ -6,10 +6,10 @@ using MediatR;
 
 namespace Application.Features.Employees.Handlers;
 public class DeleteEmployeeHandler(IEmployeesRepository employeesRepository,
-    IUnitOfWork unitOfWork) :IRequestHandler<DeleteEmployeeCommand, ApiResponse<Employee>>
+    IUnitOfWork unitOfWork) :IRequestHandler<DeleteEmployeeCommand, ApiResponse<Unit>>
 {
     private readonly IEmployeesRepository _employeesRepository = employeesRepository;
-    public async Task<ApiResponse<Employee>> Handle(DeleteEmployeeCommand request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<Unit>> Handle(DeleteEmployeeCommand request, CancellationToken cancellationToken)
     {
         var employee = await _employeesRepository.GetById(request.Id)
             ?? throw new NotFoundException("Employee not found");
@@ -18,6 +18,6 @@ public class DeleteEmployeeHandler(IEmployeesRepository employeesRepository,
 
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
-        return new ApiResponse<Employee>(employee);
+        return new ApiResponse<Unit>();
     }
 }

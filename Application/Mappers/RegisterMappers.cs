@@ -1,4 +1,5 @@
 ﻿using Application.DTOs.Contract.Requests;
+using Application.DTOs.Contract.Responses;
 using Application.DTOs.Employees.Requests;
 using Application.DTOs.Employees.Responses;
 using Application.DTOs.Equipments.Requests;
@@ -56,6 +57,7 @@ public class RegisterMappers : IRegister
         config.NewConfig<UpdateEmployeeDtoRequest, Employee>();
 
         config.NewConfig<UpdateContractDtoRequest, Contract>();
+        config.NewConfig<Contract, ContractDtoResponse>();
 
         config.NewConfig<AddSalaryDtoRequest, Salary>();
 

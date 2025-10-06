@@ -1,27 +1,28 @@
 ﻿using Application.Commons;
+using Application.DTOs.Salaries.Responses;
 using Application.Features.Salaries.Commands;
 using Domain.Interfaces;
 using Mapster;
 using MediatR;
 
 namespace Application.Features.Salaries.Handlers;
-public class CreateSalaryHandler(ISalariesRepository salariesRepository, IUnitOfWork unitOfWork)
-    : IRequestHandler<CreateSalaryCommand, ApiResponse<Salary>>
+public class CreateSalaryHandler(ISalariesRepository salariesRepository)
+    : IRequestHandler<CreateSalaryCommand, ApiResponse<SalaryDtoResponse>>
 {
     private readonly ISalariesRepository _salariesRepository = salariesRepository;
 
-    public async Task<ApiResponse<Salary>> Handle(CreateSalaryCommand request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<SalaryDtoResponse>> Handle(CreateSalaryCommand request, CancellationToken cancellationToken)
     {
         var salary = request.salary;
         var newSalary = salary.Adapt<Salary>();
         
         await _salariesRepository.CreateAsync(newSalary);
 
-        await unitOfWork.SaveChangesAsync(CancellationToken.None);
+        var response = newSalary.Adapt<SalaryDtoResponse>();
 
-        return new ApiResponse<Salary>
+        return new ApiResponse<SalaryDtoResponse>
         {
-            Data = newSalary,
+            Data = response,
             StatusCode = 201
         };
 

@@ -18,7 +18,7 @@ public abstract class CreateAndUpdateEmployeeDto
     public required string FullName { get; set; }
 
 
-    public IFormFile? Photo { get; set; }
+    public required IFormFile? Photo { get; set; }
 
     [Required(ErrorMessage = "Date of birth is required")]
     public DateTime DateOfBirth { get; set; }

@@ -20,7 +20,6 @@ public class UpdateEquipmentStatusHandler(IEquipmentRepository equipmentReposito
             ?? throw new KeyNotFoundException("Equipment not found");
         equipment.Status = newStatus;
 
-        //await _equipmentRepository.UpdateStatusAsync(equipment);
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         var response = equipment.Adapt<EquipmentDtoResponse>();

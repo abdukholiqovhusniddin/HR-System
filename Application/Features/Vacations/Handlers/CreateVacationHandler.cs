@@ -1,4 +1,5 @@
 ﻿using Application.Commons;
+using Application.DTOs.Vacations.Responses;
 using Application.Features.Vacations.Commands;
 using Domain.Interfaces;
 using Mapster;
@@ -6,10 +7,10 @@ using MediatR;
 
 namespace Application.Features.Vacations.Handlers;
 public class CreateVacationHandler(IVacationRepository vacationRepository) 
-    : IRequestHandler<CreateVacationCommand, ApiResponse<Vacation>>
+    : IRequestHandler<CreateVacationCommand, ApiResponse<VacationDtoResponse>>
 {
     private readonly IVacationRepository _vacationRepository = vacationRepository;
-    public async Task<ApiResponse<Vacation>> Handle(CreateVacationCommand request, CancellationToken cancellationToken)
+    public async Task<ApiResponse<VacationDtoResponse>> Handle(CreateVacationCommand request, CancellationToken cancellationToken)
     {
         Guid userId = request.UserId;
         var createVacationDtoRequest = request.CreateVacationDtoRequest;
@@ -20,7 +21,9 @@ public class CreateVacationHandler(IVacationRepository vacationRepository)
 
         await _vacationRepository.CreateVacationAsync(userId, vacation);
 
-        return new ApiResponse<Vacation>(vacation);
+        var response = vacation.Adapt<VacationDtoResponse>();
+
+        return new ApiResponse<VacationDtoResponse>(response);
 
     }
 }

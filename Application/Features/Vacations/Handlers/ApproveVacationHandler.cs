@@ -2,6 +2,7 @@
 using Application.DTOs.Vacations.Responses;
 using Application.Exceptions;
 using Application.Features.Vacations.Commands;
+using Domain.Enums;
 using Domain.Interfaces;
 using Mapster;
 using MediatR;
@@ -20,9 +21,8 @@ public class ApproveVacationHandler(IVacationRepository vacationRepository, IUni
         var vacation = await _vacationRepository.ApproveAndRejectVacation(vacationId)
             ?? throw new ApiException("Vacation not found or could not be approved");
 
-        vacation.Status = Domain.Enums.VacationStatus.Approved;
+        vacation.Status = VacationStatus.Approved;
 
-        await _vacationRepository.UpdateAsync(vacation);
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         var response = vacation.Adapt<VacationDtoResponse>();

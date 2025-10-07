@@ -255,9 +255,29 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "addEquipmentDtoRequest",
-        "Type": "Application.DTOs.Equipments.Requests.AddEquipmentDtoRequest",
-        "IsRequired": true
+        "Name": "EmployeeId",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "Type",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Model",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "InventoryNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "AssignmentDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

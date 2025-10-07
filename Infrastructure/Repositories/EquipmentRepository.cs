@@ -7,8 +7,11 @@ public class EquipmentRepository(AppDbContext appDbContext) : IEquipmentReposito
 {
     private readonly AppDbContext _context = appDbContext;
 
-    public async Task AddEquipmentAsync(Equipments newEquipment) =>
+    public async Task AddEquipmentAsync(Equipments newEquipment)
+    {
         await _context.Equipments.AddAsync(newEquipment);
+        await _context.SaveChangesAsync();
+    }
 
     public async Task<Equipments?> GetByIdAsync(Guid equipmentId) =>
         await _context.Equipments.Include(e => e.Employee)

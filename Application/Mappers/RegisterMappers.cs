@@ -58,35 +58,20 @@ public class RegisterMappers : IRegister
 
         config.NewConfig<UpdateContractDtoRequest, Contract>();
 
-        config.NewConfig<Contract, ContractDtoResponse>()
-            .Map(dest => dest.Fullname, src => src.Employee.FullName)
-            .Map(dest => dest.Position, src => src.Employee.Position)
-            .Map(dest => dest.Department, src => src.Employee.Department);
+        config.NewConfig<Contract, ContractDtoResponse>();
 
         config.NewConfig<AddSalaryDtoRequest, Salary>();
 
-        config.NewConfig<Salary, SalaryDtoResponse>()
-            .Map(dest => dest.FullName, src => src.Employee.FullName)
-            .Map(dest => dest.Position, src => src.Employee.Position)
-            .Map(dest => dest.Department, src => src.Employee.Department);
+        config.NewConfig<Salary, SalaryDtoResponse>();
 
-        config.NewConfig<Vacation, VacationDtoResponse>()
-            .Map(dest => dest.FullName, src => src.Employee.FullName)
-            .Map(dest => dest.Position, src => src.Employee.Position)
-            .Map(dest => dest.Department, src => src.Employee.Department);
+        config.NewConfig<Vacation, VacationDtoResponse>();
 
         config.NewConfig<CreateVacationDtoRequest, Vacation>();
 
-        config.NewConfig<Vacation, EquipmentDtoResponse>()
-            .Map(dest => dest.FullName, src => src.Employee.FullName)
-            .Map(dest => dest.Position, src => src.Employee.Position)
-            .Map(dest => dest.Department, src => src.Employee.Department);
+        config.NewConfig<Vacation, EquipmentDtoResponse>();
 
         config.NewConfig<AddEquipmentDtoRequest, Equipments>();
 
-        config.NewConfig<Equipments, EquipmentDtoResponse>()
-            .Map(dest => dest.FullName, src => src.Employee.FullName)
-            .Map(dest => dest.Position, src => src.Employee.Position)
-            .Map(dest => dest.Department, src => src.Employee.Department);
+        config.NewConfig<Equipments, EquipmentDtoResponse>();
     }
 }

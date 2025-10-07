@@ -25,7 +25,7 @@ public class EquipmentsController(IMediator mediator) : ApiControllerBase
 
     /// Add new equipment for employee
     [HttpPost]
-    public async Task<IActionResult> AddEquipment(AddEquipmentDtoRequest addEquipmentDtoRequest)
+    public async Task<IActionResult> AddEquipment([FromForm]AddEquipmentDtoRequest addEquipmentDtoRequest)
     {
         var result = await _mediator.Send(new AddEquipmentCommand(addEquipmentDtoRequest));
         return StatusCode(result.StatusCode, result);

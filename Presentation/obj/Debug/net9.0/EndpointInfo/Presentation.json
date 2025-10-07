@@ -422,19 +422,51 @@
         ],
         "requestBody": {
           "content": {
-            "application/json": {
+            "multipart/form-data": {
               "schema": {
-                "$ref": "#/components/schemas/AddEquipmentDtoRequest"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddEquipmentDtoRequest"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/AddEquipmentDtoRequest"
+                "required": [
+                  "EmployeeId",
+                  "InventoryNumber",
+                  "Model",
+                  "Type"
+                ],
+                "type": "object",
+                "properties": {
+                  "EmployeeId": {
+                    "type": "string",
+                    "format": "uuid"
+                  },
+                  "Type": {
+                    "$ref": "#/components/schemas/EquipmentStatus"
+                  },
+                  "Model": {
+                    "type": "string"
+                  },
+                  "InventoryNumber": {
+                    "type": "string"
+                  },
+                  "AssignmentDate": {
+                    "type": "string",
+                    "format": "date-time"
+                  }
+                }
+              },
+              "encoding": {
+                "EmployeeId": {
+                  "style": "form"
+                },
+                "Type": {
+                  "style": "form"
+                },
+                "Model": {
+                  "style": "form"
+                },
+                "InventoryNumber": {
+                  "style": "form"
+                },
+                "AssignmentDate": {
+                  "style": "form"
+                }
               }
             }
           }
@@ -893,38 +925,6 @@
   },
   "components": {
     "schemas": {
-      "AddEquipmentDtoRequest": {
-        "required": [
-          "employeeId",
-          "inventoryNumber",
-          "model",
-          "type"
-        ],
-        "type": "object",
-        "properties": {
-          "employeeId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "type": {
-            "type": "string",
-            "nullable": true
-          },
-          "model": {
-            "type": "string",
-            "nullable": true
-          },
-          "inventoryNumber": {
-            "type": "string",
-            "nullable": true
-          },
-          "assignmentDate": {
-            "type": "string",
-            "format": "date-time"
-          }
-        },
-        "additionalProperties": false
-      },
       "AddSalaryDtoRequest": {
         "required": [
           "baseSalary",

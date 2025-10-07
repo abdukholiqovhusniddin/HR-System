@@ -16,7 +16,7 @@ public class SalariesController(IMediator mediator) : ApiControllerBase
 
     // Get salary for an employee
     [HttpGet("{employeeId}")]
-    [Authorize(Roles = "HR")]
+    [Authorize(Roles = "HR, Accountant")]
     public async Task<IActionResult> GetByEmployeeId(Guid employeeId)
     {
         var salaryDto = await _mediator.Send(new GetSalaryByIdQuery(employeeId));
@@ -25,7 +25,7 @@ public class SalariesController(IMediator mediator) : ApiControllerBase
 
     // Add a new salary
     [HttpPost]
-    [Authorize(Roles = "HR")]
+    [Authorize(Roles = "HR, Accountant")]
     public async Task<IActionResult> Create(AddSalaryDtoRequest request)
     {
         var salaryDto = await _mediator.Send(new CreateSalaryCommand(request));

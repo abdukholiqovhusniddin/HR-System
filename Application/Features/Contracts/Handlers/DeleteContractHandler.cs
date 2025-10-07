@@ -22,6 +22,7 @@ public class DeleteContractHandler(IContractsRepository contractsRepository,
         await fileService.RemoveAsync(contract.DocumentUrl);
 
         contract.IsAktive = false;
+        contract.DocumentUrl = null!;
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         return new ApiResponse<Unit>();

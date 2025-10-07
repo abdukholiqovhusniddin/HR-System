@@ -23,7 +23,7 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
         {
             await fileService.RemoveAsync(updateContract.DocumentUrl);
 
-            //updateContract = contract.Adapt(updateContract);
+            updateContract = contract.Adapt(updateContract);
 
             
             var documentPath = await fileService.SaveAsync(contract.DocumentPdf, "Contracts");
@@ -53,9 +53,8 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
         }
         else
         {
-            //updateContract = contract.Adapt(updateContract);
+            updateContract = contract.Adapt(updateContract);
         }
-        updateContract = contract.Adapt(updateContract);
 
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 

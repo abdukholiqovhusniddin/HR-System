@@ -18,6 +18,9 @@ public class GetContractHandler(IContractsRepository contractsRepository): IRequ
         var contract = await _contractsRepository.GetByEmployeeId(request.EmployeeId)
             ?? throw new NotFoundException("Contract not found");
 
+        if(contract.Count == 0)
+            throw new NotFoundException("Contract not found");
+
         var response = contract.Adapt<List<ContractDtoResponse>>();
 
         return new ApiResponse<List<ContractDtoResponse>>(response);

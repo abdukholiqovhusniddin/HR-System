@@ -2,11 +2,13 @@
 using Application.DTOs.Contract.Responses;
 using Application.Exceptions;
 using Application.Features.Contracts.Commands;
+using Application.Interfaces;
 using Domain.Interfaces;
 using MediatR;
 
 namespace Application.Features.Contracts.Handlers;
-public class DeleteContractHandler(IContractsRepository contractsRepository, IUnitOfWork unitOfWork)
+public class DeleteContractHandler(IContractsRepository contractsRepository,
+    IUnitOfWork unitOfWork, IFileService fileService)
     : IRequestHandler<DeleteContractCommand, ApiResponse<Unit>>
 {
     private readonly IContractsRepository _contractsRepository = contractsRepository;
@@ -16,6 +18,8 @@ public class DeleteContractHandler(IContractsRepository contractsRepository, IUn
 
         var contract = await _contractsRepository.GetContractById(contractId)
             ?? throw new NotFoundException("Contract not found");
+
+        await fileService.RemoveAsync(contract.DocumentUrl);
 
         contract.IsAktive = false;
         await unitOfWork.SaveChangesAsync(CancellationToken.None);

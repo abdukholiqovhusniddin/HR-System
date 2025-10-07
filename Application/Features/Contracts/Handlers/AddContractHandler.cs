@@ -1,5 +1,6 @@
 ﻿using Application.Commons;
 using Application.DTOs.Contract.Responses;
+using Application.Exceptions;
 using Application.Features.Contracts.Commands;
 using Application.Interfaces;
 using Domain.Interfaces;
@@ -16,6 +17,10 @@ public class AddContractHandler(IContractsRepository contractsRepository,
     {
         var contract = request.AddContractDtoRequest;
 
+        bool isAktive = await _contractsRepository.IsEmployeeAktive(contract.EmployeeId);
+        if (!isAktive)
+            throw new ApiException("Employee is not aktive or not exist");
+
         var newContract = new Contract
         {
             Id = Guid.NewGuid(),
@@ -24,7 +29,8 @@ public class AddContractHandler(IContractsRepository contractsRepository,
             StartDate = contract.StartDate,
             EndDate = contract.EndDate,
             Terms = contract.Terms,
-            DocumentPdf = null!
+            DocumentPdf = null!,
+            DocumentUrl = null!
         };
 
         if (contract.DocumentPdf is not null)

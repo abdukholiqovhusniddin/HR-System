@@ -9,6 +9,5 @@ public class ContractConfiguration : IEntityTypeConfiguration<Contract>
     {
         builder.Property(c => c.ContractType).HasMaxLength(50);
         builder.Property(c => c.Terms).HasMaxLength(1000);
-
     }
 }

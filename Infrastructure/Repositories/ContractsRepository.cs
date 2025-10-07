@@ -21,4 +21,7 @@ public class ContractsRepository(AppDbContext context): IContractsRepository
         await _context.Contracts.Include(c => c.Employee)
             .FirstOrDefaultAsync(c => c.Id == contractId &&
             c.Employee.IsActive && c.IsAktive);
+
+    public async Task<bool> IsEmployeeAktive(Guid employeeId) =>
+        await _context.Employees.AnyAsync(e => e.Id == employeeId && e.IsActive);
 }

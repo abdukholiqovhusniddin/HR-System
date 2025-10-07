@@ -8,7 +8,7 @@ public class Contract : EmployeeBaseEntity
     public DateTime? EndDate { get; set; }
     public string? Terms { get; set; } // Условия контракта
 
-    public string? DocumentUrl { get; set; }
+    public required string DocumentUrl { get; set; }
 
     public required ContractFile DocumentPdf { get; set; } = default!;
 

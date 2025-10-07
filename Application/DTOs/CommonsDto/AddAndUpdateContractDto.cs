@@ -11,6 +11,4 @@ public abstract class AddAndUpdateContractDto
 
     [StringLength(1000, ErrorMessage = "Terms cannot exceed 1000 characters.")]
     public string? Terms { get; set; }
-
-    public required IFormFile DocumentPdf { get; set; }
 }

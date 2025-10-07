@@ -48,6 +48,10 @@
                     "type": "string",
                     "format": "uuid"
                   },
+                  "DocumentPdf": {
+                    "type": "string",
+                    "format": "binary"
+                  },
                   "ContractType": {
                     "$ref": "#/components/schemas/ContractType"
                   },
@@ -63,15 +67,14 @@
                     "maxLength": 1000,
                     "minLength": 0,
                     "type": "string"
-                  },
-                  "DocumentPdf": {
-                    "type": "string",
-                    "format": "binary"
                   }
                 }
               },
               "encoding": {
                 "EmployeeId": {
+                  "style": "form"
+                },
+                "DocumentPdf": {
                   "style": "form"
                 },
                 "ContractType": {
@@ -84,9 +87,6 @@
                   "style": "form"
                 },
                 "Terms": {
-                  "style": "form"
-                },
-                "DocumentPdf": {
                   "style": "form"
                 }
               }
@@ -110,14 +110,17 @@
             "multipart/form-data": {
               "schema": {
                 "required": [
-                  "ContractType",
-                  "DocumentPdf"
+                  "ContractType"
                 ],
                 "type": "object",
                 "properties": {
                   "ContractId": {
                     "type": "string",
                     "format": "uuid"
+                  },
+                  "DocumentPdf": {
+                    "type": "string",
+                    "format": "binary"
                   },
                   "ContractType": {
                     "$ref": "#/components/schemas/ContractType"
@@ -134,15 +137,14 @@
                     "maxLength": 1000,
                     "minLength": 0,
                     "type": "string"
-                  },
-                  "DocumentPdf": {
-                    "type": "string",
-                    "format": "binary"
                   }
                 }
               },
               "encoding": {
                 "ContractId": {
+                  "style": "form"
+                },
+                "DocumentPdf": {
                   "style": "form"
                 },
                 "ContractType": {
@@ -155,9 +157,6 @@
                   "style": "form"
                 },
                 "Terms": {
-                  "style": "form"
-                },
-                "DocumentPdf": {
                   "style": "form"
                 }
               }

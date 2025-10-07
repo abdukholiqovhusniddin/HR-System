@@ -437,7 +437,7 @@
                     "format": "uuid"
                   },
                   "Type": {
-                    "$ref": "#/components/schemas/EquipmentStatus"
+                    "type": "string"
                   },
                   "Model": {
                     "type": "string"

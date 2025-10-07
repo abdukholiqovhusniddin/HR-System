@@ -37,14 +37,26 @@ public class AddContractHandler(IContractsRepository contractsRepository,
         {
             var documentPath = await fileService.SaveAsync(contract.DocumentPdf, "Contracts");
 
-            newContract.DocumentPdf = new ContractFile()
+            newContract.DocumentPdf = new List<ContractFile>
             {
-                ContractId = newContract.Id,
-                Name = documentPath.Name,
-                Url = documentPath.Url,
-                Size = documentPath.Size,
-                Extension = documentPath.Extension,
+                new ContractFile
+                {
+                    ContractId = newContract.Id,
+                    Name = documentPath.Name,
+                    Url = documentPath.Url,
+                    Size = documentPath.Size,
+                    Extension = documentPath.Extension,
+                }
             };
+
+            //newContract.DocumentPdf = new ContractFile()
+            //{
+            //    ContractId = newContract.Id,
+            //    Name = documentPath.Name,
+            //    Url = documentPath.Url,
+            //    Size = documentPath.Size,
+            //    Extension = documentPath.Extension,
+            //};
 
             newContract.DocumentUrl = documentPath.Url;
         }

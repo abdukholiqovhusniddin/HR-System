@@ -1,9 +1,12 @@
+wwwroot\Contracts\32e64a93-7507-4765-ab90-3cd827bca3e9.pdf
 wwwroot\Contracts\54a496aa-b2f3-4c09-99e9-20aa532e4d68.pdf
 wwwroot\Contracts\54ead66a-d0da-43d0-aa08-6c4614600cfa.pdf
 wwwroot\Contracts\9d7b495b-4640-46e3-917a-ff31821bf15e.pdf
 wwwroot\Contracts\b8d5c381-7648-44c6-b075-a25fbaa72011.pptx
 wwwroot\Employees\18e3c370-9dfe-473e-a44d-3dab45ba22eb.png
+wwwroot\PhotoEmployees\17f8122b-7e46-436e-aced-2ec75a64e4fd.png
 wwwroot\PhotoEmployees\294beae8-1cc6-441d-a9c2-45558e50cad9.png
+wwwroot\PhotoEmployees\54028439-ea3c-4ffb-b229-5704e80c03b3.png
 wwwroot\PhotoEmployees\ab54e11e-5941-4c67-9d5b-e9fe9ebd9710.png
 wwwroot\PhotoEmployees\aeac642e-61f3-4fcd-b33e-f4dcd61b9292.png
 wwwroot\PhotoEmployees\dbc53c43-f865-49ce-9d4e-2e8328331005.png

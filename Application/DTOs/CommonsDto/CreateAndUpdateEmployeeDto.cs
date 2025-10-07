@@ -29,8 +29,8 @@ public abstract class CreateAndUpdateEmployeeDto
     public bool IsEmailPublic { get; set; } = false;
     public bool IsTelegramPublic { get; set; } = false;
 
-    public string? Position { get; set; }
-    public string? Department { get; set; }
+    public required string Position { get; set; }
+    public required string Department { get; set; }
 
     public required DateTime HireDate { get; set; } = DateTime.UtcNow;
 

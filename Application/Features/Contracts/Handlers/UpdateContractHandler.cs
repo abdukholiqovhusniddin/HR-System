@@ -30,23 +30,49 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
 
             if (updateContract.DocumentPdf is null)
             {
-                updateContract.DocumentPdf = new ContractFile
+                //updateContract.DocumentPdf = new ContractFile
+                //{
+                //    ContractId = updateContract.Id,
+                //    Name = documentPath.Name,
+                //    Url = documentPath.Url,
+                //    Size = documentPath.Size,
+                //    Extension = documentPath.Extension,
+
+                //};
+                updateContract.DocumentPdf = new List<ContractFile>
                 {
-                    ContractId = updateContract.Id,
-                    Name = documentPath.Name,
-                    Url = documentPath.Url,
-                    Size = documentPath.Size,
-                    Extension = documentPath.Extension,
+                    new ContractFile
+                    {
+                        ContractId = updateContract.Id,
+                        Name = documentPath.Name,
+                        Url = documentPath.Url,
+                        Size = documentPath.Size,
+                        Extension = documentPath.Extension,
+                    }
                 };
+
             }
             else
             {
+                updateContract.DocumentPdf.Clear();
 
-                updateContract.DocumentPdf.ContractId = updateContract.Id;
-                updateContract.DocumentPdf.Name = documentPath.Name;
-                updateContract.DocumentPdf.Url = documentPath.Url;
-                updateContract.DocumentPdf.Size = documentPath.Size;
-                updateContract.DocumentPdf.Extension = documentPath.Extension;
+                updateContract.DocumentPdf = new List<ContractFile>
+                {
+                    new ContractFile
+                    {
+                        ContractId = updateContract.Id,
+                        Name = documentPath.Name,
+                        Url = documentPath.Url,
+                        Size = documentPath.Size,
+                        Extension = documentPath.Extension,
+                    }
+                };
+
+                //updateContract.DocumentPdf.ContractId = updateContract.Id;
+                //updateContract.DocumentPdf.Name = documentPath.Name;
+                //updateContract.DocumentPdf.Url = documentPath.Url;
+                //updateContract.DocumentPdf.Size = documentPath.Size;
+                //updateContract.DocumentPdf.Extension = documentPath.Extension;
             }
             
             updateContract.DocumentUrl = documentPath.Url;

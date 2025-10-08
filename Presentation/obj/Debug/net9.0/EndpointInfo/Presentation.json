@@ -260,6 +260,7 @@
               "schema": {
                 "required": [
                   "DateOfBirth",
+                  "Department",
                   "Email",
                   "FullName",
                   "HireDate",
@@ -267,6 +268,7 @@
                   "PassportInfo",
                   "PhoneNumber",
                   "Photo",
+                  "Position",
                   "Telegram",
                   "Username"
                 ],
@@ -608,12 +610,14 @@
               "schema": {
                 "required": [
                   "DateOfBirth",
+                  "Department",
                   "Email",
                   "FullName",
                   "HireDate",
                   "PassportInfo",
                   "PhoneNumber",
                   "Photo",
+                  "Position",
                   "Telegram",
                   "Username"
                 ],

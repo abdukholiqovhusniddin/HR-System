@@ -11,7 +11,9 @@ using Infrastructure.Repositories;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Presentation.BackgroundServices;
 using Presentation.Middlewares;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,6 +52,8 @@ builder.Services.Configure<AuthSettings>(builder.Configuration.GetSection("AuthS
 builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddAuthorization();
 builder.Services.AddHttpContextAccessor();
+builder.Services.AddHostedService<LogCleanupService>();
+builder.Services.AddHostedService<ContractReminderService>();
 
 
 builder.Services.AddSwaggerGen(c =>
@@ -87,8 +91,24 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+var logsDirectory = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "logs");
 
+// Проверяем, существует ли папка logs, если нет — создаем
+if (!Directory.Exists(logsDirectory))
+{
+    Directory.CreateDirectory(logsDirectory);
+}
 
+// Полный путь к файлу log.txt
+var logFilePath = Path.Combine(logsDirectory, "log.txt");
+
+// Конфигурируем Serilog
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .WriteTo.File(logFilePath, rollingInterval: RollingInterval.Day, fileSizeLimitBytes: 10_000_000, retainedFileCountLimit: 10)
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())

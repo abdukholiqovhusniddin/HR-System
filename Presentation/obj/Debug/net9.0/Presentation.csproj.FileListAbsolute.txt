@@ -482,3 +482,12 @@ D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\ref
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.pdb
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\Presentation.genruntimeconfig.cache
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\ref\Presentation.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Sinks.File.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.AspNetCore.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Sinks.Debug.dll

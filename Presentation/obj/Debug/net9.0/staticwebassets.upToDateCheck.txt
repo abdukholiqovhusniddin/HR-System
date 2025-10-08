@@ -1,3 +1,4 @@
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\wwwroot\logs\log20251008.txt
 wwwroot\Contracts\32e64a93-7507-4765-ab90-3cd827bca3e9.pdf
 wwwroot\Contracts\54a496aa-b2f3-4c09-99e9-20aa532e4d68.pdf
 wwwroot\Contracts\54ead66a-d0da-43d0-aa08-6c4614600cfa.pdf
@@ -5,6 +6,7 @@ wwwroot\Contracts\9d7b495b-4640-46e3-917a-ff31821bf15e.pdf
 wwwroot\Contracts\b8d5c381-7648-44c6-b075-a25fbaa72011.pptx
 wwwroot\Employees\18e3c370-9dfe-473e-a44d-3dab45ba22eb.png
 wwwroot\Employees\c8381fbc-9c43-4fd7-a401-8f0438bb7edd.png
+wwwroot\logs\log20251008.txt
 wwwroot\PhotoEmployees\17f8122b-7e46-436e-aced-2ec75a64e4fd.png
 wwwroot\PhotoEmployees\294beae8-1cc6-441d-a9c2-45558e50cad9.png
 wwwroot\PhotoEmployees\ab54e11e-5941-4c67-9d5b-e9fe9ebd9710.png

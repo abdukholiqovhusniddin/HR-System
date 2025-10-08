@@ -91,3 +91,17 @@ System.ArgumentException: Cannot write DateTime with Kind=Local to PostgreSQL ty
 2025-10-08 07:25:38.347 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/ - 404 0 null 1077.3047ms
 2025-10-08 07:25:38.373 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7187/, Response status code: 404
 2025-10-08 07:25:47.996 +05:00 [INF] Application is shutting down...
+2025-10-08 08:48:02.559 +05:00 [INF] User profile is available. Using 'C:\Users\Another love\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 08:48:03.136 +05:00 [INF] Now listening on: https://localhost:7187
+2025-10-08 08:48:03.139 +05:00 [INF] Now listening on: http://localhost:5271
+2025-10-08 08:48:03.202 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-08 08:48:03.206 +05:00 [INF] Hosting environment: Development
+2025-10-08 08:48:03.212 +05:00 [INF] Content root path: D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation
+2025-10-08 08:48:03.682 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_vs/browserLink - null null
+2025-10-08 08:48:03.682 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 08:48:03.813 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 135.281ms
+2025-10-08 08:48:03.998 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_vs/browserLink - 200 null text/javascript; charset=UTF-8 323.0852ms
+2025-10-08 08:48:04.050 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - null null
+2025-10-08 08:48:04.112 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 61.6387ms
+2025-10-08 08:48:28.086 +05:00 [INF] Application is shutting down...
+2025-10-08 08:48:28.303 +05:00 [INF] ContractReminderService: stopping requested, operation canceled.

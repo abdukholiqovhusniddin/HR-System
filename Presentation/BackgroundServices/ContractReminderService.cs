@@ -1,14 +1,6 @@
-﻿using System;
-using System.IO;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Text;
 using Infrastructure.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.AspNetCore.Hosting;
 
 namespace Presentation.BackgroundServices;
 
@@ -32,8 +24,6 @@ public class ContractReminderService : BackgroundService
 
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
-        await CheckAndLogReminders(stoppingToken);
-
         while (!stoppingToken.IsCancellationRequested)
         {
             try
@@ -43,11 +33,11 @@ public class ContractReminderService : BackgroundService
             }
             catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
             {
-                // shutdown, tinchlik bilan chiqamiz
+                _logger.LogInformation("ContractReminderService: stopping requested, operation canceled.");
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "ContractReminderService: xatolik yuz berdi");
+                _logger.LogError(ex, "ContractReminderService: an error occurred.");
             }
         }
     }

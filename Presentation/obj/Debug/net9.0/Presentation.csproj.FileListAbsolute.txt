@@ -491,3 +491,4 @@ D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Ser
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\compressed\epdzixpfst-2yelcwwg93.gz

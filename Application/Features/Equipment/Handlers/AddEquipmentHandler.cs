@@ -1,7 +1,5 @@
 ﻿using Application.Commons;
-using Application.DTOs.Equipments.Requests;
 using Application.DTOs.Equipments.Responses;
-using Application.DTOs.Vacations.Responses;
 using Application.Features.Equipment.Commands;
 using Domain.Interfaces;
 using Mapster;

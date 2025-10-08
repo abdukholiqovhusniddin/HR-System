@@ -18,7 +18,7 @@ public class UserProfileResponseDto
     public DateTime HireDate { get; set; }
     public string? PassportInfo { get; set; }
     public int? Age { get; internal set; }
-    
+
     public static UserProfileResponseDto FromEmployee(Employee e) => new()
     {
         FullName = e.FullName,

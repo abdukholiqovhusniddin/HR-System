@@ -2,7 +2,6 @@
 using System.Net.Mail;
 using Application.Interfaces;
 using Microsoft.Extensions.Options;
-using Microsoft.Office.Interop.Word;
 
 
 namespace Application.Service;

@@ -1,9 +1,8 @@
-﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Persistence.Configurations;
-public class SalaryConfiguration: IEntityTypeConfiguration<Salary>
+public class SalaryConfiguration : IEntityTypeConfiguration<Salary>
 {
     public void Configure(EntityTypeBuilder<Salary> builder)
     {

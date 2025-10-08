@@ -17,7 +17,6 @@ public abstract class CreateAndUpdateEmployeeDto
     [StringLength(100, ErrorMessage = "Full name cannot exceed 100 characters")]
     public required string FullName { get; set; }
 
-
     public required IFormFile? Photo { get; set; }
 
     [Required(ErrorMessage = "Date of birth is required")]

@@ -1,9 +1,8 @@
-﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Persistence.Configurations;
-public class EquipmentAssignmentConfiguration: IEntityTypeConfiguration<Equipments>
+public class EquipmentAssignmentConfiguration : IEntityTypeConfiguration<Equipments>
 {
     public void Configure(EntityTypeBuilder<Equipments> builder)
     {

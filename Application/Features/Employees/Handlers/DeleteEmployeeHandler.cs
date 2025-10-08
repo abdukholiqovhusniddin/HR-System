@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Application.Features.Employees.Handlers;
 public class DeleteEmployeeHandler(IEmployeesRepository employeesRepository,
-    IUnitOfWork unitOfWork) :IRequestHandler<DeleteEmployeeCommand, ApiResponse<Unit>>
+    IUnitOfWork unitOfWork) : IRequestHandler<DeleteEmployeeCommand, ApiResponse<Unit>>
 {
     private readonly IEmployeesRepository _employeesRepository = employeesRepository;
     public async Task<ApiResponse<Unit>> Handle(DeleteEmployeeCommand request, CancellationToken cancellationToken)

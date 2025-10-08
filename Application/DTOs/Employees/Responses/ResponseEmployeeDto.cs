@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-
-namespace Application.DTOs.Employees.Responses;
+﻿namespace Application.DTOs.Employees.Responses;
 public class ResponseEmployeeDto
 {
     public string? FullName { get; set; }

@@ -1,7 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Application.DTOs.CommonsDto;
-using Domain.Enums;
-using Microsoft.AspNetCore.Http;
+﻿using Application.DTOs.CommonsDto;
 
 namespace Application.DTOs.Users.Requests;
-public class UserRegisterRequestDto: CreateAndUpdateEmployeeDto;
+public class UserRegisterRequestDto : CreateAndUpdateEmployeeDto;

@@ -49,15 +49,6 @@ public class AddContractHandler(IContractsRepository contractsRepository,
                 }
             };
 
-            //newContract.DocumentPdf = new ContractFile()
-            //{
-            //    ContractId = newContract.Id,
-            //    Name = documentPath.Name,
-            //    Url = documentPath.Url,
-            //    Size = documentPath.Size,
-            //    Extension = documentPath.Extension,
-            //};
-
             newContract.DocumentUrl = documentPath.Url;
         }
 

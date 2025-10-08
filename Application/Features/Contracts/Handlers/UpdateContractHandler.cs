@@ -25,20 +25,11 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
 
             updateContract = contract.Adapt(updateContract);
 
-            
+
             var documentPath = await fileService.SaveAsync(contract.DocumentPdf, "Contracts");
 
             if (updateContract.DocumentPdf is null)
             {
-                //updateContract.DocumentPdf = new ContractFile
-                //{
-                //    ContractId = updateContract.Id,
-                //    Name = documentPath.Name,
-                //    Url = documentPath.Url,
-                //    Size = documentPath.Size,
-                //    Extension = documentPath.Extension,
-
-                //};
                 updateContract.DocumentPdf = new List<ContractFile>
                 {
                     new ContractFile
@@ -67,14 +58,8 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
                         Extension = documentPath.Extension,
                     }
                 };
-
-                //updateContract.DocumentPdf.ContractId = updateContract.Id;
-                //updateContract.DocumentPdf.Name = documentPath.Name;
-                //updateContract.DocumentPdf.Url = documentPath.Url;
-                //updateContract.DocumentPdf.Size = documentPath.Size;
-                //updateContract.DocumentPdf.Extension = documentPath.Extension;
             }
-            
+
             updateContract.DocumentUrl = documentPath.Url;
         }
         else

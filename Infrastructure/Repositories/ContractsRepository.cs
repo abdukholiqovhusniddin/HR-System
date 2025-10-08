@@ -1,11 +1,9 @@
-﻿using Application.DTOs.Contract.Requests;
-using Application.Exceptions;
-using Domain.Interfaces;
+﻿using Domain.Interfaces;
 using Infrastructure.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories;
-public class ContractsRepository(AppDbContext context): IContractsRepository
+public class ContractsRepository(AppDbContext context) : IContractsRepository
 {
     private readonly AppDbContext _context = context;
 
@@ -14,7 +12,7 @@ public class ContractsRepository(AppDbContext context): IContractsRepository
 
     public async Task<List<Contract>> GetByEmployeeId(Guid employeeId) =>
         await _context.Contracts.Include(c => c.Employee)
-            .Where(c => c.EmployeeId == employeeId 
+            .Where(c => c.EmployeeId == employeeId
             && c.Employee.IsActive && c.IsAktive).ToListAsync();
 
     public async Task<Contract?> GetContractById(Guid contractId) =>

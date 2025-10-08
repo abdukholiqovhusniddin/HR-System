@@ -16,7 +16,7 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
 
         var updateDto = request.UpdateEmployee;
 
-        if(updateDto.ManagerId.ToString() == "3fa85f64-5717-4562-b3fc-2c963f66afa6")
+        if (updateDto.ManagerId.ToString() == "3fa85f64-5717-4562-b3fc-2c963f66afa6")
             updateDto.ManagerId = null;
 
         var employee = await _employeesRepository.GetById(updateDto.Id)
@@ -38,7 +38,7 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
                 getPhoto.Url = photoPath.Url;
                 getPhoto.Size = photoPath.Size;
                 getPhoto.Extension = photoPath.Extension;
-                
+
             }
             else
             {

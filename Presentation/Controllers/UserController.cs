@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using Application.Commons;
+﻿using Application.Commons;
 using Application.DTOs.Users.Requests;
 using Application.DTOs.Users.Responses;
 using Application.Features.Users.Commands;
@@ -16,6 +15,7 @@ public class UserController(IMediator mediator) : ApiControllerBase
 {
     private readonly IMediator _mediator = mediator; // DI- Dependency Injection   
 
+
     [Authorize(Roles = "Admin")]
     [HttpPost]
     [Route("register")]
@@ -26,6 +26,7 @@ public class UserController(IMediator mediator) : ApiControllerBase
         return StatusCode(responseUserRegister.StatusCode, responseUserRegister);
     }
 
+
     [HttpPost]
     [Route("login")]
     public async Task<IActionResult> Login([FromBody] UserLoginRequestDto userLoginDto)
@@ -34,6 +35,7 @@ public class UserController(IMediator mediator) : ApiControllerBase
 
         return StatusCode(token.StatusCode, token);
     }
+
 
     [Authorize]
     [HttpGet("me")]
@@ -49,6 +51,7 @@ public class UserController(IMediator mediator) : ApiControllerBase
         var user = await _mediator.Send(new GetMeQuery(UserName));
         return StatusCode(user.StatusCode, user);
     }
+
 
     [Authorize(Roles = "Admin")]
     [HttpPut("assign-role")]

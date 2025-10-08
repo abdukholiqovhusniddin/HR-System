@@ -1,5 +1,4 @@
 ﻿using Application.Commons;
-using Application.DTOs.Contract.Responses;
 using Application.Exceptions;
 using Application.Features.Contracts.Commands;
 using Application.Interfaces;

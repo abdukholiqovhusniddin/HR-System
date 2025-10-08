@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using Domain.Interfaces;
+﻿using Domain.Interfaces;
 using Infrastructure.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
 

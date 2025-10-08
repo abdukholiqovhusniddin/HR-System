@@ -15,7 +15,7 @@ public class GetEquipmentByEmployeeIdHandler(IEquipmentRepository equipmentRepos
     public async Task<ApiResponse<List<EquipmentDtoResponse>>> Handle(GetEquipmentByEmployeeIdQuery request, CancellationToken cancellationToken)
     {
         Guid employeeId = request.EmployeeId;
-        if(employeeId  == Guid.Empty)
+        if (employeeId == Guid.Empty)
             throw new ApiException("EmployeeId is required");
 
         var equipments = await _equipmentRepository.GetEquipmentByEmployeeId(employeeId)

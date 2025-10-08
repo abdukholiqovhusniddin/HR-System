@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-using Application.DTOs.CommonsDto;
-using Domain.Enums;
-using Microsoft.AspNetCore.Http;
+﻿using Application.DTOs.CommonsDto;
 
 namespace Application.DTOs.Employees.Requests;
-public class UpdateEmployeeDtoRequest: CreateAndUpdateEmployeeDto
+public class UpdateEmployeeDtoRequest : CreateAndUpdateEmployeeDto
 {
     public required Guid Id { get; set; }
 }

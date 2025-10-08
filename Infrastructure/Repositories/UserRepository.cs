@@ -1,5 +1,4 @@
 ﻿using Application.Exceptions;
-using Domain.Entities;
 using Domain.Interfaces;
 using Infrastructure.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
@@ -21,7 +20,7 @@ public class UserRepository(AppDbContext context) : IUserRepository
         if (string.IsNullOrWhiteSpace(usernameOrEmail))
             throw new ApiException("Username or email cannot be null or empty.");
         return await _context.Users.Include(u => u.EmployeeProfile)
-            .AnyAsync(n => n.Username == usernameOrEmail 
+            .AnyAsync(n => n.Username == usernameOrEmail
             && n.EmployeeProfile.Email == usernameOrEmail && n.EmployeeProfile.IsActive);
     }
 

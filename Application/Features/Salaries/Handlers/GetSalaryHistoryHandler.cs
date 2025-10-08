@@ -7,7 +7,7 @@ using Mapster;
 using MediatR;
 
 namespace Application.Features.Salaries.Handlers;
-public class GetSalaryHistoryHandler(ISalariesRepository salariesRepository) 
+public class GetSalaryHistoryHandler(ISalariesRepository salariesRepository)
     : IRequestHandler<GetSalaryHistoryQuery, ApiResponse<List<SalaryDtoResponse>>>
 {
     private readonly ISalariesRepository _salariesRepository = salariesRepository;

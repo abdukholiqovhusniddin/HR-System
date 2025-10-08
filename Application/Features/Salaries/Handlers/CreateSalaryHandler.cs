@@ -15,7 +15,7 @@ public class CreateSalaryHandler(ISalariesRepository salariesRepository)
     {
         var salary = request.salary;
         var newSalary = salary.Adapt<Salary>();
-        
+
         await _salariesRepository.CreateAsync(newSalary);
 
         var response = newSalary.Adapt<SalaryDtoResponse>();

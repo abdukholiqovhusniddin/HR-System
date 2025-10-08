@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Application.Features.Employees.Handlers;
 
-public class GetEmployeeDirectoryHandler(IEmployeesRepository directoryRepository) 
+public class GetEmployeeDirectoryHandler(IEmployeesRepository directoryRepository)
     : IRequestHandler<GetEmployeeDirectory, ApiResponse<List<ResponseDirectoryDto>>>
 {
     private readonly IEmployeesRepository _directoryRepository = directoryRepository;
@@ -19,9 +19,9 @@ public class GetEmployeeDirectoryHandler(IEmployeesRepository directoryRepositor
         return directoryDto is null
             ? throw new NotFoundException("Directory not found")
             : new ApiResponse<List<ResponseDirectoryDto>>
-        {
-            Data = [.. directoryDto.Select(a => new ResponseDirectoryDto(a.FullName!,
+            {
+                Data = [.. directoryDto.Select(a => new ResponseDirectoryDto(a.FullName!,
                 a.Position, a.Department))]
-        };
+            };
     }
 }

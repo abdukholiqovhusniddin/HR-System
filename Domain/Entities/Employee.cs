@@ -15,7 +15,7 @@ public class Employee : BaseEntity
     public bool IsTelegramPublic { get; set; }
 
     public required string Position { get; set; }
-    public  required string Department { get; set; }
+    public required string Department { get; set; }
     public DateTime HireDate { get; set; }
 
     public required string PassportInfo { get; set; }

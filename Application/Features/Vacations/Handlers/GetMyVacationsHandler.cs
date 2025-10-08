@@ -13,7 +13,7 @@ public class GetMyVacationsHandler(IVacationRepository vacationRepository) : IRe
     public async Task<ApiResponse<List<VacationDtoResponse>>> Handle(GetMyVacationsQuery request, CancellationToken cancellationToken)
     {
         Guid userId = request.UserId;
-        var vacations = await _vacationRepository.GetVacationsByUserId(userId) 
+        var vacations = await _vacationRepository.GetVacationsByUserId(userId)
             ?? throw new ApiException("Vacations not found");
 
         var response = vacations.Adapt<List<VacationDtoResponse>>();

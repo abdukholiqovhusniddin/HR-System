@@ -1,9 +1,9 @@
-﻿using Application.Features.Contracts.Commands;
+﻿using Application.DTOs.Contract.Requests;
+using Application.Features.Contracts.Commands;
 using Application.Features.Contracts.Queries;
-using Microsoft.AspNetCore.Authorization;
-using Application.DTOs.Contract.Requests;
-using Microsoft.AspNetCore.Mvc;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers;
 
@@ -20,12 +20,12 @@ public class ContractsController(IMediator mediator) : ApiControllerBase
     {
         var employeeContract = await _mediator.Send(new GetContractQuery(employeeId));
 
-        return  StatusCode(employeeContract.StatusCode, employeeContract);
+        return StatusCode(employeeContract.StatusCode, employeeContract);
     }
 
     // Add a new contract
     [HttpPost]
-    public async Task<IActionResult> Create([FromForm]AddContractDtoRequest employeeContract)
+    public async Task<IActionResult> Create([FromForm] AddContractDtoRequest employeeContract)
     {
         var result = await _mediator.Send(new AddContractCommand(employeeContract));
 
@@ -34,10 +34,10 @@ public class ContractsController(IMediator mediator) : ApiControllerBase
 
     // Update a contract
     [HttpPut("updateContract")]
-    public async Task<IActionResult> UpdateContract([FromForm]UpdateContractDtoRequest updateContract)
+    public async Task<IActionResult> UpdateContract([FromForm] UpdateContractDtoRequest updateContract)
     {
         var respons = await _mediator.Send(new UpdateContractCommon(updateContract));
-        
+
         return StatusCode(respons.StatusCode, respons);
     }
 

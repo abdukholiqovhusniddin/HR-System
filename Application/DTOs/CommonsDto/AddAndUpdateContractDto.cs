@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Domain.Enums;
-using Microsoft.AspNetCore.Http;
 
 namespace Application.DTOs.CommonsDto;
 public abstract class AddAndUpdateContractDto

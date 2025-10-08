@@ -1,9 +1,8 @@
-﻿using Domain.Entities;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Infrastructure.Persistence.Configurations;
-public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
+public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
 {
     public void Configure(EntityTypeBuilder<Employee> builder)
     {
@@ -19,7 +18,7 @@ public class EmployeeConfiguration: IEntityTypeConfiguration<Employee>
                .WithMany(e => e.Subordinates)
                .HasForeignKey(e => e.ManagerId)
                .OnDelete(DeleteBehavior.Restrict);
-        builder.Property(u=>u.CreatedAt)
+        builder.Property(u => u.CreatedAt)
             .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
         builder.HasMany(c => c.Contracts)

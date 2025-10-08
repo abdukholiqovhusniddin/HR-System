@@ -1,6 +1,4 @@
-﻿using Application.Commons;
-using Application.DTOs.Employees.Requests;
-using Application.DTOs.Users.Requests;
+﻿using Application.DTOs.Employees.Requests;
 using Application.Features.Employees.Commands;
 using Application.Features.Employees.Queries;
 using MediatR;
@@ -22,6 +20,7 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
         return StatusCode(directoryDto.StatusCode, directoryDto);
     }
 
+
     [Authorize(Roles = "Admin, HR")]
     [HttpGet("Get by Id")]
     public async Task<IActionResult> GetById(Guid Id)
@@ -30,6 +29,7 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
         return StatusCode(employeeDto.StatusCode, employeeDto);
     }
 
+
     [Authorize(Roles = "Admin, HR")]
     [HttpDelete("Delete by Id")]
     public async Task<IActionResult> DeleteById(Guid Id)
@@ -37,6 +37,7 @@ public class EmployeesController(IMediator mediator) : ApiControllerBase
         var response = await mediator.Send(new DeleteEmployeeCommand(Id));
         return StatusCode(response.StatusCode, response);
     }
+
 
     [Authorize(Roles = "HR")]
     [HttpPut]

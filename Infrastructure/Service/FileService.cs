@@ -1,8 +1,9 @@
-﻿using Application.Interfaces;
+﻿using Application.DTOs;
+using Application.Interfaces;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 
-namespace Application.Service;
+namespace Infrastructure.Service;
 public class FileService(IWebHostEnvironment env) : IFileService
 {
     private readonly IWebHostEnvironment _env = env;

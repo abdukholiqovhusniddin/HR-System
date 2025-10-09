@@ -2,7 +2,7 @@
 using Application.Interfaces;
 using Microsoft.AspNetCore.Http;
 
-namespace Application.Service;
+namespace Infrastructure.Service;
 public class CurrentUserService(IHttpContextAccessor httpContextAccessor) : ICurrentUserService
 {
     private readonly IHttpContextAccessor _httpContextAccessor = httpContextAccessor;

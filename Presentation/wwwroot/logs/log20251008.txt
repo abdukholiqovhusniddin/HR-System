@@ -1,0 +1,663 @@
+2025-10-08 14:07:11.300 +05:00 [INF] Executed DbCommand (627ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE "HRSystem";
+2025-10-08 14:07:11.821 +05:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" uuid NOT NULL,
+    "Username" character varying(100) NOT NULL,
+    "PasswordHash" character varying(256) NOT NULL,
+    "Role" text NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Id")
+);
+2025-10-08 14:07:11.831 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Employees" (
+    "Id" uuid NOT NULL,
+    "FullName" character varying(150) NOT NULL,
+    "DateOfBirth" timestamp with time zone NOT NULL,
+    "PhotoUrl" text,
+    "Email" character varying(100) NOT NULL,
+    "IsEmailPublic" boolean NOT NULL,
+    "PhoneNumber" character varying(30),
+    "Telegram" character varying(100),
+    "IsTelegramPublic" boolean NOT NULL,
+    "Position" character varying(100) NOT NULL,
+    "Department" character varying(100) NOT NULL,
+    "HireDate" timestamp with time zone NOT NULL,
+    "PassportInfo" character varying(200) NOT NULL,
+    "ManagerId" uuid,
+    "UserId" uuid NOT NULL,
+    "IsActive" boolean NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    CONSTRAINT "PK_Employees" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Employees_Employees_ManagerId" FOREIGN KEY ("ManagerId") REFERENCES "Employees" ("Id") ON DELETE RESTRICT,
+    CONSTRAINT "FK_Employees_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE RESTRICT
+);
+2025-10-08 14:07:11.844 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contracts" (
+    "Id" uuid NOT NULL,
+    "ContractType" integer NOT NULL,
+    "StartDate" timestamp with time zone NOT NULL,
+    "EndDate" timestamp with time zone,
+    "Terms" character varying(1000),
+    "DocumentUrl" text NOT NULL,
+    "IsAktive" boolean NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    CONSTRAINT "PK_Contracts" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Contracts_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:07:11.852 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "EmployeesFile" (
+    "Id" uuid NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Url" text NOT NULL,
+    "Size" bigint NOT NULL,
+    "Extension" text NOT NULL,
+    CONSTRAINT "PK_EmployeesFile" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_EmployeesFile_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:07:11.857 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Equipments" (
+    "Id" uuid NOT NULL,
+    "Type" character varying(100) NOT NULL,
+    "Model" character varying(150) NOT NULL,
+    "InventoryNumber" character varying(100) NOT NULL,
+    "AssignmentDate" timestamp with time zone NOT NULL,
+    "Status" integer NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    CONSTRAINT "PK_Equipments" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Equipments_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:07:11.861 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Salaries" (
+    "Id" uuid NOT NULL,
+    "BaseSalary" numeric(18,2) NOT NULL,
+    "Bonus" numeric(18,2),
+    "Deduction" numeric(18,2),
+    "StartPeriod" timestamp with time zone NOT NULL,
+    "EndPeriod" timestamp with time zone NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    CONSTRAINT "PK_Salaries" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Salaries_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:07:11.865 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Vacations" (
+    "Id" uuid NOT NULL,
+    "VacationType" integer NOT NULL,
+    "StartDate" timestamp with time zone NOT NULL,
+    "EndDate" timestamp with time zone NOT NULL,
+    "Status" integer NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    CONSTRAINT "PK_Vacations" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Vacations_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:07:12.007 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ContractFiles" (
+    "Id" uuid NOT NULL,
+    "ContractId" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Url" text NOT NULL,
+    "Size" bigint NOT NULL,
+    "Extension" text NOT NULL,
+    CONSTRAINT "PK_ContractFiles" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ContractFiles_Contracts_ContractId" FOREIGN KEY ("ContractId") REFERENCES "Contracts" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:07:12.028 +05:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "PasswordHash", "Role", "Username")
+VALUES ('1cd5ed74-9327-4446-9c76-adfc28d3f5bd', TIMESTAMPTZ '2025-10-08T09:07:09.441557Z', '$2a$11$AfLR8eHl8jIapRDBGpX8fe0gzdBTrsSMugpsdVMl0V7GUiGRIbaw.', 'Admin', 'admin');
+2025-10-08 14:07:12.036 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Employees" ("Id", "CreatedAt", "DateOfBirth", "Department", "Email", "FullName", "HireDate", "IsActive", "IsEmailPublic", "IsTelegramPublic", "ManagerId", "PassportInfo", "PhoneNumber", "PhotoUrl", "Position", "Telegram", "UserId")
+VALUES ('d0ef2057-73ee-4092-80ea-b891a9947eae', TIMESTAMPTZ '2025-10-08T09:07:09.289101Z', TIMESTAMPTZ '2005-02-11T00:00:00Z', 'Administration', 'abdukholiqovh@gmail.com', 'Admin User', TIMESTAMPTZ '-infinity', TRUE, TRUE, TRUE, NULL, 'AB1234567', '+998901234567', NULL, 'Administrator', 'admin_telegram', '1cd5ed74-9327-4446-9c76-adfc28d3f5bd');
+2025-10-08 14:07:12.039 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ContractFiles_ContractId" ON "ContractFiles" ("ContractId");
+2025-10-08 14:07:12.041 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Contracts_EmployeeId" ON "Contracts" ("EmployeeId");
+2025-10-08 14:07:12.046 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Employees_ManagerId" ON "Employees" ("ManagerId");
+2025-10-08 14:07:12.050 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Employees_UserId" ON "Employees" ("UserId");
+2025-10-08 14:07:12.052 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_EmployeesFile_EmployeeId" ON "EmployeesFile" ("EmployeeId");
+2025-10-08 14:07:12.054 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Equipments_EmployeeId" ON "Equipments" ("EmployeeId");
+2025-10-08 14:07:12.058 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Salaries_EmployeeId" ON "Salaries" ("EmployeeId");
+2025-10-08 14:07:12.061 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Vacations_EmployeeId" ON "Vacations" ("EmployeeId");
+2025-10-08 14:08:11.648 +05:00 [INF] Executed DbCommand (63ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-10-08 14:08:11.769 +05:00 [ERR] Failed executing DbCommand (36ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-10-08 14:08:59.090 +05:00 [ERR] Failed executing DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2025-10-08 14:27:55.554 +05:00 [INF] User profile is available. Using 'C:\Users\Another love\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 14:27:56.424 +05:00 [INF] Now listening on: https://localhost:7187
+2025-10-08 14:27:56.427 +05:00 [INF] Now listening on: http://localhost:5271
+2025-10-08 14:27:56.519 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-08 14:27:56.525 +05:00 [INF] Hosting environment: Development
+2025-10-08 14:27:56.530 +05:00 [INF] Content root path: D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation
+2025-10-08 14:28:09.815 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_vs/browserLink - null null
+2025-10-08 14:28:09.814 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 14:28:09.886 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 81.0354ms
+2025-10-08 14:28:10.255 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_vs/browserLink - 200 null text/javascript; charset=UTF-8 451.3722ms
+2025-10-08 14:28:10.374 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - null null
+2025-10-08 14:28:10.546 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 171.8089ms
+2025-10-08 14:35:47.004 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-10-08 14:35:49.960 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:35:50.056 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-10-08 14:35:50.076 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-10-08 14:35:54.540 +05:00 [INF] Executed DbCommand (784ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE DATABASE "HRDbSystem";
+2025-10-08 14:35:55.364 +05:00 [INF] Executed DbCommand (94ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" uuid NOT NULL,
+    "Username" character varying(100) NOT NULL,
+    "PasswordHash" character varying(256) NOT NULL,
+    "Role" text NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Id")
+);
+2025-10-08 14:35:55.396 +05:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Employees" (
+    "Id" uuid NOT NULL,
+    "FullName" character varying(150) NOT NULL,
+    "DateOfBirth" timestamp with time zone NOT NULL,
+    "PhotoUrl" text,
+    "Email" character varying(100) NOT NULL,
+    "IsEmailPublic" boolean NOT NULL,
+    "PhoneNumber" character varying(30),
+    "Telegram" character varying(100),
+    "IsTelegramPublic" boolean NOT NULL,
+    "Position" character varying(100) NOT NULL,
+    "Department" character varying(100) NOT NULL,
+    "HireDate" timestamp with time zone NOT NULL,
+    "PassportInfo" character varying(200) NOT NULL,
+    "ManagerId" uuid,
+    "UserId" uuid NOT NULL,
+    "IsActive" boolean NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+    CONSTRAINT "PK_Employees" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Employees_Employees_ManagerId" FOREIGN KEY ("ManagerId") REFERENCES "Employees" ("Id") ON DELETE RESTRICT,
+    CONSTRAINT "FK_Employees_Users_UserId" FOREIGN KEY ("UserId") REFERENCES "Users" ("Id") ON DELETE RESTRICT
+);
+2025-10-08 14:35:55.413 +05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Contracts" (
+    "Id" uuid NOT NULL,
+    "ContractType" integer NOT NULL,
+    "StartDate" timestamp with time zone NOT NULL,
+    "EndDate" timestamp with time zone,
+    "Terms" character varying(1000),
+    "DocumentUrl" text NOT NULL,
+    "IsAktive" boolean NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    CONSTRAINT "PK_Contracts" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Contracts_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:35:55.430 +05:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "EmployeesFile" (
+    "Id" uuid NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Url" text NOT NULL,
+    "Size" bigint NOT NULL,
+    "Extension" text NOT NULL,
+    CONSTRAINT "PK_EmployeesFile" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_EmployeesFile_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:35:55.444 +05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Equipments" (
+    "Id" uuid NOT NULL,
+    "Type" character varying(100) NOT NULL,
+    "Model" character varying(150) NOT NULL,
+    "InventoryNumber" character varying(100) NOT NULL,
+    "AssignmentDate" timestamp with time zone NOT NULL,
+    "Status" integer NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    CONSTRAINT "PK_Equipments" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Equipments_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:35:55.461 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Salaries" (
+    "Id" uuid NOT NULL,
+    "BaseSalary" numeric(18,2) NOT NULL,
+    "Bonus" numeric(18,2),
+    "Deduction" numeric(18,2),
+    "StartPeriod" timestamp with time zone NOT NULL,
+    "EndPeriod" timestamp with time zone NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    CONSTRAINT "PK_Salaries" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Salaries_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:35:55.472 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Vacations" (
+    "Id" uuid NOT NULL,
+    "VacationType" integer NOT NULL,
+    "StartDate" timestamp with time zone NOT NULL,
+    "EndDate" timestamp with time zone NOT NULL,
+    "Status" integer NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "EmployeeId" uuid NOT NULL,
+    CONSTRAINT "PK_Vacations" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_Vacations_Employees_EmployeeId" FOREIGN KEY ("EmployeeId") REFERENCES "Employees" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:35:55.487 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ContractFiles" (
+    "Id" uuid NOT NULL,
+    "ContractId" uuid NOT NULL,
+    "Name" text NOT NULL,
+    "Url" text NOT NULL,
+    "Size" bigint NOT NULL,
+    "Extension" text NOT NULL,
+    CONSTRAINT "PK_ContractFiles" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ContractFiles_Contracts_ContractId" FOREIGN KEY ("ContractId") REFERENCES "Contracts" ("Id") ON DELETE CASCADE
+);
+2025-10-08 14:35:55.506 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "PasswordHash", "Role", "Username")
+VALUES ('1cd5ed74-9327-4446-9c76-adfc28d3f5bd', TIMESTAMPTZ '2025-10-08T09:35:51.83748Z', '$2a$11$iRhvUgRchE6z3hRZSTik1OieNfv33f3TauDDLeuh.LeR67AworZNy', 'Admin', 'admin');
+2025-10-08 14:35:55.522 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Employees" ("Id", "CreatedAt", "DateOfBirth", "Department", "Email", "FullName", "HireDate", "IsActive", "IsEmailPublic", "IsTelegramPublic", "ManagerId", "PassportInfo", "PhoneNumber", "PhotoUrl", "Position", "Telegram", "UserId")
+VALUES ('d0ef2057-73ee-4092-80ea-b891a9947eae', TIMESTAMPTZ '2025-10-08T09:35:51.798904Z', TIMESTAMPTZ '2005-02-11T00:00:00Z', 'Administration', 'abdukholiqovh@gmail.com', 'Admin User', TIMESTAMPTZ '-infinity', TRUE, TRUE, TRUE, NULL, 'AB1234567', '+998901234567', NULL, 'Administrator', 'admin_telegram', '1cd5ed74-9327-4446-9c76-adfc28d3f5bd');
+2025-10-08 14:35:55.533 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ContractFiles_ContractId" ON "ContractFiles" ("ContractId");
+2025-10-08 14:35:55.543 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Contracts_EmployeeId" ON "Contracts" ("EmployeeId");
+2025-10-08 14:35:55.553 +05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Employees_ManagerId" ON "Employees" ("ManagerId");
+2025-10-08 14:35:55.569 +05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_Employees_UserId" ON "Employees" ("UserId");
+2025-10-08 14:35:55.578 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE UNIQUE INDEX "IX_EmployeesFile_EmployeeId" ON "EmployeesFile" ("EmployeeId");
+2025-10-08 14:35:55.587 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Equipments_EmployeeId" ON "Equipments" ("EmployeeId");
+2025-10-08 14:35:55.597 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Salaries_EmployeeId" ON "Salaries" ("EmployeeId");
+2025-10-08 14:35:55.605 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Vacations_EmployeeId" ON "Vacations" ("EmployeeId");
+2025-10-08 14:35:56.553 +05:00 [INF] Executed DbCommand (123ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-10-08 14:35:57.530 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-08 14:35:57.581 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 7506.165ms
+2025-10-08 14:35:57.589 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:35:57.613 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 10609.0039ms
+2025-10-08 14:49:45.356 +05:00 [INF] Application is shutting down...
+2025-10-08 14:49:45.540 +05:00 [INF] ContractReminderService: stopping requested, operation canceled.
+2025-10-08 14:57:43.858 +05:00 [INF] User profile is available. Using 'C:\Users\Another love\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-10-08 14:57:44.450 +05:00 [INF] Now listening on: https://localhost:7187
+2025-10-08 14:57:44.453 +05:00 [INF] Now listening on: http://localhost:5271
+2025-10-08 14:57:44.535 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-10-08 14:57:44.540 +05:00 [INF] Hosting environment: Development
+2025-10-08 14:57:44.546 +05:00 [INF] Content root path: D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation
+2025-10-08 14:57:52.007 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - null null
+2025-10-08 14:57:52.007 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_vs/browserLink - null null
+2025-10-08 14:57:52.123 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 130.8325ms
+2025-10-08 14:57:52.326 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_vs/browserLink - 200 null text/javascript; charset=UTF-8 335.9655ms
+2025-10-08 14:57:52.418 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - null null
+2025-10-08 14:57:52.590 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 171.3856ms
+2025-10-08 14:58:13.130 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 52
+2025-10-08 14:58:13.414 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:58:13.496 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-10-08 14:58:13.517 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-10-08 14:58:17.836 +05:00 [INF] Executed DbCommand (168ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-10-08 14:58:19.095 +05:00 [INF] Executed DbCommand (57ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-10-08 14:58:25.101 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 11587.024ms
+2025-10-08 14:58:25.115 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:58:25.285 +05:00 [ERR] Invalid username or password.
+Application.Exceptions.ApiException: Invalid username or password.
+   at Application.Features.Users.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\Features\Users\Handlers\LoginUserCommandHandler.cs:line 20
+   at Presentation.Controllers.UserController.Login(UserLoginRequestDto userLoginDto) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Controllers\UserController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Presentation.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Middlewares\ExceptionHandlingMiddleware.cs:line 11
+2025-10-08 14:58:25.432 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 400 null application/json; charset=utf-8 12302.6357ms
+2025-10-08 14:58:32.819 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 52
+2025-10-08 14:58:32.872 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:58:32.887 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-10-08 14:58:33.207 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-10-08 14:58:33.232 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-10-08 14:58:39.311 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 6408.9006ms
+2025-10-08 14:58:39.325 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:58:39.493 +05:00 [ERR] Invalid username or password.
+Application.Exceptions.ApiException: Invalid username or password.
+   at Application.Features.Users.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\Features\Users\Handlers\LoginUserCommandHandler.cs:line 20
+   at Presentation.Controllers.UserController.Login(UserLoginRequestDto userLoginDto) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Controllers\UserController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Presentation.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Middlewares\ExceptionHandlingMiddleware.cs:line 11
+2025-10-08 14:58:39.508 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 400 null application/json; charset=utf-8 6689.0466ms
+2025-10-08 14:58:50.069 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-10-08 14:58:50.088 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:58:50.093 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-10-08 14:58:50.450 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-10-08 14:58:50.466 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-10-08 14:58:55.473 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 5368.7426ms
+2025-10-08 14:58:55.479 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:58:55.609 +05:00 [ERR] Invalid username or password.
+Application.Exceptions.ApiException: Invalid username or password.
+   at Application.Features.Users.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\Features\Users\Handlers\LoginUserCommandHandler.cs:line 20
+   at Presentation.Controllers.UserController.Login(UserLoginRequestDto userLoginDto) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Controllers\UserController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Presentation.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Middlewares\ExceptionHandlingMiddleware.cs:line 11
+2025-10-08 14:58:55.629 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 400 null application/json; charset=utf-8 5559.63ms
+2025-10-08 14:59:01.200 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-10-08 14:59:01.221 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:59:01.230 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-10-08 14:59:01.412 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-10-08 14:59:01.423 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-10-08 14:59:01.960 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-08 14:59:01.979 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 732.5792ms
+2025-10-08 14:59:01.984 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 14:59:01.987 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 787.2466ms
+2025-10-08 15:01:26.616 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/register - multipart/form-data; boundary=----WebKitFormBoundary9zb4FElPG28TC6xs 362481
+2025-10-08 15:01:26.873 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.CreateUser (Presentation)'
+2025-10-08 15:01:26.892 +05:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Application.DTOs.Users.Requests.UserRegisterRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-10-08 15:01:27.075 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-10-08 15:01:27.165 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usernameOrEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Users" AS u
+    LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+    WHERE u."Username" = @__usernameOrEmail_0 AND e."Email" = @__usernameOrEmail_0 AND e."IsActive")
+2025-10-08 15:01:27.182 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usernameOrEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Users" AS u
+    LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+    WHERE u."Username" = @__usernameOrEmail_0 AND e."Email" = @__usernameOrEmail_0 AND e."IsActive")
+2025-10-08 15:01:28.535 +05:00 [INF] Executed DbCommand (60ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?', @p9='?', @p10='?', @p11='?' (DbType = DateTime), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = Boolean), @p15='?' (DbType = Guid), @p16='?', @p17='?', @p18='?', @p19='?', @p20='?', @p21='?' (DbType = Guid), @p22='?' (DbType = Guid), @p23='?' (DbType = Guid), @p24='?', @p25='?', @p26='?' (DbType = Int64), @p27='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "PasswordHash", "Role", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+INSERT INTO "Employees" ("Id", "CreatedAt", "DateOfBirth", "Department", "Email", "FullName", "HireDate", "IsActive", "IsEmailPublic", "IsTelegramPublic", "ManagerId", "PassportInfo", "PhoneNumber", "PhotoUrl", "Position", "Telegram", "UserId")
+VALUES (@p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+INSERT INTO "EmployeesFile" ("Id", "EmployeeId", "Extension", "Name", "Size", "Url")
+VALUES (@p22, @p23, @p24, @p25, @p26, @p27);
+2025-10-08 15:01:32.546 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[Application.DTOs.Users.Responses.UserResponseDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 15:01:32.596 +05:00 [INF] Executed action Presentation.Controllers.UserController.CreateUser (Presentation) in 5693.5857ms
+2025-10-08 15:01:32.602 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.CreateUser (Presentation)'
+2025-10-08 15:01:32.611 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/register - 201 null application/json; charset=utf-8 5994.5453ms
+2025-10-08 15:02:55.322 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 52
+2025-10-08 15:02:55.369 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 15:02:55.372 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-10-08 15:02:55.489 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-10-08 15:02:55.506 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-10-08 15:02:58.883 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 3503.7483ms
+2025-10-08 15:02:58.894 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 15:02:59.067 +05:00 [ERR] Invalid username or password.
+Application.Exceptions.ApiException: Invalid username or password.
+   at Application.Features.Users.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\Features\Users\Handlers\LoginUserCommandHandler.cs:line 20
+   at Presentation.Controllers.UserController.Login(UserLoginRequestDto userLoginDto) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Controllers\UserController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Presentation.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Middlewares\ExceptionHandlingMiddleware.cs:line 11
+2025-10-08 15:02:59.095 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 400 null application/json; charset=utf-8 3773.5646ms
+2025-10-08 15:03:06.522 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 53
+2025-10-08 15:03:06.548 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 15:03:06.568 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-10-08 15:03:06.749 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-10-08 15:03:06.765 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-10-08 15:03:06.987 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-10-08 15:03:06.992 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 413.1356ms
+2025-10-08 15:03:06.994 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-10-08 15:03:07.002 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 481.1056ms
+2025-10-08 15:04:19.059 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/Vacations - application/json 107
+2025-10-08 15:04:19.101 +05:00 [INF] Executing endpoint 'Presentation.Controllers.VacationsController.CreateVacation (Presentation)'
+2025-10-08 15:04:19.115 +05:00 [INF] Route matched with {action = "CreateVacation", controller = "Vacations"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateVacation(Application.DTOs.Vacations.Requests.CreateVacationDtoRequest) on controller Presentation.Controllers.VacationsController (Presentation).
+2025-10-08 15:04:19.367 +05:00 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-10-08 15:04:19.438 +05:00 [INF] Executed DbCommand (7ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT e."Id"
+FROM "Employees" AS e
+WHERE e."UserId" = @__userId_0 AND e."IsActive"
+LIMIT 1
+2025-10-08 15:04:19.542 +05:00 [INF] Executed DbCommand (26ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?' (DbType = Guid), @p3='?' (DbType = DateTime), @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Vacations" ("Id", "CreatedAt", "EmployeeId", "EndDate", "StartDate", "Status", "VacationType")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2025-10-08 15:04:19.556 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[Application.DTOs.Vacations.Responses.VacationDtoResponse, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-10-08 15:04:19.586 +05:00 [INF] Executed action Presentation.Controllers.VacationsController.CreateVacation (Presentation) in 461.0339ms
+2025-10-08 15:04:19.591 +05:00 [INF] Executed endpoint 'Presentation.Controllers.VacationsController.CreateVacation (Presentation)'
+2025-10-08 15:04:19.595 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/Vacations - 200 null application/json; charset=utf-8 536.5504ms

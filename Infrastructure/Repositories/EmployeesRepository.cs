@@ -14,7 +14,7 @@ public class EmployeesRepository(AppDbContext context) : IEmployeesRepository
     }
 
     public async Task<IEnumerable<Employee>> GetAllDirectory() =>
-        await _context.Employees.Where(a => a.User.Role != UserRole.Admin && a.IsActive).ToListAsync();
+        await _context.Employees.Where(a => a.User.Role != UserRole.Admin && a.IsActive).AsNoTracking().ToListAsync();
 
     public async Task<Employee?> GetById(Guid id) =>
         await _context.Employees.FirstOrDefaultAsync(e => e.Id == id && e.IsActive);

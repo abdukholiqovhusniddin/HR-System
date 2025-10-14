@@ -28,23 +28,6 @@ public class EmailService(IOptions<EmailOptions> emailOptions) : IEmailService
         {
             throw new ApiException("An unexpected server error occurred. Please try again later.", ex);
         }
-
-
-        //using var client = new SmtpClient(_emailOptions.SmtpServer, _emailOptions.Port);
-        //client.EnableSsl = true;
-        //client.UseDefaultCredentials = false;
-        //client.Credentials = new NetworkCredential(_emailOptions.FromEmail, _emailOptions.Password);
-
-        //var mail = new MailMessage
-        //{
-        //    From = new MailAddress(_emailOptions.FromEmail)
-        //};
-        //mail.To.Add(email);
-        //mail.Subject = "Your Account Password";
-        //mail.Body = $"Hello {username},<br/><br/>Your password is: <b>{password}</b><br/>";
-        //mail.IsBodyHtml = true;
-
-        //await client.SendMailAsync(mail);
     }
     private SmtpClient CreateSmtpClient()
     {

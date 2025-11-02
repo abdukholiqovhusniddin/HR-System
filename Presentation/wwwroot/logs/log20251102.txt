@@ -175,3 +175,87 @@ LIMIT 1
 2025-11-02 11:06:16.365 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 7952.5174ms
 2025-11-02 11:07:25.499 +05:00 [INF] Application is shutting down...
 2025-11-02 11:07:25.719 +05:00 [INF] ContractReminderService: stopping requested, operation canceled.
+2025-11-02 21:05:32.545 +05:00 [INF] User profile is available. Using 'C:\Users\Another love\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 21:05:33.200 +05:00 [INF] Now listening on: https://localhost:7187
+2025-11-02 21:05:33.207 +05:00 [INF] Now listening on: http://localhost:5271
+2025-11-02 21:05:33.356 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 21:05:33.360 +05:00 [INF] Hosting environment: Development
+2025-11-02 21:05:33.367 +05:00 [INF] Content root path: D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation
+2025-11-02 21:05:46.195 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_vs/browserLink - null null
+2025-11-02 21:05:46.195 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-02 21:05:46.304 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 116.3447ms
+2025-11-02 21:05:46.593 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_vs/browserLink - 200 null text/javascript; charset=UTF-8 406.4473ms
+2025-11-02 21:05:46.687 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - null null
+2025-11-02 21:05:47.036 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 348.4678ms
+2025-11-02 21:06:07.738 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-11-02 21:06:07.980 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-02 21:06:08.034 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-02 21:06:08.087 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-02 21:06:10.756 +05:00 [INF] Executed DbCommand (115ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-02 21:06:11.423 +05:00 [INF] Executed DbCommand (60ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-02 21:06:11.935 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-02 21:06:11.961 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 3874.1349ms
+2025-11-02 21:06:11.989 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-02 21:06:12.015 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 4276.8915ms
+2025-11-02 21:06:27.899 +05:00 [INF] User profile is available. Using 'C:\Users\Another love\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-02 21:06:28.453 +05:00 [INF] Now listening on: https://localhost:7187
+2025-11-02 21:06:28.456 +05:00 [INF] Now listening on: http://localhost:5271
+2025-11-02 21:06:28.537 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-02 21:06:28.539 +05:00 [INF] Hosting environment: Development
+2025-11-02 21:06:28.541 +05:00 [INF] Content root path: D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation
+2025-11-02 21:06:57.739 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/api/User/me - null null
+2025-11-02 21:06:58.348 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.GetMeQuery (Presentation)'
+2025-11-02 21:06:58.387 +05:00 [INF] Route matched with {action = "GetMeQuery", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMeQuery() on controller Presentation.Controllers.UserController (Presentation).
+2025-11-02 21:06:58.402 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-02 21:07:02.397 +05:00 [INF] Executed DbCommand (160ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-02 21:07:03.486 +05:00 [INF] Executed DbCommand (67ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username", e."Id", e."CreatedAt", e."DateOfBirth", e."Department", e."Email", e."FullName", e."HireDate", e."IsActive", e."IsEmailPublic", e."IsTelegramPublic", e."ManagerId", e."PassportInfo", e."PhoneNumber", e."PhotoUrl", e."Position", e."Telegram", e."UserId"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-02 21:07:03.982 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[Application.DTOs.Users.Responses.UserProfileResponseDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-02 21:07:04.060 +05:00 [INF] Executed action Presentation.Controllers.UserController.GetMeQuery (Presentation) in 5657.9106ms
+2025-11-02 21:07:04.081 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.GetMeQuery (Presentation)'
+2025-11-02 21:07:04.127 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/api/User/me - 200 null application/json; charset=utf-8 6398.0581ms

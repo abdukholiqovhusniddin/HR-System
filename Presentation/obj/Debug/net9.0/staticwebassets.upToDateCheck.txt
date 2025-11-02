@@ -1,3 +1,6 @@
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\wwwroot\logs\log20251008.txt
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\wwwroot\logs\log20251009.txt
 wwwroot\logs\log20251008.txt
+wwwroot\logs\log20251009.txt
+wwwroot\PhotoEmployees\33fcb658-a7bf-482f-a371-98981cd97e94.png
 wwwroot\PhotoEmployees\6da49e1b-3175-45a2-b4a4-835d94387609.png

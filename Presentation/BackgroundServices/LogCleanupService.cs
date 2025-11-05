@@ -1,7 +1,6 @@
 ﻿namespace Presentation.BackgroundServices;
 
-public class LogCleanupService(ILogger<LogCleanupService> logger,
-    IWebHostEnvironment env) : BackgroundService
+public class LogCleanupService(ILogger<LogCleanupService> logger, IWebHostEnvironment env) : BackgroundService
 {
     private readonly ILogger<LogCleanupService> _logger = logger;
     private readonly string _logsDirectory = Path.Combine(env.WebRootPath, "logs");

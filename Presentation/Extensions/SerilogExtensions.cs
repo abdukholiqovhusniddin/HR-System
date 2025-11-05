@@ -19,7 +19,8 @@ public static class SerilogExtensions
         // Конфигурируем Serilog
         Log.Logger = new LoggerConfiguration()
             .WriteTo.Console()
-            .WriteTo.File(logFilePath, rollingInterval: RollingInterval.Day, fileSizeLimitBytes: 10_000_000, retainedFileCountLimit: 10)
+            .WriteTo.File(logFilePath, rollingInterval: RollingInterval.Day,
+            fileSizeLimitBytes: 10_000_000, retainedFileCountLimit: 10)
             .CreateLogger();
 
         host.UseSerilog();

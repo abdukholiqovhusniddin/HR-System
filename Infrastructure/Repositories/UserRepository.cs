@@ -24,6 +24,10 @@ public class UserRepository(AppDbContext context) : IUserRepository
             && n.EmployeeProfile.Email == usernameOrEmail && n.EmployeeProfile.IsActive);
     }
 
+    public Task<User?> GetByIdAsync(Guid userId) =>
+        _context.Users.Include(u => u.EmployeeProfile)
+        .FirstOrDefaultAsync(u => u.Id == userId && u.EmployeeProfile.IsActive);
+
     public async Task<User?> GetByUsernameAsync(string? username, bool includeEmployeeProfile = false)
     {
         IQueryable<User> query = _context.Users;

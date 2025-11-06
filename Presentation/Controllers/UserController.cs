@@ -61,4 +61,12 @@ public class UserController(IMediator mediator) : ApiControllerBase
 
         return StatusCode(updatedUser.StatusCode, updatedUser);
     }
+
+    [Authorize(Roles = "Admin")]
+    [HttpPost("send-reset-password-email")]
+    public async Task<IActionResult> SendResetPassword([FromBody] SendResetPasswordRequestDto requestDto)
+    {
+        var response = await _mediator.Send(new SendResetPasswordCommand(requestDto));
+        return StatusCode(response.StatusCode, response);
+    }
 }

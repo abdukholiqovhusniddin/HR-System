@@ -516,6 +516,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Presentation.Controllers.UserController",
+    "Method": "SendResetPassword",
+    "RelativePath": "api/User/send-reset-password-email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "requestDto",
+        "Type": "Application.DTOs.Users.Requests.SendResetPasswordRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Presentation.Controllers.VacationsController",
     "Method": "CreateVacation",
     "RelativePath": "api/Vacations",

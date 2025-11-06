@@ -491,4 +491,5 @@ D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Ser
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\compressed\qyy6gf8bxv-1yec2ltw0j.gz
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\compressed\qyy6gf8bxv-9ou52m9ejq.gz
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\compressed\ns1i0lo6iv-6yud2ceskb.gz

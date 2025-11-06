@@ -1,0 +1,547 @@
+2025-11-06 23:05:34.218 +05:00 [INF] User profile is available. Using 'C:\Users\Another love\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-06 23:05:35.035 +05:00 [INF] Now listening on: https://localhost:7187
+2025-11-06 23:05:35.040 +05:00 [INF] Now listening on: http://localhost:5271
+2025-11-06 23:05:35.138 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-06 23:05:35.144 +05:00 [INF] Hosting environment: Development
+2025-11-06 23:05:35.152 +05:00 [INF] Content root path: D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation
+2025-11-06 23:06:59.854 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-06 23:06:59.854 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_vs/browserLink - null null
+2025-11-06 23:06:59.979 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 145.8267ms
+2025-11-06 23:07:00.380 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_vs/browserLink - 200 null text/javascript; charset=UTF-8 547.9823ms
+2025-11-06 23:07:00.484 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - null null
+2025-11-06 23:07:01.081 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 596.6943ms
+2025-11-06 23:07:25.324 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-11-06 23:07:29.014 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:07:29.129 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:07:29.159 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-06 23:07:34.855 +05:00 [INF] Executed DbCommand (138ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:07:35.963 +05:00 [INF] Executed DbCommand (57ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:07:36.920 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-06 23:07:36.943 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 7794.1532ms
+2025-11-06 23:07:36.948 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:07:36.968 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 11643.7857ms
+2025-11-06 23:09:41.004 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/register - multipart/form-data; boundary=----WebKitFormBoundaryZSxo5lQBBANzdllx 181158
+2025-11-06 23:09:41.118 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.CreateUser (Presentation)'
+2025-11-06 23:09:41.145 +05:00 [INF] Route matched with {action = "CreateUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateUser(Application.DTOs.Users.Requests.UserRegisterRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:09:41.419 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:09:41.504 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usernameOrEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Users" AS u
+    LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+    WHERE u."Username" = @__usernameOrEmail_0 AND e."Email" = @__usernameOrEmail_0 AND e."IsActive")
+2025-11-06 23:09:41.526 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__usernameOrEmail_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Users" AS u
+    LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+    WHERE u."Username" = @__usernameOrEmail_0 AND e."Email" = @__usernameOrEmail_0 AND e."IsActive")
+2025-11-06 23:09:42.335 +05:00 [INF] Executed DbCommand (54ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = DateTime), @p2='?', @p3='?', @p4='?', @p5='?' (DbType = Guid), @p6='?' (DbType = DateTime), @p7='?' (DbType = DateTime), @p8='?', @p9='?', @p10='?', @p11='?' (DbType = DateTime), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = Boolean), @p15='?' (DbType = Guid), @p16='?', @p17='?', @p18='?', @p19='?', @p20='?', @p21='?' (DbType = Guid), @p22='?' (DbType = Guid), @p23='?' (DbType = Guid), @p24='?', @p25='?', @p26='?' (DbType = Int64), @p27='?'], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Users" ("Id", "CreatedAt", "PasswordHash", "Role", "Username")
+VALUES (@p0, @p1, @p2, @p3, @p4);
+INSERT INTO "Employees" ("Id", "CreatedAt", "DateOfBirth", "Department", "Email", "FullName", "HireDate", "IsActive", "IsEmailPublic", "IsTelegramPublic", "ManagerId", "PassportInfo", "PhoneNumber", "PhotoUrl", "Position", "Telegram", "UserId")
+VALUES (@p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21);
+INSERT INTO "EmployeesFile" ("Id", "EmployeeId", "Extension", "Name", "Size", "Url")
+VALUES (@p22, @p23, @p24, @p25, @p26, @p27);
+2025-11-06 23:09:47.331 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[Application.DTOs.Users.Responses.UserResponseDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-06 23:09:47.384 +05:00 [INF] Executed action Presentation.Controllers.UserController.CreateUser (Presentation) in 6233.9264ms
+2025-11-06 23:09:47.398 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.CreateUser (Presentation)'
+2025-11-06 23:09:47.411 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/register - 201 null application/json; charset=utf-8 6407.6144ms
+2025-11-06 23:10:49.054 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-11-06 23:10:49.082 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:10:49.106 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:10:49.306 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:10:49.318 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:10:49.561 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-06 23:10:49.571 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 449.3423ms
+2025-11-06 23:10:49.592 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:10:49.607 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 580.0247ms
+2025-11-06 23:11:15.018 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/api/User/me - null null
+2025-11-06 23:11:15.043 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.GetMeQuery (Presentation)'
+2025-11-06 23:11:15.056 +05:00 [INF] Route matched with {action = "GetMeQuery", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMeQuery() on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:11:15.209 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:11:15.252 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username", e."Id", e."CreatedAt", e."DateOfBirth", e."Department", e."Email", e."FullName", e."HireDate", e."IsActive", e."IsEmailPublic", e."IsTelegramPublic", e."ManagerId", e."PassportInfo", e."PhoneNumber", e."PhotoUrl", e."Position", e."Telegram", e."UserId"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:11:15.282 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[Application.DTOs.Users.Responses.UserProfileResponseDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-06 23:11:15.299 +05:00 [INF] Executed action Presentation.Controllers.UserController.GetMeQuery (Presentation) in 230.3066ms
+2025-11-06 23:11:15.307 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.GetMeQuery (Presentation)'
+2025-11-06 23:11:15.312 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/api/User/me - 200 null application/json; charset=utf-8 314.0824ms
+2025-11-06 23:11:34.985 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/swagger//PhotoEmployees/4d789e8e-b39c-4c2e-8997-ac0d422462ab.png - null null
+2025-11-06 23:11:35.250 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/swagger//PhotoEmployees/4d789e8e-b39c-4c2e-8997-ac0d422462ab.png - 404 0 null 265.3236ms
+2025-11-06 23:11:35.263 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7187/swagger//PhotoEmployees/4d789e8e-b39c-4c2e-8997-ac0d422462ab.png, Response status code: 404
+2025-11-06 23:11:42.555 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/PhotoEmployees/4d789e8e-b39c-4c2e-8997-ac0d422462ab.png - null null
+2025-11-06 23:11:42.653 +05:00 [INF] Sending file. Request path: '/PhotoEmployees/4d789e8e-b39c-4c2e-8997-ac0d422462ab.png'. Physical path: 'D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\wwwroot\PhotoEmployees\4d789e8e-b39c-4c2e-8997-ac0d422462ab.png'
+2025-11-06 23:11:42.662 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/PhotoEmployees/4d789e8e-b39c-4c2e-8997-ac0d422462ab.png - 200 179423 image/png 107.6688ms
+2025-11-06 23:11:42.709 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/favicon.ico - null null
+2025-11-06 23:11:42.726 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/favicon.ico - 404 0 null 17.1175ms
+2025-11-06 23:11:42.745 +05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7187/favicon.ico, Response status code: 404
+2025-11-06 23:11:47.796 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - null null
+2025-11-06 23:11:47.822 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/_framework/aspnetcore-browser-refresh.js - 200 16509 application/javascript; charset=utf-8 26.1381ms
+2025-11-06 23:11:47.971 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - null null
+2025-11-06 23:11:48.000 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 29.8338ms
+2025-11-06 23:12:22.121 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-11-06 23:12:22.144 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:12:22.151 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:12:22.233 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:12:22.245 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:12:22.481 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-06 23:12:22.490 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 329.3596ms
+2025-11-06 23:12:22.500 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:12:22.508 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 387.5785ms
+2025-11-06 23:12:57.761 +05:00 [INF] Request starting HTTP/2 GET https://localhost:7187/api/User/me - null null
+2025-11-06 23:12:57.786 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.GetMeQuery (Presentation)'
+2025-11-06 23:12:57.795 +05:00 [INF] Route matched with {action = "GetMeQuery", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetMeQuery() on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:12:57.991 +05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:12:58.015 +05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username", e."Id", e."CreatedAt", e."DateOfBirth", e."Department", e."Email", e."FullName", e."HireDate", e."IsActive", e."IsEmailPublic", e."IsTelegramPublic", e."ManagerId", e."PassportInfo", e."PhoneNumber", e."PhotoUrl", e."Position", e."Telegram", e."UserId"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:12:58.032 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[Application.DTOs.Users.Responses.UserProfileResponseDto, Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-11-06 23:12:58.040 +05:00 [INF] Executed action Presentation.Controllers.UserController.GetMeQuery (Presentation) in 231.0075ms
+2025-11-06 23:12:58.049 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.GetMeQuery (Presentation)'
+2025-11-06 23:12:58.057 +05:00 [INF] Request finished HTTP/2 GET https://localhost:7187/api/User/me - 200 null application/json; charset=utf-8 296.51ms
+2025-11-06 23:15:56.057 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/send-reset-password-email - application/json 54
+2025-11-06 23:15:56.085 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.SendResetPassword (Presentation)'
+2025-11-06 23:15:56.106 +05:00 [INF] Route matched with {action = "SendResetPassword", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendResetPassword(Application.DTOs.Users.Requests.SendResetPasswordRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:15:56.218 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:15:56.275 +05:00 [INF] Executed DbCommand (20ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username", e."Id", e."CreatedAt", e."DateOfBirth", e."Department", e."Email", e."FullName", e."HireDate", e."IsActive", e."IsEmailPublic", e."IsTelegramPublic", e."ManagerId", e."PassportInfo", e."PhoneNumber", e."PhotoUrl", e."Position", e."Telegram", e."UserId"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Id" = @__userId_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:16:04.673 +05:00 [INF] Executed action Presentation.Controllers.UserController.SendResetPassword (Presentation) in 8562.3433ms
+2025-11-06 23:16:04.679 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.SendResetPassword (Presentation)'
+2025-11-06 23:16:04.848 +05:00 [ERR] User not found.
+Application.Exceptions.ApiException: User not found.
+   at Application.Features.Users.Handlers.SendResetPasswordCommandHandler.Handle(SendResetPasswordCommand request, CancellationToken cancellationToken) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\Features\Users\Handlers\SendResetPasswordCommandHandler.cs:line 22
+   at Presentation.Controllers.UserController.SendResetPassword(SendResetPasswordRequestDto requestDto) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Controllers\UserController.cs:line 69
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Presentation.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Middlewares\ExceptionHandlingMiddleware.cs:line 11
+2025-11-06 23:16:05.017 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/send-reset-password-email - 400 null application/json; charset=utf-8 8959.7897ms
+2025-11-06 23:16:16.149 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/send-reset-password-email - application/json 54
+2025-11-06 23:16:16.167 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.SendResetPassword (Presentation)'
+2025-11-06 23:16:16.174 +05:00 [INF] Route matched with {action = "SendResetPassword", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendResetPassword(Application.DTOs.Users.Requests.SendResetPasswordRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:16:16.280 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:16:16.295 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username", e."Id", e."CreatedAt", e."DateOfBirth", e."Department", e."Email", e."FullName", e."HireDate", e."IsActive", e."IsEmailPublic", e."IsTelegramPublic", e."ManagerId", e."PassportInfo", e."PhoneNumber", e."PhotoUrl", e."Position", e."Telegram", e."UserId"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Id" = @__userId_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:16:21.872 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-06 23:16:21.876 +05:00 [INF] Executed action Presentation.Controllers.UserController.SendResetPassword (Presentation) in 5689.9337ms
+2025-11-06 23:16:21.880 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.SendResetPassword (Presentation)'
+2025-11-06 23:16:21.884 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/send-reset-password-email - 200 null application/json; charset=utf-8 5734.6491ms
+2025-11-06 23:17:05.911 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-11-06 23:17:05.935 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:17:05.937 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:17:06.144 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:17:06.158 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:17:06.507 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-06 23:17:06.512 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 570.6566ms
+2025-11-06 23:17:06.516 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:17:06.520 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 609.3163ms
+2025-11-06 23:17:20.123 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-11-06 23:17:20.130 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:17:20.134 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:17:20.337 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:17:20.349 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:17:25.892 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 5751.3865ms
+2025-11-06 23:17:25.899 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:17:26.092 +05:00 [ERR] Invalid username or password.
+Application.Exceptions.ApiException: Invalid username or password.
+   at Application.Features.Users.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\Features\Users\Handlers\LoginUserCommandHandler.cs:line 20
+   at Presentation.Controllers.UserController.Login(UserLoginRequestDto userLoginDto) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Controllers\UserController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Presentation.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Middlewares\ExceptionHandlingMiddleware.cs:line 11
+2025-11-06 23:17:26.115 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 400 null application/json; charset=utf-8 5992.1169ms
+2025-11-06 23:18:50.760 +05:00 [INF] User profile is available. Using 'C:\Users\Another love\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-06 23:18:51.426 +05:00 [INF] Now listening on: https://localhost:7187
+2025-11-06 23:18:51.432 +05:00 [INF] Now listening on: http://localhost:5271
+2025-11-06 23:18:51.515 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-06 23:18:51.519 +05:00 [INF] Hosting environment: Development
+2025-11-06 23:18:51.523 +05:00 [INF] Content root path: D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation
+2025-11-06 23:19:00.968 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-11-06 23:19:01.650 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:19:01.752 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:19:01.774 +05:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2025-11-06 23:19:06.350 +05:00 [INF] Executed DbCommand (171ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:19:07.570 +05:00 [INF] Executed DbCommand (56ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:19:08.402 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-06 23:19:08.439 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 6667.7472ms
+2025-11-06 23:19:08.452 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:19:08.482 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 7526.2389ms
+2025-11-06 23:19:39.289 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/send-reset-password-email - application/json 54
+2025-11-06 23:19:39.335 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.SendResetPassword (Presentation)'
+2025-11-06 23:19:39.355 +05:00 [INF] Route matched with {action = "SendResetPassword", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SendResetPassword(Application.DTOs.Users.Requests.SendResetPasswordRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:19:39.632 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:19:39.721 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__userId_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username", e."Id", e."CreatedAt", e."DateOfBirth", e."Department", e."Email", e."FullName", e."HireDate", e."IsActive", e."IsEmailPublic", e."IsTelegramPublic", e."ManagerId", e."PassportInfo", e."PhoneNumber", e."PhotoUrl", e."Position", e."Telegram", e."UserId"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Id" = @__userId_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:19:46.032 +05:00 [INF] Executed DbCommand (93ms) [Parameters=[@p1='?' (DbType = Guid), @p0='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "PasswordHash" = @p0
+WHERE "Id" = @p1;
+2025-11-06 23:19:46.092 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-06 23:19:46.101 +05:00 [INF] Executed action Presentation.Controllers.UserController.SendResetPassword (Presentation) in 6735.7895ms
+2025-11-06 23:19:46.107 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.SendResetPassword (Presentation)'
+2025-11-06 23:19:46.115 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/send-reset-password-email - 200 null application/json; charset=utf-8 6825.8755ms
+2025-11-06 23:20:17.851 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-11-06 23:20:17.888 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:20:17.893 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:20:18.158 +05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:20:18.179 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:20:18.515 +05:00 [INF] Executing ObjectResult, writing value of type 'Application.Commons.ApiResponse`1[[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-11-06 23:20:18.520 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 618.7077ms
+2025-11-06 23:20:18.527 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:20:18.532 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 200 null application/json; charset=utf-8 680.6037ms
+2025-11-06 23:20:29.790 +05:00 [INF] Request starting HTTP/2 POST https://localhost:7187/api/User/login - application/json 51
+2025-11-06 23:20:29.817 +05:00 [INF] Executing endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:20:29.826 +05:00 [INF] Route matched with {action = "Login", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Application.DTOs.Users.Requests.UserLoginRequestDto) on controller Presentation.Controllers.UserController (Presentation).
+2025-11-06 23:20:29.956 +05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM pg_class AS cls
+JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+WHERE
+        cls.relkind IN ('r', 'v', 'm', 'f', 'p') AND
+        ns.nspname NOT IN ('pg_catalog', 'information_schema') AND
+        -- Exclude tables which are members of PG extensions
+        NOT EXISTS (
+            SELECT 1 FROM pg_depend WHERE
+                classid=(
+                    SELECT cls.oid
+                    FROM pg_class AS cls
+                             JOIN pg_namespace AS ns ON ns.oid = cls.relnamespace
+                    WHERE relname='pg_class' AND ns.nspname='pg_catalog'
+                ) AND
+                objid=cls.oid AND
+                deptype IN ('e', 'x')
+        )
+2025-11-06 23:20:29.975 +05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__username_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."PasswordHash", u."Role", u."Username"
+FROM "Users" AS u
+LEFT JOIN "Employees" AS e ON u."Id" = e."UserId"
+WHERE u."Username" = @__username_0 AND e."IsActive"
+LIMIT 1
+2025-11-06 23:20:36.163 +05:00 [INF] Executed action Presentation.Controllers.UserController.Login (Presentation) in 6323.3744ms
+2025-11-06 23:20:36.172 +05:00 [INF] Executed endpoint 'Presentation.Controllers.UserController.Login (Presentation)'
+2025-11-06 23:20:36.413 +05:00 [ERR] Invalid username or password.
+Application.Exceptions.ApiException: Invalid username or password.
+   at Application.Features.Users.Handlers.LoginUserCommandHandler.Handle(LoginUserCommand request, CancellationToken cancellationToken) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Application\Features\Users\Handlers\LoginUserCommandHandler.cs:line 20
+   at Presentation.Controllers.UserController.Login(UserLoginRequestDto userLoginDto) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Controllers\UserController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Presentation.Middlewares.ExceptionHandlingMiddleware.InvokeAsync(HttpContext context) in D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\Middlewares\ExceptionHandlingMiddleware.cs:line 11
+2025-11-06 23:20:36.600 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 400 null application/json; charset=utf-8 6810.1002ms
+2025-11-06 23:20:48.757 +05:00 [INF] Application is shutting down...
+2025-11-06 23:20:48.915 +05:00 [INF] ContractReminderService: stopping requested, operation canceled.

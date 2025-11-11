@@ -51,7 +51,8 @@ public class RegisterMappers : IRegister
                 DateTime.Today.Year - src.DateOfBirth.Year -
                 (src.DateOfBirth.Date > DateTime.Today.AddYears(-(DateTime.Today.Year - src.DateOfBirth.Year)) ? 1 : 0));
 
-        config.NewConfig<Employee, UserResponseDto>();
+        config.NewConfig<Employee, UserResponseDto>()
+            .Map(dest => dest.Photo, src => src.PhotoUrl);
         config.NewConfig<Employee, ResponseEmployeeDto>();
 
         config.NewConfig<UpdateEmployeeDtoRequest, Employee>();

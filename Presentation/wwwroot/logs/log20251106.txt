@@ -545,3 +545,9 @@ Application.Exceptions.ApiException: Invalid username or password.
 2025-11-06 23:20:36.600 +05:00 [INF] Request finished HTTP/2 POST https://localhost:7187/api/User/login - 400 null application/json; charset=utf-8 6810.1002ms
 2025-11-06 23:20:48.757 +05:00 [INF] Application is shutting down...
 2025-11-06 23:20:48.915 +05:00 [INF] ContractReminderService: stopping requested, operation canceled.
+2025-11-06 23:50:47.688 +05:00 [INF] User profile is available. Using 'C:\Users\Another love\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-11-06 23:50:48.963 +05:00 [INF] Now listening on: https://localhost:7187
+2025-11-06 23:50:48.968 +05:00 [INF] Now listening on: http://localhost:5271
+2025-11-06 23:50:49.138 +05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-06 23:50:49.143 +05:00 [INF] Hosting environment: Development
+2025-11-06 23:50:49.147 +05:00 [INF] Content root path: D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation

@@ -19,24 +19,36 @@ public class UserRepository(AppDbContext context) : IUserRepository
     {
         if (string.IsNullOrWhiteSpace(usernameOrEmail))
             throw new ApiException("Username or email cannot be null or empty.");
-        return await _context.Users.Include(u => u.EmployeeProfile)
-            .AnyAsync(n => n.Username == usernameOrEmail
-            && n.EmployeeProfile.Email == usernameOrEmail && n.EmployeeProfile.IsActive);
-    }
 
+        return await _context.Users.AnyAsync(n =>
+            (n.Username == usernameOrEmail
+            || (n.EmployeeProfile != null && n.EmployeeProfile.Email == usernameOrEmail))
+            && (n.EmployeeProfile != null && n.EmployeeProfile.IsActive));
+    }
     public Task<User?> GetByIdAsync(Guid userId) =>
-        _context.Users.Include(u => u.EmployeeProfile)
-        .FirstOrDefaultAsync(u => u.Id == userId && u.EmployeeProfile.IsActive);
+        _context.Users
+            .Include(u => u.EmployeeProfile)
+            .FirstOrDefaultAsync(u =>
+                u.Id == userId &&
+                u.EmployeeProfile != null &&
+                u.EmployeeProfile.IsActive);
 
     public async Task<User?> GetByUsernameAsync(string? username, bool includeEmployeeProfile = false)
     {
+        if (string.IsNullOrWhiteSpace(username))
+            throw new ApiException("Username cannot be null or empty.");
+
         IQueryable<User> query = _context.Users;
 
         if (includeEmployeeProfile)
             query = query.Include(u => u.EmployeeProfile);
 
-        return await query.FirstOrDefaultAsync(u => u.Username == username && u.EmployeeProfile.IsActive);
+        return await query.FirstOrDefaultAsync(u =>
+            u.Username == username &&
+            (u.EmployeeProfile == null || u.EmployeeProfile.IsActive));
     }
+
+
 
     public async Task UpdateAsync(User user)
     {

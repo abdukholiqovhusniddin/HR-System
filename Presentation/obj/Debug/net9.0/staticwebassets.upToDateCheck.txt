@@ -4,5 +4,13 @@ D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\wwwroot\logs\log2025
 wwwroot\logs\log20251102.txt
 wwwroot\logs\log20251106.txt
 wwwroot\logs\log20251111.txt
+wwwroot\PhotoEmployees\435bc0ca-c5db-4280-a2ce-249c9d3f643d.png
 wwwroot\PhotoEmployees\4d789e8e-b39c-4c2e-8997-ac0d422462ab.png
+wwwroot\PhotoEmployees\524f735d-8dc8-4d54-8f0e-f52cf10dce47.png
+wwwroot\PhotoEmployees\7413d06d-d057-418d-a302-3b3529107d20.png
+wwwroot\PhotoEmployees\8ef6d3e1-7933-43ca-a732-edca15f9e657.png
+wwwroot\PhotoEmployees\96b432b5-b191-41c9-8de9-98319af341f9.png
 wwwroot\PhotoEmployees\a26d1d33-773a-4f05-a695-0e6373020e94.png
+wwwroot\PhotoEmployees\d982c1da-8689-407b-a697-3895499f9f93.png
+wwwroot\PhotoEmployees\e260081f-acc5-4a8a-bccc-15bb0efd93eb.png
+wwwroot\PhotoEmployees\e965bc25-4926-433d-a09b-0bb37abfa021.png

@@ -493,4 +493,11 @@ D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Ser
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\compressed\qyy6gf8bxv-9ou52m9ejq.gz
 D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\compressed\ns1i0lo6iv-ktxz91c72q.gz
-D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\compressed\hnscu2j3i1-khj4iibz3m.gz
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Json.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.Configuration.UserSecrets.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\bin\Debug\net9.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\Git-Hub_pr\HR-SystemClean\HR-SystemSolution\Presentation\obj\Debug\net9.0\compressed\hnscu2j3i1-8u1vmi5z4l.gz

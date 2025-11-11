@@ -72,7 +72,7 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
                 Extension = imagePath.Extension,
             };
 
-            newEmployer.PhotoUrl = imagePath.Url; //// PhotoUrl is null !!!!!!!!!!!!!!!!!!!!!!!
+            newEmployer.PhotoUrl = imagePath.Url;
         }
 
         var employee = await _employerRepository.CreateAsync(newEmployer);

@@ -30,8 +30,13 @@ public static class ServiceExtensions
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(configuration.GetConnectionString("HRDb")));
 
-        // Email
-        services.Configure<EmailOptions>(configuration.GetSection("SendEmail"));
+        // Email: bind and validate options
+        services.AddOptions<EmailOptions>()
+            .Bind(configuration.GetSection("SendEmail"))
+            .Validate(o => !string.IsNullOrWhiteSpace(o.FromEmail), "SendEmail:FromEmail is required")
+            .Validate(o => o.Port > 0, "SendEmail:Port must be greater than zero")
+            .Validate(o => !string.IsNullOrWhiteSpace(o.Password), "SendEmail:Password must be provided (use User Secrets in dev)")
+            .ValidateOnStart();
 
         // Repositories
         services.AddScoped<IUserRepository, UserRepository>();

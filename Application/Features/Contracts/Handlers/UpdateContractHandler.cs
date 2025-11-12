@@ -14,19 +14,19 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
 
     public async Task<ApiResponse<Guid>> Handle(UpdateContractCommon request, CancellationToken cancellationToken)
     {
-        var contract = request.UpdateContractDtoRequest;
+        var contractDto = request.UpdateContractDtoRequest;
 
-        var updateContract = await _contractsRepository.GetContractById(contract.ContractId)
+        var updateContract = await _contractsRepository.GetContractById(contractDto.ContractId)
             ?? throw new NotFoundException("Contract not found");
 
-        if (contract.DocumentPdf is not null && updateContract.DocumentUrl is not null)
+        if (contractDto.DocumentPdf is not null)
         {
             await fileService.RemoveAsync(updateContract.DocumentUrl);
 
-            updateContract = contract.Adapt(updateContract);
+            updateContract = contractDto.Adapt(updateContract);
 
 
-            var documentPath = await fileService.SaveAsync(contract.DocumentPdf, "Contracts");
+            var documentPath = await fileService.SaveAsync(contractDto.DocumentPdf, "Contracts");
 
             if (updateContract.DocumentPdf is null)
             {
@@ -64,7 +64,7 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
         }
         else
         {
-            updateContract = contract.Adapt(updateContract);
+            updateContract = contractDto.Adapt(updateContract);
         }
 
         await unitOfWork.SaveChangesAsync(CancellationToken.None);

@@ -17,7 +17,7 @@ public class AddContractHandler(IContractsRepository contractsRepository,
     {
         var dto = request.AddContractDtoRequest;
 
-        if (!await _contractsRepository.IsEmployeeAktive(dto.EmployeeId))
+        if (!await _contractsRepository.IsEmployeeActive(dto.EmployeeId, cancellationToken))
             throw new ApiException("Employee is not active or does not exist.");
 
         var newContract = new Contract
@@ -50,7 +50,6 @@ public class AddContractHandler(IContractsRepository contractsRepository,
 
 
         await _contractsRepository.CreateAsync(newContract);
-
         await unitOfWork.SaveChangesAsync(cancellationToken);
 
         var response = newContract.Adapt<ContractDtoResponse>();

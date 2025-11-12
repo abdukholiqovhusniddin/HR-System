@@ -16,58 +16,30 @@ public class UpdateContractHandler(IContractsRepository contractsRepository, IFi
     {
         var contractDto = request.UpdateContractDtoRequest;
 
-        var updateContract = await _contractsRepository.GetContractById(contractDto.ContractId)
+        var updateContract = await _contractsRepository.GetContractById(contractDto.ContractId, cancellationToken)
             ?? throw new NotFoundException("Contract not found");
 
         if (contractDto.DocumentPdf is not null)
         {
             await fileService.RemoveAsync(updateContract.DocumentUrl);
-
-            updateContract = contractDto.Adapt(updateContract);
-
-
             var documentPath = await fileService.SaveAsync(contractDto.DocumentPdf, "Contracts");
 
-            if (updateContract.DocumentPdf is null)
+            updateContract.DocumentPdf = new List<ContractFile>
             {
-                updateContract.DocumentPdf = new List<ContractFile>
+                new ContractFile
                 {
-                    new ContractFile
-                    {
-                        ContractId = updateContract.Id,
-                        Name = documentPath.Name,
-                        Url = documentPath.Url,
-                        Size = documentPath.Size,
-                        Extension = documentPath.Extension,
-                    }
-                };
-
-            }
-            else
-            {
-                updateContract.DocumentPdf.Clear();
-
-                updateContract.DocumentPdf = new List<ContractFile>
-                {
-                    new ContractFile
-                    {
-                        ContractId = updateContract.Id,
-                        Name = documentPath.Name,
-                        Url = documentPath.Url,
-                        Size = documentPath.Size,
-                        Extension = documentPath.Extension,
-                    }
-                };
-            }
-
+                    ContractId = updateContract.Id,
+                    Name = documentPath.Name,
+                    Url = documentPath.Url,
+                    Size = documentPath.Size,
+                    Extension = documentPath.Extension,
+                }
+            };
             updateContract.DocumentUrl = documentPath.Url;
         }
-        else
-        {
-            updateContract = contractDto.Adapt(updateContract);
-        }
 
-        await unitOfWork.SaveChangesAsync(CancellationToken.None);
+        updateContract = contractDto.Adapt(updateContract);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
         return new ApiResponse<Guid>(updateContract.EmployeeId);
     }

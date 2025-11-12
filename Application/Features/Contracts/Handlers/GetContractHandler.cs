@@ -15,7 +15,7 @@ public class GetContractHandler(IContractsRepository contractsRepository) : IReq
         if (request.EmployeeId == Guid.Empty)
             throw new ApiException("EmployeeId cannot be empty.");
 
-        var contracts = await _contractsRepository.GetAllByEmployeeIdAsync(request.EmployeeId);
+        var contracts = await _contractsRepository.GetAllByEmployeeIdAsync(request.EmployeeId, cancellationToken);
 
         if (contracts is null || contracts.Count == 0)
             throw new NotFoundException("No active contracts found for this employee.");

@@ -13,7 +13,7 @@ public class DeleteContractHandler(IContractsRepository contractsRepository,
     private readonly IContractsRepository _contractsRepository = contractsRepository;
     public async Task<ApiResponse<Unit>> Handle(DeleteContractCommand request, CancellationToken cancellationToken)
     {
-        var contract = await _contractsRepository.GetContractById(request.ContractId)
+        var contract = await _contractsRepository.GetContractById(request.ContractId, cancellationToken)
             ?? throw new NotFoundException("Contract not found");
 
         await fileService.RemoveAsync(contract.DocumentUrl);

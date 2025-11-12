@@ -15,47 +15,43 @@ public class AddContractHandler(IContractsRepository contractsRepository,
     private readonly IContractsRepository _contractsRepository = contractsRepository;
     public async Task<ApiResponse<ContractDtoResponse>> Handle(AddContractCommand request, CancellationToken cancellationToken)
     {
-        var contract = request.AddContractDtoRequest;
+        var dto = request.AddContractDtoRequest;
 
-        bool isAktive = await _contractsRepository.IsEmployeeAktive(contract.EmployeeId);
-        if (!isAktive)
-            throw new ApiException("Employee is not aktive or not exist");
+        if (!await _contractsRepository.IsEmployeeAktive(dto.EmployeeId))
+            throw new ApiException("Employee is not active or does not exist.");
 
         var newContract = new Contract
         {
             Id = Guid.NewGuid(),
-            EmployeeId = contract.EmployeeId,
-            ContractType = contract.ContractType,
-            StartDate = contract.StartDate,
-            EndDate = contract.EndDate,
-            Terms = contract.Terms,
-            DocumentPdf = null!,
+            EmployeeId = dto.EmployeeId,
+            ContractType = dto.ContractType,
+            StartDate = dto.StartDate,
+            EndDate = dto.EndDate,
+            Terms = dto.Terms,
+            DocumentPdf = new List<ContractFile>(),
             DocumentUrl = null!
         };
 
-        if (contract.DocumentPdf is not null)
+        if (dto.DocumentPdf is not null && dto.DocumentPdf.Length > 0)
         {
-            var documentPath = await fileService.SaveAsync(contract.DocumentPdf, "Contracts");
+            var file = await fileService.SaveAsync(dto.DocumentPdf, "Contracts");
 
-            newContract.DocumentPdf = new List<ContractFile>
+            newContract.DocumentPdf.Add(new ContractFile
             {
-                new ContractFile
-                {
-                    ContractId = newContract.Id,
-                    Name = documentPath.Name,
-                    Url = documentPath.Url,
-                    Size = documentPath.Size,
-                    Extension = documentPath.Extension,
-                }
-            };
+                ContractId = newContract.Id,
+                Name = file.Name,
+                Url = file.Url,
+                Size = file.Size,
+                Extension = file.Extension,
+            });
 
-            newContract.DocumentUrl = documentPath.Url;
+            newContract.DocumentUrl = file.Url;
         }
 
 
         await _contractsRepository.CreateAsync(newContract);
 
-        await unitOfWork.SaveChangesAsync(CancellationToken.None);
+        await unitOfWork.SaveChangesAsync(cancellationToken);
 
         var response = newContract.Adapt<ContractDtoResponse>();
 

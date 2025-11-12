@@ -13,16 +13,15 @@ public class GetContractHandler(IContractsRepository contractsRepository) : IReq
     public async Task<ApiResponse<List<ContractDtoResponse>>> Handle(GetContractQuery request, CancellationToken cancellationToken)
     {
         if (request.EmployeeId == Guid.Empty)
-            throw new ApiException("Id is empty");
+            throw new ApiException("EmployeeId cannot be empty.");
 
-        var contract = await _contractsRepository.GetByEmployeeId(request.EmployeeId)
-            ?? throw new NotFoundException("Contract not found");
+        var contracts = await _contractsRepository.GetAllByEmployeeIdAsync(request.EmployeeId);
 
-        if (contract.Count == 0)
-            throw new NotFoundException("Contract not found");
+        if (contracts is null || contracts.Count == 0)
+            throw new NotFoundException("No active contracts found for this employee.");
 
-        var response = contract.Adapt<List<ContractDtoResponse>>();
+        var contractDtos = contracts.Adapt<List<ContractDtoResponse>>();
 
-        return new ApiResponse<List<ContractDtoResponse>>(response);
+        return new ApiResponse<List<ContractDtoResponse>>(contractDtos);
     }
 }

@@ -10,9 +10,9 @@ public class ContractsRepository(AppDbContext context) : IContractsRepository
     public async Task CreateAsync(Contract newContract) =>
         await _context.Contracts.AddAsync(newContract);
 
-    public async Task<List<Contract>> GetByEmployeeId(Guid employeeId) =>
+    public async Task<List<Contract>> GetAllByEmployeeIdAsync(Guid employeeId) =>
         await _context.Contracts.Include(c => c.Employee)
-            .Where(c => c.EmployeeId == employeeId
+            .Where(c => c.EmployeeId == employeeId && c.Employee != null
             && c.Employee.IsActive && c.IsAktive).AsNoTracking().ToListAsync();
 
     public async Task<Contract?> GetContractById(Guid contractId) =>

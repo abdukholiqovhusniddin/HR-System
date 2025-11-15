@@ -1,13 +1,13 @@
 ﻿using Application.DTOs.Employees.Requests;
 using FluentValidation;
 
-namespace Application.Validators;
-public class UpdateEmployeeDtoRequestValidator : AbstractValidator<UpdateEmployeeDtoRequest>
+namespace Application.Validators.Users;
+public class UpdateEmployeeRequestDtoValidator : AbstractValidator<UpdateEmployeeDtoRequest>
 {
     private static readonly string[] AllowedExtensions = [".jpg", ".jpeg", ".png"];
     private const long MaxFileBytes = 5 * 1024 * 1024; // 5 MB
 
-    public UpdateEmployeeDtoRequestValidator()
+    public UpdateEmployeeRequestDtoValidator()
     {
         When(x => x.Photo != null, () =>
         {

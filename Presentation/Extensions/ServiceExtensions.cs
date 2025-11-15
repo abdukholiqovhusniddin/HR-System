@@ -1,9 +1,10 @@
-﻿using System.Reflection;
-using Application;
+﻿using Application;
 using Application.Commons;
+using Application.DTOs.Users.Requests;
 using Application.JwtAuth;
 using Application.Mappers;
 using Domain.Interfaces;
+using FluentValidation;
 using Infrastructure.Helpers;
 using Infrastructure.Persistence.DataContext;
 using Infrastructure.Repositories;
@@ -11,6 +12,7 @@ using Infrastructure.Service;
 using Mapster;
 using Microsoft.EntityFrameworkCore;
 using Presentation.BackgroundServices;
+using System.Reflection;
 
 namespace Presentation.Extensions;
 public static class ServiceExtensions
@@ -65,6 +67,7 @@ public static class ServiceExtensions
         services.AddHostedService<ContractReminderService>();
 
         services.AddControllers();
+        services.AddValidatorsFromAssembly(typeof(UserRegisterRequestDto).Assembly);
 
         return services;
     }

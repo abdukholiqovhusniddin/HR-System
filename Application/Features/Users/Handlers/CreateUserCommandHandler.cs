@@ -24,6 +24,8 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
     {
         var userRegisterDto = request.UserRegisterDto;
 
+
+
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))
             throw new ApiException("User already exists.");
 

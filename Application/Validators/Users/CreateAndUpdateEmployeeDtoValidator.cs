@@ -4,12 +4,9 @@ using System.Linq;
 using FluentValidation;
 using Application.DTOs.CommonsDto;
 
-namespace Application.Validators;
+namespace Application.Validators.Users;
 public class CreateAndUpdateEmployeeDtoValidator : AbstractValidator<CreateAndUpdateEmployeeDto>
 {
-    //private static readonly string[] AllowedExtensions = [".jpg", ".jpeg", ".png"];
-    //private const long MaxFileBytes = 5 * 1024 * 1024; // 5 MB
-
     public CreateAndUpdateEmployeeDtoValidator()
     {
         RuleFor(x => x.Username)
@@ -26,21 +23,6 @@ public class CreateAndUpdateEmployeeDtoValidator : AbstractValidator<CreateAndUp
         RuleFor(x => x.FullName)
             .NotEmpty().WithMessage("Full name is required.")
             .MaximumLength(100).WithMessage("Full name cannot exceed 100 characters.");
-
-        //When(x => x.Photo != null, () =>
-        //{
-        //    RuleFor(x => x.Photo.Length)
-        //        .LessThanOrEqualTo(MaxFileBytes)
-        //        .WithMessage("Photo size must be 5 MB or less.");
-
-        //    RuleFor(x => x.Photo.FileName)
-        //        .Must(fn =>
-        //        {
-        //            var ext = Path.GetExtension(fn)?.ToLowerInvariant();
-        //            return ext != null && AllowedExtensions.Contains(ext);
-        //        })
-        //        .WithMessage("Photo must be a JPG or PNG file.");
-        //});
 
         RuleFor(x => x.DateOfBirth)
             .NotEmpty().WithMessage("Date of birth is required.")

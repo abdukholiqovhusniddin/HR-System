@@ -24,5 +24,5 @@ public abstract class CreateAndUpdateEmployeeDto
 
     public required string PassportInfo { get; set; }
 
-    public Guid? ManagerId { get; set; }
+    public Guid? ManagerId { get; set; } = null;
 }

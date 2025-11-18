@@ -3,6 +3,7 @@
 namespace Domain.Interfaces;
 public interface IEmployeesRepository
 {
+    Task AddPhotoAsync(EmployeeFile fileEntity);
     Task<IEnumerable<Employee>> GetAllDirectory(CancellationToken cancellationToken);
     Task<Employee?> GetById(Guid id, CancellationToken cancellation, bool t);
     Task<EmployeeFile> GetImgByEmployeeId(Guid id);

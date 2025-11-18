@@ -1,4 +1,5 @@
-﻿using Domain.Enums;
+﻿using Application.Exceptions;
+using Domain.Enums;
 using Domain.Interfaces;
 using Infrastructure.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
@@ -7,6 +8,13 @@ namespace Infrastructure.Repositories;
 public class EmployeesRepository(AppDbContext context) : IEmployeesRepository
 {
     private readonly AppDbContext _context = context;
+
+    public async Task AddPhotoAsync(EmployeeFile fileEntity)
+    {
+        if (fileEntity == null)
+            throw new ApiException("FileEntity is not null");
+        await _context.EmployeesFile.AddAsync(fileEntity);
+    }
 
     public async Task Delete(Employee employee)
     {

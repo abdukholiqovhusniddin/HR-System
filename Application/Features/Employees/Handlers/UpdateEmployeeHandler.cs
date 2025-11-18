@@ -13,51 +13,45 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
     private readonly IEmployeesRepository _employeesRepository = employeesRepository;
     public async Task<ApiResponse<Unit>> Handle(UpdateEmployeeCommand request, CancellationToken cancellationToken)
     {
-
         var updateDto = request.UpdateEmployee;
-
-        if (updateDto.ManagerId.ToString() == "3fa85f64-5717-4562-b3fc-2c963f66afa6")
+        if (updateDto.ManagerId == Guid.Empty)
             updateDto.ManagerId = null;
 
-        var employee = await _employeesRepository.GetById(updateDto.Id)
+        var employee = await _employeesRepository.GetById(updateDto.Id, cancellationToken, false)
             ?? throw new NotFoundException("Employee not found");
 
         if (updateDto.Photo is not null)
         {
-            employee = updateDto.Adapt(employee);
-
-            var photoPath = await fileService.SaveAsync(updateDto.Photo, "Employees");
-
-            if (employee.PhotoUrl is not null)
-            {
+            if (!string.IsNullOrWhiteSpace(employee.PhotoUrl))
                 await fileService.RemoveAsync(employee.PhotoUrl);
 
-                var getPhoto = await _employeesRepository.GetImgByEmployeeId(updateDto.Id);
+            var newPhoto = await fileService.SaveAsync(updateDto.Photo, "Employees");
 
-                getPhoto.Name = photoPath.Name;
-                getPhoto.Url = photoPath.Url;
-                getPhoto.Size = photoPath.Size;
-                getPhoto.Extension = photoPath.Extension;
-
+            var fileEntity = await _employeesRepository.GetImgByEmployeeId(updateDto.Id);
+            if(fileEntity is null)
+            {
+                fileEntity = new EmployeeFile
+                {
+                    EmployeeId = updateDto.Id,
+                    Name = newPhoto.Name,
+                    Url = newPhoto.Url,
+                    Size = newPhoto.Size,
+                    Extension = newPhoto.Extension,
+                };
+                await _employeesRepository.AddPhotoAsync(fileEntity);
             }
             else
             {
-                var getPhoto = new EmployeeFile
-                {
-                    EmployeeId = updateDto.Id,
-                    Name = photoPath.Name,
-                    Url = photoPath.Url,
-                    Size = photoPath.Size,
-                    Extension = photoPath.Extension
-                };
+                fileEntity.Name = newPhoto.Name;
+                fileEntity.Url = newPhoto.Url;
+                fileEntity.Size = newPhoto.Size;
+                fileEntity.Extension = newPhoto.Extension;
             }
-            employee.PhotoUrl = photoPath.Url;
+            employee.PhotoUrl = newPhoto.Url;
+        }
+        updateDto.Adapt(employee);
 
-        }
-        else
-        {
-            _ = updateDto.Adapt(employee);
-        }
+
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         return new ApiResponse<Unit>();

@@ -20,7 +20,7 @@ public class Employee : BaseEntity
 
     public required string PassportInfo { get; set; }
 
-    public Guid? ManagerId { get; set; }
+    public Guid? ManagerId { get; set; } = null;
     public Employee? Manager { get; set; }
 
     public Guid UserId { get; set; }

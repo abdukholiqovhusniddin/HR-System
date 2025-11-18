@@ -13,8 +13,9 @@ public class EmployeesRepository(AppDbContext context) : IEmployeesRepository
         await _context.Employees.Where(e => e.Id == employee.Id && e.IsActive).ExecuteDeleteAsync();
     }
 
-    public async Task<IEnumerable<Employee>> GetAllDirectory() =>
-        await _context.Employees.Where(a => a.User.Role != UserRole.Admin && a.IsActive).AsNoTracking().ToListAsync();
+    public async Task<IEnumerable<Employee>> GetAllDirectory(CancellationToken cancellation) =>
+        await _context.Employees.AsNoTracking()
+        .Where(a => a.User.Role != UserRole.Admin && a.IsActive).ToListAsync(cancellation);
 
     public async Task<Employee?> GetById(Guid id) =>
         await _context.Employees.FirstOrDefaultAsync(e => e.Id == id && e.IsActive);

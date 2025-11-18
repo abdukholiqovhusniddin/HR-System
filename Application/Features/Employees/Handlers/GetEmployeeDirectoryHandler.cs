@@ -14,13 +14,13 @@ public class GetEmployeeDirectoryHandler(IEmployeesRepository directoryRepositor
 
     public async Task<ApiResponse<List<ResponseDirectoryDto>>> Handle(GetEmployeeDirectory request, CancellationToken cancellationToken)
     {
-        var directoryDto = await _directoryRepository.GetAllDirectory();
+        var directoryDto = await _directoryRepository.GetAllDirectory(cancellationToken);
 
         return directoryDto is null
             ? throw new NotFoundException("Directory not found")
             : new ApiResponse<List<ResponseDirectoryDto>>
             {
-                Data = [.. directoryDto.Select(a => new ResponseDirectoryDto(a.FullName!,
+                Data = [.. directoryDto.Select(a => new ResponseDirectoryDto(a.FullName,
                 a.Position, a.Department))]
             };
     }

@@ -11,7 +11,7 @@ public class DeleteEmployeeHandler(IEmployeesRepository employeesRepository,
     private readonly IEmployeesRepository _employeesRepository = employeesRepository;
     public async Task<ApiResponse<Unit>> Handle(DeleteEmployeeCommand request, CancellationToken cancellationToken)
     {
-        var employee = await _employeesRepository.GetById(request.Id)
+        var employee = await _employeesRepository.GetById(request.Id, cancellationToken, false)
             ?? throw new NotFoundException("Employee not found");
 
         employee.IsActive = false;

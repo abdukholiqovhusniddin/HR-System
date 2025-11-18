@@ -15,10 +15,14 @@ public class EmployeesRepository(AppDbContext context) : IEmployeesRepository
 
     public async Task<IEnumerable<Employee>> GetAllDirectory(CancellationToken cancellation) =>
         await _context.Employees.AsNoTracking()
-        .Where(a => a.User.Role != UserRole.Admin && a.IsActive).ToListAsync(cancellation);
+        .Where(a => a.User.Role != UserRole.Admin && a.IsActive).ToListAsync();
 
-    public async Task<Employee?> GetById(Guid id) =>
-        await _context.Employees.FirstOrDefaultAsync(e => e.Id == id && e.IsActive);
+    public async Task<Employee?> GetById(Guid id, CancellationToken cancellation, bool t = false)
+    {
+        var query = _context.Employees;
+        if (t) query.AsNoTracking();
+        return await query.FirstOrDefaultAsync(e => e.Id == id && e.IsActive, cancellation);
+    }
 
     public async Task<EmployeeFile> GetImgByEmployeeId(Guid id) =>
         await _context.EmployeesFile.FirstAsync(e => e.EmployeeId == id);

@@ -16,7 +16,7 @@ internal sealed class GetEmployeeByIdHandler(IEmployeesRepository directory) : I
         if (request.EmployeeId == Guid.Empty)
             throw new ApiException("Id is empty");
 
-        var employee = await _directoryRepository.GetById(request.EmployeeId);
+        var employee = await _directoryRepository.GetById(request.EmployeeId, cancellationToken, true);
 
         return employee is null
             ? throw new NotFoundException("Employee not found")

@@ -13,11 +13,11 @@ public class EquipmentRepository(AppDbContext appDbContext) : IEquipmentReposito
         await _context.SaveChangesAsync();
     }
 
-    public async Task<Equipments?> GetByIdAsync(Guid equipmentId) =>
+    public async Task<Equipments?> GetByIdAsync(Guid equipmentId, CancellationToken cancellationToken) =>
         await _context.Equipments.Include(e => e.Employee)
-            .FirstOrDefaultAsync(e => e.Id == equipmentId && e.Employee.IsActive);
+            .FirstOrDefaultAsync(e => e.Id == equipmentId && e.Employee.IsActive, cancellationToken);
 
-    public async Task<List<Equipments>> GetEquipmentByEmployeeId(Guid employeeId) =>
+    public async Task<List<Equipments>> GetEquipmentByEmployeeId(Guid employeeId, CancellationToken cancellationToken) =>
         await _context.Equipments.Include(e => e.Employee)
-        .Where(e => e.EmployeeId == employeeId && e.Employee.IsActive).ToListAsync();
+        .Where(e => e.EmployeeId == employeeId && e.Employee.IsActive).ToListAsync(cancellationToken);
 }

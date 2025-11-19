@@ -1,5 +1,6 @@
 ﻿using Application.Commons;
 using Application.DTOs.Equipments.Responses;
+using Application.Exceptions;
 using Application.Features.Equipment.Commands;
 using Domain.Enums;
 using Domain.Interfaces;
@@ -16,8 +17,8 @@ public class UpdateEquipmentStatusHandler(IEquipmentRepository equipmentReposito
         Guid equipmentId = request.EquipmentId;
         EquipmentStatus newStatus = request.NewStatus;
 
-        var equipment = await _equipmentRepository.GetByIdAsync(equipmentId)
-            ?? throw new KeyNotFoundException("Equipment not found");
+        var equipment = await _equipmentRepository.GetByIdAsync(equipmentId, cancellationToken)
+            ?? throw new ApiException("Equipment not found");
 
         equipment.Status = newStatus;
 

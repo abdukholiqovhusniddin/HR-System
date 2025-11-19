@@ -50,8 +50,6 @@ public class UpdateEmployeeHandler(IEmployeesRepository employeesRepository, IUn
             employee.PhotoUrl = newPhoto.Url;
         }
         updateDto.Adapt(employee);
-
-
         await unitOfWork.SaveChangesAsync(CancellationToken.None);
 
         return new ApiResponse<Unit>();

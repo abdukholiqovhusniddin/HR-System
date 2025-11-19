@@ -18,7 +18,7 @@ public class GetEquipmentByEmployeeIdHandler(IEquipmentRepository equipmentRepos
         if (employeeId == Guid.Empty)
             throw new ApiException("EmployeeId is required");
 
-        var equipments = await _equipmentRepository.GetEquipmentByEmployeeId(employeeId)
+        var equipments = await _equipmentRepository.GetEquipmentByEmployeeId(employeeId, cancellationToken)
             ?? throw new ApiException("No equipment found for the given employee ID.");
 
         var response = equipments.Adapt<List<EquipmentDtoResponse>>();

@@ -33,7 +33,7 @@ public class UserRepository(AppDbContext context) : IUserRepository
                 u.EmployeeProfile != null &&
                 u.EmployeeProfile.IsActive);
 
-    public async Task<User?> GetByUsernameAsync(string? username, bool includeEmployeeProfile = false)
+    public async Task<User?> GetByUsernameAsync(string? username, CancellationToken cancellationToken, bool includeEmployeeProfile = false)
     {
         if (string.IsNullOrWhiteSpace(username))
             throw new ApiException("Username cannot be null or empty.");
@@ -45,7 +45,7 @@ public class UserRepository(AppDbContext context) : IUserRepository
 
         return await query.FirstOrDefaultAsync(u =>
             u.Username == username &&
-            (u.EmployeeProfile == null || u.EmployeeProfile.IsActive));
+            (u.EmployeeProfile == null || u.EmployeeProfile.IsActive), cancellationToken);
     }
 
 

@@ -67,6 +67,7 @@ public static class ServiceExtensions
         services.AddHostedService<ContractReminderService>();
 
         services.AddControllers();
+        services.AddApplication();
 
         return services;
     }

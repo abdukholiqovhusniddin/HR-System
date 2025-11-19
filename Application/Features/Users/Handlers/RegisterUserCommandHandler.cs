@@ -9,7 +9,7 @@ using MediatR;
 
 namespace Application.Features.Users.Handlers;
 
-internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
+internal sealed class RegisterUserCommandHandler(IUserRepository userRepository,
     IUnitOfWork unitOfWork, IFileService fileService,
     IEmailService emailService, IEmployerRepository employerRepository) : IRequestHandler<RegisterUserCommand, ApiResponse<UserResponseDto>>
 {
@@ -23,8 +23,6 @@ internal sealed class CreateUserCommandHandler(IUserRepository userRepository,
     public async Task<ApiResponse<UserResponseDto>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
     {
         var userRegisterDto = request.UserRegisterDto;
-
-
 
         if (await _userRepository.ExistsAsync(userRegisterDto.Username))
             throw new ApiException("User already exists.");

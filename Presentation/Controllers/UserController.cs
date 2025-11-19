@@ -22,7 +22,6 @@ public class UserController(IMediator mediator) : ApiControllerBase
     public async Task<IActionResult> CreateUser([FromForm] UserRegisterRequestDto userRegisterDto)
     {
         var responseUserRegister = await _mediator.Send(new RegisterUserCommand(userRegisterDto));
-
         return StatusCode(responseUserRegister.StatusCode, responseUserRegister);
     }
 

@@ -13,7 +13,7 @@ internal sealed class LoginUserCommandHandler(IUserRepository userRepository,
     public async Task<ApiResponse<string>> Handle(LoginUserCommand request, CancellationToken cancellationToken)
     {
         var loginDto = request.UserLoginDto;
-        var user = await _userRepository.GetByUsernameAsync(loginDto.Username);
+        var user = await _userRepository.GetByUsernameAsync(loginDto.Username, cancellationToken);
 
         if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash))
         {

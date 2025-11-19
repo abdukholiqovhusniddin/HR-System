@@ -30,7 +30,7 @@ public class VacationRepository(AppDbContext context) : IVacationRepository
             .Where(s => s.Status == VacationStatus.Pending
             && s.Employee.IsActive).ToListAsync();
 
-    public async Task<List<Vacation>> GetVacationsByUserId(Guid userId) =>
+    public async Task<List<Vacation>> GetVacationsByUserId(Guid userId, CancellationToken cancellationToken ) =>
         await _context.Vacations.Include(v => v.Employee)
             .Where(v => v.Employee.UserId == userId && v.Employee.IsActive).ToListAsync();
 }

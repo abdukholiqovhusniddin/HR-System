@@ -13,7 +13,7 @@ internal sealed class AssignRoleCommandHandler(IUserRepository userRepository) :
     public async Task<ApiResponse<UserProfileResponseDto>> Handle(AssignRoleCommand request, CancellationToken cancellationToken)
     {
         var dto = request.AssignRoleDto;
-        var user = await _userRepository.GetByUsernameAsync(dto.Username, includeEmployeeProfile: true)
+        var user = await _userRepository.GetByUsernameAsync(dto.Username, cancellationToken, includeEmployeeProfile: true)
             ?? throw new NotFoundException("User not found");
 
         user.Role = dto.Role;

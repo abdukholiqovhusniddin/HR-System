@@ -13,10 +13,10 @@ public class SalariesRepository(AppDbContext context) : ISalariesRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task<Salary?> GetByEmployeeId(Guid employeeId) =>
+    public async Task<Salary?> GetByEmployeeId(Guid employeeId, CancellationToken cancellationToken) =>
         await _context.Salaries.Include(s => s.Employee)
             .Where(s => s.EmployeeId == employeeId && s.Employee.IsActive)
-            .OrderByDescending(s => s.StartPeriod).FirstOrDefaultAsync();
+            .OrderByDescending(s => s.StartPeriod).FirstOrDefaultAsync(cancellationToken);
 
     public async Task<List<Salary>> GetHistoryByEmployeeId(Guid salaryEmployee) =>
         await _context.Salaries.Include(s => s.Employee)
@@ -31,4 +31,6 @@ public class SalariesRepository(AppDbContext context) : ISalariesRepository
             .Select(g => g.OrderByDescending(s => s.StartPeriod).First())
             .ToListAsync();
 
+    public async Task<bool> IsEmployeeAktive(Guid employeeId, CancellationToken cancellationToken) =>
+        await _context.Employees.AnyAsync(e => e.Id == employeeId && e.IsActive, cancellationToken);
 }

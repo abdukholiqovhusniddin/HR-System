@@ -1,5 +1,6 @@
 ﻿using Application.Commons;
 using Application.DTOs.Salaries.Responses;
+using Application.Exceptions;
 using Application.Features.Salaries.Commands;
 using Domain.Interfaces;
 using Mapster;
@@ -14,6 +15,8 @@ public class CreateSalaryHandler(ISalariesRepository salariesRepository)
     public async Task<ApiResponse<SalaryDtoResponse>> Handle(CreateSalaryCommand request, CancellationToken cancellationToken)
     {
         var salary = request.salary;
+        if (await _salariesRepository.IsEmployeeAktive(salary.EmployeeId, cancellationToken))
+            throw new NotFoundException("Employee not found");
         var newSalary = salary.Adapt<Salary>();
 
         await _salariesRepository.CreateAsync(newSalary);

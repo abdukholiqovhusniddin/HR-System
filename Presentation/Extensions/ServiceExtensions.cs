@@ -67,7 +67,6 @@ public static class ServiceExtensions
         services.AddHostedService<ContractReminderService>();
 
         services.AddControllers();
-        services.AddValidatorsFromAssembly(typeof(UserRegisterRequestDto).Assembly);
 
         return services;
     }

@@ -17,7 +17,7 @@ public class GetSalaryHistoryHandler(ISalariesRepository salariesRepository)
         if (salaryEmployee == Guid.Empty)
             throw new ApiException("The salary employee Id is required");
 
-        var salary = await _salariesRepository.GetHistoryByEmployeeId(salaryEmployee)
+        var salary = await _salariesRepository.GetHistoryByEmployeeId(salaryEmployee, cancellationToken)
             ?? throw new ApiException("The salary employee doesn't exist");
 
         var response = salary.Adapt<List<SalaryDtoResponse>>();

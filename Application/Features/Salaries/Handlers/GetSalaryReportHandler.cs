@@ -14,7 +14,7 @@ public class GetSalaryReportHandler(ISalariesRepository salariesRepository) :
 
     public async Task<ApiResponse<List<SalaryDtoResponse>>> Handle(GetSalaryReportQuery request, CancellationToken cancellationToken)
     {
-        var salaries = await _salariesRepository.GetSalaryReport();
+        var salaries = await _salariesRepository.GetSalaryReport(cancellationToken);
         if (salaries == null || salaries.Count == 0)
         {
             throw new ApiException("No salary data available for the report.");

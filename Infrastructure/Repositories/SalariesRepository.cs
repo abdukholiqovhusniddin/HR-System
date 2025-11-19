@@ -18,18 +18,18 @@ public class SalariesRepository(AppDbContext context) : ISalariesRepository
             .Where(s => s.EmployeeId == employeeId && s.Employee.IsActive)
             .OrderByDescending(s => s.StartPeriod).FirstOrDefaultAsync(cancellationToken);
 
-    public async Task<List<Salary>> GetHistoryByEmployeeId(Guid salaryEmployee) =>
+    public async Task<List<Salary>> GetHistoryByEmployeeId(Guid salaryEmployee, CancellationToken cancellationToken) =>
         await _context.Salaries.Include(s => s.Employee)
             .Where(s => s.EmployeeId == salaryEmployee && s.Employee.IsActive)
-            .OrderBy(s => s.StartPeriod).ToListAsync();
+            .OrderBy(s => s.StartPeriod).ToListAsync(cancellationToken);
 
-    public async Task<List<Salary>> GetSalaryReport() =>
+    public async Task<List<Salary>> GetSalaryReport(CancellationToken cancellationToken) =>
         await _context.Salaries
             .Include(s => s.Employee)
             .Where(s => s.Employee.IsActive)
             .GroupBy(s => s.EmployeeId)
             .Select(g => g.OrderByDescending(s => s.StartPeriod).First())
-            .ToListAsync();
+            .ToListAsync(cancellationToken);
 
     public async Task<bool> IsEmployeeAktive(Guid employeeId, CancellationToken cancellationToken) =>
         await _context.Employees.AnyAsync(e => e.Id == employeeId && e.IsActive, cancellationToken);
